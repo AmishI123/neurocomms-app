@@ -1,5 +1,5 @@
 # Render static site for the Helper Jobs app.
-# The repository remains private; Render serves only the explicit helper-jobs directory.
+# This repository is public. Render serves only the explicit helper-jobs directory (not the rest of the repository).
 services:
   - type: web
     name: helper-jobs

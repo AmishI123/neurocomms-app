@@ -111,4 +111,4 @@ The Android app asks only for the internet. Records stay inside the app on the t
 
 The app on `helper-jobs.onrender.com` talks to `https://helper-jobs-live.onrender.com`. If Render gives the live service a different address, set it with `<meta name="helper-jobs-api" content="https://…">` in `index.html` and `lead-phone.html`, and add the app’s address to the service’s `ALLOWED_ORIGINS`.
 
-After changing `render.yaml`, open the Blueprint in Render and press **Manual sync** (or use [Deploy neurocomms to Render](https://render.com/deploy?repo=https://github.com/mehtama1234/neurocomms)).
+The live copies at `helper-jobs.onrender.com` and `helper-jobs-live.onrender.com` still deploy from the original private repository. To run your own copy from this public repository, use [Deploy to Render](https://render.com/deploy?repo=https://github.com/AmishI123/neurocomms-app). Render will give the new services their own addresses, so set `helper-jobs-api` in `index.html` and `lead-phone.html` and the live service's `ALLOWED_ORIGINS` to match (see above). After later changes to `render.yaml`, open the Blueprint in Render and press **Manual sync**.
