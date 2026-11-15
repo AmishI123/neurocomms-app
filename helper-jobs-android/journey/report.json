@@ -1,0 +1,109 @@
+{
+ "finishedAt": "2026-11-15T07:39:50.981Z",
+ "serial": "emulator-5554",
+ "passed": true,
+ "results": [
+  {
+   "name": "opens as the Android app",
+   "ok": true,
+   "detail": "Mozilla/5.0 (Linux; Android 11; sdk_gphone_x86_64 Build/RSR1.240422.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Safari/537.36",
+   "fatal": true
+  },
+  {
+   "name": "live link points at the public relay",
+   "ok": true,
+   "detail": "https://helper-jobs-live.onrender.com",
+   "fatal": true
+  },
+  {
+   "name": "voice engine lists languages",
+   "ok": true,
+   "detail": "en-US, hi-IN, es-ES, es-US, en-IN, en-GB",
+   "fatal": false
+  },
+  {
+   "name": "reads a step aloud with the device voice",
+   "ok": true,
+   "detail": "finished",
+   "fatal": true
+  },
+  {
+   "name": "Read aloud button works",
+   "ok": true,
+   "detail": "no warning",
+   "fatal": true
+  },
+  {
+   "name": "back button stays inside the app",
+   "ok": true,
+   "detail": "org.helperjobs.app",
+   "fatal": true
+  },
+  {
+   "name": "screen stays on during the outing",
+   "ok": true,
+   "detail": "",
+   "fatal": true
+  },
+  {
+   "name": "device checks know it is the app",
+   "ok": true,
+   "detail": "",
+   "fatal": true
+  },
+  {
+   "name": "coordinator can pin the app",
+   "ok": true,
+   "detail": "confirmation: Got it (by position)",
+   "fatal": true
+  },
+  {
+   "name": "coordinator can unpin the app",
+   "ok": true,
+   "detail": "",
+   "fatal": true
+  },
+  {
+   "name": "a saved file opens the share sheet",
+   "ok": true,
+   "detail": "android",
+   "fatal": true
+  },
+  {
+   "name": "printing opens the print screen",
+   "ok": true,
+   "detail": "com.android.printspooler",
+   "fatal": true
+  },
+  {
+   "name": "back from a printed page returns to the app",
+   "ok": true,
+   "detail": "https://localhost/index.html",
+   "fatal": true
+  },
+  {
+   "name": "Help works with no internet",
+   "ok": true,
+   "detail": "",
+   "fatal": true
+  },
+  {
+   "name": "pairing code opens the public site",
+   "ok": true,
+   "detail": "",
+   "fatal": true
+  },
+  {
+   "name": "live link reaches the public relay",
+   "ok": false,
+   "detail": "relay not reachable or app origin not allowed yet",
+   "fatal": false
+  },
+  {
+   "name": "no page errors",
+   "ok": true,
+   "detail": "",
+   "fatal": true
+  }
+ ]
+}
