@@ -1,0 +1,68 @@
+{
+  "id": "music-volume--s17--basic",
+  "case_id": "music-volume",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:14:32.831420+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Noor\", \"age\": 11, \"communication_style\": \"short phrases\"}, \"activity\": \"Explore a drum, a quiet shaker and recorded music with adjustable volume.\", \"facts\": [\"Noor has said she enjoys rhythms.\", \"Noor has said she does not like loud drums.\", \"A quiet shaker is available.\", \"Her preferred volume right now is unknown.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I like the rhythm of the drum.\",\n    \"I prefer a quiet shaker.\",\n    \"The volume is currently unknown.\",\n    \"I enjoy listening to music.\",\n    \"This is an optional activity card.\",\n    \"Noor is 11 years old.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851672,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 196,
+      "total_tokens": 270,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-QoC8xu3hWhDL7KMSgiZRRoALkNurfQJB",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 196,
+      "prompt_ms": 6327.03,
+      "prompt_per_token_ms": 32.28076530612245,
+      "prompt_per_second": 30.978199882093183,
+      "predicted_n": 74,
+      "predicted_ms": 7668.862,
+      "predicted_per_token_ms": 105.05290410958904,
+      "predicted_per_second": 9.519013381646456
+    }
+  },
+  "wall_seconds": 14.01220903000285,
+  "error": null
+}

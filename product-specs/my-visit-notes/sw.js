@@ -1,0 +1,11 @@
+const CACHE='my-visit-notes-shell-v16';
+const ASSETS=['./','./index.html','./styles.css','./app.mjs','./model.mjs','./intake.mjs','./intake-model.mjs','./preparation-model.mjs','./recovery-model.mjs','./recovery-ui.mjs','./followup-record.mjs','./followup-model.mjs','./followup-ui.mjs','./transfer-record.mjs','./transfer-model.mjs','./transfer-ui.mjs','./display.mjs','./install.mjs','./help.html','./manifest.webmanifest','./icon.svg','./icons/icon-180.png','./icons/icon-192.png','./icons/icon-512.png'];
+ASSETS.push('./conversation-ui.mjs');
+ASSETS.push('./journey-ui.mjs');
+ASSETS.push('./draft-record.mjs','./draft-model.mjs','./draft-ui.mjs');
+ASSETS.push('./next-appointment-model.mjs','./next-appointment-ui.mjs');
+ASSETS.push('./after-review-model.mjs');
+ASSETS.push('./platform.mjs');
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
+self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
+self.addEventListener('fetch',event=>{const url=new URL(event.request.url);if(event.request.method!=='GET'||url.origin!==self.location.origin)return;event.respondWith(caches.open(CACHE).then(async cache=>(await cache.match(event.request))||fetch(event.request)));});

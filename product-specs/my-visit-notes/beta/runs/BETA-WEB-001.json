@@ -1,0 +1,33 @@
+{
+  "caseId": "BETA-WEB-001",
+  "runDate": "2026-09-16",
+  "surface": "web",
+  "buildHash": "5885e3f621052a5465f74773926b9ea8a37e76ccfb3de33a182c4a036d63a9c2",
+  "device": "Chromium 145.0.7632.6",
+  "osVersion": "Linux host; temporary browser libraries",
+  "tasks": {
+    "1": "Pass",
+    "2": "Pass",
+    "3": "Pass",
+    "4": "Pass",
+    "5": "Pass",
+    "6": "Pass",
+    "7": "Pass",
+    "8": "Pass",
+    "9": "Pass",
+    "10": "Pass",
+    "11": "Pass"
+  },
+  "dataResult": "restored",
+  "privacyResult": "private-hidden",
+  "evidencePaths": [
+    "product-specs/my-visit-notes/qa/browser-results.json",
+    "product-specs/my-visit-notes/qa/phone-results.json",
+    "product-specs/my-visit-notes/qa/transfer-results.json",
+    "product-specs/my-visit-notes/qa/recovery-results.json",
+    "my-visit-notes-mobile/LLM-ACCEPTANCE-JUDGE.html"
+  ],
+  "severity": "S3",
+  "failureCode": null,
+  "nextAction": "close"
+}

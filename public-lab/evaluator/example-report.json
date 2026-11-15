@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "rubric": "/home/mehta/neuro-divergent/public-lab/evaluator/rubric.json",
+  "records": 2,
+  "valid_records": 2,
+  "invalid_records": 0,
+  "dimension_means": {
+    "grounding": 1.0,
+    "uncertainty": 1.0,
+    "role_fit": 1.5,
+    "optionality": 1.5,
+    "respect": 1.5
+  },
+  "rows": [
+    {
+      "line": 1,
+      "record_id": "unknown-preference--example",
+      "reviewer": "demo-rater",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    },
+    {
+      "line": 2,
+      "record_id": "third-party-transfer--example",
+      "reviewer": "demo-rater",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 0,
+        "uncertainty": 0,
+        "role_fit": 1,
+        "optionality": 1,
+        "respect": 1
+      }
+    }
+  ],
+  "interpretation": "Reviewer annotations are contextual judgments, not clinical outcomes."
+}

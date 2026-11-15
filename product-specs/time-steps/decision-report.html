@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Plain-language decision report for the Time Steps product. Engineering evidence only.">
+  <title>Time Steps · decision report</title>
+  <style>
+    :root{--ink:#172a2a;--muted:#526562;--wash:#edf5f1;--line:#b8cbc4;--accent:#075f62;--warn:#9a5100;--danger:#a33b2b;--good:#245648}
+    *{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:1rem}.page{background:#fff;padding:clamp(1.2rem,4vw,3rem);margin:1rem 0 4rem;box-shadow:0 2px 12px #0001}
+    h1,h2{font-family:Georgia,serif;line-height:1.15;color:#16484a}h1{font-size:clamp(2.2rem,5vw,4rem);margin:.2rem 0 1rem}h2{margin-top:2.3rem}h3{color:var(--good);margin-bottom:.25rem}.lead{font-size:1.2rem;color:var(--muted);max-width:70ch}
+    .eyebrow,.small{font-size:.9rem;color:var(--muted);letter-spacing:.03em}.decision{padding:1.1rem 1.3rem;background:var(--wash);border-left:6px solid var(--accent);margin:1.5rem 0}.warning{padding:1.1rem 1.3rem;background:#fff8e8;border-left:6px solid var(--warn);margin:1.5rem 0}.danger{padding:1.1rem 1.3rem;background:#fff0ec;border-left:6px solid var(--danger);margin:1.5rem 0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card{border:1px solid var(--line);border-radius:.5rem;padding:1rem;background:#fff}.card p{margin:.35rem 0}.status{font-weight:700;color:var(--good)}table{border-collapse:collapse;width:100%;margin:1rem 0 1.5rem}th,td{text-align:left;border-bottom:1px solid var(--line);padding:.75rem;vertical-align:top}th{width:28%}ul{padding-left:1.4rem}a{color:var(--accent)}:focus-visible{outline:3px solid #b36800;outline-offset:3px}
+    @media(max-width:650px){.grid{grid-template-columns:1fr}th,td{display:block;width:auto}th{border-bottom:0;padding-bottom:.2rem}td{padding-top:.2rem}}
+  </style>
+</head>
+<body>
+<main><article class="page">
+  <p class="eyebrow">PRODUCT DECISION REPORT · 17 SEPTEMBER 2026</p>
+  <h1>Show me the time steps</h1>
+  <p class="lead">A small local-first tool that works backward from one appointment and shows when to start preparing and when to leave.</p>
+
+  <section class="decision"><h2>Decision today</h2><p><strong>Keep the product as a controlled prototype and move it to approved human review.</strong> The engineering slice is complete enough to review. It is not ready for claims about benefit, demand, or broad accessibility.</p></section>
+
+  <h2>What the product does</h2>
+  <div class="grid">
+    <div class="card"><h3>Person enters the assumptions</h3><p>Appointment time, preparation minutes, travel minutes, spare minutes, and display choice.</p></div>
+    <div class="card"><h3>Product shows the steps</h3><p>Start preparing, leave, and appointment time, with dates and the arithmetic behind them.</p></div>
+    <div class="card"><h3>Person stays in control</h3><p>Changing a value changes the result. The product does not choose a travel time or claim to know readiness.</p></div>
+    <div class="card"><h3>Work stays local</h3><p>Save, reload, delete, and print work on the device. There is no account, cloud sync, calendar, traffic service, or remote AI in the product.</p></div>
+  </div>
+
+  <h2>What is built</h2>
+  <table><tbody>
+    <tr><th>Standalone web app</th><td class="status">Complete</td><td><a href="index.html">Open Time Steps</a></td></tr>
+    <tr><th>Phrase Studio integration</th><td class="status">Complete</td><td>Available in the support tools panel.</td></tr>
+    <tr><th>Mobile web bundle</th><td class="status">Built and audited</td><td>39 required runtime files match exactly.</td></tr>
+    <tr><th>Android package</th><td class="status">Built; unsigned</td><td>Debug and unsigned release APK bundle audits pass. It is not distributable until the release owner signs it. <a href="../../communication-tool/docs/android-release-signing.md">Signing handoff</a></td></tr>
+    <tr><th>iOS package</th><td>Source ready; not built</td><td>The iOS shell and Time Steps runtime match the current mobile bundle. Building still requires macOS, Xcode, and CocoaPods.</td></tr>
+    <tr><th>Reviewer packet</th><td class="status">Ready</td><td><a href="reviewer-guide.md">Guide</a> · <a href="reviewer-form.html">private response form</a></td></tr>
+    <tr><th>Technical-preview handoff</th><td class="status">Packaged and hash-pinned</td><td>22 explicit files; fictional-only and no private user data. <a href="../../artifacts/time-steps/time-steps-technical-preview.tar.gz">Download archive</a> · <a href="../../communication-tool/ai-evaluation/results/time-steps-handoff-manifest.json">manifest</a></td></tr>
+  </tbody></table>
+
+  <h2>Evidence we have</h2>
+  <table><thead><tr><th>Evidence</th><th>Result</th><th>What it proves</th></tr></thead><tbody>
+    <tr><th>Standalone browser checks</th><td class="status">10 passed</td><td>Calculation, input limits, invalid edits, markup-safe labels, midnight crossing, daylight-saving refusal, malformed-save rejection, cancellation-safe delete, narrow layout, focus, and print behavior.</td></tr>
+    <tr><th>Shared shell checks</th><td class="status">4 passed</td><td>The integrated panel calculates, updates, saves, reloads, deletes locally, and rejects malformed saved data.</td></tr>
+    <tr><th>Product contract checks</th><td class="status">2 passed</td><td>The shell and mobile runtime contract include the feature.</td></tr>
+    <tr><th>Scoped release audit</th><td class="status">Passed</td><td>20 browser/integration checks, the static accessibility audit, the 39-file mobile bundle, the Android package, and packaged permissions passed. <a href="../../communication-tool/ai-evaluation/results/time-steps-release-audit.json">Read the machine report</a>.</td></tr>
+    <tr><th>iOS source audit</th><td class="status">2 passed; tools unavailable</td><td>The iOS shell and synced Time Steps files match. Xcode and CocoaPods are not installed on this host. <a href="../../communication-tool/ai-evaluation/results/time-steps-ios-audit.json">Read the machine report</a>.</td></tr>
+    <tr><th>Android signing</th><td>Not distributable</td><td>The signing audit reports <code>unsigned</code> with <code>distributable: false</code>; no private key was inspected.</td></tr>
+    <tr><th>Safety and report checks</th><td class="status">12 focused checks passed</td><td>The judge output is bounded, unsafe certainty is refused, and the reviewer packet works.</td></tr>
+    <tr><th>Local model judge</th><td>Advisory only</td><td>It identified clear engineering strengths and the absence of human review. It cannot establish usefulness.</td></tr>
+  </tbody></table>
+
+  <div class="warning"><strong>Model judge warning.</strong> The local judge returned <code>not-credible</code> for the evidence package because there was no participant or specialist review. This is not a finding that the arithmetic is wrong. Read the <a href="../../communication-tool/ai-evaluation/results/time-steps-judge.html">full model report</a> with its limits.</div>
+
+  <h2>What we cannot claim</h2>
+  <ul><li>It helps every autistic, dyslexic, ADHD, Down syndrome, or other neurodivergent person.</li><li>It improves punctuality, reduces stress, or improves health or outcomes.</li><li>It predicts travel time or confirms that a person is ready to leave.</li><li>It is clinically safe, medically useful, or a replacement for support.</li><li>People prefer it to a calculator, paper, or their usual method.</li><li>It has passed native Android or iOS use.</li></ul>
+
+  <h2>Open gates</h2>
+  <ol><li>Run the fictional task with an approved accessibility or product reviewer using the <a href="reviewer-guide.md">review guide</a>.</li><li>Review the downloaded response privately and record only the agreed evidence.</li><li>Run the native Android journey on an authorized target. The current emulator stayed offline; the runner recorded this and completed zero steps.</li><li>Run iOS packaging on an authorized macOS/Xcode environment.</li><li>Revise, continue, or stop based on observed confusion, access barriers, privacy concerns, and reviewer recommendation.</li></ol>
+
+  <div class="danger"><strong>Evidence boundary.</strong> This report summarizes engineering work and a model critique. It contains no participant data and does not authorize recruitment or human research.</div>
+  <p class="small">Supporting documents: <a href="PRD.md">PRD</a> · <a href="verification.md">verification record</a> · <a href="reviewer-guide.md">reviewer guide</a> · <a href="../../NEXT-MEATY-GOAL-TIME-STEPS.md">overall goal</a>.</p>
+</article></main>
+</body>
+</html>

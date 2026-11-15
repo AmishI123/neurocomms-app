@@ -1,0 +1,2 @@
+:root{--pl-ink:#18242a;--pl-muted:#66736f;--pl-green:#216b4c;--pl-wash:#f7f8f5;--pl-panel:#fff;--pl-line:#d7e0d9;--pl-warn:#d69a36;--pl-radius:15px}
+.pl-panel{background:var(--pl-panel);border:1px solid var(--pl-line);border-radius:var(--pl-radius);padding:22px}.pl-unknown{border-left:4px solid var(--pl-warn);padding:10px;background:#fff8e8}.pl-button{background:var(--pl-green);color:#fff;border:0;border-radius:8px;padding:10px 14px;font-weight:700}

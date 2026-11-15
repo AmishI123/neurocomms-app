@@ -1,0 +1,165 @@
+{
+  "id": "garden-birds--s43--basic",
+  "case_id": "garden-birds",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:28:13.664202+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Mina said she likes birds.\",\n    \"She has not said she wants to go outside.\",\n    \"Do not infer fear.\",\n    \"Mood or family details are not relevant.\",\n    \"She has not said she wants to go outside.\",\n    \"Do not infer mood or family details.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788888493,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 240,
+      "total_tokens": 315,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-OkqtbcvTWrP2o2fAroOzb9JEyDXPi1oO",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 240,
+      "prompt_ms": 5172.405,
+      "prompt_per_token_ms": 21.5516875,
+      "prompt_per_second": 46.400078880134096,
+      "predicted_n": 75,
+      "predicted_ms": 75386.798,
+      "predicted_per_token_ms": 1018.7405135135134,
+      "predicted_per_second": 0.9816042326137795
+    }
+  },
+  "wall_seconds": 81.04115563300002,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 43,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"cards\": [\n    \"Mina said she likes birds.\",\n    \"She has not said she wants to go outside.\",\n    \"Do not infer fear.\",\n    \"Mood or family details are not relevant.\",\n    \"She has not said she wants to go outside.\",\n    \"Do not infer mood or family details.\"\n  ]\n}"
+            }
+          }
+        ],
+        "created": 1788888493,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 75,
+          "prompt_tokens": 240,
+          "total_tokens": 315,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-OkqtbcvTWrP2o2fAroOzb9JEyDXPi1oO",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 240,
+          "prompt_ms": 5172.405,
+          "prompt_per_token_ms": 21.5516875,
+          "prompt_per_second": 46.400078880134096,
+          "predicted_n": 75,
+          "predicted_ms": 75386.798,
+          "predicted_per_token_ms": 1018.7405135135134,
+          "predicted_per_second": 0.9816042326137795
+        }
+      },
+      "wall_seconds": 81.04115563300002,
+      "error": null
+    }
+  ]
+}

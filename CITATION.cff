@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "PhraseLab: reproducible communication-support evaluation tools"
+message: "If you use PhraseLab, please cite the repository and the relevant benchmark version."
+type: software
+authors:
+  - family-names: Mehta
+    given-names: PhraseLab contributors
+repository-code: "https://github.com/mehtama1234/neuro-divergent"
+license: MIT
+version: 0.1.0
+date-released: 2026-09-08
+keywords:
+  - accessibility
+  - communication-support
+  - reproducibility
+  - language-model-evaluation

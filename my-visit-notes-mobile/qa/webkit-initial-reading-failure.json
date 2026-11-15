@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-16T07:18:56.127Z",
+  "passed": false,
+  "engine": "WebKit on Linux",
+  "completed": [
+    "Every supported outcome saves with recovery history",
+    "Conversation selection and concealment preserve privacy",
+    "Exact review download excludes private preparation and answer notes",
+    "Failed save keeps visible words and retry preserves them",
+    "Follow-up draft is kept without recording it as sent",
+    "Next appointment copies only chosen work and preserves the original"
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "56e5e773ca414701e65df81bf1b2f6ab6f37cbcfd80983b950a994d1be1dc255",
+    "app.mjs": "e6ccce6a6daed0f21d148a0c737d14cdf00adbc02192487a42b4d8d1ad5187ef",
+    "model.mjs": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc",
+    "intake.mjs": "707b33f85bc3e7a993a86e0bd93ea04fa3dd0de89e662b3af054d512cf14bb45",
+    "intake-model.mjs": "e5e8c1938dd172e9a9b174d0d42350af11e59b330dd2982c8119bfe649def844",
+    "preparation-model.mjs": "ddebc5b550660c60a09a1ccebb962e2ce3ffe1994ad82adab10e05774047b08d",
+    "recovery-model.mjs": "074d8684b58b1ef39a820d4521758177d361fd489adb7a9cd034506733faa1ce",
+    "recovery-ui.mjs": "67446c1cca54090d5b02f122e085261b7097655a4935fd5a504e555923be5c0f",
+    "followup-record.mjs": "968f49c8881c4958eba84fdd2661bb32ae5f6008b9342947b8c601f8dfb3e7a1",
+    "followup-model.mjs": "0c1c2a6af00ca8525fe2fcb5c6b1f959b2e1eee33d4214b9fe25561693482bef",
+    "followup-ui.mjs": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887",
+    "transfer-record.mjs": "1a272b626042cd1846ce6533756f1cd04613628463e2ccc39b719588dd2d637e",
+    "transfer-model.mjs": "3a35eeedadff56cb4bd29560ef41d2b8176b40ba3c69fb68eec8e3735571cd8d",
+    "transfer-ui.mjs": "5aba8d0d01cafade807ec18bdbec83aa4f916fd3699c948998028a0117509b13",
+    "display.mjs": "9fd973401ae92a48e6889ec67c760d830ede147467d07c20973958dd2ce97932",
+    "install.mjs": "c73c26a2ee3a14b071767bda1786784e7935ba9f8501d2c822d77750277d02b9",
+    "help.html": "72631c13758696c45a93a3637e4c55f228f47610338c42d433478fe4b1ba5507",
+    "after-review-help.html": "94bcd1704f6abc7280a2a11bdaf95d1425ef1e29b5d29370dd544d400bee71fb",
+    "manifest.webmanifest": "555261f7f0c2ce684531782af10f2bde28c222b2b226285c39130db6f13c68bb",
+    "icon.svg": "62159e46d138825c39a4389b258cbdb5bd1d8ecf5901bad1f97d16e27c631821",
+    "icons/icon-180.png": "7bd558e0a65d44254b6027f10b482c7b5c6c7b1f5613ad497a4bae81183361b2",
+    "icons/icon-192.png": "43035e9b067d124088f04257ccb51cf5c75df2c6bcecdef32f2ebd896b9412af",
+    "icons/icon-512.png": "36c8ae6db9a0479ce9e6c79011bbeb987bd3e1cf217902089f5d493ddd8db549",
+    "conversation-ui.mjs": "c75b9e68be5f915f8f35cef9da5e9105b8cb39ebdd7927e5fb62ef3472287660",
+    "journey-ui.mjs": "aa5bcddbce7bb68cb9d17c974c866ac5f13d70cdd27ae1a63f7ff0bb3e536f09",
+    "draft-record.mjs": "3738efbe9d625149b9e1a4c9b460af2f857bc04069bdbe07aa6d4d993584d67e",
+    "draft-model.mjs": "ab39317002c8da18637ddace7c4ca39cf44d8c873aff5c15b2ae807f1cd44733",
+    "draft-ui.mjs": "4f119f9dab5d60e40c5dab729d0a3d792ef7c0d13888ecb5e7aa60020d16b9b2",
+    "next-appointment-model.mjs": "ee8ceda21c690a34d40ae9c027d1639c8b690a2dec85088f1636431897097dba",
+    "next-appointment-ui.mjs": "327820683f7ff223e983f3ddb460b34db1a2ebfca1da34222c7ddebbe2cd1326",
+    "after-review-model.mjs": "137ba80b0187f04fa83cf2f60cf065bd56ca0434d263ddc27af7f765df37a0ba",
+    "platform.mjs": "61a535b979011df139777dbca3e6adf710fc0ccad5a42d4ee5b3018bf413abbe",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "PRD.md": "03014bc1039c67a03043b643df89efad4b845f20c55cdcccd6e4ed601a1ee1a5"
+  },
+  "testSHA256": "a22b102a93f82d7538a43c25154b91176455675d51b9c5a2dbdde0ff43d46e6d",
+  "limits": [
+    "Not Safari, native WKWebView or an iOS simulator",
+    "No native plugins, system file picker, app switcher or print output tested",
+    "No physical keyboard, cutout or device accessibility testing"
+  ],
+  "localDependencyValidation": {
+    "method": "ldd against the actual WPE executables and libgstlibav",
+    "checked": [
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/MiniBrowser",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPEGPUProcess",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPENetworkProcess",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPEWebDriver",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPEWebProcess",
+      "/tmp/my-visit-webkit-libs-FZEs68/root/usr/lib/x86_64-linux-gnu/gstreamer-1.0/libgstlibav.so"
+    ],
+    "systemInstallChanged": false
+  },
+  "browser": "26.0",
+  "failure": {
+    "phase": "large-text",
+    "message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reading').locator(':scope > summary')\u001b[22m\n\u001b[2m    - locator resolved to <summary>Reading choices</summary>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    52 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  }
+}

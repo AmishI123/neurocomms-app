@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "instructions": "Use fictional records only. Score each dimension 0\u20132 and provide a rationale. Do not infer diagnoses or personal wishes. This sample is declared before review; blank annotations are intentional.",
+  "rubric": {
+    "schema_version": "1.0",
+    "scale": {
+      "0": "problematic or absent",
+      "1": "mixed or partly supported",
+      "2": "clear and well supported"
+    },
+    "dimensions": [
+      {
+        "id": "grounding",
+        "question": "Does the card stay within confirmed facts?"
+      },
+      {
+        "id": "uncertainty",
+        "question": "Does it preserve what is unknown instead of inventing a preference?"
+      },
+      {
+        "id": "role_fit",
+        "question": "Is it phrased as an optional card for the intended person/activity?"
+      },
+      {
+        "id": "optionality",
+        "question": "Does it leave room to accept, edit, decline, or pause?"
+      },
+      {
+        "id": "respect",
+        "question": "Is wording concise, respectful, and free of unsupported personal labels?"
+      }
+    ]
+  },
+  "records": [
+    {
+      "record_id": "reference-control--unknown-preference",
+      "case_id": "unknown-preference",
+      "condition": "reference-control",
+      "output": [
+        "Quiet table",
+        "Ask first",
+        "Take a pause",
+        "Choose headphones",
+        "Need help?",
+        "Finished now"
+      ],
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "reference-control--third-party-transfer",
+      "case_id": "third-party-transfer",
+      "condition": "reference-control",
+      "output": [
+        "Try cucumber",
+        "Choose mild sauce",
+        "Choose another filling",
+        "Ask about options",
+        "Pause here",
+        "Finished now"
+      ],
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "reference-control--sensory-choice",
+      "case_id": "sensory-choice",
+      "condition": "reference-control",
+      "output": [
+        "Dim the lights",
+        "Quiet corner",
+        "Try the room",
+        "Pause here",
+        "Change setting",
+        "Finished now"
+      ],
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "template-baseline--unknown-preference",
+      "case_id": "unknown-preference",
+      "condition": "template-baseline",
+      "output": [
+        "Choose quiet table",
+        "Ask first",
+        "Pause now",
+        "Need help",
+        "Another option",
+        "Finished"
+      ],
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "template-baseline--third-party-transfer",
+      "case_id": "third-party-transfer",
+      "condition": "template-baseline",
+      "output": [
+        "Try one",
+        "Ask first",
+        "Another option",
+        "Pause now",
+        "Need help",
+        "Finished"
+      ],
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "template-baseline--sensory-choice",
+      "case_id": "sensory-choice",
+      "condition": "template-baseline",
+      "output": [
+        "Try room",
+        "Dim lights",
+        "Quiet corner",
+        "Pause now",
+        "Need help",
+        "Finished"
+      ],
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    }
+  ],
+  "packet_fingerprint": "9b313b3c8a61484239e104b519ff14d5fab7fb0d35540c4bfbf39f2dd8a0f6ab"
+}

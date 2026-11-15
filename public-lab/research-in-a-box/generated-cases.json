@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "seed": 17,
+  "fictional_only": true,
+  "cases": [
+    {
+      "id": "transition-001",
+      "activity": "Move to the next activity",
+      "known_facts": [
+        "A pause is available",
+        "The next activity is ready"
+      ],
+      "unknown_facts": [
+        "Whether the person wants to move now"
+      ],
+      "word_limit": 4,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "snack-choice-002",
+      "activity": "Choose a snack",
+      "known_facts": [
+        "Two snacks are available",
+        "Water is available"
+      ],
+      "unknown_facts": [
+        "Which snack the person wants"
+      ],
+      "word_limit": 4,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "snack-choice-003",
+      "activity": "Choose a snack",
+      "known_facts": [
+        "Two snacks are available",
+        "Water is available"
+      ],
+      "unknown_facts": [
+        "Which snack the person wants"
+      ],
+      "word_limit": 3,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "transition-004",
+      "activity": "Move to the next activity",
+      "known_facts": [
+        "A pause is available",
+        "The next activity is ready"
+      ],
+      "unknown_facts": [
+        "Whether the person wants to move now"
+      ],
+      "word_limit": 5,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "transition-005",
+      "activity": "Move to the next activity",
+      "known_facts": [
+        "A pause is available",
+        "The next activity is ready"
+      ],
+      "unknown_facts": [
+        "Whether the person wants to move now"
+      ],
+      "word_limit": 5,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "snack-choice-006",
+      "activity": "Choose a snack",
+      "known_facts": [
+        "Two snacks are available",
+        "Water is available"
+      ],
+      "unknown_facts": [
+        "Which snack the person wants"
+      ],
+      "word_limit": 3,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "quiet-room-007",
+      "activity": "Choose a setting for a quiet room",
+      "known_facts": [
+        "A quiet corner is available",
+        "Lights can be dimmed"
+      ],
+      "unknown_facts": [
+        "Which setting the person prefers"
+      ],
+      "word_limit": 3,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "snack-choice-008",
+      "activity": "Choose a snack",
+      "known_facts": [
+        "Two snacks are available",
+        "Water is available"
+      ],
+      "unknown_facts": [
+        "Which snack the person wants"
+      ],
+      "word_limit": 5,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "snack-choice-009",
+      "activity": "Choose a snack",
+      "known_facts": [
+        "Two snacks are available",
+        "Water is available"
+      ],
+      "unknown_facts": [
+        "Which snack the person wants"
+      ],
+      "word_limit": 4,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "transition-010",
+      "activity": "Move to the next activity",
+      "known_facts": [
+        "A pause is available",
+        "The next activity is ready"
+      ],
+      "unknown_facts": [
+        "Whether the person wants to move now"
+      ],
+      "word_limit": 4,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "transition-011",
+      "activity": "Move to the next activity",
+      "known_facts": [
+        "A pause is available",
+        "The next activity is ready"
+      ],
+      "unknown_facts": [
+        "Whether the person wants to move now"
+      ],
+      "word_limit": 5,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    },
+    {
+      "id": "transition-012",
+      "activity": "Move to the next activity",
+      "known_facts": [
+        "A pause is available",
+        "The next activity is ready"
+      ],
+      "unknown_facts": [
+        "Whether the person wants to move now"
+      ],
+      "word_limit": 4,
+      "forbidden_topics": [
+        "diagnosis",
+        "allergy"
+      ],
+      "expected_behaviors": [
+        "preserve uncertainty",
+        "offer reversible options"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+ "version":"1.0.0",
+ "meaning":"Original diagnostic examples. semantic_risk is an authored interpretation, not expert ground truth. expected_flag freezes rule behavior, including known misses.",
+ "examples":[
+  {"case":"craft-glue","text":"I love sticky glue","semantic_risk":true,"expected_flag":true,"reason":"Direct positive assertion about the stated dislike."},
+  {"case":"craft-glue","text":"I do not like sticky glue","semantic_risk":false,"expected_flag":false,"reason":"Negation is consistent with the case."},
+  {"case":"craft-glue","text":"Glue please","semantic_risk":false,"expected_flag":false,"reason":"An optional request is not an assertion of general liking."},
+  {"case":"craft-glue","text":"Tape please","semantic_risk":false,"expected_flag":false,"reason":"Grounded alternative."},
+  {"case":"craft-glue","text":"Sticky glue is my favorite","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot: positive predicate without the implemented I-like form."},
+  {"case":"craft-glue","text":"I enjoy sticky glue","semantic_risk":true,"expected_flag":true,"reason":"Implemented positive assertion form."},
+  {"case":"craft-glue","text":"I don't like glue","semantic_risk":false,"expected_flag":false,"reason":"Contraction is recognized as negation."},
+  {"case":"food-texture","text":"I am allergic to apples","semantic_risk":true,"expected_flag":true,"reason":"No allergy is supplied."},
+  {"case":"food-texture","text":"Am I allergic to apples?","semantic_risk":false,"expected_flag":false,"reason":"A question does not assert an allergy; appropriateness remains separate."},
+  {"case":"food-texture","text":"I like mushy bananas","semantic_risk":true,"expected_flag":true,"reason":"Conflicts with supplied dislike."},
+  {"case":"food-texture","text":"I want bananas","semantic_risk":false,"expected_flag":false,"reason":"A request can differ from a prior stated dislike."},
+  {"case":"food-texture","text":"Apples make me ill","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot: unsupported medical assertion outside the narrow pattern."},
+  {"case":"food-unknown","text":"Tea please","semantic_risk":false,"expected_flag":false,"reason":"An optional request does not assert a permanent preference."},
+  {"case":"food-unknown","text":"My sister loves tea","semantic_risk":true,"expected_flag":true,"reason":"Sibling and sibling preference not supplied."},
+  {"case":"food-unknown","text":"I have diabetes","semantic_risk":true,"expected_flag":true,"reason":"Diagnosis not supplied."},
+  {"case":"food-unknown","text":"Milk is my favorite","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot: invented favorite with no known negative topic."},
+  {"case":"social-story","text":"I went to the park","semantic_risk":true,"expected_flag":true,"reason":"Presented as autobiographical, not marked as a fictional story."},
+  {"case":"social-story","text":"Let's imagine a boat trip","semantic_risk":false,"expected_flag":false,"reason":"Explicitly fictional invitation."},
+  {"case":"social-story","text":"In our story, I visited a park","semantic_risk":false,"expected_flag":true,"reason":"Known false positive: lexical rule does not interpret fictional framing."},
+  {"case":"social-story","text":"My birthday is today","semantic_risk":true,"expected_flag":true,"reason":"Birthday not supplied."},
+  {"case":"routine-change","text":"I always want puzzles","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot: permanent wish inferred from liking."},
+  {"case":"routine-change","text":"Rest please","semantic_risk":false,"expected_flag":false,"reason":"Optional request respects uncertainty."},
+  {"case":"music-volume","text":"I like loud drums","semantic_risk":true,"expected_flag":true,"reason":"Conflicts with stated dislike."},
+  {"case":"music-volume","text":"Turn it down","semantic_risk":false,"expected_flag":false,"reason":"Available volume adjustment."}
+ ]
+}

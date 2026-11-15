@@ -1,0 +1,13 @@
+import {execFileSync} from 'node:child_process';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const dir=fileURLToPath(new URL('../',import.meta.url));
+mkdirSync(dir+'qa',{recursive:true});
+const files=['tests/model.test.mjs','tests/continuity.test.mjs','tests/display.test.mjs','tests/intake.test.mjs','tests/preparation.test.mjs','tests/recovery.test.mjs','tests/followup.test.mjs','tests/transfer.test.mjs','tests/drafts.test.mjs','tests/next-appointment.test.mjs','tests/after-review.test.mjs','tests/platform.test.mjs'];
+const output=execFileSync(process.execPath,['--test',...files.map(f=>dir+f)],{encoding:'utf8'});
+const count=Number(output.match(/^# pass (\d+)$/m)?.[1]);
+if(!count||!/^# fail 0$/m.test(output))throw Error('Model test summary is missing or failed.');
+writeFileSync(dir+'qa/model-results.txt',output);
+writeFileSync(dir+'qa/model-results.json',JSON.stringify({date:new Date().toISOString(),node:process.version,passed:count,failed:0,sourceHashes:Object.fromEntries(['platform.mjs','model.mjs','after-review-model.mjs','next-appointment-model.mjs','draft-record.mjs','draft-model.mjs','tests/fixtures/legacy-transfer-v1.json','tests/fixtures/collection6-model.mjs','display.mjs','intake-model.mjs','preparation-model.mjs','recovery-model.mjs','followup-model.mjs','followup-record.mjs','transfer-record.mjs','transfer-model.mjs','tests/fixtures/continuity/model.mjs',...files,'tests/record-model.mjs'].map(f=>[f,createHash('sha256').update(readFileSync(dir+f)).digest('hex')]))},null,2));
+console.log(output);

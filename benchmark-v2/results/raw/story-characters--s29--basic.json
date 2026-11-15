@@ -1,0 +1,65 @@
+{
+  "id": "story-characters--s29--basic",
+  "case_id": "story-characters",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T15:54:31.125054+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Anya, you said you like foxes. The story is fictional.\",\n    \"Anya, you said you like foxes. The story is fictional.\",\n    \"Anya, you said you like foxes. The story is fictional.\",\n    \"Anya, you said you like foxes. The story is fictional.\",\n    \"Anya, you said you like foxes. The story is fictional.\",\n    \"Anya, you said you like foxes. The story is fictional.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788882871,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 230,
+      "total_tokens": 342,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-KSsGhaUlI5lVk4YMaXrX7JtD0TlsVQz4",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 230,
+      "prompt_ms": 3599.393,
+      "prompt_per_token_ms": 15.649534782608695,
+      "prompt_per_second": 63.89966308208078,
+      "predicted_n": 112,
+      "predicted_ms": 3960.417,
+      "predicted_per_token_ms": 35.679432432432435,
+      "predicted_per_second": 28.027351665241312
+    }
+  },
+  "wall_seconds": 7.581566592001764,
+  "error": null
+}

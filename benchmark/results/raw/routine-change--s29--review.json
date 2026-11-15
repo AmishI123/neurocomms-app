@@ -1,0 +1,68 @@
+{
+  "id": "routine-change--s29--review",
+  "case_id": "routine-change",
+  "condition": "review",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T06:58:57.363189+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": "routine-change--s29--context",
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 1029,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Isha\", \"age\": 12, \"communication_style\": \"short phrases\"}, \"activity\": \"Move from reading to either a puzzle table or a rest area.\", \"facts\": [\"Isha has said she likes puzzles.\", \"Isha asked for rest earlier, but her preference now is unknown.\", \"Both destinations are available.\", \"No emotion, diagnosis or need to comply has been specified.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Isha prefers puzzles, so she likes them.\\\",\\n    \\\"Isha asked for rest earlier, but her current preference is unknown.\\\",\\n    \\\"Both destinations are available now.\\\",\\n    \\\"No emotion, diagnosis, or need has been specified.\\\",\\n    \\\"Isha may have other requests or comments.\\\",\\n    \\\"Isha might be asking to stop or leave.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Isha likes puzzles, so she prefers them.\",\n    \"Isha asked for rest earlier, but her current preference is unknown.\",\n    \"Both destinations are available now.\",\n    \"No emotion, diagnosis, or need has been specified.\",\n    \"Isha may have other requests or comments.\",\n    \"Isha might be asking to stop or leave.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850737,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 91,
+      "prompt_tokens": 405,
+      "total_tokens": 496,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-qOLRX1wHYr4EyAEa5881kTa19CIk4u6t",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 405,
+      "prompt_ms": 6038.809,
+      "prompt_per_token_ms": 14.91063950617284,
+      "prompt_per_second": 67.06620461087608,
+      "predicted_n": 91,
+      "predicted_ms": 6587.06,
+      "predicted_per_token_ms": 73.18955555555556,
+      "predicted_per_second": 13.663151694382622
+    }
+  },
+  "wall_seconds": 12.643425374999424,
+  "error": null
+}

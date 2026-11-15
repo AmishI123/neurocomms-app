@@ -1,0 +1,15 @@
+{
+  "reviewers": [
+    "rater-a",
+    "rater-b"
+  ],
+  "paired_records": 2,
+  "kappa": {
+    "grounding": 1.0,
+    "uncertainty": 1.0,
+    "role_fit": 0.0,
+    "optionality": 1.0,
+    "respect": 1.0
+  },
+  "interpretation": "Agreement is descriptive and depends on the reviewed sample; it is not clinical validation."
+}

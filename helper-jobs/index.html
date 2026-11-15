@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F3ECE1" />
+  <title>Helper Jobs · Sunday outings, one clear job at a time</title>
+  <meta name="description" content="Helper Jobs gives Pragnya adults a real job at kids’ Sunday outings: picture steps, a volunteer close by, and help one tap away." />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="app.webmanifest" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Helper Jobs" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="experience.css" />
+  <link rel="stylesheet" href="theme-atlas.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="native.js"></script>
+</head>
+<body>
+  <aside class="public-demo-banner" aria-label="Early test notice">Early product test · Use made-up names only · Kid details stay on the outing’s own devices</aside>
+  <a class="skip-link" href="#app">Skip to the app</a>
+  <header>
+    <a class="brand" href="#home" data-action="home"><span class="mark" aria-hidden="true">h.</span> Helper Jobs</a>
+    <span class="header-status"><span class="badge">Works without internet</span><span class="badge">Made-up examples only</span></span>
+    <a class="header-link" href="presentation/">Slides and handout</a>
+  </header>
+  <main id="app" tabindex="-1">
+    <div class="alert-banner" id="alert-banner" role="status" aria-live="polite" hidden></div>
+    <div class="mirror-banner" id="mirror-banner" hidden><span class="h-icon" data-icon="device-tablet"></span><span><b>Helper tablet</b> · linked to the main tablet. Lead tools are on the main tablet.</span><span class="mirror-state" id="mirror-state" role="status">Connecting…</span></div>
+
+    <section id="home" class="screen active landing" aria-labelledby="home-title">
+      <div class="landing-hero">
+        <div class="landing-hero-text">
+          <p class="landing-kicker">What this is</p>
+          <h1 id="home-title">Helper Jobs gives Pragnya adults a real job at kids’ Sunday outings, with a volunteer always close by.</h1>
+          <p class="landing-lede">Pick your picture, pick a job, and follow one picture step at a time. Help is one tap away, and stopping is always okay. Nothing happens unless you tap.</p>
+          <div class="landing-actions">
+            <button type="button" class="primary" data-action="helper-entry">I’m a helper <span aria-hidden="true">→</span></button>
+            <button type="button" class="secondary" data-action="lead-entry">I’m the volunteer lead</button>
+          </div>
+          <p class="landing-try-note">One shared tablet. No logins. Kids never use it.</p>
+          <aside class="install-card" id="install-card" hidden aria-labelledby="install-title"></aside>
+          <p class="lead-hint">Volunteer lead: hold the <b>h.</b> at the top for 2 seconds.</p>
+          <ul class="landing-parts" aria-label="What makes it work">
+            <li><a href="#feat-steps"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21c.8-4 3.6-6 7-6s6.2 2 7 6"/></svg><b>Pick your picture</b><small>No password. Tap your photo.</small></a></li>
+            <li><a href="#feat-steps"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M8 9l2 2 4-4M8 15h8"/></svg><b>One step at a time</b><small>A picture, a few words, read aloud</small></a></li>
+            <li><a href="#feat-help"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><b>Help is one tap</b><small>Same Help button on every screen</small></a></li>
+            <li><a href="#feat-trust"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg><b>Trust grows slowly</b><small>New jobs when a coordinator says ready</small></a></li>
+          </ul>
+          <p class="landing-voice"><a href="#feat-help"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg>Every step can be read aloud. Nobody is rushed.</a></p>
+        </div>
+        <svg class="landing-art" viewBox="0 0 440 400" aria-hidden="true" focusable="false">
+          <path class="la-line" d="M210 96 C 228 100, 222 120, 236 122"/><path class="la-line" d="M318 170 C 300 214, 250 204, 214 232"/><path class="la-line" d="M216 304 C 226 304, 228 302, 238 302"/>
+          <g class="la-card" transform="translate(14 18) rotate(-2)"><rect width="196" height="104"/><rect class="la-top" width="196" height="5"/><text class="la-kick" x="14" y="26">1 · WHO ARE YOU?</text><circle cx="31" cy="60" r="17" class="hj-avatar"/><text class="hj-avatar-letter" x="31" y="66" text-anchor="middle">A</text><text class="la-title" x="58" y="58">Asha</text><text class="la-small" x="58" y="78">Level 1 helper</text></g>
+          <g class="la-card" transform="translate(234 66) rotate(2)"><rect width="192" height="104"/><text class="la-kick" x="14" y="24">2 · PICK A JOB</text><text class="la-title" x="14" y="52">Snack Helper</text><rect class="la-note" x="14" y="64" width="164" height="28"/><text class="la-k2" x="24" y="82">YOUR JOB NOW · WITH ELI</text></g>
+          <g class="la-card la-ink" transform="translate(18 214) rotate(1.5)"><rect width="196" height="116"/><text class="la-kick" x="14" y="24">3 · ONE STEP AT A TIME</text><text class="la-title" x="14" y="52">Clean your hands</text><text class="la-k2" x="14" y="74">STEP 1 OF 7</text><text class="la-body" x="14" y="94">Use wipes or gel.</text></g>
+          <g class="la-card" transform="translate(238 236) rotate(-2)"><rect width="190" height="132"/><text class="la-kick" x="14" y="24">4 · DONE</text><circle cx="30" cy="54" r="14"/><path class="la-tick" d="M24.5 54l3.5 3.5 7-7"/><text class="la-title" x="52" y="60">Star earned</text><rect class="la-pill" x="14" y="88" width="56" height="22" rx="11"/><text class="la-pt" x="42" y="103" text-anchor="middle">Happy</text><rect class="la-pill" x="76" y="88" width="50" height="22" rx="11"/><text class="la-pt" x="101" y="103" text-anchor="middle">Okay</text><rect class="la-pill" x="132" y="88" width="46" height="22" rx="11"/><text class="la-pt" x="155" y="103" text-anchor="middle">Hard</text></g>
+        </svg>
+      </div>
+
+      <section class="landing-problems" aria-labelledby="landing-problems-title">
+        <h2 class="landing-subhead" id="landing-problems-title">What gets in the way</h2>
+        <p class="lp-lead">Four moments on a Sunday outing where helping gets hard. The hard part is the moment, not the person.</p>
+        <ol aria-label="Four hard moments" tabindex="0">
+          <li id="feat-steps"><p class="lp-k">Having a real role</p><h3>“Help out” is not a job</h3><p class="lp-pain">Without a clear task, it is easy to stand at the side, or to be handed jobs that are not real.</p><p class="lp-fix"><b>Helper Jobs:</b> six real jobs, each with a start, a middle and a done.</p></li>
+          <li><p class="lp-k">Following the steps</p><h3>Spoken instructions are hard to hold on to</h3><p class="lp-pain">In a busy park, instructions come fast and all at once.</p><p class="lp-fix"><b>Helper Jobs:</b> one picture step per screen, a few words, and a button that reads it aloud.</p></li>
+          <li><p class="lp-k">Keeping kids safe</p><h3>The lead tracks who is with which kid</h3><p class="lp-pain">Snacks, allergies, roads and bathroom breaks all need an adult’s decision.</p><p class="lp-fix"><b>Helper Jobs:</b> kid jobs need a named volunteer nearby. A “no snack” card can’t be changed on the day.</p></li>
+          <li id="feat-help"><p class="lp-k">Getting help</p><h3>When something goes wrong, help has to be quick</h3><p class="lp-pain">A child runs off, or a helper feels unsure, and there is no time to find the words.</p><p class="lp-fix"><b>Helper Jobs:</b> a big Help button on every screen, and Stop is always okay. It reaches the lead’s phone in about a second, and stays there until they answer.</p></li>
+        </ol>
+        <p class="lp-energy" id="feat-trust"><b>Under all of it, dignity:</b> helpers earn stars and badges for real work, and take on new jobs only when a coordinator says they are ready. <span>Helpers are never alone with a kid, and never give bathroom or changing help.</span></p>
+        <div class="lp-how"><p class="lp-how-short"><b>What this can’t tell us yet:</b> no outing has used Helper Jobs. Next: three Sundays with three to five adult helpers, and listening to what makes the day easier.</p></div>
+      </section>
+
+      <section class="landing-more" aria-labelledby="landing-more-title">
+        <div class="lm-head"><div><h2 class="landing-subhead" id="landing-more-title">Built for the whole day</h2><p class="lp-lead">From who is here in the morning to every kid back at the end, and what to do if the tablet stops.</p></div><div class="hj-art" data-art="tablets"></div></div>
+        <ul class="lm-grid"><li><div class="lm-top"><span class="lm-icon" data-icon="coffee"></span><p class="lm-k">On the day</p></div><h3>Break reminders</h3><p>After 20 minutes on one job, the board and the lead’s phone say “offer a break”.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="users"></span><p class="lm-k">Wrap-up</p></div><h3>Every kid back</h3><p>The outing can’t finish until every kid is marked back with a volunteer or home with family.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="language"></span><p class="lm-k">For every helper</p></div><h3>Their language, their pace</h3><p>Steps and read aloud in English, Hindi or Spanish. Bigger text, stronger contrast, a slower voice.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="device-tablet"></span><p class="lm-k">More devices</p></div><h3>One outing, many tablets</h3><p>A second helper tablet, the lead’s phone and a laptop backup. All locked before anything is sent.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="printer"></span><p class="lm-k">If the tablet stops</p></div><h3>Paper backup</h3><p>Printed job cards with the same pictures, and a sheet for matches and the head count.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="heart"></span><p class="lm-k">Families</p></div><h3>Only with a yes</h3><p>A family page with one helper’s stars, badges and certificates, in English, Hindi or Spanish. Photos only after a yes.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="calendar-event"></span><p class="lm-k">The day plan</p></div><h3>Now and next</h3><p>Picture steps for the day with times. Helpers see what is happening now and what comes next.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="pencil-check"></span><p class="lm-k">For the coordinator</p></div><h3>Make a job for a new place</h3><p>A zoo or a library: picture steps, a real photo of the place, locked until a helper is ready.</p></li><li><div class="lm-top"><span class="lm-icon" data-icon="history"></span><p class="lm-k">After each Sunday</p></div><h3>One page to learn from</h3><p>Jobs done, how fast help came, how each job felt and what people said. No kid names.</p></li></ul>
+      </section>
+
+      <h2 class="landing-subhead">See it in action</h2><p class="landing-demo-note">Pictures of the app. Swipe to see all four.</p>
+      <ol class="landing-demo" aria-label="Four screens from the app" tabindex="0">
+        <li><div class="phone" aria-hidden="true"><div class="ph-bar"><span>Helper Jobs</span><em class="ph-picture-tag">Picture</em></div><div class="ph-body"><p class="ph-k">HELPER · PICK A JOB</p><p class="ph-title">Snack Helper</p><p class="ph-small">Level 1 · next to a volunteer</p><div class="ph-paused"><b>Your job now</b><em>with Eli</em></div><p class="ph-btn">Start</p></div></div><strong>Pick a job</strong><span>Only jobs the coordinator has approved. Kid jobs start when the lead sets them up.</span></li>
+        <li><div class="phone" aria-hidden="true"><div class="ph-bar"><span>Helper Jobs</span><em class="ph-picture-tag">Picture</em></div><div class="ph-body"><p class="ph-k">STEP 3 OF 7</p><p class="ph-title">Check the snack card</p><p class="ph-note">Snack okay for Eli</p><p class="ph-small">Snack okay, or no snack. Never guess.</p><p class="ph-btn">Next →</p></div></div><strong>One step at a time</strong><span>A picture and a few words, with a button that reads the step aloud.</span></li>
+        <li><div class="phone" aria-hidden="true"><div class="ph-bar"><span>Helper Jobs</span><em class="ph-picture-tag">Picture</em></div><div class="ph-body"><p class="ph-k">LEAD’S PHONE</p><div class="ph-paused ph-red"><b>Asha needs you</b><em>Snack Helper · Eli</em></div><p class="ph-btn">I’m here</p><p class="ph-small">Stays until you answer.</p></div></div><strong>Help reaches the lead’s phone</strong><span>Help and Stop reach the lead’s phone in about a second and stay until the lead taps “I’m here”.</span></li>
+        <li><div class="phone" aria-hidden="true"><div class="ph-bar"><span>Helper Jobs</span><em class="ph-picture-tag">Picture</em></div><div class="ph-body"><p class="ph-k">JOB COMPLETE</p><p class="ph-title">You showed up for someone.</p><p class="ph-reacts"><span>Happy</span><span>Okay</span><span>Hard</span></p><div class="ph-paused"><b>Star earned</b><em>One star for helping.</em></div></div></div><strong>Done, with a star</strong><span>Pick how it felt. Five jobs of one kind earn a badge.</span></li>
+      </ol>
+
+      <div class="landing-facts">
+        <div class="landing-fact"><h2>Where kids’ details go</h2><p>They stay with the coordinator on the main tablet. Helpers see only a first name, a picture letter and up to three tips. A paired phone or second tablet gets first names, jobs and alerts, locked on the tablet first. Photos never leave the main tablet.</p></div>
+        <div class="landing-fact landing-fact-not"><h2>What it is not</h2><p>It does not replace a volunteer, and it does not diagnose anything. Helpers are still told to find their volunteer when they press Help, because a phone can be in a pocket.</p></div>
+      </div>
+      <p class="landing-note">An early test version. Every person and example in it is made up. <a href="presentation/">Slides and handout</a> <a href="https://mehtama1234.github.io/ASDRP-Neuroscience-Portfolio/tools.html">The research behind it: From neurons to next steps</a></p>
+    </section>
+
+    <section id="helper-who" class="screen" aria-labelledby="helper-title">
+      <div class="hj-heading"><button class="back-button" data-action="home">← <span>Back</span></button><p class="eyebrow">Helper · Step 1 of 2</p><h1 id="helper-title">Who are you today?</h1><p class="hj-sub">Tap your picture. You don’t need a password.</p></div>
+      <div class="person-grid" id="helper-list"></div>
+      <button class="button-stop" data-action="home">I want to stop</button>
+    </section>
+
+    <section id="helper-jobs" class="screen" aria-labelledby="jobs-title">
+      <div class="hj-heading"><button class="back-button" data-action="helper-entry">← <span data-t="Back">Back</span></button><p class="eyebrow">Helper · Step 2 of 2</p><h1 id="jobs-title" data-t="Pick a job">Pick a job</h1><p class="hj-sub" id="helper-greeting">Choose one picture. Your volunteer is nearby.</p></div>
+      <div class="day-strip" id="day-strip-jobs" aria-label="The day plan"></div>
+      <div class="job-grid" id="job-list"></div>
+      <button class="help-button" data-action="help" aria-label="Ask the volunteer for help" data-t="Help">Help</button>
+      <button class="button-stop" data-action="home" data-t="I want to stop">I want to stop</button>
+    </section>
+
+    <section id="helper-task" class="screen" aria-labelledby="task-title">
+      <div class="task-top"><button class="back-button" data-action="helper-jobs">← <span data-t="Jobs">Jobs</span></button><div class="task-progress" id="task-progress">Step 1 of 4</div></div>
+      <div class="task-card" id="task-card"></div>
+      <div class="task-actions">
+        <button type="button" class="secondary button-read" data-action="read"><span class="hj-read-icon" aria-hidden="true"></span><span data-t="Read aloud">Read aloud</span></button>
+        <button type="button" class="primary button-next" data-action="next"><span data-t="Next">Next</span> <span aria-hidden="true">→</span></button>
+      </div>
+      <button class="help-button" data-action="help" aria-label="Ask the volunteer for help" data-t="Help">Help</button>
+      <div class="task-exits"><button class="button-break" data-action="need-break"><span class="h-icon" data-icon="coffee"></span><span data-t="I need a break">I need a break</span></button><button class="button-stop" data-action="stop-task" data-t="I want to stop">I want to stop</button></div>
+    </section>
+
+    <section id="helper-break" class="screen" aria-labelledby="break-title">
+      <div class="break-card"><div class="break-art" aria-hidden="true" data-icon="coffee"></div><h1 id="break-title" data-t="Take a break">Take a break</h1><p class="hj-sub" data-t="Sit with your volunteer. Have some water. Your job will wait for you.">Sit with your volunteer. Have some water. Your job will wait for you.</p><button type="button" class="primary" data-action="break-done" data-t="I’m ready">I’m ready</button><p class="break-note" data-t="Your lead can see you are taking a break.">Your lead can see you are taking a break.</p></div>
+    </section>
+
+    <section id="helper-practice-help" class="screen" aria-labelledby="practice-help-title">
+      <div class="hj-heading"><button class="back-button" data-action="helper-jobs">← <span data-t="Back">Back</span></button><p class="eyebrow" data-t="Try it here. Nothing is sent.">Try it here. Nothing is sent.</p><h1 id="practice-help-title" data-t="Practise the Help button">Practise the Help button</h1><p class="hj-sub" id="practice-help-text" data-t="This is the Help button. It is in the same place on every screen.">This is the Help button. It is in the same place on every screen.</p></div>
+      <div class="practice-help"><p class="practice-help-try" id="practice-help-try" data-t="Press it now to try. This time nothing is sent.">Press it now to try. This time nothing is sent.</p><div class="practice-arrow" aria-hidden="true"></div></div>
+      <div class="practice-help-done" id="practice-help-done" hidden><div class="done-mark" aria-hidden="true" data-icon="circle-check"></div><p data-t="That’s it! When you press Help for real, your lead sees it and a volunteer comes to you.">That’s it! When you press Help for real, your lead sees it and a volunteer comes to you.</p><button type="button" class="primary" data-action="helper-jobs" data-t="Back to my jobs">Back to my jobs</button></div>
+      <button class="help-button practice" data-action="practice-help-press" aria-label="Practise pressing Help" data-t="Help">Help</button>
+    </section>
+
+    <section id="helper-done" class="screen" aria-labelledby="done-title">
+      <div class="done-mark" aria-hidden="true"></div>
+      <p class="eyebrow" id="done-eyebrow">Job complete</p>
+      <h1 id="done-title">You showed up for someone.</h1>
+      <p class="hj-sub" data-t="How did it feel?">How did it feel?</p>
+      <div class="smiley-row" role="group" aria-label="How did the job feel?">
+        <button type="button" data-smiley="happy"><span class="smiley-icon" data-icon="mood-happy"></span><small data-t="Happy">Happy</small></button>
+        <button type="button" data-smiley="okay"><span class="smiley-icon" data-icon="mood-neutral"></span><small data-t="Okay">Okay</small></button>
+        <button type="button" data-smiley="hard"><span class="smiley-icon" data-icon="mood-sad"></span><small data-t="Hard">Hard</small></button>
+      </div>
+      <div class="badge-earned" id="badge-earned" hidden><span class="badge-star" aria-hidden="true"></span><div><strong id="badge-title">Star earned</strong><small id="badge-description">You earned a star for helping.</small></div></div>
+      <div class="wish-box" id="wish-box"></div>
+      <div class="hj-actions"><button type="button" class="primary" data-action="helper-jobs" data-t="Choose another job">Choose another job</button><button type="button" class="secondary" data-action="home" data-t="Finish for today">Finish for today</button></div>
+    </section>
+
+    <section id="lead-pin" class="screen" aria-labelledby="pin-title">
+      <div class="hj-heading"><button class="back-button" data-action="home">← <span>Back</span></button><p class="eyebrow">Volunteer lead</p><h1 id="pin-title">This screen is for the volunteer lead.</h1><p class="hj-sub" id="pin-intro">Enter the 4-digit lead PIN to set up today’s outing.</p></div>
+      <div class="pin-panel"><div class="pin-dots" id="pin-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="pin-pad" id="pin-pad"></div><p class="pin-hint" id="pin-hint" aria-live="polite"></p></div>
+    </section>
+
+    <section id="lead-setup-outing" class="screen" aria-labelledby="outing-title">
+      <div class="hj-heading"><p class="eyebrow">Volunteer lead · Set up today</p><h1 id="outing-title">Who is here today?</h1><p class="hj-sub">Set the place, date and lead, and tick who came, before making matches.</p></div>
+      <form class="setup-form" id="outing-form">
+        <label>Place<input id="outing-place" name="place" required /></label>
+        <label>Date<input id="outing-date" name="date" type="date" required /></label>
+        <label>Lead volunteer<input id="outing-lead" name="leadVolunteer" required /></label>
+        <div class="tick-all"><button type="button" class="button button-secondary" data-action="tick-all">Tick everyone</button><button type="button" class="button-stop" data-action="tick-none">Untick everyone</button><small>Ticks start as last Sunday’s.</small></div>
+        <fieldset><legend>Helpers here today</legend><div id="outing-helpers"></div></fieldset>
+        <fieldset><legend>Kids here today</legend><div id="outing-kids"></div></fieldset>
+        <fieldset><legend>Volunteers here today</legend><div id="outing-volunteers"></div></fieldset>
+        <fieldset class="schedule-edit"><legend>The day plan <small>(helpers see “now” and “next”)</small></legend><div id="outing-schedule"></div><button type="button" class="button button-secondary" data-action="schedule-add">Add a part of the day</button></fieldset>
+        <button class="primary" type="submit">Start live board</button>
+      </form>
+    </section>
+
+    <section id="lead-board" class="screen" aria-labelledby="board-title">
+      <div class="hj-heading"><button class="back-button" data-action="home">← <span>Exit lead mode</span></button><p class="eyebrow">Volunteer lead · Live board</p><h1 id="board-title">Sunday at Pragnya Park</h1><p class="hj-sub">Keep an eye on everyone. Help and Stop stay here until you answer them.</p></div>
+      <div class="board-summary">
+        <div><strong id="board-helper-count">3</strong><span>helpers today</span></div>
+        <div><strong id="board-job-count">0</strong><span>on a job</span></div>
+        <div class="alert-summary"><strong id="board-alert-count">0</strong><span>need you</span></div>
+      </div>
+      <form class="note-form" id="help-note-form" hidden aria-labelledby="help-note-title">
+        <h2 id="help-note-title" class="with-icon"><span class="h-icon" data-icon="notes"></span>What happened? <small>Optional</small></h2>
+        <p class="hj-sub">One or two lines for the coordinator. Only the coordinator sees this. Facts only, no blame.</p>
+        <label class="sr-only" for="help-note-text">Note about this Help</label><textarea id="help-note-text" maxlength="280" rows="2" placeholder="Eli wanted to go to the swings. Jordan walked over with them."></textarea>
+        <div class="hj-actions"><button type="submit" class="primary">Save note</button><button type="button" class="secondary" data-action="skip-note">Skip</button></div>
+      </form>
+      <section class="day-plan" id="day-plan" aria-label="The day plan"></section>
+      <ul class="board-notes" id="board-notes"></ul>
+      <div class="lead-board" id="lead-board-list"></div>
+      <div class="lead-tools">
+        <button type="button" class="primary" data-action="lead-setup"><span class="h-icon" data-icon="user-check"></span>Make assignment</button>
+        <button type="button" class="secondary" data-action="snacks"><span class="h-icon" data-icon="apple"></span>Snack check</button>
+        <button type="button" class="secondary" data-action="wrap"><span class="h-icon" data-icon="checklist"></span>Wrap up outing</button>
+        <button type="button" class="secondary" data-action="feedback"><span class="h-icon" data-icon="message-circle"></span>Volunteer feedback</button>
+        <button type="button" class="secondary" data-action="coordinator"><span class="h-icon" data-icon="shield-check"></span>Coordinator tools</button>
+        <button type="button" class="secondary" data-action="phone-pair"><span class="phone-dot" id="phone-dot" aria-hidden="true"></span><span class="h-icon" data-icon="device-mobile"></span>Lead’s phone</button>
+        <button type="button" class="secondary" data-action="tablets-pair"><span class="phone-dot" id="tablets-dot" aria-hidden="true"></span><span class="h-icon" data-icon="device-tablet"></span>More tablets</button>
+      </div>
+    </section>
+
+    <section id="lead-phone-pair" class="screen" aria-labelledby="pair-title">
+      <div class="hj-top"><div class="hj-heading"><button class="back-button" data-action="pair-back">← <span id="pair-back-label">Live board</span></button><p class="eyebrow" id="pair-eyebrow">Volunteer lead · Lead’s phone</p><h1 id="pair-title">See Help on your own phone.</h1><p class="hj-sub" id="pair-sub">Help and Stop will also show on your phone, and “I’m here” on the phone closes them here. You can also make matches and mark who is here from the phone. A second lead can scan the same code. The board is locked on this tablet before it is sent: the server cannot read names.</p></div><div class="hj-art" id="pair-art" data-art="phone"></div></div>
+      <div class="pair-panel">
+        <div id="pair-start"><button type="button" class="primary" data-action="phone-link">Make a pairing code</button><p class="hj-privacy">Needs the internet on the tablet and the phone. Without it, the tablet keeps working as before.</p></div>
+        <div id="pair-ready" hidden>
+          <div class="pair-qr" id="pair-qr" role="img" aria-label="Pairing code for the lead’s phone"></div>
+          <div class="pair-text">
+            <p class="eyebrow" id="pair-scan">Scan with the lead’s phone camera</p>
+            <p class="pair-status" id="pair-status" role="status">Waiting for the phone…</p>
+            <p class="hj-sub" id="pair-key-note">Or open this link on the phone. Treat it like a key: only the lead should have it.</p>
+            <div class="hj-actions"><button type="button" class="secondary" data-action="phone-copy">Copy the link</button><button type="button" class="button-stop" data-action="phone-unlink" id="pair-stop">Stop sending to the phone</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lead-setup" class="screen" aria-labelledby="setup-title">
+      <div class="hj-heading"><button class="back-button" data-action="lead-board">← <span>Live board</span></button><p class="eyebrow">Volunteer lead · Assignment</p><h1 id="setup-title">Make a safe match.</h1><p class="hj-sub">A job with a kid cannot start without a named volunteer nearby.</p></div>
+      <form class="setup-form" id="assignment-form">
+        <label>Helper<select id="assignment-helper" name="assignment-helper"></select></label>
+        <label>Kid<select id="assignment-kid" name="assignment-kid"></select></label>
+        <label>Job<select id="assignment-job" name="assignment-job"></select></label>
+        <label>Nearby volunteer<select id="assignment-volunteer" name="assignment-volunteer"></select></label>
+        <button class="primary" type="submit">Save assignment</button>
+      </form>
+      <p class="hj-privacy">Helpers see only the kid’s first name, picture letter and up to three safe tips.</p>
+    </section>
+
+    <section id="coordinator-pin" class="screen" aria-labelledby="coordinator-pin-title">
+      <div class="hj-heading"><button class="back-button" data-action="lead-board">← <span>Back</span></button><p class="eyebrow">Coordinator</p><h1 id="coordinator-pin-title">Coordinator check-in</h1><p class="hj-sub" id="coordinator-pin-intro">Enter the coordinator PIN to view sensitive records.</p></div>
+      <form class="setup-form" id="coordinator-form">
+        <label><span id="coordinator-pin-label-text">Coordinator PIN</span><input id="coordinator-pin-input" inputmode="numeric" type="password" minlength="4" maxlength="4" autocomplete="off" required /></label>
+        <label id="coordinator-confirm-label" hidden>Type it again<input id="coordinator-pin-confirm" inputmode="numeric" type="password" minlength="4" maxlength="4" autocomplete="off" /></label>
+        <label id="coordinator-recovery-label" hidden>Recovery words <small>(optional, at least 8 letters). Write them down: they let you choose a new PIN if you forget it.</small><input id="coordinator-recovery" type="password" autocomplete="new-password" /></label>
+        <button class="primary" type="submit">Open coordinator tools</button>
+        <button type="button" class="button-stop" data-action="forgot-pin" id="forgot-pin">Forgot the coordinator PIN?</button>
+      </form>
+      <form class="setup-form" id="recover-form" hidden>
+        <h2 class="with-icon"><span class="h-icon" data-icon="key"></span>Choose a new coordinator PIN</h2>
+        <label>Recovery words<input name="words" type="password" autocomplete="off" required /></label>
+        <label>New PIN (4 numbers)<input name="pin" inputmode="numeric" type="password" minlength="4" maxlength="4" autocomplete="off" required /></label>
+        <label>Type it again<input name="pin2" inputmode="numeric" type="password" minlength="4" maxlength="4" autocomplete="off" required /></label>
+        <button class="primary" type="submit">Save the new PIN</button>
+        <p class="card-note" id="recover-note">No recovery words? Start again on this tablet, choose new PINs, then restore the newest locked copy (Coordinator tools → Restore from a copy).</p>
+        <button type="button" class="button-stop" data-action="fresh-start">Start again on this tablet</button>
+      </form>
+    </section>
+
+    <section id="coordinator" class="screen" aria-labelledby="coordinator-title">
+      <div class="hj-top"><div class="hj-heading"><button class="back-button" data-action="lead-board">← <span>Live board</span></button><p class="eyebrow">Coordinator</p><h1 id="coordinator-title">Keep the outing safe.</h1><p class="hj-sub">Only the coordinator adds people, records each yes, and changes levels, job unlocks and snack permissions.</p></div><div class="hj-art" data-art="coordinator"></div></div>
+      <nav class="coord-nav" aria-label="Coordinator sections"><a href="#coord-people"><span class="h-icon" data-icon="users-group"></span>People</a><a href="#coord-add"><span class="h-icon" data-icon="user-plus"></span>Add someone</a><a href="#coord-jobs"><span class="h-icon" data-icon="pencil-check"></span>Make a job</a><a href="progress.html" target="_blank" rel="noopener"><span class="h-icon" data-icon="history"></span>Progress across Sundays</a><a href="#coord-pictures"><span class="h-icon" data-icon="photo"></span>Job pictures</a><a href="#coord-notes"><span class="h-icon" data-icon="notes"></span>Help notes and practice</a><a href="#coord-copies"><span class="h-icon" data-icon="lock"></span>Copies and backup</a><a href="#coord-paper"><span class="h-icon" data-icon="printer"></span>Paper backup</a></nav>
+      <h2 class="hj-h2 with-icon" id="coord-people"><span class="h-icon" data-icon="users-group"></span>People</h2>
+      <div class="coordinator-grid" id="coordinator-list"></div>
+      <h2 class="hj-h2 with-icon" id="coord-add"><span class="h-icon" data-icon="user-plus"></span>Add someone</h2>
+      <div class="coordinator-grid coord-add">
+        <form class="coordinator-card admin-form" id="add-helper-form"><h3 class="with-icon"><span class="h-icon" data-icon="user-plus"></span>New helper</h3><label>First name<input name="name" maxlength="40" required autocomplete="off" /></label><label>Photo letter <small>(optional)</small><input name="photo" maxlength="2" autocomplete="off" /></label><label>Language<select name="language"><option value="en">English</option><option value="hi">हिन्दी (Hindi)</option><option value="es">Español (Spanish)</option></select></label><label class="check-row"><input type="checkbox" name="consent" /> Helper said yes to taking part</label><button class="button button-secondary" type="submit">Add helper</button></form>
+        <form class="coordinator-card admin-form" id="add-kid-form"><h3 class="with-icon"><span class="h-icon" data-icon="mood-happy"></span>New kid</h3><label>First name<input name="firstName" maxlength="40" required autocomplete="off" /></label><label>Photo letter <small>(optional)</small><input name="photo" maxlength="2" autocomplete="off" /></label><label>Safe tips <small>(up to 3, commas)</small><input name="safeTips" autocomplete="off" /></label><label>Allergy note<input name="allergy" value="none" autocomplete="off" /></label><label class="check-row"><input type="checkbox" name="parentConsent" /> Parent said yes</label><small>Snacks start as “no snack”. Change it on the kid’s card once a parent says which snacks are safe.</small><button class="button button-secondary" type="submit">Add kid</button></form>
+      </div>
+      <h2 class="hj-h2 with-icon" id="coord-jobs"><span class="h-icon" data-icon="pencil-check"></span>Make a job</h2>
+      <p class="hj-sub">For a new place, like a zoo or a library. Up to 8 picture steps; a “Tap Done” step is added at the end. New jobs start locked: unlock them for each helper below their name.</p>
+      <div class="coordinator-grid job-maker"><form class="coordinator-card admin-form" id="job-form"><input type="hidden" name="jobId" /><h3 class="with-icon"><span class="h-icon" data-icon="pencil-check"></span><span id="job-form-title">New job</span></h3>
+        <label>Job name<input name="name" maxlength="40" required autocomplete="off" placeholder="Zoo Guide" /></label>
+        <label>One line about it<input name="desc" maxlength="80" autocomplete="off" placeholder="Help the group find the animals on the map." /></label>
+        <div class="job-form-row"><label>Picture<select name="icon" id="job-icon"></select></label><label>Level<select name="level"><option value="1">Level 1</option><option value="2">Level 2</option><option value="3">Level 3</option></select></label></div>
+        <label class="check-row"><input type="checkbox" name="needsVolunteer" checked /> With a kid, so a named volunteer must be nearby</label>
+        <fieldset class="job-steps"><legend>Steps</legend><div id="job-steps"></div><button type="button" class="button button-secondary" data-action="job-step-add">Add a step</button></fieldset>
+        <div class="hj-actions"><button class="button button-secondary" type="submit">Save job</button><button class="button-stop" type="button" data-action="job-form-clear">Clear</button></div></form>
+        <div class="coordinator-card"><h3 class="with-icon"><span class="h-icon" data-icon="checklist"></span>Jobs you made</h3><ul class="made-jobs" id="made-jobs"></ul></div></div>
+      <h2 class="hj-h2 with-icon" id="coord-pictures"><span class="h-icon" data-icon="photo"></span>Job pictures</h2>
+      <p class="hj-sub">Add a photo of the real thing for a step: the snack box, the bin, the meeting spot. <b>Things and places only, never people.</b> Pictures stay on this tablet.</p>
+      <div class="job-pictures" id="job-pictures"></div>
+      <h2 class="hj-h2 with-icon" id="coord-notes"><span class="h-icon" data-icon="notes"></span>Help notes and practice runs</h2>
+      <div class="audit-list" id="coordinator-notes"></div>
+      <h2 class="hj-h2 with-icon"><span class="h-icon" data-icon="history"></span>Audit history</h2>
+      <div class="audit-list" id="coordinator-audit"></div>
+      <div class="lead-tools">
+        <button type="button" class="secondary" data-action="retention">Keep outing records 30 days</button>
+        <button type="button" class="secondary" data-action="summary">Download outing summary (no kid details)</button><button type="button" class="secondary" data-action="feedback-csv">Download feedback</button><a class="button button-secondary" href="report.html" target="_blank" rel="noopener">Sunday report</a>
+      </div>
+      <h2 class="hj-h2 with-icon" id="coord-copies"><span class="h-icon" data-icon="lock"></span>Copies and backup</h2>
+      <div class="coordinator-grid coord-copies">
+        <form class="coordinator-card admin-form" id="copy-form"><h3 class="with-icon"><span class="h-icon" data-icon="lock"></span>Locked copy</h3><p class="card-note">Save everything on this tablet to a file, locked with words only you know. Without the words, the file can’t be read.</p><label>Words to lock it <small>(at least 8 letters)</small><input name="passphrase" type="password" minlength="8" autocomplete="new-password" required /></label><button class="button button-secondary" type="submit">Download locked copy</button></form>
+        <form class="coordinator-card admin-form" id="restore-form"><h3 class="with-icon"><span class="h-icon" data-icon="upload"></span>Restore from a copy</h3><p class="card-note">Replaces everything on this tablet with the copy.</p><label>Copy file<input name="file" type="file" accept=".json,.hjcopy,application/json" required /></label><label>Words that lock it<input name="passphrase" type="password" autocomplete="off" /></label><button class="button button-secondary" type="submit">Restore</button></form>
+        <div class="coordinator-card"><h3 class="with-icon"><span class="h-icon" data-icon="device-laptop"></span>Backup on your laptop</h3><p class="card-note">Your laptop keeps a locked copy that updates during the outing. If the tablet breaks, download it there and restore on a new tablet.</p><button type="button" class="button button-secondary" data-action="backup-pair"><span class="phone-dot" id="backup-dot" aria-hidden="true"></span>Set up the laptop backup</button></div>
+        <div class="coordinator-card" id="volunteer-card"><h3 class="with-icon"><span class="h-icon" data-icon="users"></span>Volunteers</h3><p class="card-note">The adults who stand near a helper with a kid. First names only.</p><ul class="vol-list" id="volunteer-list"></ul><form class="admin-form inline-add" id="add-volunteer-form"><label>New volunteer<input name="name" maxlength="40" required autocomplete="off" /></label><button class="button button-secondary" type="submit">Add</button></form></div>
+        <div class="coordinator-card"><h3 class="with-icon"><span class="h-icon" data-icon="key"></span>PINs</h3><p class="card-note">If the lead forgets their PIN, reset it here. They choose a new one next time.</p><button type="button" class="button button-secondary" data-action="reset-lead-pin">Reset the lead PIN</button><p class="card-note" id="recovery-state"></p></div>
+        <form class="coordinator-card admin-form" id="device-form"><h3 class="with-icon"><span class="h-icon" data-icon="device-tablet"></span>This tablet</h3><ul class="device-checks" id="device-checks"></ul><p class="card-note">Helper-only mode hides the lead buttons and links out of the app. To get in, the lead holds the <b>h.</b> at the top for 2 seconds.</p><label class="check-row"><input type="checkbox" name="helperOnly" /> Helper-only mode on this tablet</label><div class="pin-app" id="pin-app" hidden></div><label class="check-row"><input type="checkbox" name="outdoor" /> Outdoor mode: stronger contrast for sunlight</label><label class="check-row"><input type="checkbox" name="quiet" /> No chime on this tablet</label><button class="button button-secondary" type="submit">Save</button><a class="button button-secondary" href="tablet-setup.html" target="_blank" rel="noopener"><span class="h-icon" data-icon="checklist"></span>How to set up the tablet</a></form>
+        <div class="coordinator-card"><h3 class="with-icon"><span class="h-icon" data-icon="language"></span>Hindi and Spanish wording</h3><p class="card-note">A native speaker checks each line, hears it read aloud, and fixes it: here, or on their own phone from a link. Fixes work on this tablet straight away.</p><a class="button button-secondary" href="wording.html" target="_blank" rel="noopener"><span class="h-icon" data-icon="pencil-check"></span>Check the wording here</a><button type="button" class="button button-secondary" data-action="wording-pair"><span class="phone-dot" id="wording-dot" aria-hidden="true"></span><span class="h-icon" data-icon="link"></span>Send it to someone’s phone</button></div>
+        <div class="coordinator-card"><h3 class="with-icon"><span class="h-icon" data-icon="refresh"></span>Start again</h3><p class="card-note">Clears this tablet and loads the made-up example again: people, PINs, links and history.</p><button type="button" class="button button-secondary" data-action="fresh-start">Start again with the made-up example</button></div>
+      </div>
+      <h2 class="hj-h2 with-icon" id="coord-paper"><span class="h-icon" data-icon="printer"></span>Paper backup</h2>
+      <div class="paper-row"><div class="hj-art" data-art="paper"></div><div><p class="hj-sub">Print these before the outing. If the tablet stops, the day keeps going on paper: one card per job, plus a sheet for matches and the head count.</p>
+      <div class="lead-tools"><a class="button button-secondary" href="print-cards.html" target="_blank" rel="noopener">Print job cards</a><a class="button button-secondary" href="print-cards.html#if-the-tablet-stops" target="_blank" rel="noopener">Print the “if the tablet stops” page</a><a class="button button-secondary" href="people-sheets.html" target="_blank" rel="noopener">Print volunteer card, family sheet and consent form</a><a class="button button-secondary" href="tablet-setup.html" target="_blank" rel="noopener">Print the setup guide</a><a class="button button-secondary" href="rehearsal.html" target="_blank" rel="noopener">Print a practice Sunday (20 minutes)</a></div></div></div>
+    </section>
+
+    <section id="feedback" class="screen" aria-labelledby="feedback-title">
+      <div class="hj-top"><div class="hj-heading"><button class="back-button" data-action="lead-board">← <span>Live board</span></button><p class="eyebrow">After the outing</p><h1 id="feedback-title">How did today go?</h1><p class="hj-sub">Two minutes, for the coordinator. Hand the tablet to a volunteer, or fill it in yourself. Please don’t write names.</p></div><div class="hj-art" data-art="note"></div></div>
+      <div id="feedback-box"></div>
+    </section>
+
+    <section id="lead-wrap" class="screen" aria-labelledby="wrap-title">
+      <div class="hj-top"><div class="hj-heading"><button class="back-button" data-action="lead-board">← <span>Live board</span></button><p class="eyebrow">Volunteer lead · Wrap-up</p><h1 id="wrap-title">Every kid back, then a good note.</h1><p class="hj-sub">First, mark every kid who came today. Then leave one kind sentence for each helper.</p></div><div class="hj-art" data-art="headcount"></div></div>
+      <h2 class="hj-h2 with-icon"><span class="h-icon" data-icon="users"></span>Head count</h2>
+      <div class="headcount" id="headcount-list"></div>
+      <p class="headcount-status" id="headcount-status" role="status"></p>
+      <h2 class="hj-h2 with-icon"><span class="h-icon" data-icon="message-2"></span>Notes for helpers</h2>
+      <div class="wrap-list" id="wrap-list"></div>
+      <h2 class="hj-h2 with-icon"><span class="h-icon" data-icon="message-circle"></span>How did today go?</h2>
+      <p class="hj-sub">Optional, for the coordinator. A face and a few words. Please don’t write names.</p>
+      <div id="wrap-feedback"></div>
+      <button type="button" class="primary" data-action="finish-outing" id="finish-outing">Save and finish</button>
+    </section>
+  </main>
+  <footer class="hj-foot">Helper Jobs · an early test version for Pragnya Sunday outings. Every person and example is made up. It does not diagnose anything. · <a href="presentation/">Slides and handout</a> · <a href="https://mehtama1234.github.io/ASDRP-Neuroscience-Portfolio/tools.html">The research behind it</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="vendor/qrcode.js"></script><script src="icons.js"></script><script src="link.js"></script><script src="data.js"></script><script src="i18n.js"></script><script src="art.js"></script><script src="store.js"></script><script src="app.js"></script>
+</body>
+</html>

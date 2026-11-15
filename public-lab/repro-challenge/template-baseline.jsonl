@@ -1,0 +1,3 @@
+{"case_id": "unknown-preference", "condition": "template-baseline", "cards": ["Choose quiet table", "Ask first", "Pause now", "Need help", "Another option", "Finished"]}
+{"case_id": "third-party-transfer", "condition": "template-baseline", "cards": ["Try one", "Ask first", "Another option", "Pause now", "Need help", "Finished"]}
+{"case_id": "sensory-choice", "condition": "template-baseline", "cards": ["Try room", "Dim lights", "Quiet corner", "Pause now", "Need help", "Finished"]}

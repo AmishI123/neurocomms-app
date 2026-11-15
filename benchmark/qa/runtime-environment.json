@@ -1,0 +1,10 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "matplotlib": "3.10.5",
+  "runtime_version": "0.4.0-dev; build 10853; commit 9dcf84e5a; GNU 11.4.0 for Linux x86_64 (captured from stderr)",
+  "server_command": ".benchmark-runtime/llama-b10853/llama-server -m .benchmark-runtime/Qwen3.5-0.8B-Q8_0.gguf --host 127.0.0.1 --port 8791 -t 2 -tb 2 -c 4096 -np 1 --reasoning off --no-cache-prompt --cache-ram 0 --alias qwen3.5-0.8b-q8_0",
+  "host_memory": "11 GiB total; approximately 2.8 GiB available before launch",
+  "cpu": "4 logical CPUs exposed; AMD Ryzen 7 8840HS, virtualized; two inference threads used",
+  "browser": "Existing pinned Playwright 1.58.2 development dependency; cached Chromium 151.0.7922.34"
+}

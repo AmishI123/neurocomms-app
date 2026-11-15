@@ -1,0 +1,95 @@
+name: Build Phrase Studio mobile shells
+
+# Paused 2026-10-17: run manually (Actions tab > Run workflow) to save Actions minutes before the Oct 25 demo.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: communication-tool
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: communication-tool/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: android-actions/setup-android@v3
+      - run: npm ci
+      - run: npm run platform:research
+      - run: npx playwright install --with-deps chromium
+      - run: PHRASE_STUDIO_BROWSER_LIBS=0 npm run beta:controlled-audit
+      - name: Detect Android signing configuration
+        id: android-signing
+        env:
+          KEYSTORE_BASE64: ${{ secrets.PHRASE_STUDIO_ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.PHRASE_STUDIO_ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.PHRASE_STUDIO_ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.PHRASE_STUDIO_ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ] && [ -n "$KEYSTORE_PASSWORD" ] && [ -n "$KEY_ALIAS" ] && [ -n "$KEY_PASSWORD" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Sign Android release APK
+        if: steps.android-signing.outputs.configured == 'true'
+        env:
+          PHRASE_STUDIO_ANDROID_KEYSTORE_BASE64: ${{ secrets.PHRASE_STUDIO_ANDROID_KEYSTORE_BASE64 }}
+          PHRASE_STUDIO_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.PHRASE_STUDIO_ANDROID_KEYSTORE_PASSWORD }}
+          PHRASE_STUDIO_ANDROID_KEY_ALIAS: ${{ secrets.PHRASE_STUDIO_ANDROID_KEY_ALIAS }}
+          PHRASE_STUDIO_ANDROID_KEY_PASSWORD: ${{ secrets.PHRASE_STUDIO_ANDROID_KEY_PASSWORD }}
+        run: npm run mobile:sign-release
+      - name: Audit signed Android release APK
+        if: steps.android-signing.outputs.configured == 'true'
+        run: |
+          mkdir -p ai-evaluation/results
+          node scripts/android-signing-audit.mjs --apk=android/app/build/outputs/apk/release/app-release-signed.apk > ai-evaluation/results/android-signing-report.json
+      - name: Write Android release artifact manifest
+        run: npm run release:artifact-manifest -- --platform=android
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phrase-studio-android
+          path: |
+            communication-tool/android/app/build/outputs/apk/debug/*.apk
+            communication-tool/android/app/build/outputs/apk/release/*.apk
+            communication-tool/ai-evaluation/results/controlled-beta-audit.json
+            communication-tool/ai-evaluation/results/controlled-beta-audit.html
+            communication-tool/ai-evaluation/results/android-signing-report.json
+            communication-tool/ai-evaluation/results/release-artifact-manifest.json
+
+  ios:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: communication-tool
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: communication-tool/package-lock.json
+      - run: npm ci
+      - run: npm run mobile:sync
+      - run: npm run platform:research
+      - run: node scripts/platform-release-audit.mjs
+      - run: xcodebuild -workspace ios/App/App.xcworkspace -scheme App -sdk iphonesimulator -configuration Debug -derivedDataPath ios/build CODE_SIGNING_ALLOWED=NO build
+      - name: Write iOS simulator artifact manifest
+        run: npm run release:artifact-manifest -- --platform=ios --output=ai-evaluation/results/ios-release-artifact-manifest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phrase-studio-ios-simulator
+          path: |
+            communication-tool/ios/build/Build/Products/Debug-iphonesimulator/App.app
+            communication-tool/ai-evaluation/results/ios-release-artifact-manifest.json

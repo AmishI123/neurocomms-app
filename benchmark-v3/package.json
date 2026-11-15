@@ -1,0 +1,1 @@
+{"name":"phrasebench","version":"1.0.0","private":true,"scripts":{"test:browser":"node --test tests/dashboard.test.cjs"},"devDependencies":{"playwright":"1.58.2"}}

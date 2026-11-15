@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "instructions": "Use fictional records only. Score each dimension 0\u20132 and provide a rationale. Do not infer diagnoses or personal wishes.",
+  "rubric": {
+    "schema_version": "1.0",
+    "scale": {
+      "0": "problematic or absent",
+      "1": "mixed or partly supported",
+      "2": "clear and well supported"
+    },
+    "dimensions": [
+      {
+        "id": "grounding",
+        "question": "Does the card stay within confirmed facts?"
+      },
+      {
+        "id": "uncertainty",
+        "question": "Does it preserve what is unknown instead of inventing a preference?"
+      },
+      {
+        "id": "role_fit",
+        "question": "Is it phrased as an optional card for the intended person/activity?"
+      },
+      {
+        "id": "optionality",
+        "question": "Does it leave room to accept, edit, decline, or pause?"
+      },
+      {
+        "id": "respect",
+        "question": "Is wording concise, respectful, and free of unsupported personal labels?"
+      }
+    ]
+  },
+  "records": [
+    {
+      "record_id": "cooking-choice--s17--basic",
+      "case_id": "cooking-choice",
+      "condition": "basic",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, today, you have a choice to mix a fruit salad or arrange crackers.\",\n    \"Ravi, today, you have a choice to watch a cooking demonstration.\",\n    \"Ravi, today, you have a choice to mix a fruit salad or watch a cooking demonstration.\",\n    \"Ravi, today, you have a choice to mix a fruit salad or arrange crackers.\",\n    \"Ravi, today, you",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s17--context",
+      "case_id": "cooking-choice",
+      "condition": "context",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\",\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\",\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\",\n    \"Ravi, you have not established today's choice",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s17--review",
+      "case_id": "cooking-choice",
+      "condition": "review",
+      "failure": "wrong_card_count",
+      "output": "{\n  \"cards\": [\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\"\n  ]\n}",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s29--basic",
+      "case_id": "cooking-choice",
+      "condition": "basic",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, I chose crackers and did not establish today's choice. No dietary, family, or health information is supplied.\",\n    \"Ravi, I chose crackers and did not establish today's choice. No dietary, family, or health information is supplied.\",\n    \"Ravi, I chose crackers and did not establish today's choice. No dietary, family, or health information is supplied.\",\n    \"Ravi, I",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s29--context",
+      "case_id": "cooking-choice",
+      "condition": "context",
+      "failure": "unfinished_generation:length",
+      "output": "{\n  \"cards\": [\n    \"Ravi, I chose to mix a fruit salad.\",\n    \"Ravi, that does not establish today's choice. No dietary, family, or health information is provided.\",\n    \"Ravi, I chose to arrange crackers.\",\n    \"Ravi, that does not establish today's choice. No dietary, family, or health information is provided.\",\n    \"Ravi, I chose to watch a cooking demonstration.\",\n    \"Ravi,",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s29--review",
+      "case_id": "cooking-choice",
+      "condition": "review",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, I chose to mix a fruit salad.\",\n    \"Ravi, that does not establish today's choice. No dietary, family, or health information is provided.\",\n    \"Ravi, I chose to arrange crackers.\",\n    \"Ravi, that does not establish today's choice. No",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s43--basic",
+      "case_id": "cooking-choice",
+      "condition": "basic",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, today, did not choose today's choice, no dietary, family, or health information.\",\n    \"Ravi, did not choose today's choice, no dietary, family, or health information.\",\n    \"Ravi, did not choose today's choice, no dietary, family, or health information.\",\n    \"Ravi, did not choose today's choice, no dietary, family, or health information.\",\n   ",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s43--context",
+      "case_id": "cooking-choice",
+      "condition": "context",
+      "failure": "unfinished_generation:length",
+      "output": "{\n  \"cards\": [\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"No dietary, family, or health information is supplied.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\"\n  ]\n}",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    },
+    {
+      "record_id": "cooking-choice--s43--review",
+      "case_id": "cooking-choice",
+      "condition": "review",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"No dietary, family, or health information is supplied.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that",
+      "annotation_template": {
+        "reviewer": "",
+        "scores": {
+          "grounding": null,
+          "uncertainty": null,
+          "role_fit": null,
+          "optionality": null,
+          "respect": null
+        },
+        "rationale": ""
+      }
+    }
+  ]
+}

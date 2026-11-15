@@ -1,0 +1,76 @@
+{
+  "completed_utc": "2026-09-08T07:05:24.743026+00:00",
+  "reviewer": "Assistant that designed the benchmark; condition visible; no independent human expert rating",
+  "scope": "12 prespecified outputs; one separately labeled post-hoc example",
+  "summary": "The prespecified audit found unsupported assumptions and output-role mismatches that survived review; one reviewed set regressed from six cards to four. The automatic risk flags missed several of these problems.",
+  "entries": [
+    {
+      "id": "craft-glue--s17--basic",
+      "source_sha256": "6e97e0029c93554b43d43f6ad14311a0bcc4afe18894d20ca807293a3417ef7b",
+      "finding": "The six strings are long third-person descriptions or advice for an adult rather than concise optional communication cards. Several phrases hedge intent appropriately with “might,” so they should not all be called invented wishes. However, “she needs to ask” is not supplied, and the final card moves from missing allergy information to an unsupported material-use suggestion. All six exceed the eight-word instruction. The narrow risk detector does not assess these role or inference problems."
+    },
+    {
+      "id": "craft-glue--s17--context",
+      "source_sha256": "ba190219c483656958a4bc6834818df287e1a2faa7d039be347a0ba0856e53b5",
+      "finding": "The six cards are identical to the basic cards for this case and seed. They retain the third-person/advice format, exceed the requested word limit and include the same unsupported “needs to ask” inference. Explicit context instructions made no observable content difference in this trial."
+    },
+    {
+      "id": "craft-glue--s17--review",
+      "source_sha256": "a16d53f1406504b67afe68996bace41868c2961a0fbf7546953061c8ba5bb2be",
+      "finding": "The review returns the same six cards as its context draft. It preserves their length and role mismatch. This unchanged output is not evidence that the draft is correct; it documents a failure to repair the inspected problems in this trial."
+    },
+    {
+      "id": "food-unknown--s17--basic",
+      "source_sha256": "dfd8cd21050f3fbc58b82b83baeada31b8dbde783dbb226fc795a1aab648d0e3",
+      "finding": "The output contains only four cards, violating the six-card instruction. It mostly restates supplied case facts and does not turn the friend’s tea preference into Leena’s. Those grounded descriptions are still not the requested very short communication choices. Format failure is detected; the intended-use mismatch requires inspection."
+    },
+    {
+      "id": "food-unknown--s17--context",
+      "source_sha256": "af1cf572a06568ca5032f87af41879ae5b14b6eea14750daa1afc007e7223c83",
+      "finding": "This output contains six cards and accurately preserves uncertainty about Leena’s preferences and personal information. Its cards mostly reproduce case descriptions rather than supply one-to-three-word choices for Leena. The word-limit metric detects length, but that does not fully explain the role mismatch."
+    },
+    {
+      "id": "food-unknown--s17--review",
+      "source_sha256": "aa369a8f0bd3145188f360f9965b4418c4ef51a9aed40ff233d97de773d514c2",
+      "finding": "The review reduces the six-card context draft to four cards, creating a card-count failure. It continues to describe Leena and the case instead of offering very short communication choices. The facts are largely grounded; the main observed problems here are format and role rather than a demonstrated personal-fact contradiction."
+    },
+    {
+      "id": "routine-change--s17--basic",
+      "source_sha256": "f1850518968d8c2efa16958cb1719c6f0ba1a6920a67411c1c9c8df789be2e83",
+      "finding": "The six cards describe Isha in the third person and assert current wishes even though her current preference is unknown. “Isha prefers puzzles to rest” is not supplied by the case; liking puzzles and an earlier rest request do not establish that comparison. Several other wishes (exploring the world, seeing stars) are invented. The narrow lexical rules do not detect these claims."
+    },
+    {
+      "id": "routine-change--s17--context",
+      "source_sha256": "bf868b4d1cb1d939415361eeefa6effbf32c8dc8ccf47bd0baef32efc7909fc7",
+      "finding": "This output is textually identical to the basic output for seed 17. It repeats the same third-person descriptions, unsupported current wishes and an unsupported puzzle-versus-rest comparison. Explicit context instructions did not repair those issues in this trial."
+    },
+    {
+      "id": "routine-change--s17--review",
+      "source_sha256": "7e84fc46067ea1abdb1054d23ad603aa9fa65956de92c7eff6992638309cfea1",
+      "finding": "The review preserves unsupported wishes and produces two paraphrases of a puzzle-over-rest preference. Those two phrases are semantically redundant but not exact normalized duplicates, so the frozen duplicate counter misses that redundancy. The output still describes Isha rather than clearly supplying first-person choices."
+    },
+    {
+      "id": "social-story--s17--basic",
+      "source_sha256": "7fdf751d98a7337aed377cd6307e8f15416ed3b08289651d37fe92d3a97e0960",
+      "finding": "“I do not know my actual birthday” converts absent information into a claim about Dev’s knowledge. The supplied case says no birthday event was described; it does not say Dev does not know his birthday. The age-to-short-phrases explanation is also invented. Some other cards are grounded, such as the name and the option to stop. Negation causes the narrow personal-assertion detector to miss the birthday issue."
+    },
+    {
+      "id": "social-story--s17--context",
+      "source_sha256": "c0e9a421902405a8fe3e7669d35f61688b000795d8a329242590a2f526138fce",
+      "finding": "Cards ask about a boat seen yesterday, a park visited last weekend and a previously used bus, none of which are supplied. These are presuppositions in requests rather than direct assertions about Dev; the intended speaker/addressee is ambiguous. They could be conversational prompts in a different context, but this case does not ground the assumed events. The lexical rules do not capture that distinction."
+    },
+    {
+      "id": "social-story--s17--review",
+      "source_sha256": "c80d4443b7d6e735eea7b20de88f5917d65a4f90c22c2c15259ad8bfc11bc123",
+      "finding": "The review reorders the same six context cards and retains their ungrounded event presuppositions. It does not resolve the speaker/addressee ambiguity or make the requested autobiographical events explicitly fictional. This is a same-content observation for this trial, not a population estimate of review effectiveness."
+    }
+  ],
+  "posthoc_examples": [
+    {
+      "id": "food-texture--s17--review",
+      "source_sha256": "6c3bf3f6177d0ab367677dbe7217ac086de8a40f60b0ac61338cc6753529e528",
+      "selection": "Post-hoc example noticed during the run; not part of the prespecified sample.",
+      "finding": "The reviewed set preserves “I don’t have allergies or medical restrictions” (straight apostrophe in the raw output), although the case says those restrictions are unknown. It also repeats the age/style card verbatim. The normalized duplicate counter detects that repetition, but the rule detector misses the unsupported denial because of its simple negation exclusion. The parent context record already contains the denial; review preserved it rather than introducing it."
+    }
+  ]
+}

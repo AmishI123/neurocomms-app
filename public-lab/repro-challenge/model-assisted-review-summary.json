@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "judgment_type": "model-assisted exploratory; not independent human evidence",
+  "rows": 12,
+  "valid_rows": 0,
+  "by_judge": {
+    "qwen25-0.5b": {
+      "calls": 6,
+      "valid": 0,
+      "failure_categories": {
+        "packet_or_rubric_echo": 6
+      }
+    },
+    "qwen35-0.8b": {
+      "calls": 6,
+      "valid": 0,
+      "failure_categories": {
+        "empty_output": 6
+      }
+    }
+  }
+}

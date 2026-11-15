@@ -1,0 +1,58 @@
+{
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 101,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a fictional person choosing a book, return only a JSON object with key cards and six short optional phrases."
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    {\n      \"title\": \"The Alchemist\",\n      \"author\": \"Paulo Coelho\",\n      \"genre\": \"Fiction\"\n    },\n    {\n      \"title\": \"The Lord of the Rings\",\n      \"author\": \"J.R.R. Tolkien\",\n      \"genre\": \"Fantasy\"\n    },\n    {\n      \"title\": \"War and Peace\",\n      \"author\": \"Leo Tolstoy\",\n      \"genre\": \"Fiction\"\n    },\n    {\n      \"title\": \"To Kill a Mockingbird\",\n      \"author\": \"Harper Lee\",\n      \"genre\": \"Fiction\"\n    },\n    {\n      \"title\": \"1984\",\n      \"author\": \"George Orwell\",\n      \"genre\": \"Dystopian\"\n    },\n    {\n      \"title\": \"The Catcher in the Rye\",\n      \"author\": \"J.D. Salinger\",\n      \"genre\": \"Fiction\"\n    }\n  ],\n  \"optionalPhrases\": [\n    \"The Alchemist\",\n    \"The Lord of the Rings\",\n    \"War and Peace\",\n    \"To Kill a Mockingbird\",\n    \"1984\",\n    \"The Catcher in"
+        }
+      }
+    ],
+    "created": 1788882621,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 51,
+      "total_tokens": 307,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-fuMRmfdzfjXDSjBymhthj9HrpOtDkGBW",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 51,
+      "prompt_ms": 859.076,
+      "prompt_per_token_ms": 16.844627450980393,
+      "prompt_per_second": 59.366109634071954,
+      "predicted_n": 256,
+      "predicted_ms": 9362.881,
+      "predicted_per_token_ms": 36.71718039215686,
+      "predicted_per_second": 27.235206770223826
+    }
+  },
+  "wall_seconds": 10.267722278997098,
+  "error": null
+}

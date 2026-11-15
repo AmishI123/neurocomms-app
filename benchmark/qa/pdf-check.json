@@ -1,0 +1,13 @@
+{
+  "pages": 4,
+  "text_bounds": "pass",
+  "replacement_glyphs": "none",
+  "external_source_links": [
+    "https://arxiv.org/html/2507.21811v1",
+    "https://arxiv.org/html/2606.24854v1",
+    "https://github.com/ggml-org/llama.cpp",
+    "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+    "https://huggingface.co/ggml-org/Qwen3.5-0.8B-GGUF"
+  ],
+  "bytes": 186021
+}

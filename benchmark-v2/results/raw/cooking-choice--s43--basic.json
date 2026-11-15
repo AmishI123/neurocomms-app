@@ -1,0 +1,65 @@
+{
+  "id": "cooking-choice--s43--basic",
+  "case_id": "cooking-choice",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T16:04:37.866260+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Ravi\", \"age\": 16, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose between mixing a fruit salad, arranging crackers, or watching a cooking demonstration.\", \"facts\": [\"Ravi\", \"chose\", \"crackers\", \"yesterday;\", \"that\", \"does\", \"not\", \"establish\", \"today's\", \"choice.\", \"No\", \"dietary,\", \"family,\", \"or\", \"health\", \"information\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Ravi has chosen crackers today.\",\n    \"That does not establish today's choice.\",\n    \"No dietary, family, or health information is provided.\",\n    \"Ravi mixed a fruit salad.\",\n    \"That does not establish today's choice.\",\n    \"No dietary, family, or health information is provided.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883477,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 227,
+      "total_tokens": 305,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-N0jnp67ng9JmlzGqqecFKggIxbBmqdDP",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 227,
+      "prompt_ms": 3632.241,
+      "prompt_per_token_ms": 16.00106167400881,
+      "prompt_per_second": 62.49585311106834,
+      "predicted_n": 78,
+      "predicted_ms": 3083.805,
+      "predicted_per_token_ms": 40.049415584415584,
+      "predicted_per_second": 24.969153367349755
+    }
+  },
+  "wall_seconds": 6.729459382997447,
+  "error": null
+}

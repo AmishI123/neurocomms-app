@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Files Helper Jobs saves (summaries, locked copies) go to the share sheet from here. -->
+    <cache-path name="shared" path="shared/" />
+    <!-- Photos taken with the coordinator's "Add a photo" buttons (Capacitor's camera hand-off). -->
+    <external-path name="my_images" path="." />
+    <cache-path name="my_cache_images" path="." />
+</paths>

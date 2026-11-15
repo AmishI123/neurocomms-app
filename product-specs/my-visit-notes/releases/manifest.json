@@ -1,0 +1,947 @@
+{
+  "archive": "my-visit-notes.tar.gz",
+  "sha256": "a5eed8ce1957e9cd1abd2440ba64ccfe015dcc121e66531e5eb5165ee050c9d7",
+  "node": "v18.19.1",
+  "files": [
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-AFTER-REVIEW.md",
+      "sha256": "1ea03192c3c2341154f07a3432d011a2a10cb44ad8ed6a526c0cf871ea2951d9"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-CONTINUITY.md",
+      "sha256": "8fc1fb095f990e82bb13d08f5c7473f4b47210030186ca276676bd72813cdef2"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-CONVERSATION.md",
+      "sha256": "ccfd00427dd2f4e717aca9e6037665ce7b2aecc78f04aa2c46bcf0a571bce36d"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-DRAFTS.md",
+      "sha256": "dbcd3d9f514014e3fbb94a72c3a2d826978662b63cd6cd968e6f3d80bb6f51b4"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-EXISTING-NOTES.md",
+      "sha256": "3e4ad13ba1371385bd8dcd299c3c414134fa3f85f06e51912c19323718b2bee7"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-FOLLOW-UP.md",
+      "sha256": "7bc4fdae36800db60a8b3ff71d3bb38896addb1664a4615394415dde66a5749e"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-JOURNEY.md",
+      "sha256": "43475bed602cc757c34dbfd8362f7637cc60f5b6ef396bd8cb52aba7967747ab"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-NATIVE.md",
+      "sha256": "c27244e65ca3e373d6719751e4512136d4b9914e1d7a12efaf54901c83635582"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-NEXT-APPOINTMENT.md",
+      "sha256": "e7408f9285128de16564cfc89c11b03b43e8f1e483d76b86032c6617a68fdc14"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-PHONE.md",
+      "sha256": "67f06338c83991ff4eb64c96b4e9faa807be92c151a5de10f49182660ccbdd01"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-RECOVERY.md",
+      "sha256": "7f0ee624074c34da52f2cf01d6b043e19f037d15eee5d21283493001c0e901cb"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-RESUME.md",
+      "sha256": "b8d50e931cb6b1a7eeb3875b650bef1e69362ca075a64bc0794ae492f8c90b03"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES-TRANSFER.md",
+      "sha256": "30928e69f01e4592234f4ee2f94a413b05ef8666bc1487844b1d7eff2c258052"
+    },
+    {
+      "path": "NEXT-MEATY-GOAL-MY-VISIT-NOTES.md",
+      "sha256": "984ab05c1f548ea461d616c20d54f0ecb9d65d1a2b5f5c456d36f844f8950da8"
+    },
+    {
+      "path": "my-visit-notes-mobile/README.md",
+      "sha256": "5a1e4cb40fe8432a03aabef0f483be687ae8f39b148701b2489f1835a8a61967"
+    },
+    {
+      "path": "my-visit-notes-mobile/acceptance.md",
+      "sha256": "57547a231fd1505184aeb90f9eeeceaed17dd4ee840dbb0253a73e6e5ad76224"
+    },
+    {
+      "path": "my-visit-notes-mobile/progress.md",
+      "sha256": "012396461e3bc81bd65014215b7ad3dbbcb0883d656e470c5dd8197bf1b93034"
+    },
+    {
+      "path": "product-specs/my-visit-notes/PRD.md",
+      "sha256": "03014bc1039c67a03043b643df89efad4b845f20c55cdcccd6e4ed601a1ee1a5"
+    },
+    {
+      "path": "product-specs/my-visit-notes/README.md",
+      "sha256": "0b352e0f700b76cd32e9387cde552ea7f64a41fbcd8be0edb8523b6d551cddfc"
+    },
+    {
+      "path": "product-specs/my-visit-notes/acceptance-audit.md",
+      "sha256": "a9b38ea9931e5951ff750133de7f1d877022a2d06d0de11cc670d0f7ba46f406"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-PRD.md",
+      "sha256": "51b923d55215bff8b96ad0dcdf93616b25bcf3c9591cca77e5c05644b144e149"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-acceptance-audit.md",
+      "sha256": "0e0ff519972c383417ec01e474d9398375a35fc2b4b78aa242ea5f3f0853a171"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-help.html",
+      "sha256": "94bcd1704f6abc7280a2a11bdaf95d1425ef1e29b5d29370dd544d400bee71fb"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-model.mjs",
+      "sha256": "137ba80b0187f04fa83cf2f60cf065bd56ca0434d263ddc27af7f765df37a0ba"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-presentation.html",
+      "sha256": "110176c530c4396684624755313c5cd726a25c9feef584662d3ac4b3f13f6f0f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-progress.md",
+      "sha256": "70e7db766a00f94b418765996ee874b6627c475ca94a5e2b009749e454175977"
+    },
+    {
+      "path": "product-specs/my-visit-notes/after-review-walkthroughs.md",
+      "sha256": "01b090b293aed8caab7432ada3ab53afd64a0f0f80ec55bf80191f1ebc37b74a"
+    },
+    {
+      "path": "product-specs/my-visit-notes/app.mjs",
+      "sha256": "5194af70ac9b254325ab50d75eaac8cf22ff4f7fd510deb9218e94ba8b95a092"
+    },
+    {
+      "path": "product-specs/my-visit-notes/beta/README.md",
+      "sha256": "50aab54c3f72b65010f7aef65c5168cf8865a6c341cbed9042ac31320b3d41d7"
+    },
+    {
+      "path": "product-specs/my-visit-notes/beta/record-template.json",
+      "sha256": "63713cd523c2c0a4e6db8c017ac12411cb817704202f7eba853e41cc0e9471c2"
+    },
+    {
+      "path": "product-specs/my-visit-notes/beta/runs/BETA-WEB-001.json",
+      "sha256": "acdcc7b07af135af6b6fbc8a25dd19c908ae10844667c7f333c0a523910c0721"
+    },
+    {
+      "path": "product-specs/my-visit-notes/beta/validate-record.mjs",
+      "sha256": "8f2561f23770749b103970e0ea417866d7fe835d2cc220794facff8818797098"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-after-review-presentation.mjs",
+      "sha256": "c13b3870a8d23d5f8b893fd6ddcb476758fa1b3181ace1ca1f8fccd96fb8cda8"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-conversation-presentation.mjs",
+      "sha256": "9e075dfdee2525aeeac98baeea0751bc30ba8751064821225752f0f29ea1c744"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-drafts-presentation.mjs",
+      "sha256": "a4eb1eec14aa98d364178b08b062264a3cbba8bc281574d4cddf4486da455d61"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-existing-notes-presentation.mjs",
+      "sha256": "a91865d7befe8a89a6ad867ff36334d60f7112f00933564c0f0fcc687eefbe17"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-followup-presentation.mjs",
+      "sha256": "ad7fa32548ff4ef542ca68a7eef5f4b6b566d12bd23305b54df8b66e62ba152e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-icons.mjs",
+      "sha256": "14e5460a3769df7cf77e83f68528d793bdc63f47bb6f1933b73e286d32d1a54e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-journey-presentation.mjs",
+      "sha256": "d90bc4137435a11a3f9af01a2f2c585b6a1978e6bd7d239b23ae675984b62eff"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-next-appointment-presentation.mjs",
+      "sha256": "a2b945f134ad4276d5f6447cc07b446bddea1bbc5f057bc19daa06db311ae41b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-phone-presentation.mjs",
+      "sha256": "0060c2007db53b5433085b743de22b57ddf7f9e398bbcc760ac72de75218c260"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-presentation.mjs",
+      "sha256": "58d426f8db3eda1a8a4e59d2e36bbfc6c587c17a5e3a8b1cf738db2ef9e7db72"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-recovery-presentation.mjs",
+      "sha256": "3f860fcefe9bf3073e5cce331946bef2edfdaed2470a140dda0eda51b596a717"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-release.mjs",
+      "sha256": "84b3ae2d353a601fe8514a62a5d29720cc4edc25cdbbb2135672fa409e072de8"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-resume-presentation.mjs",
+      "sha256": "6203b17b3634b8602fd650cd7a3762afd399a1f8bda0830b447128ba393981f3"
+    },
+    {
+      "path": "product-specs/my-visit-notes/build-transfer-presentation.mjs",
+      "sha256": "eb7a4d41eec7f916b31a076c46461e1defd92bbcf7c76c035502e12ad6b59e7d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/continuity-presentation.html",
+      "sha256": "170dce6e6fe8c8a6bdd1fad57f486f08041ebffc0f305fbcb3582580d701819f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/conversation-PRD.md",
+      "sha256": "eea93ac21fa129648acc4fac5c4061bb41b71dc0ae1d2478aec599cb97946e3b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/conversation-acceptance-audit.md",
+      "sha256": "aac7e94f2b83660e5afe2b50124fa89c59b9b312c97770a6512aed056bb84e15"
+    },
+    {
+      "path": "product-specs/my-visit-notes/conversation-presentation.html",
+      "sha256": "cc500a1bb4f10ecc059d01c74e8d96ddf37ed1a4b4974b7fe9628bd489051d66"
+    },
+    {
+      "path": "product-specs/my-visit-notes/conversation-progress.md",
+      "sha256": "57632cae661624802c677e5b8a9f2d1a15ffa72c5f791f94652f847f52f07edb"
+    },
+    {
+      "path": "product-specs/my-visit-notes/conversation-ui.mjs",
+      "sha256": "c75b9e68be5f915f8f35cef9da5e9105b8cb39ebdd7927e5fb62ef3472287660"
+    },
+    {
+      "path": "product-specs/my-visit-notes/conversation-walkthroughs.md",
+      "sha256": "cebc35ad0676e9ecda6b52ad1493d77bfc8fe5e47d12c1cfbeb3acc2d0f468e3"
+    },
+    {
+      "path": "product-specs/my-visit-notes/decision-record.md",
+      "sha256": "3acd830b24e98c7a3ab25e5be7d491c34011683fd2e692dd97fd844325063073"
+    },
+    {
+      "path": "product-specs/my-visit-notes/decision-report.md",
+      "sha256": "6e68d734bd3c40b7959eeaa2cae8d745630f6fd3aa747628fa76cc4443f3fc3d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/display.mjs",
+      "sha256": "9fd973401ae92a48e6889ec67c760d830ede147467d07c20973958dd2ce97932"
+    },
+    {
+      "path": "product-specs/my-visit-notes/draft-model.mjs",
+      "sha256": "ab39317002c8da18637ddace7c4ca39cf44d8c873aff5c15b2ae807f1cd44733"
+    },
+    {
+      "path": "product-specs/my-visit-notes/draft-record.mjs",
+      "sha256": "3738efbe9d625149b9e1a4c9b460af2f857bc04069bdbe07aa6d4d993584d67e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/draft-ui.mjs",
+      "sha256": "4f119f9dab5d60e40c5dab729d0a3d792ef7c0d13888ecb5e7aa60020d16b9b2"
+    },
+    {
+      "path": "product-specs/my-visit-notes/drafts-PRD.md",
+      "sha256": "481360b0cfb95165d13a475ea51491c0268956bd6c0803cd4253d5094c238fb3"
+    },
+    {
+      "path": "product-specs/my-visit-notes/drafts-acceptance-audit.md",
+      "sha256": "1c2933f701bf6e8018a77c1835e113c525b091e0af5784baca346a1177419775"
+    },
+    {
+      "path": "product-specs/my-visit-notes/drafts-presentation.html",
+      "sha256": "cb7f722ca47520cafc22c366caf360bde3ea05b498d1b75f0f62c702989c05f3"
+    },
+    {
+      "path": "product-specs/my-visit-notes/drafts-progress.md",
+      "sha256": "21525881a0122a6a6cc0228c808b9577d418cb5afed74d9fc8dd0edb37ee9a99"
+    },
+    {
+      "path": "product-specs/my-visit-notes/drafts-walkthroughs.md",
+      "sha256": "43f8f899ad9d25bbab4378970eb1ecaf173b4650fa674d0ffd58248d83eee63e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/executive-presentation.html",
+      "sha256": "56641749c6a9f646ff5cae4f0a16fdffb1e3f44a258a9eabcbe3b6f26bde46a0"
+    },
+    {
+      "path": "product-specs/my-visit-notes/existing-notes-PRD.md",
+      "sha256": "8f2f583dd13350023b986f249b1d5b64a6b9a8594e2d17729eeace934e72e66d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/existing-notes-acceptance-audit.md",
+      "sha256": "dd32134580b7450e4d62cb15d9afda7dbaf4bba9c3e8293b76e7a1022539c7b9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/existing-notes-presentation.html",
+      "sha256": "29c6e3677c2e230b53a354a36d5247db360464b06fd031636e048946137eab12"
+    },
+    {
+      "path": "product-specs/my-visit-notes/existing-notes-walkthroughs.md",
+      "sha256": "7905e4dcb9cf86faa217ab7ee276d0c611489661ab71572c84f97093deb43bd9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-PRD.md",
+      "sha256": "569566a3aa3a6ca14aadeac24cc770cac282562f9e6476aa54e38151cf0ee37c"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-acceptance-audit.md",
+      "sha256": "2702dad3813118aa7773c493091f1053e5f9e61b0b7bad52b7a2cfb83488e5a9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-model.mjs",
+      "sha256": "0c1c2a6af00ca8525fe2fcb5c6b1f959b2e1eee33d4214b9fe25561693482bef"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-presentation.html",
+      "sha256": "6ae8586d68e2b88543c3323be5a4e5128dcfb1edbe01551e0669441ca7657034"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-progress.md",
+      "sha256": "1b4649a6da7539c772e37eb653321e4512ae54fe398bf16e212dced99b09309b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-record.mjs",
+      "sha256": "968f49c8881c4958eba84fdd2661bb32ae5f6008b9342947b8c601f8dfb3e7a1"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-ui.mjs",
+      "sha256": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887"
+    },
+    {
+      "path": "product-specs/my-visit-notes/followup-walkthroughs.md",
+      "sha256": "48237310ea1e35b64252a98d7d5ef0d88f37ec0ebcd52b00763679ba6d376353"
+    },
+    {
+      "path": "product-specs/my-visit-notes/goal-status.md",
+      "sha256": "a00faf69a8695bab7eee8a9f849b6f36026553193233d165bd0a3a2f3dcc30dd"
+    },
+    {
+      "path": "product-specs/my-visit-notes/help.html",
+      "sha256": "72631c13758696c45a93a3637e4c55f228f47610338c42d433478fe4b1ba5507"
+    },
+    {
+      "path": "product-specs/my-visit-notes/icon.svg",
+      "sha256": "62159e46d138825c39a4389b258cbdb5bd1d8ecf5901bad1f97d16e27c631821"
+    },
+    {
+      "path": "product-specs/my-visit-notes/icons/icon-180.png",
+      "sha256": "7bd558e0a65d44254b6027f10b482c7b5c6c7b1f5613ad497a4bae81183361b2"
+    },
+    {
+      "path": "product-specs/my-visit-notes/icons/icon-192.png",
+      "sha256": "43035e9b067d124088f04257ccb51cf5c75df2c6bcecdef32f2ebd896b9412af"
+    },
+    {
+      "path": "product-specs/my-visit-notes/icons/icon-512.png",
+      "sha256": "36c8ae6db9a0479ce9e6c79011bbeb987bd3e1cf217902089f5d493ddd8db549"
+    },
+    {
+      "path": "product-specs/my-visit-notes/index.html",
+      "sha256": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/install.mjs",
+      "sha256": "c73c26a2ee3a14b071767bda1786784e7935ba9f8501d2c822d77750277d02b9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/intake-model.mjs",
+      "sha256": "e5e8c1938dd172e9a9b174d0d42350af11e59b330dd2982c8119bfe649def844"
+    },
+    {
+      "path": "product-specs/my-visit-notes/intake.mjs",
+      "sha256": "707b33f85bc3e7a993a86e0bd93ea04fa3dd0de89e662b3af054d512cf14bb45"
+    },
+    {
+      "path": "product-specs/my-visit-notes/journey-PRD.md",
+      "sha256": "3f03740b2171a3c85ad89fb21399ac300b77a58d15bb1721a8c072dbd9a01fea"
+    },
+    {
+      "path": "product-specs/my-visit-notes/journey-acceptance-audit.md",
+      "sha256": "a07cb90817440871c8c37aa695375131fca3b396725f5ec798c3812426184b37"
+    },
+    {
+      "path": "product-specs/my-visit-notes/journey-presentation.html",
+      "sha256": "49f7e3f51def5ce551912e99653179f4cde282f9e220f1ecadc345d53408742b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/journey-progress.md",
+      "sha256": "cc0615ad1abf4795f43f10751cadb7dab147b0a1a059fad3845aa8845e6fd2d1"
+    },
+    {
+      "path": "product-specs/my-visit-notes/journey-ui.mjs",
+      "sha256": "aa5bcddbce7bb68cb9d17c974c866ac5f13d70cdd27ae1a63f7ff0bb3e536f09"
+    },
+    {
+      "path": "product-specs/my-visit-notes/journey-walkthroughs.md",
+      "sha256": "371a1e5b550414e92fc346f41d156301672433e156d78335287cf6ea22526a5c"
+    },
+    {
+      "path": "product-specs/my-visit-notes/manifest.webmanifest",
+      "sha256": "555261f7f0c2ce684531782af10f2bde28c222b2b226285c39130db6f13c68bb"
+    },
+    {
+      "path": "product-specs/my-visit-notes/model.mjs",
+      "sha256": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-PRD.md",
+      "sha256": "35fccc4bc1f50c4d4bb071a0c782b10478dc0ddb3101fb36e74e8e06cd0d5336"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-acceptance-audit.md",
+      "sha256": "5f84243219b854848be15931dd3bae48ddf70704dcbf638fe2782922cf80674f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-model.mjs",
+      "sha256": "ee8ceda21c690a34d40ae9c027d1639c8b690a2dec85088f1636431897097dba"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-presentation.html",
+      "sha256": "56641749c6a9f646ff5cae4f0a16fdffb1e3f44a258a9eabcbe3b6f26bde46a0"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-progress.md",
+      "sha256": "428d90acceda6656c002aa64f0477002a65277ace2e0d833e05cd7072860af95"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-ui.mjs",
+      "sha256": "327820683f7ff223e983f3ddb460b34db1a2ebfca1da34222c7ddebbe2cd1326"
+    },
+    {
+      "path": "product-specs/my-visit-notes/next-appointment-walkthroughs.md",
+      "sha256": "ecee2427a9318ada1d31c352a739736592ab01022163eaeb297c783647d4c987"
+    },
+    {
+      "path": "product-specs/my-visit-notes/phone-acceptance-audit.md",
+      "sha256": "0aaedf98940f16e1481f9558600f0bc99a3dbb2b2ac3eaca2a265ff54b47da2d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/phone-presentation.html",
+      "sha256": "6795b92b9c22163d840a9f9765e67a61f1d9a63891bb30c7e38e51b75b999efb"
+    },
+    {
+      "path": "product-specs/my-visit-notes/phone-walkthroughs.md",
+      "sha256": "16ccf2b8e58a6ae6a2bca8c50207fb055b2d043861e7bca37c595497813348cc"
+    },
+    {
+      "path": "product-specs/my-visit-notes/platform.mjs",
+      "sha256": "61a535b979011df139777dbca3e6adf710fc0ccad5a42d4ee5b3018bf413abbe"
+    },
+    {
+      "path": "product-specs/my-visit-notes/preparation-model.mjs",
+      "sha256": "ddebc5b550660c60a09a1ccebb962e2ce3ffe1994ad82adab10e05774047b08d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/after-review-plan.png",
+      "sha256": "1105532c3353782e2fac1e169c7618df1c4a241fa651255a8792d021c4a35a92"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/after-review-results.json",
+      "sha256": "b65566ea6a3c7a42d7051930a96bffa0a25227102f31334d65dc8a30120e4cca"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/before-during-phone.png",
+      "sha256": "9afd1703454410c986d190465010b0e6a34c3f6c694b1b8509d1ba5d1bd83f44"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/before-start-phone.png",
+      "sha256": "3c889df55c190d94afce6b04e94154825a43a4dab540b2a56d36f4944bf18bea"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/browser-results.json",
+      "sha256": "ca52b01bf18462d10b240fc9a93696f292d6c7db6841bfcf8a9d28cb2c5e2db7"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/card-results.json",
+      "sha256": "2d4d3dab991e51ff2cdbed46346d46ab7f2ba228418c71f71c5006872b793ace"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/card-results.txt",
+      "sha256": "03a073fe42c9d8c30cad528df57dbe50984bdaa5e275866e73dc5010625171d7"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/carry-preview.png",
+      "sha256": "355ac57232cf75c0e54f1e48211ef8bb9d0d99cd91691d4b480ad6be64468601"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/continuity-mobile.png",
+      "sha256": "a90e290a467ea7de74a77524b218dc236544c26ad03b71e2635520aac583d6bc"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/continuity-results.json",
+      "sha256": "89b64512ab2d696ba02b26854ef2e95c48da4b8b0340245d57fe3f2293574600"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/conversation-hidden.png",
+      "sha256": "2a9ca89141494e89e72b4f566cc1520d443ee57e10518562578043f738f3aecf"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/conversation-long.png",
+      "sha256": "54572f4219a8092c8467595aef8e1328da2d62236618f36d16d141e2a8c0bbea"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/conversation-results.json",
+      "sha256": "98d58191f3687401f4348a37b685f2d10ff82e4a317ab5e89630ee0f92367ea9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/conversation-show.png",
+      "sha256": "33bd3c698a4839306bb3562015e92def5e79bee29ea16a04b0cf6e02326a4586"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/drafts-editor.png",
+      "sha256": "75c922ae1bceb077915c1f7b18623b70f43b8fe68d8459ba92e73456ed155a6d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/drafts-home.png",
+      "sha256": "c6a0f6d6bcb968c1e9f6e578a5869c7d8aa9f415b1139ced951a09242c4ab631"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/drafts-results.json",
+      "sha256": "123d6ea3b4447d0afe32fc45388642ad571214b13afe45dd298c45981e19dd96"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/during.png",
+      "sha256": "6094bf2078f954ef314f2afbb6486df27a90a7cc64f24fd4a27f4317c6083bcf"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/followup-message.png",
+      "sha256": "9d162d445e18301f1d691023d8b283376ca46716cb41ce04d8010162fd381061"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/followup-overview.png",
+      "sha256": "b35c8dcdeac08479a75cb4d1a2abba6e2230ac7c9fc09e6b7ded42cdaf8de8fb"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/followup-results.json",
+      "sha256": "81a12bbf66f65b96d89165e6c7f62cb5e309aa53027476658a6b545999bcd947"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/intake-results.json",
+      "sha256": "89b97cd2e2d46b956db70c934ce8e0117c13e5c428eae2a41a33feb8f7c6a657"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/intake-review.png",
+      "sha256": "e60905bad491ef8a224524ce02a869263e23d9e05167b0d4998df04647246adf"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/intake-selection.png",
+      "sha256": "51595aaefc0a8a41e243efd5f04d93ba40bb386488557efeec50d0593b03831b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/journey-home.png",
+      "sha256": "28f5b079793ad5973d5e45fc569b30b4866e442e4fb079ad31c340896b50a713"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/journey-results.json",
+      "sha256": "d9124d78be51516b2119b02d79b1fb8b26713cea5290a65b0dceecd390f97976"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/journey-review.png",
+      "sha256": "7c3cf1e6ccaf4ebe19d8809b8f554fafc992a79aafa3d3721e7e4fc093323d77"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/mobile.png",
+      "sha256": "3baa76ea8319e8f18c1fd8aa028a4c43ea13d166a767d3189c3aea4e419540f9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/model-results.json",
+      "sha256": "6af3d1c01e99f76269af59d2b385bc4cda67a9731f9721bbd55fab761630ebbe"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/model-results.txt",
+      "sha256": "307907165785c74b9d55604cdfbe1b6f2775dfd76161653f501621cf97deff5f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/next-appointment-choices.png",
+      "sha256": "9fe6d3d70d6e07659ed01c45cc8932556ce995e58dc80aa94afe952468efb9c5"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/next-appointment-plan.png",
+      "sha256": "c06cf2ab3d9da5c97920c33123d81691a8ffc45c89939e55cbc4e22c456ada60"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/next-appointment-results.json",
+      "sha256": "e6a527be344dd50f53380f1924cefafc4999933033daa77849efd868dcf57b06"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/next-steps.png",
+      "sha256": "c80d8fd6cc265c069cf2eef1ed63095daf745e15adbad6e768483291bab87195"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-during.png",
+      "sha256": "6f07c040f892389429d42083751ee672c55f9761afc884830747088b08c09b1e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-landscape.png",
+      "sha256": "46f7721c0f8c7020bc7b70dd7f30d3a4aea6d862c4cc7d3b26ebe7327d33938b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-reading.png",
+      "sha256": "f0c9e4354ade8ccfc940689eedf13312df115594077d5fea5ea3cd85a504edfe"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-recovery.png",
+      "sha256": "4915dd80e845311b7b63a8d62278d62da893a0f54f3425e326f20e5e69cd347d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-results.json",
+      "sha256": "eb8d6c3066a6dde5f79b52d7a7136b97cbd0a3e3066d3446e5bd96ba19f13997"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-standalone.png",
+      "sha256": "5b65eb8e94bd1c9e20e65e9c1194a327d9c33e18c1d651ebf5369f6eb3e9cb2b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/phone-start.png",
+      "sha256": "7b7fe8bd4fdab8b5ee2b85d1d1e6ffa7c497d3cb6e7b289a1e9a05907b08b341"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/prepare.png",
+      "sha256": "9f213bd1b869ed384120cf4d210149759dd433f88429eae766965f67c77e2666"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/recovery-list.png",
+      "sha256": "513a80ccc5c038c6a32dea36a369537d487766483295379ff5973cb11a509968"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/recovery-preview.png",
+      "sha256": "be59da3ae285ff1b635358e076faf55225e06c93b94546d7270aad8f997a34ea"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/recovery-results.json",
+      "sha256": "fb23609ba5e10ea51723afab6fce544dbad0156d85151085e8a53b71b366ad61"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/requests.png",
+      "sha256": "294a26fa94225182b6180a04ba80eae787aad5f61d69fb713fd1ec4b4f990ecb"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/resume-completed.png",
+      "sha256": "44df1d057fdff945514b4d9236d76bf57c43ae9aa5f0c297127e656b973ce5b6"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/resume-list.png",
+      "sha256": "c03b7c5136182f342b258db6c0df122408f8e92b42eea9a51e75250d799ea16e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/resume-preparation.png",
+      "sha256": "134429c6a4adbbc52cbdcf55ec02b3a9233c4d26fb16255a8e36b2812b2f897f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/resume-results.json",
+      "sha256": "f8fa8a7b764a8f800b14a3bd06eef97e684ce9c34f8e41b7edbdfae220be8ff3"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/review.png",
+      "sha256": "c4570d1b124d0e8d8c97ddadfac67ff54f437af2790c0642492ec4916cd7be9f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/transfer-preview.png",
+      "sha256": "e3f9f84d7124a0942aa587152ae783db676d71e019cc61a36be8ed3a961a206f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/transfer-result.png",
+      "sha256": "94131c6a73e402d71ab0a78c50c79119e9b60a4d208a7c536e49cc3e5e2b2732"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/transfer-results.json",
+      "sha256": "ab58d4a7eec21fdc0efe7186c3c89ffc9be2ef4a13a23f48e8e197dba96b6c8f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/qa/visit-library.png",
+      "sha256": "c287d730bc7a3608f0163ec984755e4401fbaeaae426a9cbf856bcba7e861097"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-PRD.md",
+      "sha256": "c9e65b146c260212ba8bffaf14cd5376723607e9c0956ad9a6935139bd9dedc7"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-acceptance-audit.md",
+      "sha256": "038ab1c967ed6a48fdb1c632e269925d54c601581c349ca636b812a722f2fef6"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-model.mjs",
+      "sha256": "074d8684b58b1ef39a820d4521758177d361fd489adb7a9cd034506733faa1ce"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-presentation.html",
+      "sha256": "867adf49030f03c4b1678be3a35f5300301eaaba0024198bc044ed903371c643"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-progress.md",
+      "sha256": "2ae938113354bab91c657e1888d9dfe9f40260288a2d236fb4ed48f1beb016bc"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-ui.mjs",
+      "sha256": "67446c1cca54090d5b02f122e085261b7097655a4935fd5a504e555923be5c0f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/recovery-walkthroughs.md",
+      "sha256": "4c15f4e0da439e363081584682f2e1f821143e7fc7bb1190795a25db9fbb3721"
+    },
+    {
+      "path": "product-specs/my-visit-notes/research/invitation-and-consent.md",
+      "sha256": "981627c22ce6d91f8c58265ce37362dd55fdbd845b77971e7c964f2f1c243278"
+    },
+    {
+      "path": "product-specs/my-visit-notes/research/review-plan.md",
+      "sha256": "a67908d807a9a7b1b639b44986663f38cfc24836cbf7ae79e03ce50a3882ee2f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/research/session-record.md",
+      "sha256": "2fa26332552719e1447761cf73e530b42e1d873515036e7158680698fee0d80d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/resume-PRD.md",
+      "sha256": "10c8e8881add854f533b8dfd9b63c920b63eb672f789c05942c9500a5920509c"
+    },
+    {
+      "path": "product-specs/my-visit-notes/resume-acceptance-audit.md",
+      "sha256": "a296489f9163a1f2b64dcbdbc3a9acc2690371942db66713939356a968e044cd"
+    },
+    {
+      "path": "product-specs/my-visit-notes/resume-presentation.html",
+      "sha256": "ea6827511541976b42abc9b17f7df01ee8bcefd3b776fad32fb4776a243cc041"
+    },
+    {
+      "path": "product-specs/my-visit-notes/resume-walkthroughs.md",
+      "sha256": "4ca8ce8aa45218623a8a3c152e41bfb6ed1c867bbbf4a64b3f8a057e8be4887d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/review.html",
+      "sha256": "0f8b57e6facd32458f39711634ecb447253c5da193f714e592db424ddbb11a70"
+    },
+    {
+      "path": "product-specs/my-visit-notes/serve-local.mjs",
+      "sha256": "f7e794e253dfea02406f42ea9b8b227ced26c80207588e332a120a338b18f90b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/styles.css",
+      "sha256": "e8124a62f452e8c5574f6017340a2eace53d4c6b00508d0ea199020b55919131"
+    },
+    {
+      "path": "product-specs/my-visit-notes/sw.js",
+      "sha256": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/after-review-browser.mjs",
+      "sha256": "93b9f47d06670eefdbf11b6d9cc4ff7c8f75c306b922e59c4230630b70b1f6a0"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/after-review.test.mjs",
+      "sha256": "b266d02e00c6acf94b1c91fb74cb10b0f26841b8c55acd93d0c2a513e31f4b5d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/beta-record.test.mjs",
+      "sha256": "224e9250b1730edd3e2cc90e81420a9076807beaff9ed799d080e7cced8ee35d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/browser.mjs",
+      "sha256": "6b19f3c71e784e0abed79dbffcf9bd785bfcd55244ea7fb7209691da10eb05b2"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/card-regression.mjs",
+      "sha256": "cb387e6dc72c33c62b65bdaeb603f1853514ddeeece9d4ff7dc2be78ccc10170"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/continuity-browser.mjs",
+      "sha256": "c4fa86026a129e05a22cdaf6566a2eed8ab65ef27d5617b72aa56a6975b631a4"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/continuity.test.mjs",
+      "sha256": "ed1968e27e29489564fffd0e9e5ab54fa0cc253ef2e7219082cc27f2d2dfe2a6"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/conversation-browser.mjs",
+      "sha256": "e7bf492f01021569ddcb629cd145254182a91961d6b9f5544bbceecccaa47b03"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/display.test.mjs",
+      "sha256": "96fcae83a2226bff8a1ceb5df8c037abb7b9b1bab5bace4641a17f55d68a01a6"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/drafts-browser.mjs",
+      "sha256": "37174324dafe3d98226f5e862cf03ca7d259523ac553ca3f6c81df0944b0db65"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/drafts.test.mjs",
+      "sha256": "54f8711a59e7762efccf649b59ca6aed8f69149b58096965773db9285ae85fb9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/collection6-model.mjs",
+      "sha256": "6f2c014f576b655df7f0b537eafe7d6fd19a256a2e1bce41e4357090991cc79c"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/continuity/README.md",
+      "sha256": "bc0b1a5b38ad568f8a1a135f999af89f6c13ebd728d833abc22d766bc4a07396"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/continuity/app.mjs",
+      "sha256": "2b4631a4b8b28175ae5b39b2e360bd09c0a699f39dd083c9ca125f7eb32a388e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/continuity/index.html",
+      "sha256": "6055b5cdd01520c496457441ce26d5edbdf9af1a7d431b4ca0d9e647672c3839"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/continuity/model.mjs",
+      "sha256": "6fe8aa0daf5a784123fc64364244ddd0419620620a88d46ac150da1b1465465f"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/continuity/styles.css",
+      "sha256": "a5cb169a19b32babd821497056e19a382272d140065f8d39ef071738e8b5b858"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/continuity/sw.js",
+      "sha256": "311a9bb998483a658af2b89b021d2dd7cac547b8a306b8f457dba720639a8b22"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/legacy-transfer-v1.json",
+      "sha256": "0505392257a1d71890edb201ecfbffa7bfd0e323aecaeb6cdb1a1bd3ea84d25e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/v1/README.md",
+      "sha256": "b0d971a98d2a0dde54b4fcd36033321fde47eb531128072e95cc1852072542b9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/v1/app.mjs",
+      "sha256": "e06baad66c4bc02983662a6664f9b638cd660fffe22955db7ef6e6b5d2a14fc8"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/v1/index.html",
+      "sha256": "31df7e98896d022494651694d44d2492a428155e7d19c9dc45be9882c2998830"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/v1/model.mjs",
+      "sha256": "ec25dc0046a681747de8dcf5a3ec8043530f0987d64fad1920dc2e7da88afa98"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/v1/styles.css",
+      "sha256": "1fb241564a940eab0c99d68b7c17daa5795b35dfa6fa55b2873107b747a21a37"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/fixtures/v1/sw.js",
+      "sha256": "14a3e68a27fa3923edc2c1752c54dce33fdaf6634ec8434fc9eb45460cb9c49b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/followup-browser.mjs",
+      "sha256": "9b0e30ff5d2e516018251ba0da723d40add47730126789d84d73d9a2493655e7"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/followup.test.mjs",
+      "sha256": "d9cb0a9704606f617f3c6cae497e987848bfd754f5ee730bdd49cf4eef3c7633"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/intake-browser.mjs",
+      "sha256": "6082d51999733477c84252e64b7053f7c24228d6c48fc42b073861cd8774b6a3"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/intake.test.mjs",
+      "sha256": "9835962ef775d3b69c541bba4cdab1d0d33d0713efb23bbc27f9f7f5e8da8af0"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/journey-browser.mjs",
+      "sha256": "2946aa573043cdf01a97c6e84a9bfce034f60824dd55e0acf1c2f0fbe5a23a45"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/model.test.mjs",
+      "sha256": "efb2a4ce2b3e723cf2126d6dc715fca0665fad8c2d7b91551d0688ad278415a9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/navigation.mjs",
+      "sha256": "7a856a6579bcd86ab3a20aa9d0d8f692345b59ff23d1d0204616729ed8a0d78b"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/next-appointment-browser.mjs",
+      "sha256": "82346edf85f99b0975b433ef414f862cb6db20bef1b5bb17d37dc0b7b9570c89"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/next-appointment.test.mjs",
+      "sha256": "aa2209b90c526bd5bfb017f491b82d104be191ca96d019d4efbbcb37c0a42fde"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/phone-browser.mjs",
+      "sha256": "37ab4b2e56b366bd4a9a2e7ec39efb4855d6bb2a0bbf1b98113d1071a1cb88d6"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/platform-browser.mjs",
+      "sha256": "ce9a50909e258333f532affff5899b3e69d381fec72426db598b0e200f840749"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/platform.test.mjs",
+      "sha256": "df81a94591f930d67eb3c47d5636c816c06ac4546c456e487af0375685704f29"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/preparation.test.mjs",
+      "sha256": "850b56f0db5d4a75d060c487e525c404c56a39a36d790557d1c97396a8467666"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/record-model.mjs",
+      "sha256": "c1fc9a5d4b8149907ed36eebb0ed83904bb2f9388231508afa923ab3159ca0be"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/recovery-browser.mjs",
+      "sha256": "197580285f3bb3ea72df07d31e198043c36ba855a82a4b7c72dfde132fb3adc1"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/recovery.test.mjs",
+      "sha256": "3a7be81b5b97e1bdd54d89c8002d9b103bddfc29122e2dbf1a8810e578f18952"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/release.mjs",
+      "sha256": "ef0ef306b7ff548c4063f25c3148cc9375df790736b3282792a355dd659a175a"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/resume-browser.mjs",
+      "sha256": "24828e00650d8d928069e72597857a8c801eaff44bc80fa4fc3f68b4c78fe664"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/transfer-browser.mjs",
+      "sha256": "891c7c3574baa9f57b26ce233ad197831e6771cf901aded924cc19df2bdf3c93"
+    },
+    {
+      "path": "product-specs/my-visit-notes/tests/transfer.test.mjs",
+      "sha256": "d94fc0c6281335155b1785ac4f8ba13e7780a75c40205f80fef1e670a040b0c9"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-PRD.md",
+      "sha256": "5157ba8e6efa09f4c943f4efe0822be870cd82b63b9529fd6ead26cb9c1ae34e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-acceptance-audit.md",
+      "sha256": "0b4a0507225bcd869bab582e6b9803368df36f97b87a7ab108f047e05991fdf0"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-model.mjs",
+      "sha256": "3a35eeedadff56cb4bd29560ef41d2b8176b40ba3c69fb68eec8e3735571cd8d"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-presentation.html",
+      "sha256": "5c3eca313fa9cf9e9cdb6ce349994df0c6a5575f0a6129cb00853daa67e94769"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-progress.md",
+      "sha256": "475122b77300ae4e9ac76d4e7ffd93573d5f3037a465a391a7d123b05463d578"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-record.mjs",
+      "sha256": "1a272b626042cd1846ce6533756f1cd04613628463e2ccc39b719588dd2d637e"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-ui.mjs",
+      "sha256": "5aba8d0d01cafade807ec18bdbec83aa4f916fd3699c948998028a0117509b13"
+    },
+    {
+      "path": "product-specs/my-visit-notes/transfer-walkthroughs.md",
+      "sha256": "bd99985305b9b5ea27910308d048340a6ac87609a277898736a5a07df239e836"
+    },
+    {
+      "path": "product-specs/my-visit-notes/verification.md",
+      "sha256": "60041f0f2d34c3725076ef4f5a6b5ce47ef4b99a1e74505fa4d43e028b124bce"
+    },
+    {
+      "path": "product-specs/my-visit-notes/walkthroughs.md",
+      "sha256": "40893a87d420933daed886c69b5f397b6061e818eee85c6c432a4ede9c8ccf21"
+    }
+  ]
+}

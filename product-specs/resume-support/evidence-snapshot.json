@@ -1,0 +1,142 @@
+{
+  "status": "proxy-only",
+  "generated_at": "2026-09-14T23:47:36.463887+00:00",
+  "source_posts": 1555,
+  "canonical_posts": 1296,
+  "concepts": [
+    {
+      "key": "resume",
+      "label": "Resume after interruption",
+      "description": "A low-friction way to restart work after a context switch, missed step, or stalled task.",
+      "pain_posts": 271,
+      "support_posts": 87,
+      "privacy_posts": 60,
+      "platforms": {
+        "linkedin": 124,
+        "reddit": 147
+      },
+      "proxy_gate": true,
+      "examples": [
+        {
+          "platform": "linkedin",
+          "query": "ADHD household chores",
+          "text": "The global shortage of ADHD medications is creating challenges for all of us, not least our patients who are waiting for their initial and repeat prescriptions to be dispensed. The Department of Health and Social Care along with NHS England have issued guidance to all organisatio",
+          "url": "https://www.linkedin.com/posts/adhd-360_adhdmedicationshortage-activity-7115655598641143809-VMx2"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD household chores",
+          "text": "The NYT Magazine just published an article on ADHD (https://bit.ly/4cEwVnU) entitled: “Have We Been Thinking About A.D.H.D. All Wrong?” Intrigued, I read… and read… and read. At nearly 10,000 words, it’s a novella-length deep dive into what turns out to be familiar terrain for mo",
+          "url": "https://www.linkedin.com/posts/danielcarlat_adhd-psychiatricpractice-mentalhealthcare-activity-7317879867709022208-Y1O5"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD sleep problems",
+          "text": "15 small ways to support your neurodivergent colleagues (that make a big difference ❤️) 📌 Say how long a meeting or call will last 📌 Share meeting agendas ahead of time 📌 Be specific in asks e.g. 'send X report by 3pm today” 📌 Don’t assume silence = understanding (check in!) 📌 Av",
+          "url": "https://www.linkedin.com/posts/katie-friedman-pcc-pcac-381966186_15-small-ways-to-support-your-neurodivergent-activity-7359100537042100224-ND94"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD sleep problems",
+          "text": "Things HR rarely say out loud to neurodivergent employees. Many organisations now talk about neurodiversity. But in practice, the expectation often looks like this: “Be yourself at work… but professionally.” For many neurodivergent people that quietly translates to: • be less dir",
+          "url": "https://www.linkedin.com/posts/rhysbmorgan_things-hr-rarely-say-out-loud-to-neurodivergent-activity-7437034419976151040-sWQk"
+        }
+      ]
+    },
+    {
+      "key": "accommodation",
+      "label": "Communication and workplace accommodation",
+      "description": "Tools for written follow-up, expectation clarity, flexible focus time, and safer accommodation requests.",
+      "pain_posts": 151,
+      "support_posts": 82,
+      "privacy_posts": 33,
+      "platforms": {
+        "linkedin": 105,
+        "reddit": 46
+      },
+      "proxy_gate": true,
+      "examples": [
+        {
+          "platform": "linkedin",
+          "query": "ADHD household chores",
+          "text": "Here's how I've finally managed to get my ADHD medication, after 2 months: 👉 I went into a pharmacy pretty much every single time I left the house 👉 I was told 'no' pretty much every day 👉 I asked the pharmacists to check the computer programme to double check 40mg wasn't in stoc",
+          "url": "https://www.linkedin.com/posts/leannemaskell_adhd-adhdmedicationshortage-adhdmedication-activity-7142408162069934080-jZJ9"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD household chores",
+          "text": "The NYT Magazine just published an article on ADHD (https://bit.ly/4cEwVnU) entitled: “Have We Been Thinking About A.D.H.D. All Wrong?” Intrigued, I read… and read… and read. At nearly 10,000 words, it’s a novella-length deep dive into what turns out to be familiar terrain for mo",
+          "url": "https://www.linkedin.com/posts/danielcarlat_adhd-psychiatricpractice-mentalhealthcare-activity-7317879867709022208-Y1O5"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD sleep problems",
+          "text": "If you’re a worker on the autism spectrum, or an employer who wants to embrace neurodiversity, there are ways to make the work environment more welcoming. Offering the ability to attend meetings online can help ease social anxiety. Sending agendas in advance and allowing written ",
+          "url": "https://www.linkedin.com/posts/cathybussewitz_simple-ways-to-make-meetings-work-better-activity-7450571015035817984-LFQt"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD sleep problems",
+          "text": "15 small ways to support your neurodivergent colleagues (that make a big difference ❤️) 📌 Say how long a meeting or call will last 📌 Share meeting agendas ahead of time 📌 Be specific in asks e.g. 'send X report by 3pm today” 📌 Don’t assume silence = understanding (check in!) 📌 Av",
+          "url": "https://www.linkedin.com/posts/katie-friedman-pcc-pcac-381966186_15-small-ways-to-support-your-neurodivergent-activity-7359100537042100224-ND94"
+        }
+      ]
+    },
+    {
+      "key": "pacing",
+      "label": "Energy and sensory pacing",
+      "description": "A way to plan around fluctuating energy, sensory load, masking, recovery, and shutdown risk.",
+      "pain_posts": 266,
+      "support_posts": 146,
+      "privacy_posts": 94,
+      "platforms": {
+        "linkedin": 109,
+        "reddit": 157
+      },
+      "proxy_gate": true,
+      "examples": [
+        {
+          "platform": "linkedin",
+          "query": "ADHD sleep problems",
+          "text": "🎱 Here are five frustrations neurodivergent workers experience in big business. For many ADHD and autistic employees, the reality often looks like this: 🚨 1. Endless or unnecessary meetings. Why set a meeting when an email would suffice? ADHDers zone out in long meetings, while a",
+          "url": "https://www.linkedin.com/posts/shamus11_autism-adhd-neurodiversity-activity-7304991956655321088-AIPG"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD sleep problems",
+          "text": "The last eight years have been a journey of learning about neurodivergence for me. There are many professional situations from earlier in my career that I would now approach differently with the benefit of that knowledge, and the lived experience of supporting neurodivergent chil",
+          "url": "https://www.linkedin.com/posts/somerstamara_neurodiversity-diversity-neuroinclusion-activity-7446871726761820161-ll6O"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD emotional regulation",
+          "text": "Executive dysfunction in ADHD means the brain’s management system is unreliable. Not broken. Not lazy. Not unwilling. Unreliable - especially under pressure, emotion, or complexity. Executive dysfunction is the gap between what you intend to do and what your brain can initiate, o",
+          "url": "https://www.linkedin.com/posts/emma-craven-a1083a29_executive-dysfunction-in-adhd-means-the-brain-activity-7502750182653128705-Ndgl"
+        },
+        {
+          "platform": "linkedin",
+          "query": "ADHD emotional regulation",
+          "text": "Executive function refers to the mental skills we need for self-control, decision-making, and managing our behaviours. For people with ADHD, these crucial skills can be impaired, leading to challenges in daily life. Some signs of executive dysfunction include: ✅ Time blindness - ",
+          "url": "https://www.linkedin.com/posts/adhd-360_adhd360-adhd-adhdsupport-activity-7357047601386385411-kXDe"
+        }
+      ]
+    }
+  ],
+  "recommended": "resume",
+  "recommendation": "Build the Resume after interruption direction as the next testable iteration, with privacy safeguards retained.",
+  "prototype_audit": {
+    "local_only_claim": true,
+    "undo_or_delete": true,
+    "explicit_export": true,
+    "privacy_controls": true,
+    "all_three_concepts": true,
+    "no_network_calls": true
+  },
+  "prototype_audit_pass": true,
+  "decision": "build-proxy-recommended",
+  "limitations": [
+    "Public, query-selected social posts are directional evidence, not representative prevalence.",
+    "Phrase matching is a transparent heuristic and can miss implicit needs or include incidental mentions.",
+    "No participant interviews, consent, demographic verification, or observed usability sessions were available."
+  ]
+}

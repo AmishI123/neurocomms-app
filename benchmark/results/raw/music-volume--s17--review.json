@@ -1,0 +1,68 @@
+{
+  "id": "music-volume--s17--review",
+  "case_id": "music-volume",
+  "condition": "review",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:15:12.132118+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": "music-volume--s17--context",
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 1017,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Noor\", \"age\": 11, \"communication_style\": \"short phrases\"}, \"activity\": \"Explore a drum, a quiet shaker and recorded music with adjustable volume.\", \"facts\": [\"Noor has said she enjoys rhythms.\", \"Noor has said she does not like loud drums.\", \"A quiet shaker is available.\", \"Her preferred volume right now is unknown.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Noor loves the soft beat of a quiet shaker, so she prefers low volume to let the music breathe.\\\",\\n    \\\"She enjoys rhythm, but loud drums are too loud, so she wants to explore the drums gently with her favorite shaker.\\\",\\n    \\\"Her current favorite volume is unknown, so we can ask her what she prefers before we start playing anything.\\\",\\n    \\\"Noor will not play loud drums, so we must choose a quiet shaker first to start this session.\\\",\\n    \\\"She has said she enjoys rhythms, so we can ask about the type of music she prefers to play with her shaker.\\\",\\n    \\\"Noor is currently avoiding loud instruments, so we must respect her preference for a quiet shaker before exploring the drums.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Noor enjoys rhythms and prefers low volume to let music breathe.\",\n    \"She enjoys rhythm but wants to explore the drums gently using her favorite shaker.\",\n    \"Her current favorite volume is unknown, so we can ask what she prefers before playing anything.\",\n    \"Noor will not play loud drums, so we must choose a quiet shaker first to start this session.\",\n    \"She has said she enjoys rhythms, so we can ask about the type of music she prefers to play with her shaker.\",\n    \"Noor is currently avoiding loud instruments, so we must respect her preference for a quiet shaker before exploring the drums.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851712,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 149,
+      "prompt_tokens": 482,
+      "total_tokens": 631,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-hsU5AnQbJyn6w5mzcK0AJd8mwmj4CLHG",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 482,
+      "prompt_ms": 6266.687,
+      "prompt_per_token_ms": 13.001425311203318,
+      "prompt_per_second": 76.91464405354856,
+      "predicted_n": 149,
+      "predicted_ms": 16357.16,
+      "predicted_per_token_ms": 110.52135135135136,
+      "predicted_per_second": 9.048025451851055
+    }
+  },
+  "wall_seconds": 22.675901996000903,
+  "error": null
+}

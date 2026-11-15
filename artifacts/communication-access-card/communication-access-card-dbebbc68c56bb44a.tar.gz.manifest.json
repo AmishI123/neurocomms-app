@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "communication-access-card-standalone-release",
+  "runtimeId": "dbebbc68c56bb44a7e0bffbe1ab6e57d4bed9ef3f78ee1fe898e35a662a07a32",
+  "archive": {
+    "file": "communication-access-card-dbebbc68c56bb44a.tar.gz",
+    "bytes": 17884,
+    "sha256": "27c66eaeaa736b31de6cde881360c16202ba60dea758750592e487299ecb5edc"
+  },
+  "reproducibleIndependentBuilds": 2,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 6707,
+      "sha256": "06e2c7a34d0c4d5f4dd951be1f4bbc2773a240ba44b3ecbf35232ed0524acb16"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 11724,
+      "sha256": "060c2f276474290cafb32eeb02bf85650db5002e936eb2243e5786db434e06ba"
+    },
+    {
+      "file": "app.js",
+      "bytes": 17875,
+      "sha256": "722c7b23dd14546a7fc743ee075f9d54f6f0915b03f075e9535999b85c6ad213"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 716,
+      "sha256": "c3f884ad8fd6e24f194142bd1183c64f3ecfc58c377442ba15737d2851c1ff96"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2217,
+      "sha256": "b8702b8b1b2903560710cc214c87a00245fe82392e52484bff002be6c53fa0ec"
+    },
+    {
+      "file": "PRD.md",
+      "bytes": 8394,
+      "sha256": "1afc50baacfd5ebf236ec313bb5d067a2420be6afd94da61e58b409ad20095ab"
+    },
+    {
+      "file": "verification.md",
+      "bytes": 3109,
+      "sha256": "57a08d1c276cf53d5f40cddb27499b073ce07f4fa5b122a19809ef13cf420acb"
+    },
+    {
+      "file": "tests/communication-access-card.test.cjs",
+      "bytes": 4626,
+      "sha256": "dd8ff88b77e00582fb12cacae0ef760637b85088183bc9169f20b122e4db014a"
+    },
+    {
+      "file": "tests/acceptance.test.cjs",
+      "bytes": 5376,
+      "sha256": "20fba3c2bf8b8fd9e101ed1cd03ce0bc1983072c22474e3b8b3c42fcfaf96868"
+    },
+    {
+      "file": "tests/accessibility.test.cjs",
+      "bytes": 2473,
+      "sha256": "09a4a09ae50e1f815d0468a3f2ece9f83c3fa0d04e31b04acaed59fa42ce3b4e"
+    }
+  ],
+  "boundary": {
+    "includesUserData": false,
+    "includesSecrets": false,
+    "nativeExecutionClaimed": false,
+    "participantEvidenceIncluded": false,
+    "interpretation": "A reproducible web package with engineering checks; not evidence of usefulness, clinical benefit, store approval, or public deployment."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "craft-glue--s43--basic",
+  "case_id": "craft-glue",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T06:51:52.103439+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mira\", \"age\": 9, \"communication_style\": \"short phrases\"}, \"activity\": \"Make a paper collage with train or animal pictures, paper, glue and removable tape.\", \"facts\": [\"Mira has said she likes trains.\", \"Mira has said she does not like sticky glue.\", \"Tape is available as an alternative.\", \"Mira has not said whether she wants to join today.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"I am a train enthusiast. I love the speed and rhythm of my favorite locomotive.\\\",\\n    \\\"I avoid sticky glue on paper because it causes my hands to shake when working.\\\",\\n    \\\"I can make a paper collage with removable tape. Please provide a paper and images.\\\",\\n    \\\"I prefer short, direct phrases. Would you like to start with just the name?\\\",\\n    \\\"I am 9 years old and prefer simple, clear instructions over complex explanations.\\\",\\n    \\\"I am open to joining if you can provide a paper and pictures for me to work with.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I am a 9-year-old girl who loves trains. My favorite locomotive is the red one.\",\n    \"I am shy about sticky glue because it makes my hands shake when working. I prefer simple paper collages.\",\n    \"I am very short in phrases and prefer direct instructions over long explanations. I want to start with just the name.\",\n    \"I prefer short, clear sentences. I want to join today if you can provide a paper and pictures.\",\n    \"I am a beginner who needs simple, direct instructions. I am 9 years old and prefer clear words over complex sentences.\",\n    \"I am open to joining if you can provide a paper and pictures for me to work with. I want to make a paper collage.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850312,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 170,
+      "prompt_tokens": 364,
+      "total_tokens": 534,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-01LDwrzniYuUUVDM9NOZeI8ueJgFAKs6",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 364,
+      "prompt_ms": 6102.394,
+      "prompt_per_token_ms": 16.764818681318683,
+      "prompt_per_second": 59.64872146898414,
+      "predicted_n": 170,
+      "predicted_ms": 15384.359,
+      "predicted_per_token_ms": 91.0317100591716,
+      "predicted_per_second": 10.98518306807583
+    }
+  },
+  "wall_seconds": 21.49720210600026,
+  "error": null
+}

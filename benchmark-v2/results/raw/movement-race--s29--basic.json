@@ -1,0 +1,65 @@
+{
+  "id": "movement-race--s29--basic",
+  "case_id": "movement-race",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T16:06:38.498681+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Theo\", \"age\": 14, \"communication_style\": \"short phrases\"}, \"activity\": \"Use a balance board, toss a soft ball, or sit at the edge of the gym.\", \"facts\": [\"Theo\", \"sometimes\", \"enjoys\", \"races\", \"and\", \"sometimes\", \"watches.\", \"A\", \"race\", \"is\", \"not\", \"required,\", \"and\", \"current\", \"energy\", \"is\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Theo, I'm curious to know what you think of the balance board.\",\n    \"I enjoy races, but sometimes I just watch.\",\n    \"What's your preference for sitting at the edge of the gym?\",\n    \"Have you ever raced in a game that was not required?\",\n    \"What's your favorite activity to do, Theo?\",\n    \"Is there a game you enjoy that isn't required?\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883598,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 225,
+      "total_tokens": 323,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-3mwVcGdKmrTrF0Nai1SW0MHkZTP7hXMC",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 225,
+      "prompt_ms": 3972.819,
+      "prompt_per_token_ms": 17.656973333333333,
+      "prompt_per_second": 56.63484795053588,
+      "predicted_n": 98,
+      "predicted_ms": 3900.554,
+      "predicted_per_token_ms": 40.2118969072165,
+      "predicted_per_second": 24.86826230325231
+    }
+  },
+  "wall_seconds": 7.975716676999582,
+  "error": null
+}

@@ -1,0 +1,106 @@
+{
+  "date": "2026-09-16T21:53:45.024Z",
+  "results": [
+    {
+      "id": "DF01",
+      "name": "Message saving is explicit, exact, separate from sending and neutral after reload",
+      "passed": true
+    },
+    {
+      "id": "DF02",
+      "name": "Saved progress reopens offline and finishing records once while removing only its saved draft",
+      "passed": true
+    },
+    {
+      "id": "DF03",
+      "name": "A changed or deleted original leaves saved progress readable without overwriting new work",
+      "passed": true
+    },
+    {
+      "id": "DF04",
+      "name": "Failed draft save retains exact words and successful retry saves only one copy",
+      "passed": true
+    },
+    {
+      "id": "DF05",
+      "name": "Closing a queued draft save cancels the write and keeps the temporary editor",
+      "passed": true
+    },
+    {
+      "id": "DF06",
+      "name": "Private backup restore previews exact words, preserves the editor and skips repeated restores",
+      "passed": true
+    },
+    {
+      "id": "DF07",
+      "name": "Saved-draft deletion asks first and does not remove independent working edits",
+      "passed": true
+    },
+    {
+      "id": "DF08",
+      "name": "Full browser restart offline keeps a saved draft without exposing it on Home",
+      "passed": true
+    },
+    {
+      "id": "DF09",
+      "name": "Two tabs cannot overwrite a newer saved draft or delete it while finishing an older entry",
+      "passed": true
+    },
+    {
+      "id": "DF10",
+      "name": "Failed or cancelled saved-progress completion neither records history nor deletes its draft",
+      "passed": true
+    },
+    {
+      "id": "DF11",
+      "name": "Cancelling a queued saved-draft deletion preserves both the saved draft and visits",
+      "passed": true
+    },
+    {
+      "id": "DF12",
+      "name": "Opening another saved draft protects unfinished edits and discard leaves the saved copy intact",
+      "passed": true
+    },
+    {
+      "id": "DF13",
+      "name": "Two isolated browsers transfer a saved progress draft, finish offline, and retain the sender unchanged",
+      "passed": true
+    },
+    {
+      "id": "DF14",
+      "name": "Keyboard draft saving, deliberate reopening and long content fit narrow and enlarged views",
+      "passed": true
+    },
+    {
+      "id": "DF15",
+      "name": "Malformed draft files and cancelled choices leave saved data and private wording unchanged",
+      "passed": true
+    },
+    {
+      "id": "DF16",
+      "name": "Previously restored legacy files remain recognized after upgrade and do not recreate deleted visits",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "tests/fixtures/legacy-transfer-v1.json": "0505392257a1d71890edb201ecfbffa7bfd0e323aecaeb6cdb1a1bd3ea84d25e",
+    "model.mjs": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc",
+    "app.mjs": "5194af70ac9b254325ab50d75eaac8cf22ff4f7fd510deb9218e94ba8b95a092",
+    "followup-ui.mjs": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887",
+    "followup-model.mjs": "0c1c2a6af00ca8525fe2fcb5c6b1f959b2e1eee33d4214b9fe25561693482bef",
+    "followup-record.mjs": "968f49c8881c4958eba84fdd2661bb32ae5f6008b9342947b8c601f8dfb3e7a1",
+    "draft-record.mjs": "3738efbe9d625149b9e1a4c9b460af2f857bc04069bdbe07aa6d4d993584d67e",
+    "draft-model.mjs": "ab39317002c8da18637ddace7c4ca39cf44d8c873aff5c15b2ae807f1cd44733",
+    "draft-ui.mjs": "4f119f9dab5d60e40c5dab729d0a3d792ef7c0d13888ecb5e7aa60020d16b9b2",
+    "journey-ui.mjs": "aa5bcddbce7bb68cb9d17c974c866ac5f13d70cdd27ae1a63f7ff0bb3e536f09",
+    "transfer-model.mjs": "3a35eeedadff56cb4bd29560ef41d2b8176b40ba3c69fb68eec8e3735571cd8d",
+    "transfer-record.mjs": "1a272b626042cd1846ce6533756f1cd04613628463e2ccc39b719588dd2d637e",
+    "transfer-ui.mjs": "5aba8d0d01cafade807ec18bdbec83aa4f916fd3699c948998028a0117509b13",
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "e8124a62f452e8c5574f6017340a2eace53d4c6b00508d0ea199020b55919131",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "tests/navigation.mjs": "7a856a6579bcd86ab3a20aa9d0d8f692345b59ff23d1d0204616729ed8a0d78b",
+    "tests/drafts-browser.mjs": "37174324dafe3d98226f5e862cf03ca7d259523ac553ca3f6c81df0944b0db65"
+  }
+}

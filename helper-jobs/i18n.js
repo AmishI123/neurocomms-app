@@ -1,0 +1,192 @@
+// Helper screens in Hindi and Spanish. English is the source; anything missing stays in English.
+// These first versions need a check by a native speaker before a real outing.
+(function (root) {
+  const T = {
+    // Helper screens
+    'Pick a job': ['काम चुनो', 'Elige un trabajo'],
+    'Read aloud': ['पढ़कर सुनाओ', 'Leer en voz alta'],
+    'Next': ['आगे', 'Siguiente'],
+    'Help': ['मदद', 'Ayuda'],
+    'I want to stop': ['मुझे रुकना है', 'Quiero parar'],
+    'Jobs': ['काम', 'Trabajos'],
+    'Back': ['वापस', 'Atrás'],
+    'Step {n} of {total}': ['कदम {n} / {total}', 'Paso {n} de {total}'],
+    'Hi {name}. Choose one picture. Your volunteer is nearby.': ['नमस्ते {name}। एक तस्वीर चुनो। तुम्हारे वॉलंटियर पास में हैं।', 'Hola {name}. Elige una imagen. Tu voluntario está cerca.'],
+    'Your job now': ['अभी तुम्हारा काम', 'Tu trabajo ahora'],
+    'with {name}': ['{name} के साथ', 'con {name}'],
+    'Coming soon for you!': ['जल्द ही तुम्हारे लिए!', '¡Pronto para ti!'],
+    'Ask your lead to start this with you.': ['अपने लीड से कहो कि यह तुम्हारे साथ शुरू करें।', 'Pide a tu líder que empiece esto contigo.'],
+    'Try a practice run': ['अभ्यास करके देखो', 'Haz una práctica'],
+    'More jobs': ['और काम', 'Más trabajos'],
+    'Practice and new jobs': ['अभ्यास और नए काम', 'Práctica y trabajos nuevos'],
+    'Jobs coming soon for you': ['जल्द आने वाले काम', 'Trabajos que llegan pronto'],
+    'Practice': ['अभ्यास', 'Práctica'],
+    'Practice run · no kid': ['अभ्यास · कोई बच्चा नहीं', 'Práctica · sin niños'],
+    'Level {n}': ['लेवल {n}', 'Nivel {n}'],
+    'Job complete': ['काम पूरा', 'Trabajo terminado'],
+    'Practice done': ['अभ्यास पूरा', 'Práctica terminada'],
+    'You showed up for someone.': ['तुमने किसी की मदद की।', 'Ayudaste a alguien.'],
+    'You practised a new job.': ['तुमने एक नया काम सीखा।', 'Practicaste un trabajo nuevo.'],
+    'How did it feel?': ['कैसा लगा?', '¿Cómo te sentiste?'],
+    'Happy': ['खुश', 'Feliz'],
+    'Okay': ['ठीक', 'Bien'],
+    'Hard': ['मुश्किल', 'Difícil'],
+    'Choose another job': ['दूसरा काम चुनो', 'Elige otro trabajo'],
+    'Finish for today': ['आज के लिए बस', 'Terminar por hoy'],
+    'Star earned': ['तारा मिला', 'Ganaste una estrella'],
+    'You earned a star for helping.': ['मदद करने के लिए तुम्हें एक तारा मिला।', 'Ganaste una estrella por ayudar.'],
+    'You reached a new badge.': ['तुम्हें नया बैज मिला।', 'Ganaste una insignia nueva.'],
+    'Take your time with this new job.': ['इस नए काम को आराम से सीखो।', 'Tómate tu tiempo con este trabajo nuevo.'],
+    'Snack okay': ['नाश्ता ठीक है', 'Merienda: sí'],
+    'No snack · ask the volunteer': ['नाश्ता नहीं · वॉलंटियर से पूछो', 'Sin merienda · pregunta al voluntario'],
+    'Give one snack next to the volunteer.': ['वॉलंटियर के पास एक नाश्ता दो।', 'Da una merienda junto al voluntario.'],
+    'Ask the volunteer. Never guess or change this card.': ['वॉलंटियर से पूछो। कभी अंदाज़ा मत लगाओ, कार्ड मत बदलो।', 'Pregunta al voluntario. Nunca adivines ni cambies esta tarjeta.'],
+    'Snack card: a snack is okay for {name}.': ['नाश्ता कार्ड: {name} को नाश्ता दे सकते हैं।', 'Tarjeta de merienda: {name} puede comer una merienda.'],
+    'Snack card: no snack for {name}. Do not give food.': ['नाश्ता कार्ड: {name} को नाश्ता नहीं। खाना मत दो।', 'Tarjeta de merienda: nada de merienda para {name}. No le des comida.'],
+    'No snack for {name}': ['{name} को नाश्ता नहीं', 'Sin merienda para {name}'],
+    'The card says no snack. Do not give any food.': ['कार्ड पर लिखा है: नाश्ता नहीं। कुछ भी खाने को मत दो।', 'La tarjeta dice sin merienda. No des comida.'],
+    'Water is okay': ['पानी ठीक है', 'El agua está bien'],
+    'You may offer {name} water.': ['तुम {name} को पानी दे सकते हो।', 'Puedes ofrecer agua a {name}.'],
+    'Ask about water': ['पानी के बारे में पूछो', 'Pregunta por el agua'],
+    'Ask the volunteer before giving a drink.': ['कुछ पीने को देने से पहले वॉलंटियर से पूछो।', 'Pregunta al voluntario antes de dar una bebida.'],
+    'Show them the snack card.': ['उन्हें नाश्ता कार्ड दिखाओ।', 'Muéstrale la tarjeta de merienda.'],
+    'You kept {name} safe.': ['तुमने {name} को सुरक्षित रखा।', 'Cuidaste a {name}.'],
+    '{n} seconds · take your time': ['{n} सेकंड · आराम से', '{n} segundos · sin prisa'],
+    'Take all the time you need': ['जितना समय चाहिए, लो', 'Tómate todo el tiempo que necesites'],
+    'Your lead can see this on the board. Wave to your volunteer too.': ['तुम्हारे लीड इसे बोर्ड पर देख सकते हैं। अपने वॉलंटियर को हाथ भी हिलाओ।', 'Tu líder lo ve en el tablero. Saluda también a tu voluntario.'],
+    'Stopping is okay. Your lead can see it on the board. Find your volunteer.': ['रुकना ठीक है। तुम्हारे लीड इसे बोर्ड पर देख सकते हैं। अपने वॉलंटियर के पास जाओ।', 'Parar está bien. Tu líder lo ve en el tablero. Busca a tu voluntario.'],
+
+    // Day plan
+    'Now': ['अभी', 'Ahora'],
+    'Then': ['फिर', 'Después'],
+    'Arrive and say hi': ['पहुँचो और नमस्ते कहो', 'Llegar y saludar'],
+    'Walk to the park': ['पार्क तक चलो', 'Caminar al parque'],
+    'Play time': ['खेलने का समय', 'Hora de jugar'],
+    'Snack time': ['नाश्ते का समय', 'Hora de la merienda'],
+    'Clean up': ['सफ़ाई', 'Recoger'],
+    'Go home': ['घर जाओ', 'Ir a casa'],
+    'The day': ['आज का दिन', 'El día'],
+    // Break
+    'I need a break': ['मुझे थोड़ा आराम चाहिए', 'Necesito un descanso'],
+    'Take a break': ['थोड़ा आराम करो', 'Tómate un descanso'],
+    'Sit with your volunteer. Have some water. Your job will wait for you.': ['अपने वॉलंटियर के साथ बैठो। थोड़ा पानी पियो। तुम्हारा काम तुम्हारा इंतज़ार करेगा।', 'Siéntate con tu voluntario. Bebe un poco de agua. Tu trabajo te espera.'],
+    'I’m ready': ['मैं तैयार हूँ', 'Estoy listo'],
+    'Your lead can see you are taking a break.': ['तुम्हारे लीड देख सकते हैं कि तुम आराम कर रहे हो।', 'Tu líder ve que estás descansando.'],
+    // Practise Help
+    'Practise the Help button': ['मदद बटन का अभ्यास करो', 'Practica el botón de Ayuda'],
+    'Try it here. Nothing is sent.': ['यहाँ आज़माओ। कुछ भी नहीं भेजा जाएगा।', 'Pruébalo aquí. No se envía nada.'],
+    'This is the Help button. It is in the same place on every screen.': ['यह मदद बटन है। यह हर स्क्रीन पर एक ही जगह है।', 'Este es el botón de Ayuda. Está en el mismo lugar en cada pantalla.'],
+    'Press it now to try. This time nothing is sent.': ['आज़माने के लिए अभी दबाओ। इस बार कुछ नहीं भेजा जाएगा।', 'Púlsalo ahora para probar. Esta vez no se envía nada.'],
+    'That’s it! When you press Help for real, your lead sees it and a volunteer comes to you.': ['बस इतना ही! जब तुम सच में मदद दबाओगे, तुम्हारे लीड देखेंगे और एक वॉलंटियर तुम्हारे पास आएँगे।', '¡Eso es! Cuando pulses Ayuda de verdad, tu líder lo ve y un voluntario viene a ti.'],
+    'Back to my jobs': ['मेरे कामों पर वापस', 'Volver a mis trabajos'],
+    // Wishes
+    'Next time I’d like to try…': ['अगली बार मैं यह करना चाहूँगा…', 'La próxima vez me gustaría probar…'],
+    'Thank you. Your coordinator will see it.': ['धन्यवाद। तुम्हारे कोऑर्डिनेटर इसे देखेंगे।', 'Gracias. Tu coordinador lo verá.'],
+    // Jobs
+    'Snack Helper': ['नाश्ता मददगार', 'Ayudante de merienda'],
+    'Hand out snacks next to a volunteer.': ['वॉलंटियर के पास नाश्ता बाँटो।', 'Reparte meriendas junto a un voluntario.'],
+    'Walk Leader': ['सैर लीडर', 'Líder de caminata'],
+    'Help the group move safely.': ['ग्रुप को सुरक्षित चलने में मदद करो।', 'Ayuda al grupo a moverse con cuidado.'],
+    'Clean-Up Crew': ['सफ़ाई टीम', 'Equipo de limpieza'],
+    'Pack up after the outing.': ['घूमने के बाद सामान समेटो।', 'Recoge todo después de la salida.'],
+    'Play Partner': ['खेल साथी', 'Compañero de juego'],
+    'Do one activity together.': ['साथ में एक खेल करो।', 'Hagan una actividad juntos.'],
+    'Talk Friend': ['बातचीत दोस्त', 'Amigo para hablar'],
+    'Have a short, friendly chat.': ['छोटी, प्यारी सी बात करो।', 'Ten una charla corta y amable.'],
+    'Buddy': ['साथी', 'Compañero'],
+    'Stay with one kid for the outing.': ['पूरे समय एक बच्चे के साथ रहो।', 'Quédate con un niño durante la salida.'],
+
+    // Steps: Buddy
+    'Say hi': ['नमस्ते कहो', 'Saluda'],
+    'Use the kid’s name.': ['बच्चे का नाम लो।', 'Di el nombre del niño.'],
+    'Read the tip card': ['टिप कार्ड पढ़ो', 'Lee la tarjeta de consejos'],
+    'Holds hands on stairs. Scared of dogs.': ['सीढ़ियों पर हाथ पकड़ता है। कुत्तों से डरता है।', 'Da la mano en las escaleras. Le dan miedo los perros.'],
+    'Stay close': ['पास रहो', 'Quédate cerca'],
+    'About one arm away, with a volunteer nearby.': ['लगभग एक हाथ की दूरी पर, वॉलंटियर पास में हो।', 'A un brazo de distancia, con un voluntario cerca.'],
+    'Hold hands to cross': ['पार करते समय हाथ पकड़ो', 'Da la mano para cruzar'],
+    'Ask the volunteer before moving.': ['चलने से पहले वॉलंटियर से पूछो।', 'Pregunta al voluntario antes de moverte.'],
+    'Check back': ['मुड़कर देखो', 'Mira atrás'],
+    'Make sure your kid is with you.': ['देखो कि तुम्हारा बच्चा तुम्हारे साथ है।', 'Asegúrate de que tu niño está contigo.'],
+    'If they run off': ['अगर वे भाग जाएँ', 'Si se escapa'],
+    'Do not chase. Stay calm and press Help.': ['पीछे मत भागो। शांत रहो और मदद दबाओ।', 'No corras detrás. Mantén la calma y pulsa Ayuda.'],
+    'Bathroom help': ['बाथरूम की मदद', 'Ayuda con el baño'],
+    'Tell the volunteer. Never take the kid yourself.': ['वॉलंटियर को बताओ। बच्चे को खुद कभी मत ले जाओ।', 'Avisa al voluntario. Nunca lleves al niño tú solo.'],
+    'Say bye': ['बाय कहो', 'Despídete'],
+    'Tell the volunteer and tap Done.': ['वॉलंटियर को बताओ और हो गया दबाओ।', 'Avisa al voluntario y toca Listo.'],
+    // Play
+    'Pick an activity': ['एक खेल चुनो', 'Elige una actividad'],
+    'Bubbles, ball, swing, coloring, blocks, or a song.': ['बुलबुले, गेंद, झूला, रंग भरना, ब्लॉक, या गाना।', 'Burbujas, pelota, columpio, colorear, bloques o una canción.'],
+    'Ask “Want to play?”': ['पूछो “खेलोगे?”', 'Pregunta “¿Quieres jugar?”'],
+    'If they say no or walk away, that is okay.': ['अगर वे ना कहें या चले जाएँ, तो कोई बात नहीं।', 'Si dice que no o se va, está bien.'],
+    'Take turns': ['बारी-बारी से', 'Túrnense'],
+    'Say “my turn, your turn.”': ['कहो “मेरी बारी, तुम्हारी बारी।”', 'Di “mi turno, tu turno.”'],
+    'Cheer them on': ['हौसला बढ़ाओ', 'Anímalo'],
+    'Nice throw! A high five is okay.': ['बढ़िया फेंका! हाई फ़ाइव ठीक है।', '¡Buen tiro! Chocar los cinco está bien.'],
+    'Stop if tired': ['थकें तो रुको', 'Para si se cansa'],
+    'Stop when the kid looks tired or upset.': ['जब बच्चा थका या परेशान लगे, तब रुको।', 'Para cuando el niño parezca cansado o molesto.'],
+    'Tap Done': ['हो गया दबाओ', 'Toca Listo'],
+    'Pick a smiley for how it went.': ['कैसा रहा, उसके लिए एक स्माइली चुनो।', 'Elige una carita según cómo fue.'],
+    // Talk
+    'Sit at eye level': ['आँखों के बराबर बैठो', 'Siéntate a su altura'],
+    'Crouch or sit near the kid.': ['बच्चे के पास झुककर या बैठकर रहो।', 'Agáchate o siéntate cerca del niño.'],
+    'Say one card': ['एक कार्ड बोलो', 'Di una tarjeta'],
+    'Hi, I’m ___. What is your favorite color?': ['नमस्ते, मैं ___ हूँ। तुम्हारा पसंदीदा रंग कौन सा है?', 'Hola, soy ___. ¿Cuál es tu color favorito?'],
+    'Wait 10 seconds': ['10 सेकंड रुको', 'Espera 10 segundos'],
+    'Take your time. Any answer counts.': ['आराम से। हर जवाब मायने रखता है।', 'Sin prisa. Cualquier respuesta cuenta.'],
+    'Listen back': ['ध्यान से सुनो', 'Escucha'],
+    'A word, point, nod, device, or smile counts.': ['एक शब्द, इशारा, सिर हिलाना, डिवाइस, या मुस्कान सब गिनते हैं।', 'Una palabra, señalar, asentir, un aparato o una sonrisa cuentan.'],
+    'Say it back': ['वही दोहराओ', 'Repítelo'],
+    'Blue! I like blue too.': ['नीला! मुझे भी नीला पसंद है।', '¡Azul! A mí también me gusta el azul.'],
+    'Do not talk over': ['बीच में मत बोलो', 'No hables encima'],
+    'Do not finish the kid’s sentence.': ['बच्चे की बात खुद पूरी मत करो।', 'No termines la frase del niño.'],
+    'You did it.': ['तुमने कर दिखाया।', 'Lo lograste.'],
+    // Snack
+    'Clean your hands': ['हाथ साफ़ करो', 'Lávate las manos'],
+    'Use wipes or gel.': ['वाइप्स या जेल लगाओ।', 'Usa toallitas o gel.'],
+    'Put on gloves': ['दस्ताने पहनो', 'Ponte guantes'],
+    'Ask the volunteer if you need help.': ['मदद चाहिए तो वॉलंटियर से पूछो।', 'Pide ayuda al voluntario si la necesitas.'],
+    'Check the snack card': ['नाश्ता कार्ड देखो', 'Mira la tarjeta de merienda'],
+    'Snack okay, or no snack. Never guess.': ['नाश्ता ठीक है, या नाश्ता नहीं। कभी अंदाज़ा मत लगाओ।', 'Merienda sí, o sin merienda. Nunca adivines.'],
+    'Give one snack': ['एक नाश्ता दो', 'Da una merienda'],
+    'Say the kid’s name.': ['बच्चे का नाम बोलो।', 'Di el nombre del niño.'],
+    'If unsure, ask': ['पक्का न हो तो पूछो', 'Si dudas, pregunta'],
+    'The volunteer decides.': ['वॉलंटियर फ़ैसला करते हैं।', 'El voluntario decide.'],
+    'Offer water': ['पानी दो', 'Ofrece agua'],
+    'Offer a napkin too.': ['नैपकिन भी दो।', 'Ofrece también una servilleta.'],
+    'Tell the volunteer you finished.': ['वॉलंटियर को बताओ कि तुमने पूरा कर लिया।', 'Dile al voluntario que terminaste.'],
+    // Walk
+    'Hold the group sign': ['ग्रुप का बोर्ड पकड़ो', 'Sostén el cartel del grupo'],
+    'Walk at the front or back with a volunteer.': ['वॉलंटियर के साथ आगे या पीछे चलो।', 'Camina delante o detrás con un voluntario.'],
+    'Look back': ['पीछे देखो', 'Mira atrás'],
+    'Check that kids are keeping up.': ['देखो कि बच्चे साथ चल रहे हैं।', 'Mira que los niños te siguen.'],
+    'Stop at roads': ['सड़क पर रुको', 'Para en las calles'],
+    'Wait for the volunteer to say go.': ['वॉलंटियर के “चलो” कहने तक रुको।', 'Espera a que el voluntario diga “vamos”.'],
+    'Tell the volunteer': ['वॉलंटियर को बताओ', 'Avisa al voluntario'],
+    'Speak up if a kid stops or falls behind.': ['अगर कोई बच्चा रुक जाए या पीछे रह जाए तो बताओ।', 'Avisa si un niño se para o se queda atrás.'],
+    'Tell the volunteer when you arrive.': ['पहुँचने पर वॉलंटियर को बताओ।', 'Avisa al voluntario cuando lleguen.'],
+    // Clean-up
+    'Pick up trash': ['कचरा उठाओ', 'Recoge la basura'],
+    'Put it in the bin.': ['उसे डिब्बे में डालो।', 'Ponla en el cubo.'],
+    'Pack the toys': ['खिलौने रखो', 'Guarda los juguetes'],
+    'Put balls and bubbles in the bag.': ['गेंदें और बुलबुले बैग में रखो।', 'Pon las pelotas y las burbujas en la bolsa.'],
+    'Check the list': ['लिस्ट देखो', 'Revisa la lista'],
+    'Balls, bubbles, mats, snack box.': ['गेंदें, बुलबुले, चटाई, नाश्ते का डिब्बा।', 'Pelotas, burbujas, colchonetas, caja de meriendas.'],
+    'Tell the volunteer everything is ready.': ['वॉलंटियर को बताओ कि सब तैयार है।', 'Dile al voluntario que todo está listo.']
+  };
+  const LANGS = { en: { name: 'English', speech: 'en-US' }, hi: { name: 'हिन्दी (Hindi)', speech: 'hi-IN' }, es: { name: 'Español (Spanish)', speech: 'es-ES' } };
+  // Fixes from a native speaker (the wording check page) are kept on this device and used first.
+  const FIX_KEY = 'helper-jobs.wording.v1';
+  let fixes = {};
+  function loadFixes() { try { fixes = JSON.parse(root.localStorage && root.localStorage.getItem(FIX_KEY) || '{}') || {}; } catch (_) { fixes = {}; } return fixes; }
+  loadFixes();
+  function t(text, lang, vars) {
+    const row = T[text];
+    const fixed = fixes[lang] && fixes[lang][text] && fixes[lang][text].text;
+    let out = fixed ? fixed : lang === 'hi' && row ? row[0] : lang === 'es' && row ? row[1] : text;
+    for (const [key, value] of Object.entries(vars || {})) out = out.split(`{${key}}`).join(String(value));
+    return out;
+  }
+  const api = { t, LANGS, FIX_KEY, loadFixes, base: (text, lang) => (T[text] ? T[text][lang === 'hi' ? 0 : 1] : ''), missing: lang => Object.keys(T).filter(key => !T[key][lang === 'hi' ? 0 : 1]), strings: T };
+  root.HelperJobsI18n = api;
+  if (typeof module !== 'undefined') module.exports = api;
+})(typeof window !== 'undefined' ? window : globalThis);

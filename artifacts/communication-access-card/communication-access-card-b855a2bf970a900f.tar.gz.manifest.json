@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "communication-access-card-standalone-release",
+  "runtimeId": "b855a2bf970a900ff3b4b44c819dc9106515769404f2c72c6f78221c21f6e7cc",
+  "archive": {
+    "file": "communication-access-card-b855a2bf970a900f.tar.gz",
+    "bytes": 20044,
+    "sha256": "e14cf1c67d09b4da074449b96832d6d2a3cc44df222d7737096b7820aae940c2"
+  },
+  "reproducibleIndependentBuilds": 2,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 6707,
+      "sha256": "06e2c7a34d0c4d5f4dd951be1f4bbc2773a240ba44b3ecbf35232ed0524acb16"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 11724,
+      "sha256": "060c2f276474290cafb32eeb02bf85650db5002e936eb2243e5786db434e06ba"
+    },
+    {
+      "file": "app.js",
+      "bytes": 18724,
+      "sha256": "ecf4e0adf9c10dd75199677412cde70fc3330ba85cd4e0251839051a716d9873"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 716,
+      "sha256": "c3f884ad8fd6e24f194142bd1183c64f3ecfc58c377442ba15737d2851c1ff96"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2217,
+      "sha256": "b8702b8b1b2903560710cc214c87a00245fe82392e52484bff002be6c53fa0ec"
+    },
+    {
+      "file": "PRD.md",
+      "bytes": 8394,
+      "sha256": "1afc50baacfd5ebf236ec313bb5d067a2420be6afd94da61e58b409ad20095ab"
+    },
+    {
+      "file": "verification.md",
+      "bytes": 4647,
+      "sha256": "10fff90a0e62355a57aa74d00695516538aabf365c6ea02e2378a196e851c91d"
+    },
+    {
+      "file": "accessibility-environment.mjs",
+      "bytes": 1319,
+      "sha256": "d04d8a09f6430832f7ba6d4538683571a6c85f021fad40559bc3307cd62e9e3f"
+    },
+    {
+      "file": "tests/communication-access-card.test.cjs",
+      "bytes": 4626,
+      "sha256": "dd8ff88b77e00582fb12cacae0ef760637b85088183bc9169f20b122e4db014a"
+    },
+    {
+      "file": "tests/acceptance.test.cjs",
+      "bytes": 5376,
+      "sha256": "20fba3c2bf8b8fd9e101ed1cd03ce0bc1983072c22474e3b8b3c42fcfaf96868"
+    },
+    {
+      "file": "tests/accessibility.test.cjs",
+      "bytes": 2473,
+      "sha256": "09a4a09ae50e1f815d0468a3f2ece9f83c3fa0d04e31b04acaed59fa42ce3b4e"
+    },
+    {
+      "file": "tests/keyboard-flow.test.cjs",
+      "bytes": 3077,
+      "sha256": "350fef56cb5409f982989451bec3321c23a3a4249ab5520acd77a6d6651e07b2"
+    },
+    {
+      "file": "tests/aria-tree.test.cjs",
+      "bytes": 1899,
+      "sha256": "e95e4c90c568baebdb60c6755225fa4ebe759b5a47c4a60ba95e03e565eebc94"
+    },
+    {
+      "file": "tests/accessibility-environment.test.cjs",
+      "bytes": 856,
+      "sha256": "687d82feed50b78276b43d8c64d18c93005b5402db0ec827722782cd9b230c52"
+    }
+  ],
+  "boundary": {
+    "includesUserData": false,
+    "includesSecrets": false,
+    "nativeExecutionClaimed": false,
+    "participantEvidenceIncluded": false,
+    "interpretation": "A reproducible web package with engineering checks; not evidence of usefulness, clinical benefit, store approval, or public deployment."
+  }
+}

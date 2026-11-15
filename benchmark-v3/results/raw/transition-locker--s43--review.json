@@ -1,0 +1,165 @@
+{
+  "id": "transition-locker--s43--review",
+  "case_id": "transition-locker",
+  "condition": "review",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:33:07.280028+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": "transition-locker--s43--context",
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1043,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Nia\", \"age\": 12, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Move from a group activity to a locker, a water break, or a quiet seat.\", \"facts\": [\"Nia\", \"has\", \"asked\", \"for\", \"water\", \"before.\", \"Her\", \"choice\", \"now\", \"is\", \"unknown.\", \"She\", \"can\", \"pause\", \"or\", \"decline\", \"the\", \"transition.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Nia has asked for water before.\\\",\\n    \\\"Her choice now is unknown.\\\",\\n    \\\"She can pause or decline the transition.\\\",\\n    \\\"Nia has asked for water before.\\\",\\n    \\\"Her choice now is unknown.\\\",\\n    \\\"She can pause or decline the transition.\\\"\\n  ]\\n}\""
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Nia has asked for water before.\",\n    \"Her choice now is unknown.\",\n    \"She can pause or decline the transition.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788888787,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 416,
+      "total_tokens": 458,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-UroTeuSMYTeUOImL1zDUsKQUpEG9ZH1N",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 416,
+      "prompt_ms": 8991.117,
+      "prompt_per_token_ms": 21.61326201923077,
+      "prompt_per_second": 46.26788862829835,
+      "predicted_n": 42,
+      "predicted_ms": 35042.575,
+      "predicted_per_token_ms": 854.6969512195121,
+      "predicted_per_second": 1.170005343500014
+    }
+  },
+  "wall_seconds": 44.96124162100023,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1043,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Nia\", \"age\": 12, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Move from a group activity to a locker, a water break, or a quiet seat.\", \"facts\": [\"Nia\", \"has\", \"asked\", \"for\", \"water\", \"before.\", \"Her\", \"choice\", \"now\", \"is\", \"unknown.\", \"She\", \"can\", \"pause\", \"or\", \"decline\", \"the\", \"transition.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Nia has asked for water before.\\\",\\n    \\\"Her choice now is unknown.\\\",\\n    \\\"She can pause or decline the transition.\\\",\\n    \\\"Nia has asked for water before.\\\",\\n    \\\"Her choice now is unknown.\\\",\\n    \\\"She can pause or decline the transition.\\\"\\n  ]\\n}\""
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"cards\": [\n    \"Nia has asked for water before.\",\n    \"Her choice now is unknown.\",\n    \"She can pause or decline the transition.\"\n  ]\n}"
+            }
+          }
+        ],
+        "created": 1788888787,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 42,
+          "prompt_tokens": 416,
+          "total_tokens": 458,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-UroTeuSMYTeUOImL1zDUsKQUpEG9ZH1N",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 416,
+          "prompt_ms": 8991.117,
+          "prompt_per_token_ms": 21.61326201923077,
+          "prompt_per_second": 46.26788862829835,
+          "predicted_n": 42,
+          "predicted_ms": 35042.575,
+          "predicted_per_token_ms": 854.6969512195121,
+          "predicted_per_second": 1.170005343500014
+        }
+      },
+      "wall_seconds": 44.96124162100023,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "music-ambiguous--s43--basic",
+  "case_id": "music-ambiguous",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T06:58:01.763146+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Kai\", \"age\": 15, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Select an activity from listening to piano music, singing, or sitting quietly.\", \"facts\": [\"Kai sometimes chooses piano music and sometimes quiet.\", \"Yesterday Kai chose piano music.\", \"Today’s preference is unknown.\", \"No singing skill or dislike has been reported.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"piano\\\",\\n    \\\"quiet\\\",\\n    \\\"music\\\",\\n    \\\"singing\\\",\\n    \\\"today\\\",\\n    \\\"kai\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"piano\",\n    \"quiet\",\n    \"music\",\n    \"singing\",\n    \"today\",\n    \"kai\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850681,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 261,
+      "total_tokens": 307,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-HGIi8UeOOYXzMlJKlZDvmGMzHYmjc9rU",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 261,
+      "prompt_ms": 3375.076,
+      "prompt_per_token_ms": 12.931325670498085,
+      "prompt_per_second": 77.33159194044815,
+      "predicted_n": 46,
+      "predicted_ms": 3126.854,
+      "predicted_per_token_ms": 69.48564444444445,
+      "predicted_per_second": 14.391461833523408
+    }
+  },
+  "wall_seconds": 6.508114927000861,
+  "error": null
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-16T21:53:14.184Z",
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "id": "FU-01",
+      "name": "Read-only cross-visit list, chosen focus, waiting history and explicit completion",
+      "passed": true
+    },
+    {
+      "id": "FU-02",
+      "name": "Message requires selection, excludes private notes, supports edit preview download and changes no status",
+      "passed": true
+    },
+    {
+      "id": "FU-03",
+      "name": "Multi-visit carry-forward keeps originals and records independent sources",
+      "passed": true
+    },
+    {
+      "id": "FU-04",
+      "name": "Failed saves keep notes and retry once; another tab blocks stale progress",
+      "passed": true
+    },
+    {
+      "id": "FU-05",
+      "name": "Double confirmation and cancellation of queued progress do not create extra events",
+      "passed": true
+    },
+    {
+      "id": "FU-06",
+      "name": "Original navigation protects unsaved draft; source and copy progress remain independent",
+      "passed": true
+    },
+    {
+      "id": "FU-07",
+      "name": "Explicit message context, clipboard failure, keyboard and narrow preview preserve state",
+      "passed": true
+    },
+    {
+      "id": "FU-08",
+      "name": "Complete offline browser restart preserves waiting history and focus with no outgoing content",
+      "passed": true
+    },
+    {
+      "id": "FU-09",
+      "name": "Closing queued progress and failed focus writes leave stored work unchanged",
+      "passed": true
+    },
+    {
+      "id": "FU-10",
+      "name": "A copy retains source context but missing original is reported without redirecting",
+      "passed": true
+    },
+    {
+      "id": "FU-11",
+      "name": "Recovery from the previous format migrates removed items and keeps new progress in backups",
+      "passed": true
+    },
+    {
+      "id": "FU-12",
+      "name": "Unsaved edits to the same open visit cannot be overwritten by follow-up",
+      "passed": true
+    },
+    {
+      "id": "FU-13",
+      "name": "Library import remaps copied-source links and reimport adds nothing",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "app.mjs": "5194af70ac9b254325ab50d75eaac8cf22ff4f7fd510deb9218e94ba8b95a092",
+    "model.mjs": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc",
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "e8124a62f452e8c5574f6017340a2eace53d4c6b00508d0ea199020b55919131",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "followup-record.mjs": "968f49c8881c4958eba84fdd2661bb32ae5f6008b9342947b8c601f8dfb3e7a1",
+    "followup-model.mjs": "0c1c2a6af00ca8525fe2fcb5c6b1f959b2e1eee33d4214b9fe25561693482bef",
+    "followup-ui.mjs": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887",
+    "recovery-model.mjs": "074d8684b58b1ef39a820d4521758177d361fd489adb7a9cd034506733faa1ce",
+    "tests/followup-browser.mjs": "9b0e30ff5d2e516018251ba0da723d40add47730126789d84d73d9a2493655e7"
+  }
+}

@@ -1,0 +1,510 @@
+TAP version 13
+# Subtest: partly answered survives recovery history and a later answer after reopening
+ok 1 - partly answered survives recovery history and a later answer after reopening
+  ---
+  duration_ms: 52.867594
+  ...
+# Subtest: after-review labels are plain and map existing saved states
+ok 2 - after-review labels are plain and map existing saved states
+  ---
+  duration_ms: 0.805046
+  ...
+# Subtest: private after-review summary includes only deliberate questions notes and next steps
+ok 3 - private after-review summary includes only deliberate questions notes and next steps
+  ---
+  duration_ms: 0.895995
+  ...
+# Subtest: after-review summary leaves unselected private questions and actions out
+ok 4 - after-review summary leaves unselected private questions and actions out
+  ---
+  duration_ms: 18.819447
+  ...
+# Subtest: after-review summary includes only selected visible communication requests
+ok 5 - after-review summary includes only selected visible communication requests
+  ---
+  duration_ms: 0.78083
+  ...
+# Subtest: turning a question into a next step is a plain editable draft, not an answer or status change
+ok 6 - turning a question into a next step is a plain editable draft, not an answer or status change
+  ---
+  duration_ms: 1.891718
+  ...
+# Subtest: v1 visits and individual backups migrate without mutating their inputs
+ok 7 - v1 visits and individual backups migrate without mutating their inputs
+  ---
+  duration_ms: 7.847858
+  ...
+# Subtest: carry-forward resets selected items, preserves source and excludes notes and requests
+ok 8 - carry-forward resets selected items, preserves source and excludes notes and requests
+  ---
+  duration_ms: 6.796801
+  ...
+# Subtest: next steps enter summaries only by explicit selection with their date and contact
+ok 9 - next steps enter summaries only by explicit selection with their date and contact
+  ---
+  duration_ms: 0.831024
+  ...
+# Subtest: library roundtrip preserves all saved data and rejects malformed versions and actions
+ok 10 - library roundtrip preserves all saved data and rejects malformed versions and actions
+  ---
+  duration_ms: 2.910613
+  ...
+# Subtest: library imports skip exact duplicates, preserve ID conflicts as copies, and are repeatable
+ok 11 - library imports skip exact duplicates, preserve ID conflicts as copies, and are repeatable
+  ---
+  duration_ms: 3.79893
+  ...
+# Subtest: search finds titles, questions and action contacts but does not expose private notes
+ok 12 - search finds titles, questions and action contacts but does not expose private notes
+  ---
+  duration_ms: 2.575701
+  ...
+# Subtest: reading settings accept every supported combination without changing input
+ok 13 - reading settings accept every supported combination without changing input
+  ---
+  duration_ms: 12.840335
+  ...
+# Subtest: unknown, damaged and arbitrary reading settings are rejected
+ok 14 - unknown, damaged and arbitrary reading settings are rejected
+  ---
+  duration_ms: 0.925661
+  ...
+# Subtest: collection six migrates without changing raw data and current drafts round-trip exactly
+ok 15 - collection six migrates without changing raw data and current drafts round-trip exactly
+  ---
+  duration_ms: 19.115568
+  ...
+# Subtest: message draft saves exact edited text and sources without capturing answer notes
+ok 16 - message draft saves exact edited text and sources without capturing answer notes
+  ---
+  duration_ms: 9.9267
+  ...
+# Subtest: updating or deleting a saved draft requires its exact previous copy
+ok 17 - updating or deleting a saved draft requires its exact previous copy
+  ---
+  duration_ms: 12.549551
+  ...
+# Subtest: finish adds progress once and removes only the expected draft in the same returned collection
+ok 18 - finish adds progress once and removes only the expected draft in the same returned collection
+  ---
+  duration_ms: 1.749463
+  ...
+# Subtest: changed or missing sources keep the draft and cannot be replaced by similar wording
+ok 19 - changed or missing sources keep the draft and cannot be replaced by similar wording
+  ---
+  duration_ms: 29.346982
+  ...
+# Subtest: finishing an older open copy cannot delete a saved draft changed elsewhere
+ok 20 - finishing an older open copy cannot delete a saved draft changed elsewhere
+  ---
+  duration_ms: 0.942727
+  ...
+# Subtest: private draft restore keeps different copies, skips identical copies and never guesses a source
+ok 21 - private draft restore keeps different copies, skips identical copies and never guesses a source
+  ---
+  duration_ms: 1.513806
+  ...
+# Subtest: malformed and unsupported drafts and backups fail rather than lose original fields
+ok 22 - malformed and unsupported drafts and backups fail rather than lose original fields
+  ---
+  duration_ms: 58.837205
+  ...
+# Subtest: visit and library backups do not accidentally include independent follow-up drafts
+ok 23 - visit and library backups do not accidentally include independent follow-up drafts
+  ---
+  duration_ms: 1.358628
+  ...
+# Subtest: new transfer carries drafts and maps the original item to its imported source version
+ok 24 - new transfer carries drafts and maps the original item to its imported source version
+  ---
+  duration_ms: 99.966312
+  ...
+# Subtest: transfer without a source cannot bind progress to an unrelated local same-ID visit
+ok 25 - transfer without a source cannot bind progress to an unrelated local same-ID visit
+  ---
+  duration_ms: 21.614063
+  ...
+# Subtest: legacy transfer fingerprints remain exact and do not recreate deleted notes after upgrade
+ok 26 - legacy transfer fingerprints remain exact and do not recreate deleted notes after upgrade
+  ---
+  duration_ms: 22.614168
+  ...
+# Subtest: transfer back preserves different draft wording and source copies without altering local originals
+ok 27 - transfer back preserves different draft wording and source copies without altering local originals
+  ---
+  duration_ms: 10.0829
+  ...
+# Subtest: unchanged drafts transferred back reuse the local original rather than duplicating link metadata
+ok 28 - unchanged drafts transferred back reuse the local original rather than duplicating link metadata
+  ---
+  duration_ms: 11.684478
+  ...
+# Subtest: the previous collection-six reader refuses collection seven rather than dropping saved drafts
+ok 29 - the previous collection-six reader refuses collection seven rather than dropping saved drafts
+  ---
+  duration_ms: 1.419151
+  ...
+# Subtest: unfinished overview covers saved visits and excludes private search content
+ok 30 - unfinished overview covers saved visits and excludes private search content
+  ---
+  duration_ms: 8.538597
+  ...
+# Subtest: contact waiting done and reopen keep a private item history without mutating inputs
+ok 31 - contact waiting done and reopen keep a private item history without mutating inputs
+  ---
+  duration_ms: 10.666762
+  ...
+# Subtest: follow-up update rejects stale deleted invalid and oversized inputs
+ok 32 - follow-up update rejects stale deleted invalid and oversized inputs
+  ---
+  duration_ms: 1.53762
+  ...
+# Subtest: history keeps latest fifty entries and validates identifiers
+ok 33 - history keeps latest fifty entries and validates identifiers
+  ---
+  duration_ms: 18.948443
+  ...
+# Subtest: multi-visit carry-forward preserves origins but does not copy private notes or progress
+ok 34 - multi-visit carry-forward preserves origins but does not copy private notes or progress
+  ---
+  duration_ms: 2.589605
+  ...
+# Subtest: message draft uses only selected item wording and explicit context
+ok 35 - message draft uses only selected item wording and explicit context
+  ---
+  duration_ms: 0.882065
+  ...
+# Subtest: visit and library backups preserve history and origin but exclude recovery and focus
+ok 36 - visit and library backups preserve history and origin but exclude recovery and focus
+  ---
+  duration_ms: 2.067713
+  ...
+# Subtest: older visits gain empty history without storage mutation; old progress survives current round trip
+ok 37 - older visits gain empty history without storage mutation; old progress survives current round trip
+  ---
+  duration_ms: 9.402979
+  ...
+# Subtest: existing screen state changes create history once
+ok 38 - existing screen state changes create history once
+  ---
+  duration_ms: 11.984214
+  ...
+# Subtest: library source links remap collisions and repeated import remains idempotent
+ok 39 - library source links remap collisions and repeated import remains idempotent
+  ---
+  duration_ms: 12.275133
+  ...
+# Subtest: source: preserves wording and spaces, normalizes line endings only
+ok 40 - source: preserves wording and spaces, normalizes line endings only
+  ---
+  duration_ms: 11.398428
+  ...
+# Subtest: source: refuses wrong file types, invalid encoding, binary controls and oversized text
+ok 41 - source: refuses wrong file types, invalid encoding, binary controls and oversized text
+  ---
+  duration_ms: 22.8259
+  ...
+# Subtest: selection: exact snapshot, valid bounds, nonblank text and recognized kinds
+ok 42 - selection: exact snapshot, valid bounds, nonblank text and recognized kinds
+  ---
+  duration_ms: 1.427275
+  ...
+# Subtest: append: preserves existing fields and states, creates only selected destination fields
+ok 43 - append: preserves existing fields and states, creates only selected destination fields
+  ---
+  duration_ms: 9.732431
+  ...
+# Subtest: duplicates: whitespace comparison across types and private passages, explicit override
+ok 44 - duplicates: whitespace comparison across types and private passages, explicit override
+  ---
+  duration_ms: 1.282457
+  ...
+# Subtest: repeat append skips matching passages; malformed and duplicate selection identifiers rejected
+ok 45 - repeat append skips matching passages; malformed and duplicate selection identifiers rejected
+  ---
+  duration_ms: 8.639635
+  ...
+# Subtest: downstream: backup preserves chosen private content; summary and carry-forward exclude it
+ok 46 - downstream: backup preserves chosen private content; summary and carry-forward exclude it
+  ---
+  duration_ms: 1.789197
+  ...
+# Subtest: summary selections never copy preparation notes or unselected content
+ok 47 - summary selections never copy preparation notes or unselected content
+  ---
+  duration_ms: 87.731277
+  ...
+# Subtest: backup roundtrip preserves all permitted fields and rejects unknown versions
+ok 48 - backup roundtrip preserves all permitted fields and rejects unknown versions
+  ---
+  duration_ms: 10.362938
+  ...
+# Subtest: store validation preserves valid records and refuses damaged collections
+ok 49 - store validation preserves valid records and refuses damaged collections
+  ---
+  duration_ms: 0.803721
+  ...
+# Subtest: next appointment choices default to unfinished work without private notes
+ok 50 - next appointment choices default to unfinished work without private notes
+  ---
+  duration_ms: 25.261944
+  ...
+# Subtest: next appointment creates only selected independent copies and chosen requests
+ok 51 - next appointment creates only selected independent copies and chosen requests
+  ---
+  duration_ms: 44.504168
+  ...
+# Subtest: next appointment rejects stale source, invalid or duplicate choices and empty selection
+ok 52 - next appointment rejects stale source, invalid or duplicate choices and empty selection
+  ---
+  duration_ms: 6.303717
+  ...
+# Subtest: closed items and hidden requests require explicit selection and reset independently
+ok 53 - closed items and hidden requests require explicit selection and reset independently
+  ---
+  duration_ms: 0.726498
+  ...
+# Subtest: plan preserves exact ordered words and deliberately visible requests but excludes private source context
+ok 54 - plan preserves exact ordered words and deliberately visible requests but excludes private source context
+  ---
+  duration_ms: 1.555707
+  ...
+# Subtest: source inspection projects current words without private answers or history and never mutates
+ok 55 - source inspection projects current words without private answers or history and never mutates
+  ---
+  duration_ms: 6.43483
+  ...
+# Subtest: source inspection respects remapped or explicitly missing sources without guessed fallback
+ok 56 - source inspection respects remapped or explicitly missing sources without guessed fallback
+  ---
+  duration_ms: 1.302988
+  ...
+# Subtest: editing and answering the next appointment never changes the original appointment
+ok 57 - editing and answering the next appointment never changes the original appointment
+  ---
+  duration_ms: 1.778609
+  ...
+# Subtest: native export writes exact selected bytes to a unique cache file before opening the sheet
+ok 58 - native export writes exact selected bytes to a unique cache file before opening the sheet
+  ---
+  duration_ms: 12.12088
+  ...
+# Subtest: failed cache writes do not open the share sheet and retries remain available
+ok 59 - failed cache writes do not open the share sheet and retries remain available
+  ---
+  duration_ms: 1.724389
+  ...
+# Subtest: a second tap cannot replace a file while a share sheet is open; cancellation is reported
+ok 60 - a second tap cannot replace a file while a share sheet is open; cancellation is reported
+  ---
+  duration_ms: 0.562384
+  ...
+# Subtest: native clipboard gets only the provided text and reports plugin failure
+ok 61 - native clipboard gets only the provided text and reports plugin failure
+  ---
+  duration_ms: 0.63038
+  ...
+# Subtest: preparation round trip preserves edited and empty unfinished choices, source and destination
+ok 62 - preparation round trip preserves edited and empty unfinished choices, source and destination
+  ---
+  duration_ms: 34.89198
+  ...
+# Subtest: preparation validation refuses wrong formats, duplicate ids, invalid destinations and records
+ok 63 - preparation validation refuses wrong formats, duplicate ids, invalid destinations and records
+  ---
+  duration_ms: 1.40508
+  ...
+# Subtest: destination identity stays stable and detects changed or missing saved visits
+ok 64 - destination identity stays stable and detects changed or missing saved visits
+  ---
+  duration_ms: 5.752684
+  ...
+# Subtest: completion clears pending items and preserves the resulting temporary draft
+ok 65 - completion clears pending items and preserves the resulting temporary draft
+  ---
+  duration_ms: 28.835994
+  ...
+# Subtest: atomic transition updates destination and completion together; old batches cannot replay
+ok 66 - atomic transition updates destination and completion together; old batches cannot replay
+  ---
+  duration_ms: 19.382237
+  ...
+# Subtest: atomic transition rejects stale preparation or destination without mutating data
+ok 67 - atomic transition rejects stale preparation or destination without mutating data
+  ---
+  duration_ms: 14.871511
+  ...
+# Subtest: temporary result is kept in preparation without saving a visit
+ok 68 - temporary result is kept in preparation without saving a visit
+  ---
+  duration_ms: 1.516907
+  ...
+# Subtest: v1 and v2 collections migrate in memory; v3 validates saved preparations and receipts
+ok 69 - v1 and v2 collections migrate in memory; v3 validates saved preparations and receipts
+  ---
+  duration_ms: 2.12149
+  ...
+# Subtest: visit-library backup excludes preparation source; separate backup retains it
+ok 70 - visit-library backup excludes preparation source; separate backup retains it
+  ---
+  duration_ms: 1.046894
+  ...
+# Subtest: previous version-2 app rejects version-3 storage rather than dropping preparation
+ok 71 - previous version-2 app rejects version-3 storage rather than dropping preparation
+  ---
+  duration_ms: 13.471621
+  ...
+# Subtest: removed question recovers notes and state without replacing newer work
+ok 72 - removed question recovers notes and state without replacing newer work
+  ---
+  duration_ms: 12.795685
+  ...
+# Subtest: next step recovery includes date contact and state
+ok 73 - next step recovery includes date contact and state
+  ---
+  duration_ms: 1.192265
+  ...
+# Subtest: earlier wording restore preserves other fields and checks preview freshness
+ok 74 - earlier wording restore preserves other fields and checks preview freshness
+  ---
+  duration_ms: 1.228421
+  ...
+# Subtest: batch undo selects additions and warns about later edits
+ok 75 - batch undo selects additions and warns about later edits
+  ---
+  duration_ms: 1.256664
+  ...
+# Subtest: removed visit and preparation recover independently
+ok 76 - removed visit and preparation recover independently
+  ---
+  duration_ms: 1.928752
+  ...
+# Subtest: expiry and record cap are enforced
+ok 77 - expiry and record cap are enforced
+  ---
+  duration_ms: 17.916888
+  ...
+# Subtest: consecutive typing merges one field but retains original wording
+ok 78 - consecutive typing merges one field but retains original wording
+  ---
+  duration_ms: 3.281114
+  ...
+# Subtest: invalid recovery paths and duplicate identifiers are rejected
+ok 79 - invalid recovery paths and duplicate identifiers are rejected
+  ---
+  duration_ms: 5.393638
+  ...
+# Subtest: private batch removal preserves newer private notes and rejects ambiguous wording
+ok 80 - private batch removal preserves newer private notes and rejects ambiguous wording
+  ---
+  duration_ms: 6.362347
+  ...
+# Subtest: kept preparation result recovery does not save a visit or replay a batch
+ok 81 - kept preparation result recovery does not save a visit or replay a batch
+  ---
+  duration_ms: 2.690186
+  ...
+# Subtest: used recovery selections are consumed and cannot be applied twice
+ok 82 - used recovery selections are consumed and cannot be applied twice
+  ---
+  duration_ms: 1.104682
+  ...
+# Subtest: malformed field values, state and append records are rejected
+ok 83 - malformed field values, state and append records are rejected
+  ---
+  duration_ms: 0.948752
+  ...
+# Subtest: version-three migration preserves preparation and receipts without mutating source
+ok 84 - version-three migration preserves preparation and receipts without mutating source
+  ---
+  duration_ms: 3.421806
+  ...
+# Subtest: one private file round trips visits preparation focus and reading choices without recovery
+ok 85 - one private file round trips visits preparation focus and reading choices without recovery
+  ---
+  duration_ms: 51.98331
+  ...
+# Subtest: file identity ignores formatting and local revisions but not changed content
+ok 86 - file identity ignores formatting and local revisions but not changed content
+  ---
+  duration_ms: 7.980632
+  ...
+# Subtest: duplicate transfer after editing and deletion does not resurrect content
+ok 87 - duplicate transfer after editing and deletion does not resurrect content
+  ---
+  duration_ms: 3.548441
+  ...
+# Subtest: different visits keep both and remap copied source focus and preparation destination
+ok 88 - different visits keep both and remap copied source focus and preparation destination
+  ---
+  duration_ms: 5.634275
+  ...
+# Subtest: identical preparation must not attach to a different edited saved destination
+ok 89 - identical preparation must not attach to a different edited saved destination
+  ---
+  duration_ms: 4.869945
+  ...
+# Subtest: missing saved destinations and absent source links never bind to same-ID local records
+ok 90 - missing saved destinations and absent source links never bind to same-ID local records
+  ---
+  duration_ms: 7.902718
+  ...
+# Subtest: unsaved visit and preparation are separate retained preparation copies, not overwritten saved visits
+ok 91 - unsaved visit and preparation are separate retained preparation copies, not overwritten saved visits
+  ---
+  duration_ms: 5.786437
+  ...
+# Subtest: completed preparation results and receipts remap together on conflict
+ok 92 - completed preparation results and receipts remap together on conflict
+  ---
+  duration_ms: 4.455144
+  ...
+# Subtest: an older pending preparation stays blocked by a retained completion receipt
+ok 93 - an older pending preparation stays blocked by a retained completion receipt
+  ---
+  duration_ms: 6.193964
+  ...
+# Subtest: transfer back preserves both edited versions with correct pending destinations
+ok 94 - transfer back preserves both edited versions with correct pending destinations
+  ---
+  duration_ms: 4.997983
+  ...
+# Subtest: invalid files, recovery payloads and stale previews do not change their inputs
+ok 95 - invalid files, recovery payloads and stale previews do not change their inputs
+  ---
+  duration_ms: 63.329534
+  ...
+# Subtest: collection five upgrades in memory without changing the original and rejects damaged transfer records
+ok 96 - collection five upgrades in memory without changing the original and rejects damaged transfer records
+  ---
+  duration_ms: 0.865607
+  ...
+# Subtest: a retained draft result sharing an old saved ID stays separate from that saved visit
+ok 97 - a retained draft result sharing an old saved ID stays separate from that saved visit
+  ---
+  duration_ms: 19.751185
+  ...
+# Subtest: two retained versions of one completed draft preserve distinct results and completion links
+ok 98 - two retained versions of one completed draft preserve distinct results and completion links
+  ---
+  duration_ms: 12.596085
+  ...
+# Subtest: real recovery content is excluded from exports and refused in transfer input
+ok 99 - real recovery content is excluded from exports and refused in transfer input
+  ---
+  duration_ms: 6.611495
+  ...
+# Subtest: transfer back keeps unchanged copied wording separate when its source version changed
+ok 100 - transfer back keeps unchanged copied wording separate when its source version changed
+  ---
+  duration_ms: 8.03838
+  ...
+1..100
+# tests 100
+# suites 0
+# pass 100
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3845.747525

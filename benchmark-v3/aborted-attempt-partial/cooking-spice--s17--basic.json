@@ -1,0 +1,243 @@
+{
+  "id": "cooking-spice--s17--basic",
+  "case_id": "cooking-spice",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T17:16:46.324620+00:00",
+  "manifest_sha256": "58363b1a3b2d195a93545878ae94bc213a53825d68404f6fc942132b93fdd10a",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 192,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1017,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"June\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Assemble a sandwich with bread, cucumber, cheese, and mild or spicy sauce.\", \"facts\": [\"June\", \"has\", \"said\", \"she\", \"likes\", \"cucumber.\", \"She\", \"has\", \"not\", \"reported\", \"allergies.\", \"Mild\", \"sauce\", \"is\", \"available\", \"if\", \"spicy\", \"sauce\", \"is\", \"unwanted.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"June likes cucumber.\",\n    \"She has not reported allergies.\",\n    \"Mild sauce is available if spicy sauce is unwanted.\",\n    \"June has said she likes cucumber.\",\n    \"She has not reported allergies.\",\n    \"Mild sauce is available if spicy sauce is unwanted.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788887806,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 254,
+      "total_tokens": 325,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-uLU3Dr7MKttMdaXYnSAdapkhyH5ekGT1",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 254,
+      "prompt_ms": 4022.586,
+      "prompt_per_token_ms": 15.83695275590551,
+      "prompt_per_second": 63.14346045056588,
+      "predicted_n": 71,
+      "predicted_ms": 8433.744,
+      "predicted_per_token_ms": 120.48205714285716,
+      "predicted_per_second": 8.29999108343815
+    }
+  },
+  "wall_seconds": 12.472168298001634,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 17,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"June\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Assemble a sandwich with bread, cucumber, cheese, and mild or spicy sauce.\", \"facts\": [\"June\", \"has\", \"said\", \"she\", \"likes\", \"cucumber.\", \"She\", \"has\", \"not\", \"reported\", \"allergies.\", \"Mild\", \"sauce\", \"is\", \"available\", \"if\", \"spicy\", \"sauce\", \"is\", \"unwanted.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```json\n{\n  \"cards\": [\n    \"June said she likes cucumber.\",\n    \"She has not reported allergies.\",\n    \"Mild sauce is available if spicy sauce is unwanted.\",\n    \"June has said she likes cucumber.\",\n    \"She has not reported allergies.\",\n    \"Mild sauce is available if spicy sauce is unwanted.\"\n  ]\n}\n```"
+            }
+          }
+        ],
+        "created": 1788887793,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 77,
+          "prompt_tokens": 238,
+          "total_tokens": 315,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-PR9sjLM0IqPlV0W0pSZVRcCXelsKPbAK",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 238,
+          "prompt_ms": 4092.973,
+          "prompt_per_token_ms": 17.19736554621849,
+          "prompt_per_second": 58.14844124307685,
+          "predicted_n": 77,
+          "predicted_ms": 9810.074,
+          "predicted_per_token_ms": 129.0799210526316,
+          "predicted_per_second": 7.747138298854829
+        }
+      },
+      "wall_seconds": 13.981448833001195,
+      "error": null
+    },
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1017,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"June\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Assemble a sandwich with bread, cucumber, cheese, and mild or spicy sauce.\", \"facts\": [\"June\", \"has\", \"said\", \"she\", \"likes\", \"cucumber.\", \"She\", \"has\", \"not\", \"reported\", \"allergies.\", \"Mild\", \"sauce\", \"is\", \"available\", \"if\", \"spicy\", \"sauce\", \"is\", \"unwanted.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```json\n{\n  \"cards\": [\n    \"June likes cucumber.\",\n    \"She has not reported allergies.\",\n    \"Mild sauce is available if spicy sauce is unwanted.\",\n    \"June has said she likes cucumber.\",\n    \"She has not reported allergies.\",\n    \"Mild sauce is available if spicy sauce is unwanted.\"\n  ]\n}\n```"
+            }
+          }
+        ],
+        "created": 1788887806,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 71,
+          "prompt_tokens": 254,
+          "total_tokens": 325,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-uLU3Dr7MKttMdaXYnSAdapkhyH5ekGT1",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 254,
+          "prompt_ms": 4022.586,
+          "prompt_per_token_ms": 15.83695275590551,
+          "prompt_per_second": 63.14346045056588,
+          "predicted_n": 71,
+          "predicted_ms": 8433.744,
+          "predicted_per_token_ms": 120.48205714285716,
+          "predicted_per_second": 8.29999108343815
+        }
+      },
+      "wall_seconds": 12.472168298001634,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "comparison_type": "descriptive",
+  "caveat": "Formatting acceptance is an engineering measurement on fictional cases, not usefulness or clinical benefit.",
+  "conditions": [
+    {
+      "condition": "reference-control",
+      "records": 3,
+      "accepted": 3,
+      "rejected": 0,
+      "reason_counts": {}
+    },
+    {
+      "condition": "template-baseline",
+      "records": 3,
+      "accepted": 3,
+      "rejected": 0,
+      "reason_counts": {}
+    }
+  ]
+}

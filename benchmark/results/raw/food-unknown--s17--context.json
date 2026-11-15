@@ -1,0 +1,68 @@
+{
+  "id": "food-unknown--s17--context",
+  "case_id": "food-unknown",
+  "condition": "context",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:03:16.542259+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Leena\", \"age\": 14, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Choose a drink during a group break. Water, tea, milk and cups are available.\", \"facts\": [\"Leena has not stated a drink preference.\", \"A friend likes tea; this does not establish Leena’s preference.\", \"Nothing is known about Leena’s family, allergies or religion.\", \"Choosing nothing is allowed.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Choose a drink during a group break.\",\n    \"Water, tea, milk and cups are available.\",\n    \"Nothing is known about Leena's family, allergies or religion.\",\n    \"Choosing nothing is allowed.\",\n    \"Leena has not stated a drink preference.\",\n    \"A friend likes tea; this does not establish Leena's preference.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850996,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 297,
+      "total_tokens": 387,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-FXVdGypEftqcTjiHSkRnKu8sTpE5lIEY",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 297,
+      "prompt_ms": 4615.671,
+      "prompt_per_token_ms": 15.5409797979798,
+      "prompt_per_second": 64.34600733024516,
+      "predicted_n": 90,
+      "predicted_ms": 5961.096,
+      "predicted_per_token_ms": 66.97860674157303,
+      "predicted_per_second": 14.930140363449945
+    }
+  },
+  "wall_seconds": 10.58208254300007,
+  "error": null
+}

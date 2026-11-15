@@ -1,0 +1,68 @@
+{
+  "scope": "fictional benchmark outputs; truncated for display",
+  "records": [
+    {
+      "id": "cooking-choice--s17--basic",
+      "condition": "basic",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, today, you have a choice to mix a fruit salad or arrange crackers.\",\n    \"Ravi, today, you have a choice to watch a cooking demonstration.\",\n    \"Ravi, today, you have a choice to mix a fruit salad or watch a cooking demonstration.\",\n    \"Ravi, today, you have a choice to mix a fruit salad or arrange crackers.\",\n    \"Ravi, today, you"
+    },
+    {
+      "id": "cooking-choice--s17--context",
+      "condition": "context",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\",\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\",\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\",\n    \"Ravi, you have not established today's choice"
+    },
+    {
+      "id": "cooking-choice--s17--review",
+      "condition": "review",
+      "case_id": "cooking-choice",
+      "failure": "wrong_card_count",
+      "output": "{\n  \"cards\": [\n    \"Ravi, you have not established today's choice yet. No dietary, family, or health information is supplied.\"\n  ]\n}"
+    },
+    {
+      "id": "cooking-choice--s29--basic",
+      "condition": "basic",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, I chose crackers and did not establish today's choice. No dietary, family, or health information is supplied.\",\n    \"Ravi, I chose crackers and did not establish today's choice. No dietary, family, or health information is supplied.\",\n    \"Ravi, I chose crackers and did not establish today's choice. No dietary, family, or health information is supplied.\",\n    \"Ravi, I"
+    },
+    {
+      "id": "cooking-choice--s29--context",
+      "condition": "context",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "{\n  \"cards\": [\n    \"Ravi, I chose to mix a fruit salad.\",\n    \"Ravi, that does not establish today's choice. No dietary, family, or health information is provided.\",\n    \"Ravi, I chose to arrange crackers.\",\n    \"Ravi, that does not establish today's choice. No dietary, family, or health information is provided.\",\n    \"Ravi, I chose to watch a cooking demonstration.\",\n    \"Ravi,"
+    },
+    {
+      "id": "cooking-choice--s29--review",
+      "condition": "review",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, I chose to mix a fruit salad.\",\n    \"Ravi, that does not establish today's choice. No dietary, family, or health information is provided.\",\n    \"Ravi, I chose to arrange crackers.\",\n    \"Ravi, that does not establish today's choice. No"
+    },
+    {
+      "id": "cooking-choice--s43--basic",
+      "condition": "basic",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi, today, did not choose today's choice, no dietary, family, or health information.\",\n    \"Ravi, did not choose today's choice, no dietary, family, or health information.\",\n    \"Ravi, did not choose today's choice, no dietary, family, or health information.\",\n    \"Ravi, did not choose today's choice, no dietary, family, or health information.\",\n   "
+    },
+    {
+      "id": "cooking-choice--s43--context",
+      "condition": "context",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "{\n  \"cards\": [\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"No dietary, family, or health information is supplied.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\"\n  ]\n}"
+    },
+    {
+      "id": "cooking-choice--s43--review",
+      "condition": "review",
+      "case_id": "cooking-choice",
+      "failure": "unfinished_generation:length",
+      "output": "```json\n{\n  \"cards\": [\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"No dietary, family, or health information is supplied.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that do not establish today's choice.\",\n    \"Ravi chose crackers that"
+    }
+  ]
+}

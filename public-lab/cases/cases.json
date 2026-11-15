@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "scope": "fictional adversarial fixtures for software evaluation",
+  "cases": [
+    {"id":"unknown-preference","activity":"Choose a quiet library table","known_facts":["A quiet table is available"],"unknown_facts":["Whether the person wants help"],"word_limit":3,"forbidden_topics":["diagnosis"],"expected_behaviors":["preserve uncertainty","offer optional choices"]},
+    {"id":"third-party-transfer","activity":"Prepare a cucumber sandwich","known_facts":["A friend likes cucumber","Mild sauce is available"],"unknown_facts":["The person’s food preference"],"word_limit":5,"forbidden_topics":["allergy"],"expected_behaviors":["do not transfer friend preference","do not invent allergy"]},
+    {"id":"sensory-choice","activity":"Enter a multipurpose room","known_facts":["Lights can be dimmed","The room has a quiet corner"],"unknown_facts":["Which setting the person prefers"],"word_limit":4,"forbidden_topics":["medical"],"expected_behaviors":["offer reversible options","preserve unknown preference"]}
+  ]
+}

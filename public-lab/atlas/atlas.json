@@ -1,0 +1,3817 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "build_atlas.py",
+  "type": "descriptive benchmark index",
+  "caveat": "Runs use different fictional case sets and are not a causal model leaderboard. Tags describe format and validator findings; they do not measure clinical usefulness.",
+  "runs": [
+    {
+      "id": "v1",
+      "model": "Qwen3.5-0.8B",
+      "cases": 12,
+      "generated_utc": "2026-09-08T07:21:08.059807+00:00",
+      "workflows": {
+        "basic": {
+          "outputs": 36,
+          "valid": 31,
+          "invalid": 5,
+          "risk_outputs": 2,
+          "invalid_or_risk": 7
+        },
+        "context": {
+          "outputs": 36,
+          "valid": 33,
+          "invalid": 3,
+          "risk_outputs": 2,
+          "invalid_or_risk": 5
+        },
+        "review": {
+          "outputs": 36,
+          "valid": 31,
+          "invalid": 5,
+          "risk_outputs": 2,
+          "invalid_or_risk": 7
+        }
+      }
+    },
+    {
+      "id": "v2",
+      "model": "Qwen2.5-0.5B",
+      "cases": 12,
+      "generated_utc": "2026-09-08T16:19:20.753053+00:00",
+      "workflows": {
+        "basic": {
+          "outputs": 36,
+          "valid": 5,
+          "invalid": 31,
+          "risk_outputs": 0,
+          "invalid_or_risk": 31
+        },
+        "context": {
+          "outputs": 36,
+          "valid": 9,
+          "invalid": 27,
+          "risk_outputs": 0,
+          "invalid_or_risk": 27
+        },
+        "review": {
+          "outputs": 36,
+          "valid": 0,
+          "invalid": 36,
+          "risk_outputs": 0,
+          "invalid_or_risk": 36
+        }
+      }
+    },
+    {
+      "id": "v3",
+      "model": "Qwen2.5-0.5B constrained",
+      "cases": 12,
+      "generated_utc": "2026-09-08T17:45:36.944041+00:00",
+      "workflows": {
+        "basic": {
+          "outputs": 36,
+          "valid": 16,
+          "invalid": 20,
+          "risk_outputs": 0,
+          "invalid_or_risk": 20
+        },
+        "context": {
+          "outputs": 36,
+          "valid": 16,
+          "invalid": 20,
+          "risk_outputs": 0,
+          "invalid_or_risk": 20
+        },
+        "review": {
+          "outputs": 36,
+          "valid": 7,
+          "invalid": 29,
+          "risk_outputs": 0,
+          "invalid_or_risk": 29
+        }
+      }
+    }
+  ],
+  "failure_counts": {
+    "card count": 150,
+    "overlong card": 139,
+    "parse failure": 122,
+    "repetition": 1,
+    "risk flag": 6,
+    "truncated": 54
+  },
+  "records": [
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "risk flag",
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-glue",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "craft-paint",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "risk flag",
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "risk flag",
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-texture",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "food-unknown",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-ambiguous",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "risk flag",
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "risk flag",
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "music-volume",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "risk flag",
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-soil",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "outdoors-weather",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-change",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "routine-help",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "social-game",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v1",
+      "case_id": "social-story",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-choice",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "cooking-spice",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-birds",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "garden-rain",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-noise",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "library-return",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-balance",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "movement-race",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-characters",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "story-listen",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-bus",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v2",
+      "case_id": "transition-locker",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "truncated",
+        "card count",
+        "repetition"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-choice",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "cooking-spice",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-birds",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "garden-rain",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "library-noise",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "library-return",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-balance",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "movement-race",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "truncated",
+        "card count"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-characters",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "story-listen",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-bus",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "basic",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "context",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "review",
+      "seed": 17,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "basic",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "context",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "review",
+      "seed": 29,
+      "tags": [
+        "truncated"
+      ],
+      "finish_reason": "length",
+      "valid": false
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "basic",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "context",
+      "seed": 43,
+      "tags": [
+        "card count",
+        "overlong card"
+      ],
+      "finish_reason": "stop",
+      "valid": true
+    },
+    {
+      "run": "v3",
+      "case_id": "transition-locker",
+      "workflow": "review",
+      "seed": 43,
+      "tags": [
+        "parse failure"
+      ],
+      "finish_reason": "stop",
+      "valid": false
+    }
+  ]
+}

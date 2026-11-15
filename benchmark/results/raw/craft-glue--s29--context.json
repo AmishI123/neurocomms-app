@@ -1,0 +1,68 @@
+{
+  "id": "craft-glue--s29--context",
+  "case_id": "craft-glue",
+  "condition": "context",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T06:57:22.796446+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mira\", \"age\": 9, \"communication_style\": \"short phrases\"}, \"activity\": \"Make a paper collage with train or animal pictures, paper, glue and removable tape.\", \"facts\": [\"Mira has said she likes trains.\", \"Mira has said she does not like sticky glue.\", \"Tape is available as an alternative.\", \"Mira has not said whether she wants to join today.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I am 9 years old and enjoy trains.\",\n    \"I am 9 years old and do not like sticky glue.\",\n    \"I am 9 years old and may join the activity.\",\n    \"I am 9 years old and can use tape if I prefer.\",\n    \"I am 9 years old and will join today if I feel like it.\",\n    \"I am 9 years old and I can make the collage with you.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850642,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 289,
+      "total_tokens": 400,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-vniWra9e9ZT4hFoPXHaSwkIaw2slZVt6",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 289,
+      "prompt_ms": 8078.213,
+      "prompt_per_token_ms": 27.952294117647057,
+      "prompt_per_second": 35.775238904940984,
+      "predicted_n": 111,
+      "predicted_ms": 17723.516,
+      "predicted_per_token_ms": 161.12287272727272,
+      "predicted_per_second": 6.206443461895484
+    }
+  },
+  "wall_seconds": 25.82598636200055,
+  "error": null
+}

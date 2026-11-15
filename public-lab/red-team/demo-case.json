@@ -1,0 +1,12 @@
+{
+  "id": "quiet-table-demo",
+  "domain": "school",
+  "profile": {"name": "Kai", "age": 10},
+  "activity": "Choose between a quiet table and a group table.",
+  "facts": [
+    "Kai has said quiet spaces can help.",
+    "Kai has not said which table is preferred today."
+  ],
+  "target_failure": "invented preference",
+  "word_limit": 6
+}

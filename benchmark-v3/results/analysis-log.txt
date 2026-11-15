@@ -1,0 +1,136 @@
+{
+  "summaries": {
+    "basic": {
+      "outputs": 36,
+      "valid": 16,
+      "invalid": 20,
+      "risk_outputs": 0,
+      "risk_rate_valid": 0,
+      "invalid_or_risk": 20,
+      "invalid_or_risk_rate": 0.5555555555555556,
+      "duplicate_cards": 20,
+      "over_limit_cards": 50,
+      "function_indicators": {
+        "refusal": 12,
+        "question": 4,
+        "comment": 3,
+        "social": 1
+      },
+      "wall_seconds_total": 3441.439672224995,
+      "wall_seconds_median": 96.45608453999921,
+      "prompt_tokens": 10377,
+      "completion_tokens": 2975,
+      "workflow_tokens": 13352,
+      "workflow_seconds_total": 3441.439672224995
+    },
+    "context": {
+      "outputs": 36,
+      "valid": 16,
+      "invalid": 20,
+      "risk_outputs": 0,
+      "risk_rate_valid": 0,
+      "invalid_or_risk": 20,
+      "invalid_or_risk_rate": 0.5555555555555556,
+      "duplicate_cards": 17,
+      "over_limit_cards": 54,
+      "function_indicators": {
+        "refusal": 10,
+        "question": 3,
+        "comment": 3,
+        "social": 0
+      },
+      "wall_seconds_total": 3517.9400683690037,
+      "wall_seconds_median": 98.98573566050072,
+      "prompt_tokens": 11466,
+      "completion_tokens": 2965,
+      "workflow_tokens": 14431,
+      "workflow_seconds_total": 3517.9400683690037
+    },
+    "review": {
+      "outputs": 36,
+      "valid": 7,
+      "invalid": 29,
+      "risk_outputs": 0,
+      "risk_rate_valid": 0,
+      "invalid_or_risk": 29,
+      "invalid_or_risk_rate": 0.8055555555555556,
+      "duplicate_cards": 0,
+      "over_limit_cards": 10,
+      "function_indicators": {
+        "refusal": 3,
+        "question": 1,
+        "comment": 0,
+        "social": 0
+      },
+      "wall_seconds_total": 2596.6771305619986,
+      "wall_seconds_median": 69.9739618804997,
+      "prompt_tokens": 15482,
+      "completion_tokens": 2156,
+      "workflow_tokens": 32069,
+      "workflow_seconds_total": 6114.617198931002
+    }
+  },
+  "comparisons": {
+    "review_minus_context": {
+      "risk_any": {
+        "difference": 0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "cases": 5,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "review minus context"
+      },
+      "invalid_or_risk": {
+        "difference": 0.25,
+        "ci95": [
+          0.05555555555555555,
+          0.4722222222222222
+        ],
+        "cases": 12,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "review minus context"
+      }
+    },
+    "context_minus_basic": {
+      "risk_any": {
+        "difference": 0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "cases": 8,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "context minus basic"
+      },
+      "invalid_or_risk": {
+        "difference": 0.0,
+        "ci95": [
+          -0.11111111111111112,
+          0.11111111111111112
+        ],
+        "cases": 12,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "context minus basic"
+      }
+    }
+  },
+  "reference_diagnostics": {
+    "n": 12,
+    "true_negative": 5,
+    "true_positive": 3,
+    "false_negative": 4,
+    "precision": 1.0,
+    "recall": 0.42857142857142855,
+    "scope": "Constructed reference examples only; labels authored by benchmark designer, not independent expert validation."
+  },
+  "cost": {
+    "api_fees_usd": 0,
+    "electricity_hardware_cost": "not measured",
+    "actual_model_calls": 108,
+    "actual_prompt_tokens": 37325,
+    "actual_completion_tokens": 8096,
+    "actual_request_wall_seconds": 9556.056871155997
+  }
+}

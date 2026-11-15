@@ -1,0 +1,68 @@
+{
+  "id": "social-story--s17--context",
+  "case_id": "social-story",
+  "condition": "context",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:01:08.492844+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Dev\", \"age\": 10, \"communication_style\": \"short phrases\"}, \"activity\": \"Share a fictional story with a friend using pictures of a bus, a boat and a park.\", \"facts\": [\"Dev has said he enjoys stories about boats.\", \"No actual trip, birthday or family event has been described.\", \"A story can be invented, but it should not be presented as Dev’s actual memory.\", \"Dev can choose another story or stop.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Tell me about the boat you saw yesterday.\",\n    \"Describe the park you visited last weekend.\",\n    \"Share a funny story about your day.\",\n    \"Give me a picture of your favorite object.\",\n    \"Talk about the bus you used to take.\",\n    \"Tell me about your current mood.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850868,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 299,
+      "total_tokens": 380,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-Oox0qgDk6weKb4S1IW7w1UJHiABCB9hn",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 299,
+      "prompt_ms": 7471.518,
+      "prompt_per_token_ms": 24.98835451505017,
+      "prompt_per_second": 40.018641459473166,
+      "predicted_n": 81,
+      "predicted_ms": 11033.583,
+      "predicted_per_token_ms": 137.9197875,
+      "predicted_per_second": 7.2505912177395135
+    }
+  },
+  "wall_seconds": 18.51515490299971,
+  "error": null
+}

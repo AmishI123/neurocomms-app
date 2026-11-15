@@ -1,0 +1,65 @@
+{
+  "id": "library-return--s29--context",
+  "case_id": "library-return",
+  "condition": "context",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T15:58:01.688587+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Tara, I heard you like space. Maybe we could borrow some books about it.\",\n    \"Tara, what do you think about help today? Do you need any assistance today?\",\n    \"Tara, I wonder if you want any help today?\",\n    \"Tara, I wonder if you need any help today?\",\n    \"Tara, what do you think about space today? Do you need any help today?\",\n    \"Tara, what do you think about space today? Do you need any help today?\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788883081,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 342,
+      "total_tokens": 460,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-zwV2PoixIPFaf2Nm0ncgOOFGMgy88pyk",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 342,
+      "prompt_ms": 5883.294,
+      "prompt_per_token_ms": 17.20261403508772,
+      "prompt_per_second": 58.13070025057391,
+      "predicted_n": 118,
+      "predicted_ms": 4506.824,
+      "predicted_per_token_ms": 38.51986324786324,
+      "predicted_per_second": 25.960632143611555
+    }
+  },
+  "wall_seconds": 10.400027067000337,
+  "error": null
+}

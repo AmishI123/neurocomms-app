@@ -1,0 +1,7 @@
+const button=document.querySelector('#install-app'),status=document.querySelector('#install-status');let promptEvent=null;
+function installed(){return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;}
+function showMode(){if(installed()){button.hidden=true;status.textContent='Opened as a standalone app. Notes still stay in this browser’s storage. Keep a backup.';}}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();promptEvent=e;if(!installed()){button.hidden=false;status.textContent='This browser offers installation. It is optional. Installing does not create a backup or an account.';}});
+button.addEventListener('click',async()=>{if(!promptEvent)return;const event=promptEvent;promptEvent=null;button.hidden=true;try{await event.prompt();const choice=await event.userChoice;status.textContent=choice.outcome==='accepted'?'Installation accepted by the browser. Open the app from its new shortcut when available. Keep a backup of your notes.':'Installation was not accepted. You can keep using this browser page.';}catch{status.textContent='Installation could not finish here. Keep using this browser page; your notes are unchanged.';}});
+window.addEventListener('appinstalled',()=>{promptEvent=null;button.hidden=true;status.textContent='The browser reported installation complete. Notes stay on this device; installation is not a backup.';});
+matchMedia('(display-mode: standalone)').addEventListener('change',showMode);showMode();

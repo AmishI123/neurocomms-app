@@ -1,0 +1,18 @@
+{
+  "appId": "org.helperjobs.app",
+  "appName": "Helper Jobs",
+  "webDir": "www",
+  "backgroundColor": "#F3ECE1",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": false
+  },
+  "ios": {
+    "contentInset": "always",
+    "backgroundColor": "#F3ECE1",
+    "limitsNavigationsToAppBoundDomains": false
+  }
+}

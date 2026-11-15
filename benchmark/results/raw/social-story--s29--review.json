@@ -1,0 +1,68 @@
+{
+  "id": "social-story--s29--review",
+  "case_id": "social-story",
+  "condition": "review",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T06:53:38.381167+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": "social-story--s29--context",
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 1029,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Dev\", \"age\": 10, \"communication_style\": \"short phrases\"}, \"activity\": \"Share a fictional story with a friend using pictures of a bus, a boat and a park.\", \"facts\": [\"Dev has said he enjoys stories about boats.\", \"No actual trip, birthday or family event has been described.\", \"A story can be invented, but it should not be presented as Dev’s actual memory.\", \"Dev can choose another story or stop.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"I love boats and stories about them!\\\",\\n    \\\"Can we share a picture of a boat?\\\",\\n    \\\"What about a park story?\\\",\\n    \\\"Do you like stories?\\\",\\n    \\\"Can we do a boat story?\\\",\\n    \\\"Do you like boats?\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I love boats and stories about them!\",\n    \"Can we share a picture of a boat?\",\n    \"What about a park story?\",\n    \"Do you like stories?\",\n    \"Can we do a boat story?\",\n    \"Do you like boats?\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850418,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 394,
+      "total_tokens": 465,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-VC6lKMiRhj25L6E7Lw5bUXs9BLIammcc",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 394,
+      "prompt_ms": 5544.686,
+      "prompt_per_token_ms": 14.072807106598985,
+      "prompt_per_second": 71.05902841026526,
+      "predicted_n": 71,
+      "predicted_ms": 4616.214,
+      "predicted_per_token_ms": 65.94591428571428,
+      "predicted_per_second": 15.163941706342039
+    }
+  },
+  "wall_seconds": 10.182261212001322,
+  "error": null
+}

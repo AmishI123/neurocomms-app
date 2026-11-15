@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "decision": "build-communication-access-card-first",
+  "date": "2026-09-17",
+  "status": "engineering-choice-before-lived-experience-review",
+  "selectedProduct": {
+    "name": "Communication-access card",
+    "firstUser": "A person who wants to explain communication preferences in their own words",
+    "firstSituation": "Before or during a healthcare, school, work, service, or unfamiliar conversation",
+    "firstTask": "Make a short card, edit the example, choose what is visible, review exactly what will leave the device, save it locally, and export a copy",
+    "reason": "A working implementation and product requirements already exist. The complete task is small enough to check now, has clear user control and privacy boundaries, and can support several areas without asking the person to name a diagnosis."
+  },
+  "comparison": [
+    {
+      "name": "Communication-access card",
+      "existingAlternative": "Paper card or ordinary notes app",
+      "implementation": "Working prototype",
+      "engineeringEvidence": "6/6 browser tests passed; local save/reload/delete, hidden-content exclusion, review-before-export, keyboard use, 320px layout, and no external requests are covered",
+      "relativeEffort": "Small extension of existing work",
+      "mainRisk": "A card cannot make another person listen; wording must be reviewed by people who would use it",
+      "decision": "first"
+    },
+    {
+      "name": "Reading and writing desk",
+      "existingAlternative": "A current reader plus text editor",
+      "implementation": "Product brief only; not implemented in this slice",
+      "engineeringEvidence": "No working-flow evidence yet",
+      "relativeEffort": "Medium for plain text; larger for scanned documents and reliable speech",
+      "mainRisk": "Text extraction, speech privacy, and source fidelity can create new errors",
+      "decision": "later"
+    },
+    {
+      "name": "Show me the time steps",
+      "existingAlternative": "Calculator and written schedule",
+      "implementation": "Product brief only; not implemented in this slice",
+      "engineeringEvidence": "No working-flow evidence yet",
+      "relativeEffort": "Small to medium",
+      "mainRisk": "Date, travel, rounding, and money assumptions can look certain when they are not",
+      "decision": "later"
+    }
+  ],
+  "testMethod": {
+    "mode": "engineering-only; no participants or demand claim",
+    "command": "UV_USE_IO_URING=0 LD_LIBRARY_PATH=/home/mehta/.cache/sdl-browser-libs/usr/lib/x86_64-linux-gnu node --test product-specs/communication-access-card/tests/communication-access-card.test.cjs",
+    "result": "6/6 prototype tests, 4/4 acceptance tests, and 1/1 dedicated decision-flow test passed at 320px and 1280px",
+    "visualReview": {
+      "viewports": ["320x900", "1280x900"],
+      "reviewer": "assistant visual self-review",
+      "observations": [
+        "The privacy boundary and the two-column editor/preview relationship are clear on desktop.",
+        "The phone layout becomes one column and keeps the editor usable without horizontal scrolling.",
+        "The temporary mobile success message was visually too large over the editor; its mobile padding and text size were reduced in this slice."
+      ],
+      "limits": "This is not an independent model review, participant review, screen-reader certification, or native Android/iOS test."
+    }
+  },
+  "nextDecisionTest": {
+    "comparison": "Compare the card with a person's current paper or notes method on the same fictional task.",
+    "measure": [
+      "whether the person can make and change the card without unwanted assumptions",
+      "whether the person can identify exactly what will be shared",
+      "whether the card adds effort compared with the current method",
+      "whether the person would choose to use it in the named situation"
+    ],
+    "changeDirectionIf": [
+      "the existing method is easier and the card adds no clear control or access benefit",
+      "people do not want to show a card in the target situation",
+      "the card causes privacy or wording problems that cannot be fixed without changing its purpose"
+    ],
+    "doNotClaim": ["prevalence", "clinical benefit", "market demand", "diagnostic value", "communication success with other people"]
+  }
+}

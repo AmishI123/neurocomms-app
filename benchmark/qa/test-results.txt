@@ -1,0 +1,16 @@
+test_incomplete_archive_is_rejected (test_analysis.AnalysisTests.test_incomplete_archive_is_rejected) ... ok
+test_missing_pair_not_counted_as_success (test_analysis.AnalysisTests.test_missing_pair_not_counted_as_success) ... ok
+test_pairs_are_cases_not_cards_or_seeds (test_analysis.AnalysisTests.test_pairs_are_cases_not_cards_or_seeds) ... ok
+test_percentile_interpolates (test_analysis.AnalysisTests.test_percentile_interpolates) ... ok
+test_authored_reference_behavior (test_benchmark.BenchmarkTests.test_authored_reference_behavior) ... ok
+test_case_balance (test_benchmark.BenchmarkTests.test_case_balance) ... ok
+test_duplicates_length_and_indicators (test_benchmark.BenchmarkTests.test_duplicates_length_and_indicators) ... ok
+test_invalid_outputs_are_not_error_free (test_benchmark.BenchmarkTests.test_invalid_outputs_are_not_error_free) ... ok
+test_private_annotations_never_reach_model (test_benchmark.BenchmarkTests.test_private_annotations_never_reach_model) ... ok
+test_truncation_is_failure (test_benchmark.BenchmarkTests.test_truncation_is_failure) ... ok
+test_resumption_and_frozen_inputs (test_runner.RunnerTests.test_resumption_and_frozen_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.700s
+
+OK

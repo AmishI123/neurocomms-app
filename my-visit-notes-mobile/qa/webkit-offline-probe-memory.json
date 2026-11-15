@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-16T07:37:00.909Z",
+  "cases": [
+    {
+      "mode": "playwright-offline",
+      "requests": [
+        "/",
+        "/sw.js"
+      ],
+      "warm": {
+        "passed": false,
+        "error": "page.reload: WebKit encountered an internal error\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n"
+      },
+      "cold": {
+        "passed": false,
+        "error": "page.goto: WebKit encountered an internal error\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:37581/\", waiting until \"load\"\u001b[22m\n"
+      },
+      "profile": "/dev/shm/webkit-offline-probe-qNuQIR",
+      "before": {
+        "url": "http://127.0.0.1:37581/",
+        "caches": [
+          "probe"
+        ],
+        "registrations": 1,
+        "keys": [],
+        "cachedPage": null
+      },
+      "cacheDiagnostics": {
+        "workerBefore": {
+          "url": "http://127.0.0.1:37581/sw.js",
+          "keys": []
+        },
+        "windowKeys": [],
+        "workerAfter": {
+          "url": "http://127.0.0.1:37581/sw.js",
+          "keys": []
+        }
+      },
+      "originStopped": false
+    },
+    {
+      "mode": "server-stopped",
+      "requests": [
+        "/",
+        "/sw.js"
+      ],
+      "warm": {
+        "passed": false,
+        "error": "page.reload: FetchEvent.respondWith received an error: TypeError: Load failed\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n"
+      },
+      "cold": {
+        "passed": false,
+        "error": "page.goto: FetchEvent.respondWith received an error: TypeError: Load failed\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:40473/\", waiting until \"load\"\u001b[22m\n"
+      },
+      "profile": "/dev/shm/webkit-offline-probe-8vEBS7",
+      "before": {
+        "url": "http://127.0.0.1:40473/",
+        "caches": [
+          "probe"
+        ],
+        "registrations": 1,
+        "keys": [],
+        "cachedPage": null
+      },
+      "cacheDiagnostics": {
+        "workerBefore": {
+          "url": "http://127.0.0.1:40473/sw.js",
+          "keys": []
+        },
+        "windowKeys": [],
+        "workerAfter": {
+          "url": "http://127.0.0.1:40473/sw.js",
+          "keys": []
+        }
+      },
+      "originStopped": true
+    }
+  ],
+  "limits": [
+    "Minimal synthetic fixture, not app or native iOS acceptance",
+    "A stopped local origin is not a physical airplane-mode test"
+  ],
+  "engine": "webkit",
+  "profileStorage": "Linux /dev/shm (diagnostic only, not durable disk)",
+  "localDependencyValidation": {
+    "method": "ldd against actual WPE executables and libgstlibav",
+    "checked": [
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/MiniBrowser",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPEGPUProcess",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPENetworkProcess",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPEWebDriver",
+      "/home/mehta/.cache/ms-playwright/webkit-2248/minibrowser-wpe/bin/WPEWebProcess",
+      "/tmp/my-visit-webkit-libs-FZEs68/root/usr/lib/x86_64-linux-gnu/gstreamer-1.0/libgstlibav.so"
+    ],
+    "systemInstallChanged": false
+  },
+  "browser": "26.0"
+}

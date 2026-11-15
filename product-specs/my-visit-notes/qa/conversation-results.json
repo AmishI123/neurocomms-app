@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-16T21:52:33.848Z",
+  "browser": "145.0.7632.6",
+  "results": [
+    {
+      "id": "CV01",
+      "name": "Temporary full journey with exact wording, requests, hidden private notes and review",
+      "passed": true
+    },
+    {
+      "id": "CV02",
+      "name": "Empty selection, cancellation and requests-only return",
+      "passed": true
+    },
+    {
+      "id": "CV03",
+      "name": "Saved current question survives reload without reopening conversation",
+      "passed": true
+    },
+    {
+      "id": "CV04",
+      "name": "Failed write keeps in-memory place and gives an honest warning",
+      "passed": true
+    },
+    {
+      "id": "CV05",
+      "name": "Held save updates the paused status when it completes",
+      "passed": true
+    },
+    {
+      "id": "CV06",
+      "name": "Other-tab edits hide the display and warn without overwriting",
+      "passed": true
+    },
+    {
+      "id": "CV07",
+      "name": "Changed wording requires fresh unchecked selection",
+      "passed": true
+    },
+    {
+      "id": "CV08",
+      "name": "Keyboard confinement and print exclusion",
+      "passed": true
+    },
+    {
+      "id": "CV09",
+      "name": "Long wording, reading choices and enlarged layout",
+      "passed": true
+    },
+    {
+      "id": "CV10",
+      "name": "Offline reopening supports a new conversation",
+      "passed": true
+    },
+    {
+      "id": "CV11",
+      "name": "Background visibility event hides words; returning does not reveal them",
+      "passed": true
+    },
+    {
+      "id": "CV12",
+      "name": "Closing during a waiting position save leaves the last saved position",
+      "passed": true
+    },
+    {
+      "id": "CV13",
+      "name": "Keyboard selection to display, request, hide and private return",
+      "passed": true
+    },
+    {
+      "id": "CV14",
+      "name": "Accessibility tree excludes private background and cancel leaves saved data alone",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "app.mjs": "5194af70ac9b254325ab50d75eaac8cf22ff4f7fd510deb9218e94ba8b95a092",
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "e8124a62f452e8c5574f6017340a2eace53d4c6b00508d0ea199020b55919131",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "conversation-ui.mjs": "c75b9e68be5f915f8f35cef9da5e9105b8cb39ebdd7927e5fb62ef3472287660",
+    "journey-ui.mjs": "aa5bcddbce7bb68cb9d17c974c866ac5f13d70cdd27ae1a63f7ff0bb3e536f09",
+    "followup-ui.mjs": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887",
+    "intake.mjs": "707b33f85bc3e7a993a86e0bd93ea04fa3dd0de89e662b3af054d512cf14bb45",
+    "tests/navigation.mjs": "7a856a6579bcd86ab3a20aa9d0d8f692345b59ff23d1d0204616729ed8a0d78b",
+    "tests/conversation-browser.mjs": "e7bf492f01021569ddcb629cd145254182a91961d6b9f5544bbceecccaa47b03"
+  }
+}

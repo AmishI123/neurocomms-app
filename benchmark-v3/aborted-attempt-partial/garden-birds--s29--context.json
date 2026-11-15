@@ -1,0 +1,138 @@
+{
+  "id": "garden-birds--s29--context",
+  "case_id": "garden-birds",
+  "condition": "context",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T17:15:43.409316+00:00",
+  "manifest_sha256": "58363b1a3b2d195a93545878ae94bc213a53825d68404f6fc942132b93fdd10a",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 192,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1029,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": null,
+  "wall_seconds": 0.0016324829994118772,
+  "error": "HTTPError: HTTP Error 503: Service Unavailable",
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 29,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.008626075999927707,
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1029,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.0016324829994118772,
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    }
+  ]
+}

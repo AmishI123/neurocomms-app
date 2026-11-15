@@ -1,0 +1,100 @@
+{
+  "date": "2026-09-16T21:53:36.643Z",
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "id": "RC-01",
+      "name": "Saved question removal, offline recovery and retained result",
+      "passed": true
+    },
+    {
+      "id": "RC-02",
+      "name": "Earlier wording preview and cancellation",
+      "passed": true
+    },
+    {
+      "id": "RC-03",
+      "name": "Recoverable visit removal and permanent erasure stay distinct",
+      "passed": true
+    },
+    {
+      "id": "RC-04",
+      "name": "Temporary batch history survives first save and removes only selected additions",
+      "passed": true
+    },
+    {
+      "id": "RC-05",
+      "name": "Kept preparation result recovery and removal preserve completion",
+      "passed": true
+    },
+    {
+      "id": "RC-06",
+      "name": "Recovery failure and another tab leave saved notes intact",
+      "passed": true
+    },
+    {
+      "id": "RC-07",
+      "name": "Earlier private wording stays out of backups and summaries; erase removes recovery copies",
+      "passed": true
+    },
+    {
+      "id": "RC-08",
+      "name": "Cancelling a locked recovery prevents delayed application",
+      "passed": true
+    },
+    {
+      "id": "RC-09",
+      "name": "Expired records cannot be recovered and are pruned on a successful write",
+      "passed": true
+    },
+    {
+      "id": "RC-10",
+      "name": "Full browser restart offline retains recovery before and after use",
+      "passed": true
+    },
+    {
+      "id": "RC-11",
+      "name": "Private batch undo keeps newer wording; keyboard controls fit narrow screen",
+      "passed": true
+    },
+    {
+      "id": "RC-12",
+      "name": "Next-step recovery retains date contact and state without replacing newer title",
+      "passed": true
+    },
+    {
+      "id": "RC-13",
+      "name": "Failed first save retries with history; failed later edits cannot be overwritten by recovery",
+      "passed": true
+    },
+    {
+      "id": "RC-14",
+      "name": "Library and preparation backups exclude history; permanent preparation deletion clears its history",
+      "passed": true
+    },
+    {
+      "id": "RC-15",
+      "name": "Double confirmation does not duplicate; closing a queued recovery leaves saved state unchanged",
+      "passed": true
+    },
+    {
+      "id": "RC-16",
+      "name": "Saved-target batch refuses ambiguous private undo but still recovers other selected additions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "app.mjs": "5194af70ac9b254325ab50d75eaac8cf22ff4f7fd510deb9218e94ba8b95a092",
+    "model.mjs": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc",
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "e8124a62f452e8c5574f6017340a2eace53d4c6b00508d0ea199020b55919131",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "intake.mjs": "707b33f85bc3e7a993a86e0bd93ea04fa3dd0de89e662b3af054d512cf14bb45",
+    "preparation-model.mjs": "ddebc5b550660c60a09a1ccebb962e2ce3ffe1994ad82adab10e05774047b08d",
+    "recovery-model.mjs": "074d8684b58b1ef39a820d4521758177d361fd489adb7a9cd034506733faa1ce",
+    "recovery-ui.mjs": "67446c1cca54090d5b02f122e085261b7097655a4935fd5a504e555923be5c0f",
+    "tests/recovery-browser.mjs": "197580285f3bb3ea72df07d31e198043c36ba855a82a4b7c72dfde132fb3adc1"
+  }
+}

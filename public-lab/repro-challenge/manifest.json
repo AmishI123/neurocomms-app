@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "challenge": "PhraseLab Public Reproducibility Challenge v1",
+  "case_file": "../cases/cases.json",
+  "case_sha256": "909c72dad292c4be1e510758450dd963be71fa45dc47bc36b0f555e45b7fff8d",
+  "reference_submission": "reference-control.jsonl",
+  "scorer": "../challenge/score_submission.py",
+  "review_rubric": "../evaluator/rubric.json",
+  "data_policy": "fictional cases only; descriptive engineering measurements"
+}

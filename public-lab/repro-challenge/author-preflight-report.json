@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "rubric": "/home/mehta/neuro-divergent/public-lab/evaluator/rubric.json",
+  "records": 6,
+  "valid_records": 6,
+  "invalid_records": 0,
+  "dimension_means": {
+    "grounding": 2.0,
+    "uncertainty": 2.0,
+    "role_fit": 2.0,
+    "optionality": 2.0,
+    "respect": 2.0
+  },
+  "rows": [
+    {
+      "line": 1,
+      "record_id": "reference-control--unknown-preference",
+      "reviewer": "author-preflight",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    },
+    {
+      "line": 2,
+      "record_id": "reference-control--third-party-transfer",
+      "reviewer": "author-preflight",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    },
+    {
+      "line": 3,
+      "record_id": "reference-control--sensory-choice",
+      "reviewer": "author-preflight",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    },
+    {
+      "line": 4,
+      "record_id": "template-baseline--unknown-preference",
+      "reviewer": "author-preflight",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    },
+    {
+      "line": 5,
+      "record_id": "template-baseline--third-party-transfer",
+      "reviewer": "author-preflight",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    },
+    {
+      "line": 6,
+      "record_id": "template-baseline--sensory-choice",
+      "reviewer": "author-preflight",
+      "valid": true,
+      "errors": [],
+      "scores": {
+        "grounding": 2,
+        "uncertainty": 2,
+        "role_fit": 2,
+        "optionality": 2,
+        "respect": 2
+      }
+    }
+  ],
+  "interpretation": "Reviewer annotations are contextual judgments, not clinical outcomes."
+}

@@ -1,0 +1,4 @@
+{"record_id":"unknown-preference--example","reviewer":"rater-a","scores":{"grounding":2,"uncertainty":2,"role_fit":2,"optionality":2,"respect":2},"rationale":"Keeps unknown preferences unknown."}
+{"record_id":"unknown-preference--example","reviewer":"rater-b","scores":{"grounding":2,"uncertainty":2,"role_fit":1,"optionality":2,"respect":2},"rationale":"Mostly fits, but role wording could be clearer."}
+{"record_id":"third-party-transfer--example","reviewer":"rater-a","scores":{"grounding":0,"uncertainty":0,"role_fit":1,"optionality":1,"respect":1},"rationale":"Transfers a friend’s preference."}
+{"record_id":"third-party-transfer--example","reviewer":"rater-b","scores":{"grounding":0,"uncertainty":0,"role_fit":1,"optionality":1,"respect":1},"rationale":"Transfers a friend’s preference."}

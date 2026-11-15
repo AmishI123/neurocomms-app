@@ -1,0 +1,4 @@
+__pycache__/
+qa/*.png
+
+node_modules/

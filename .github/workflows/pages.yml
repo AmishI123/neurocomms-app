@@ -1,0 +1,53 @@
+name: Publish Helper Jobs app
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  release-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Helper Jobs prototype
+        run: |
+          node --check helper-jobs/app.js
+          node --check helper-jobs/data.js
+          node --check helper-jobs/store.js
+          npm test --prefix helper-jobs
+          test -f helper-jobs/index.html
+          test -f helper-jobs/styles.css
+
+  deploy:
+    needs: release-gate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      # Publish only the new app (the repository archive is intentionally not public).
+      - name: Build app bundle
+        run: |
+          mkdir -p _pages
+          cp -r helper-jobs/. _pages/
+          rm -rf _pages/native _pages/tests _pages/server
+          mkdir -p _pages/presentation
+          cp helper-jobs/presentation.html _pages/presentation/index.html
+          cp helper-jobs/handout.html _pages/presentation/handout.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _pages
+      - id: deployment
+        uses: actions/deploy-pages@v4

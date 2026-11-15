@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F3ECE1" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · Family page</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="experience.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="print.css" />
+  <style>@media print{@page{size:landscape;margin:.3in}}</style>
+  <script src="native.js"></script>
+</head>
+<body class="family-page">
+  <header class="no-print"><a class="brand" href="./"><span class="mark" aria-hidden="true">h.</span> Helper Jobs</a><span class="header-status"><span class="lang-pick" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="hi" lang="hi">हिन्दी</button><button type="button" data-lang="es" lang="es">Español</button></span><span class="badge" id="family-status" role="status">Connecting…</span></span></header>
+  <main id="app" tabindex="-1" class="no-print">
+    <section id="family-missing" hidden><div class="hj-heading"><p class="eyebrow">Family page</p><h1 data-w="askTitle">Ask the coordinator for your link.</h1><p class="hj-sub" data-w="askSub">The coordinator makes a family page for each helper who says yes. It opens from the link they send you.</p></div></section>
+    <section id="family-board" hidden aria-labelledby="family-name">
+      <div class="family-top"><div class="family-hero"><span class="family-photo" id="family-photo" aria-hidden="true"></span><div><p class="eyebrow" data-w="eyebrow">Family page · Helper Jobs</p><h1 id="family-name">Helper</h1><p class="hj-sub" id="family-meta"></p></div></div><div class="hj-art" data-art="family"></div></div>
+      <div class="board-summary" id="family-summary"></div>
+      <blockquote class="family-note" id="family-note" hidden></blockquote>
+      <h2 class="hj-h2 with-icon"><span class="h-icon" data-icon="checklist"></span><span data-w="hJobs">Jobs done</span></h2><div class="family-jobs" id="family-jobs"></div>
+      <h2 class="hj-h2 with-icon"><span class="h-icon" data-icon="award"></span><span data-w="hCerts">Badges and certificates</span></h2><div class="family-certs" id="family-certs"></div>
+      <p class="hj-privacy" data-w="privacy">This page shows only this helper’s own stars, badges and photo. It never shows the kids, other helpers or what happened when someone asked for help. The coordinator can turn it off at any time.</p>
+      <button type="button" class="button-stop" id="family-forget" data-w="forget">Stop showing this page on this device</button>
+    </section>
+  </main>
+  <div id="print-area" class="print-only"></div>
+  <script src="icons.js"></script><script src="art.js"></script><script src="i18n.js"></script><script src="link.js"></script><script src="certificate.js"></script><script src="family.js"></script>
+</body>
+</html>

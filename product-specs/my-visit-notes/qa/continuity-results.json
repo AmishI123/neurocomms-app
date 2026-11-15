@@ -1,0 +1,119 @@
+{
+  "navigationSourceHashes": {
+    "platform.mjs": "61a535b979011df139777dbca3e6adf710fc0ccad5a42d4ee5b3018bf413abbe",
+    "after-review-model.mjs": "137ba80b0187f04fa83cf2f60cf065bd56ca0434d263ddc27af7f765df37a0ba",
+    "next-appointment-model.mjs": "ee8ceda21c690a34d40ae9c027d1639c8b690a2dec85088f1636431897097dba",
+    "next-appointment-ui.mjs": "327820683f7ff223e983f3ddb460b34db1a2ebfca1da34222c7ddebbe2cd1326",
+    "draft-record.mjs": "3738efbe9d625149b9e1a4c9b460af2f857bc04069bdbe07aa6d4d993584d67e",
+    "draft-model.mjs": "ab39317002c8da18637ddace7c4ca39cf44d8c873aff5c15b2ae807f1cd44733",
+    "draft-ui.mjs": "4f119f9dab5d60e40c5dab729d0a3d792ef7c0d13888ecb5e7aa60020d16b9b2",
+    "transfer-model.mjs": "3a35eeedadff56cb4bd29560ef41d2b8176b40ba3c69fb68eec8e3735571cd8d",
+    "transfer-record.mjs": "1a272b626042cd1846ce6533756f1cd04613628463e2ccc39b719588dd2d637e",
+    "journey-ui.mjs": "aa5bcddbce7bb68cb9d17c974c866ac5f13d70cdd27ae1a63f7ff0bb3e536f09",
+    "followup-ui.mjs": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887",
+    "intake.mjs": "707b33f85bc3e7a993a86e0bd93ea04fa3dd0de89e662b3af054d512cf14bb45",
+    "tests/navigation.mjs": "7a856a6579bcd86ab3a20aa9d0d8f692345b59ff23d1d0204616729ed8a0d78b"
+  },
+  "date": "2026-09-16T21:53:46.138Z",
+  "node": "v18.19.1",
+  "browser": "145.0.7632.6",
+  "sourceHashes": {
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "e8124a62f452e8c5574f6017340a2eace53d4c6b00508d0ea199020b55919131",
+    "model.mjs": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc",
+    "app.mjs": "5194af70ac9b254325ab50d75eaac8cf22ff4f7fd510deb9218e94ba8b95a092",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "display.mjs": "9fd973401ae92a48e6889ec67c760d830ede147467d07c20973958dd2ce97932",
+    "install.mjs": "c73c26a2ee3a14b071767bda1786784e7935ba9f8501d2c822d77750277d02b9",
+    "help.html": "72631c13758696c45a93a3637e4c55f228f47610338c42d433478fe4b1ba5507",
+    "manifest.webmanifest": "555261f7f0c2ce684531782af10f2bde28c222b2b226285c39130db6f13c68bb",
+    "icon.svg": "62159e46d138825c39a4389b258cbdb5bd1d8ecf5901bad1f97d16e27c631821",
+    "icons/icon-180.png": "7bd558e0a65d44254b6027f10b482c7b5c6c7b1f5613ad497a4bae81183361b2",
+    "icons/icon-192.png": "43035e9b067d124088f04257ccb51cf5c75df2c6bcecdef32f2ebd896b9412af",
+    "icons/icon-512.png": "36c8ae6db9a0479ce9e6c79011bbeb987bd3e1cf217902089f5d493ddd8db549",
+    "tests/continuity-browser.mjs": "c4fa86026a129e05a22cdaf6566a2eed8ab65ef27d5617b72aa56a6975b631a4",
+    "tests/fixtures/v1/index.html": "31df7e98896d022494651694d44d2492a428155e7d19c9dc45be9882c2998830",
+    "tests/fixtures/v1/styles.css": "1fb241564a940eab0c99d68b7c17daa5795b35dfa6fa55b2873107b747a21a37",
+    "tests/fixtures/v1/model.mjs": "ec25dc0046a681747de8dcf5a3ec8043530f0987d64fad1920dc2e7da88afa98",
+    "tests/fixtures/v1/app.mjs": "e06baad66c4bc02983662a6664f9b638cd660fffe22955db7ef6e6b5d2a14fc8",
+    "tests/fixtures/v1/sw.js": "14a3e68a27fa3923edc2c1752c54dce33fdaf6634ec8434fc9eb45460cb9c49b"
+  },
+  "results": [
+    {
+      "id": "NC-01",
+      "name": "Next steps save, reverse state, cancel removal and share only by choice",
+      "passed": true
+    },
+    {
+      "id": "NC-02",
+      "name": "Search and opening saved visits are read-only",
+      "passed": true
+    },
+    {
+      "id": "NC-03",
+      "name": "Carry-forward previews selections, excludes notes, preserves source and can cancel",
+      "passed": true
+    },
+    {
+      "id": "NC-04",
+      "name": "Reusable requests require selection, persist separately, and are never preselected for sharing",
+      "passed": true
+    },
+    {
+      "id": "NC-05",
+      "name": "Whole-library backup, duplicate import, ID conflict and private draft preservation",
+      "passed": true
+    },
+    {
+      "id": "NC-06",
+      "name": "Malformed library and failed import writes leave saved data and draft intact",
+      "passed": true
+    },
+    {
+      "id": "NC-07",
+      "name": "A library preview cannot overwrite a concurrent tab change",
+      "passed": true
+    },
+    {
+      "id": "NC-08",
+      "name": "Waiting next-step edits cannot save a replacement draft",
+      "passed": true
+    },
+    {
+      "id": "NC-09",
+      "name": "Real v1 shell upgrades with visits unchanged until saving; old backup restores",
+      "passed": true
+    },
+    {
+      "id": "NC-10",
+      "name": "Complete browser restart offline retains next steps and allows the next visit",
+      "passed": true
+    },
+    {
+      "id": "NC-11",
+      "name": "New next-step and carry-forward controls work by keyboard and at 320px",
+      "passed": true
+    },
+    {
+      "id": "NC-13",
+      "name": "Long-content selection dialogs fit narrow and enlarged views with no outgoing data",
+      "passed": true
+    },
+    {
+      "id": "NC-14",
+      "name": "Closing a tab with a waiting action edit preserves the last successful save",
+      "passed": true
+    },
+    {
+      "id": "NC-15",
+      "name": "Empty-library restore retains all records and requests; action-only drafts and clear-all work",
+      "passed": true
+    },
+    {
+      "id": "NC-12",
+      "name": "Previous app refuses to overwrite the upgraded format",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

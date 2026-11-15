@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">My Visit Notes</string>
+    <string name="title_activity_main">My Visit Notes</string>
+    <string name="package_name">org.myvisitnotes.app</string>
+    <string name="custom_url_scheme">org.myvisitnotes.app</string>
+</resources>

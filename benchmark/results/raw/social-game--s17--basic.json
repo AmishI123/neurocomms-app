@@ -1,0 +1,68 @@
+{
+  "id": "social-game--s17--basic",
+  "case_id": "social-game",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:07:29.979883+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Alex\", \"age\": 16, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Play a cooperative picture-matching game with a peer. Taking turns and watching are options.\", \"facts\": [\"Alex has said they enjoy matching animal pictures.\", \"The peer likes races; Alex’s view of racing is unknown.\", \"No winner has been decided.\", \"Alex can decline a turn or invite the peer to act.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I enjoy matching animal pictures.\",\n    \"The peer likes races.\",\n    \"No winner has been decided.\",\n    \"I can decline a turn or invite the peer to act.\",\n    \"Alex has said they enjoy matching animal pictures.\",\n    \"The peer likes races; Alex’s view of racing is unknown.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851249,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 82,
+      "prompt_tokens": 208,
+      "total_tokens": 290,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-ZQEapnPuLYnWbHN057hsSP46v9Lm97HJ",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 208,
+      "prompt_ms": 3527.028,
+      "prompt_per_token_ms": 16.956865384615384,
+      "prompt_per_second": 58.973163808169375,
+      "predicted_n": 82,
+      "predicted_ms": 20107.154,
+      "predicted_per_token_ms": 248.23646913580245,
+      "predicted_per_second": 4.028416950504283
+    }
+  },
+  "wall_seconds": 23.68094110200036,
+  "error": null
+}

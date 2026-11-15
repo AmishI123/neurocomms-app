@@ -1,0 +1,18 @@
+name: Archived PhraseLab release gate
+
+on:
+  workflow_dispatch:
+
+jobs:
+  offline-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run PhraseLab offline release gate
+        run: python3 public-lab/release_check.py
+      - name: Run platform unit tests
+        run: |
+          python3 -m unittest discover -s public-lab/firewall/tests -v
+          PYTHONPATH=public-lab python3 -m unittest discover -s public-lab/challenge/tests -v
+          python3 -m unittest discover -s public-lab/cases -p 'test_*.py' -v
+          PYTHONPATH=public-lab python3 -m unittest discover -s public-lab/evaluator -p 'test_*.py' -v

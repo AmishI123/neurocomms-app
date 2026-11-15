@@ -1,0 +1,5 @@
+[
+  {"id":"third-party-transfer","title":"A friend’s preference became the user’s preference","lesson":"Grounding requires tracking whose fact is whose."},
+  {"id":"review-no-repair","title":"A review prompt repeated the draft","lesson":"A second pass is not evidence of correction unless the output changes in a measurable way."},
+  {"id":"format-success-semantic-failure","title":"Valid JSON can still be a poor suggestion","lesson":"Schema validation is necessary but not sufficient."}
+]

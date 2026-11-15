@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helper Jobs · The video</title><meta name="description" content="A short look at Helper Jobs, an early test app that gives Pragnya adults a real job at kids’ Sunday outings.">
+<meta property="og:title" content="Helper Jobs · The video"><meta property="og:description" content="Follow Asha through a Sunday outing: a real job, one step at a time, with a volunteer close by."><meta property="og:type" content="video.other"><meta property="og:image" content="https://helper-jobs.onrender.com/presentation/video/poster.jpg"><meta property="og:video" content="https://helper-jobs.onrender.com/presentation/video/helper-jobs-video.mp4"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=IBM+Plex+Sans+Condensed:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F3ECE1;--paper:#FAF6EF;--ink:#2B2622;--muted:#5A5047;--rust:#9A4A22;--line:#D9CDBA}
+*{box-sizing:border-box}
+html{background:var(--cream)}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 18px/1.55 'Source Serif 4',Georgia,serif;-webkit-text-size-adjust:100%}
+a{color:var(--rust)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.top{border-bottom:1.5px solid var(--ink);padding:22px 0 14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:600 13px/1.2 'IBM Plex Sans Condensed',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}.top span{color:var(--muted)}
+.eyebrow{font:600 13px/1.2 'IBM Plex Sans Condensed',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);margin:36px 0 12px}
+h1{font:400 clamp(30px,5vw,48px)/1.1 Fraunces,Georgia,serif;margin:0 0 12px}h1 em{color:var(--rust)}
+.lede{color:var(--muted);margin:0 0 24px;max-width:760px}
+.player{background:#000;border:1px solid var(--line);aspect-ratio:16/9}
+video{display:block;width:100%;height:100%}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;border:1.5px solid var(--ink);color:var(--ink);background:var(--paper);text-decoration:none;font:600 16px/1.2 'IBM Plex Sans Condensed',sans-serif;cursor:pointer}
+.btn.primary{background:var(--rust);border-color:var(--rust);color:#fff}
+.note{color:var(--muted);font-size:16px;margin:14px 0 0}
+details{margin-top:28px;background:var(--paper);border:1px solid var(--line);padding:14px 18px}
+summary{cursor:pointer;font:600 16px/1.3 'IBM Plex Sans Condensed',sans-serif;letter-spacing:.04em}
+.script p{margin:10px 0}
+:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
+.versions{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 18px}.ver{font:600 14px/1 'IBM Plex Sans Condensed',sans-serif;letter-spacing:.04em;padding:10px 16px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer;min-height:40px}.ver[aria-pressed="true"]{background:var(--ink);color:var(--cream,#F3ECE1)}
+.foot{border-top:1.5px solid var(--ink);margin-top:48px;padding:16px 0 32px;font:500 13px/1.4 'IBM Plex Sans Condensed',sans-serif;color:var(--muted)}
+</style></head><body><div class="wrap">
+<header class="top"><a href="./" style="display:inline-flex;align-items:center;gap:10px"><i style="display:inline-flex;align-items:flex-end;width:28px;height:28px;padding:0 0 3px 5px;background:#9A4A22;color:#fff;border-radius:4px;font:600 17px/1 Fraunces,Georgia,serif;font-style:normal;letter-spacing:0;text-transform:none">h.</i>Helper Jobs</a><span>Early test version · October 2026</span></header>
+<main id="content">
+<div class="versions" role="group" aria-label="Choose a version"><button type="button" class="ver" data-ver="full" aria-pressed="true">Full · 2 min 25 s</button><button type="button" class="ver" data-ver="short" aria-pressed="false">Short · 27 s</button><button type="button" class="ver" data-ver="hi" aria-pressed="false" lang="hi">हिन्दी · 3 min</button></div>
+<p class="eyebrow" id="ver-eyebrow">The video · 2 min 25 s</p>
+<h1>Helper Jobs on a Sunday. <em>Follow Asha through one outing.</em></h1>
+<p class="lede" id="ver-lede">Asha is a made-up helper, and everyone in the app is made up. The screens are the real app. The voice is a computer voice.</p>
+<div class="player"><video id="v" controls playsinline preload="metadata" poster="video/poster.jpg">
+  <source src="video/helper-jobs-video.mp4" type="video/mp4">
+  <track kind="captions" src="video/helper-jobs.vtt" srclang="en" label="English">
+  Your browser cannot play this video. <a href="video/helper-jobs-video.mp4">Download it instead</a>.
+</video></div>
+<div class="btns">
+  <button class="btn primary" type="button" id="fs">Play full screen</button>
+  <button class="btn" type="button" id="copy">Copy link to share</button>
+  <a class="btn" id="dl" href="video/helper-jobs-video.mp4" download>Download (MP4, 14 MB)</a>
+  <a class="btn" href="./">Slides and handout</a>
+</div>
+<p class="note" id="status" role="status" aria-live="polite"></p>
+<details><summary>Read what the voice says</summary><div class="script" id="script"></div></details>
+</main>
+<footer class="foot">Helper Jobs · for Pragnya Sunday outings. An early test version: every example is made up, and it does not diagnose anything. · <a href="../">Open the app</a> · <a href="./">Slides and handout</a></footer>
+</div>
+<script>
+(function () {
+  var v = document.getElementById('v'), status = document.getElementById('status');
+  document.getElementById('fs').addEventListener('click', function () {
+    var el = v; var req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitEnterFullscreen;
+    v.play().catch(function () {});
+    if (req) try { req.call(el); } catch (e) {}
+  });
+  document.getElementById('copy').addEventListener('click', function () {
+    var url = location.href.split('#')[0];
+    function done() { status.textContent = 'Link copied: ' + url; }
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { status.textContent = url; });
+    else status.textContent = url;
+  });
+  // Three versions: the full video, a short one to send on WhatsApp, and a Hindi one.
+  var VERSIONS = {
+    full: { poster: 'video/poster.jpg', mp4: 'video/helper-jobs-video.mp4', vtt: 'video/helper-jobs.vtt', lang: 'en', label: 'English', eyebrow: 'The video · 2 min 25 s', size: '14 MB', lede: 'Asha is a made-up helper, and everyone in the app is made up. The screens are the real app. The voice is a computer voice.' },
+    short: { poster: 'video/poster-30s.jpg', mp4: 'video/helper-jobs-30s.mp4', vtt: 'video/helper-jobs-30s.vtt', lang: 'en', label: 'English', eyebrow: 'The short version · 27 s · for WhatsApp', size: '3 MB', lede: 'The whole idea in under 30 seconds, small enough to send on WhatsApp. Everyone in it is made up.' },
+    hi: { poster: 'video/poster-hi.jpg', mp4: 'video/helper-jobs-video-hi.mp4', vtt: 'video/helper-jobs-hi.vtt', lang: 'hi', label: 'हिन्दी', eyebrow: 'हिन्दी में · 3 min', size: '16 MB', lede: 'The same video with a Hindi computer voice and Hindi captions. The app screens stay in English. A Hindi speaker still needs to check the wording.' }
+  };
+  var source = v.querySelector('source'), track = v.querySelector('track'), dl = document.getElementById('dl');
+  function loadScript(url) {
+    var box = document.getElementById('script'); box.innerHTML = '';
+    fetch(url).then(function (r) { return r.text(); }).then(function (t) {
+      t.split(/\n\n+/).forEach(function (block) {
+        var lines = block.split('\n').filter(function (l) { return l && l !== 'WEBVTT' && !/^\d+$/.test(l) && l.indexOf('-->') < 0; });
+        if (lines.length) { var p = document.createElement('p'); p.textContent = lines.join(' '); box.appendChild(p); }
+      });
+    }).catch(function () {});
+  }
+  function pick(key, push) {
+    var x = VERSIONS[key] || VERSIONS.full;
+    v.poster = x.poster; source.src = x.mp4; track.src = x.vtt; track.srclang = x.lang; track.label = x.label;
+    v.load();
+    if (v.textTracks && v.textTracks[0]) v.textTracks[0].mode = 'showing';
+    dl.href = x.mp4; dl.textContent = 'Download (MP4, ' + x.size + ')';
+    document.getElementById('ver-eyebrow').textContent = x.eyebrow;
+    document.getElementById('ver-lede').textContent = x.lede;
+    document.getElementById('script').lang = x.lang;
+    document.querySelectorAll('[data-ver]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.ver === key)); });
+    loadScript(x.vtt);
+    if (push) history.replaceState(null, '', key === 'full' ? location.pathname : '?v=' + key);
+  }
+  document.querySelectorAll('[data-ver]').forEach(function (b) { b.addEventListener('click', function () { pick(b.dataset.ver, true); }); });
+  var start = (location.search.match(/[?&]v=(\w+)/) || [])[1];
+  if (start && VERSIONS[start]) pick(start, false); else loadScript(VERSIONS.full.vtt);
+})();
+</script>
+</body></html>

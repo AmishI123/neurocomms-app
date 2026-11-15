@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#3A2E26" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · Lead’s phone</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="lead-phone.webmanifest" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Lead’s phone" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="experience.css" />
+  <link rel="stylesheet" href="theme-atlas.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="native.js"></script>
+</head>
+<body class="lead-phone">
+  <header>
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">h.</span> Helper Jobs</a>
+    <span class="header-status"><span class="badge" id="phone-status" role="status">Connecting…</span></span>
+  </header>
+  <main id="app" tabindex="-1">
+    <section id="phone-missing" hidden>
+      <div class="hj-heading"><p class="eyebrow">Lead’s phone</p><h1>Open this from the tablet.</h1><p class="hj-sub">On the outing tablet: Volunteer lead → Live board → Lead’s phone. Scan the code with this phone’s camera.</p></div>
+    </section>
+    <section id="phone-board" hidden aria-labelledby="phone-title">
+      <div class="hj-heading"><p class="eyebrow">Lead’s phone · Live board</p><h1 id="phone-title">Sunday outing</h1><p class="hj-sub" id="phone-updated">Waiting for the tablet…</p></div>
+      <div id="phone-alerts" class="phone-alerts" aria-live="assertive"></div>
+      <div class="phone-day" id="phone-day" hidden></div>
+      <form class="note-form" id="phone-note" hidden aria-labelledby="phone-note-title">
+        <h2 id="phone-note-title" class="with-icon"><span class="h-icon" data-icon="notes"></span>What happened? <small>Optional</small></h2>
+        <p class="hj-sub">One or two lines for the coordinator. Facts only, no blame.</p>
+        <label class="sr-only" for="phone-note-text">Note about this Help</label><textarea id="phone-note-text" maxlength="280" rows="2"></textarea>
+        <div class="hj-actions"><button type="submit" class="primary">Save note</button><button type="button" class="secondary" id="phone-note-skip">Skip</button></div>
+      </form>
+      <div class="board-summary" id="phone-summary"></div>
+      <div class="lead-board" id="phone-helpers"></div>
+      <details class="phone-manage" id="phone-match-box"><summary><span class="h-icon" data-icon="user-check"></span>Make a match</summary>
+        <form class="setup-form" id="phone-match">
+          <label>Helper<select name="helperId" id="pm-helper"></select></label>
+          <label>Kid<select name="kidId" id="pm-kid"></select></label>
+          <label>Job<select name="jobId" id="pm-job"></select></label>
+          <label>Nearby volunteer<select name="volunteerId" id="pm-volunteer"></select></label>
+          <button class="primary" type="submit">Save match</button>
+          <p class="hj-privacy">The tablet checks every match: consent, unlocked jobs and a named volunteer nearby.</p>
+        </form>
+      </details>
+      <details class="phone-manage" id="phone-here-box"><summary><span class="h-icon" data-icon="users-group"></span>Who is here</summary>
+        <div class="setup-form"><fieldset><legend>Helpers</legend><div id="pm-helpers-here"></div></fieldset><fieldset><legend>Kids</legend><div id="pm-kids-here"></div></fieldset></div>
+      </details>
+      <div class="phone-settings">
+        <label class="check-row"><input type="checkbox" id="phone-sound" /> Play a sound when someone needs you</label>
+        <label class="check-row"><input type="checkbox" id="phone-strong" /> Strong buzz (for a pocket or a noisy park)</label>
+        <div class="wake-box" id="wake-box">
+          <div class="wake-head"><span class="h-icon" data-icon="bell-ringing"></span><div><strong>Buzz even when the phone is locked</strong><small id="wake-status">Off. Help only shows while this page is open.</small></div></div>
+          <p class="wake-hint" id="wake-hint" hidden></p>
+          <div class="hj-actions"><button type="button" class="primary" id="wake-on">Turn on</button><button type="button" class="secondary" id="wake-test" hidden>Send a test buzz</button><button type="button" class="button-stop" id="wake-off" hidden>Turn off</button></div>
+        </div>
+        <button type="button" class="button-stop" id="phone-forget">Stop showing this outing on this phone</button>
+      </div>
+      <p class="hj-privacy">The board is locked on the tablet before it is sent. Only this phone and the tablet hold the key.</p>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="icons.js"></script><script src="link.js"></script><script src="lead-phone.js"></script>
+</body>
+</html>

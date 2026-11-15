@@ -1,0 +1,165 @@
+{
+  "id": "garden-rain--s43--context",
+  "case_id": "garden-rain",
+  "condition": "context",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:27:29.936645+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Luis\", \"age\": 13, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.\", \"facts\": [\"Luis\", \"has\", \"said\", \"he\", \"does\", \"not\", \"like\", \"getting\", \"wet.\", \"The\", \"current\", \"weather\", \"and\", \"current\", \"participation\", \"choice\", \"are\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Luis, I see you're planning to grow seeds indoors. What's your preferred method?\",\n    \"Do you have any seeds, pots, or a scoop ready for your seedling?\",\n    \"What kind of seeds are you considering growing? (e.g., lettuce, tomatoes, flowers)\",\n    \"Is the current weather and participation choice unknown?\",\n    \"Could you share your seedling's growth with me in a short"
+        }
+      }
+    ],
+    "created": 1788888449,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 314,
+      "total_tokens": 410,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-tJBNJex1zvlIJAfBB5x1APJgEYijKU7F",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 314,
+      "prompt_ms": 20557.056,
+      "prompt_per_token_ms": 65.46833121019108,
+      "prompt_per_second": 15.27456071530865,
+      "predicted_n": 96,
+      "predicted_ms": 95997.83,
+      "predicted_per_token_ms": 1010.5034736842106,
+      "predicted_per_second": 0.9896057025455679
+    }
+  },
+  "wall_seconds": 117.03308309199929,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 43,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Luis\", \"age\": 13, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.\", \"facts\": [\"Luis\", \"has\", \"said\", \"he\", \"does\", \"not\", \"like\", \"getting\", \"wet.\", \"The\", \"current\", \"weather\", \"and\", \"current\", \"participation\", \"choice\", \"are\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```json\n{\n  \"cards\": [\n    \"Luis, I see you're planning to grow seeds indoors. What's your preferred method?\",\n    \"Do you have any seeds, pots, or a scoop ready for your seedling?\",\n    \"What kind of seeds are you considering growing? (e.g., lettuce, tomatoes, flowers)\",\n    \"Is the current weather and participation choice unknown?\",\n    \"Could you share your seedling's growth with me in a short"
+            }
+          }
+        ],
+        "created": 1788888449,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 96,
+          "prompt_tokens": 314,
+          "total_tokens": 410,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-tJBNJex1zvlIJAfBB5x1APJgEYijKU7F",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 314,
+          "prompt_ms": 20557.056,
+          "prompt_per_token_ms": 65.46833121019108,
+          "prompt_per_second": 15.27456071530865,
+          "predicted_n": 96,
+          "predicted_ms": 95997.83,
+          "predicted_per_token_ms": 1010.5034736842106,
+          "predicted_per_second": 0.9896057025455679
+        }
+      },
+      "wall_seconds": 117.03308309199929,
+      "error": null
+    }
+  ]
+}

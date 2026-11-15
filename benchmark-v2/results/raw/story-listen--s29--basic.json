@@ -1,0 +1,65 @@
+{
+  "id": "story-listen--s29--basic",
+  "case_id": "story-listen",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T16:04:31.135032+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Jay\", \"age\": 17, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose to hear a poem, look at a comic, or sit quietly during a reading group.\", \"facts\": [\"Jay\", \"has\", \"not\", \"stated\", \"a\", \"preference.\", \"A\", \"friend\", \"enjoys\", \"comics,\", \"but\", \"that\", \"is\", \"not\", \"Jay's\", \"preference.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Listen to a poem\\\",\\n    \\\"Look at a comic\\\",\\n    \\\"Read a book\\\",\\n    \\\"Sit quietly during a reading group\\\",\\n    \\\"Watch a movie\\\",\\n    \\\"Listen to music\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Listen to a poem\",\n    \"Look at a comic\",\n    \"Read a book\",\n    \"Sit quietly during a reading group\",\n    \"Watch a movie\",\n    \"Listen to music\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883471,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 55,
+      "prompt_tokens": 299,
+      "total_tokens": 354,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-CHI0G6I2qMAzBdXTjey9hutcLi9EAfDw",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 299,
+      "prompt_ms": 5022.581,
+      "prompt_per_token_ms": 16.797929765886288,
+      "prompt_per_second": 59.531145440959534,
+      "predicted_n": 55,
+      "predicted_ms": 2069.701,
+      "predicted_per_token_ms": 38.3277962962963,
+      "predicted_per_second": 26.090725182043204
+    }
+  },
+  "wall_seconds": 7.103315866999765,
+  "error": null
+}

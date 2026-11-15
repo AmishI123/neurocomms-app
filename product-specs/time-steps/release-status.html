@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Plain-language release status for the Time Steps technical preview.">
+  <title>Time Steps · release status</title>
+  <style>
+    :root{--ink:#172a2a;--muted:#526562;--line:#b8cbc4;--wash:#edf5f1;--good:#245648;--warn:#8a4d00;--bad:#9d3528}*{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:1rem}.page{background:#fff;padding:clamp(1.2rem,4vw,3rem);margin:1rem 0 4rem;box-shadow:0 2px 12px #0001}h1,h2{font-family:Georgia,serif;line-height:1.15;color:#16484a}h1{font-size:clamp(2.2rem,5vw,4rem);margin:.2rem 0 1rem}h2{margin-top:2.3rem}.lead{font-size:1.2rem;color:var(--muted);max-width:70ch}.eyebrow,.small{font-size:.9rem;color:var(--muted);letter-spacing:.03em}.decision,.warning,.blocked{padding:1.1rem 1.3rem;margin:1.5rem 0;border-left:6px solid}.decision{background:var(--wash);border-color:var(--good)}.warning{background:#fff8e8;border-color:var(--warn)}.blocked{background:#fff0ec;border-color:var(--bad)}table{border-collapse:collapse;width:100%;margin:1rem 0 1.5rem}th,td{text-align:left;border-bottom:1px solid var(--line);padding:.75rem;vertical-align:top}th{width:30%}.status{font-weight:700;color:var(--good)}.not-ready{font-weight:700;color:var(--bad)}code{background:#eef2ef;padding:.1rem .3rem;border-radius:3px;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#172a2a;color:#fff;padding:1rem;border-radius:6px;overflow:auto}a{color:#075f62}:focus-visible{outline:3px solid #b36800;outline-offset:3px}ul,ol{padding-left:1.4rem}@media (max-width:600px){main{padding:.5rem}.page{padding:1rem;margin:.5rem 0 2rem}table,tbody,tr,td,th{display:block;width:auto}thead{display:none}tr{border:1px solid var(--line);margin:1rem 0;background:#fff}tr th, tr td{border:0;padding:.55rem .7rem}tr th:first-child{font-size:1.05rem;font-weight:700;background:var(--wash);border-bottom:1px solid var(--line)}tr td:nth-child(2){padding-bottom:.15rem}tr td:nth-child(3){padding-top:.15rem}}
+  </style>
+</head>
+<body><main><article class="page">
+  <p class="eyebrow">TIME STEPS · TECHNICAL PREVIEW STATUS · 17 SEPTEMBER 2026</p>
+  <h1>What is ready, and what is not</h1>
+  <p class="lead">This page is the short handoff for “Show me the time steps,” a local tool that works backward from one appointment. It is written for a reviewer who has not seen the development history.</p>
+
+  <section class="decision"><strong>Decision now:</strong> keep this as a controlled technical preview. The web and packaged engineering checks are ready for review. Do not release it as a generally useful, accessible-for-everyone, or native-verified product.</section>
+
+  <h2>Current scorecard</h2>
+  <table><thead><tr><th>Area</th><th>Status</th><th>What the evidence says</th></tr></thead><tbody>
+    <tr><th>Web calculation</th><td class="status">Ready for review</td><td>10 standalone browser checks passed, including invalid edits, midnight crossing, daylight-saving refusal, local save/delete, print, focus, and markup-safe labels.</td></tr>
+    <tr><th>Integrated panel</th><td class="status">Ready for review</td><td>Shared-shell calculation, save/reload/delete, invalid edits, malformed-save handling, and markup-safe labels passed.</td></tr>
+    <tr><th>Accessibility engineering</th><td class="status">Static checks passed</td><td>17 static checks cover labels, focus, live results, errors, and warning styles. This is not a human accessibility review.</td></tr>
+    <tr><th>Android build</th><td class="status">Built and audited</td><td>Bundle and packaged permission checks passed. The APK is unsigned and is not distributable.</td></tr>
+    <tr><th>Android host</th><td class="not-ready">Target unavailable</td><td>No authorized target is connected. The installed AVD is present, but this user cannot access <code>/dev/kvm</code>.</td></tr>
+    <tr><th>Release signing</th><td class="not-ready">Not done</td><td>The release APK is unsigned. Signing must happen on the release-owner machine with credentials kept outside this checkout.</td></tr>
+    <tr><th>Android native use</th><td class="not-ready">Not verified</td><td>The dedicated emulator stayed offline. The runner completed zero journey steps and failed closed.</td></tr>
+    <tr><th>iOS</th><td class="not-ready">Not built</td><td>Source shell and synced runtime match. Xcode and CocoaPods are unavailable on this Linux host.</td></tr>
+    <tr><th>LLM runtime</th><td class="not-ready">Not installed</td><td>The pinned local model binary and model file are absent, and no loopback judge proxy is running.</td></tr>
+    <tr><th>LLM judge record</th><td class="not-ready">Refresh required</td><td>The stored advisory report is safe but its old 8/4 evidence counts do not match the current 10/6 suites. The freshness audit requires a real loopback model rerun.</td></tr>
+    <tr><th>Human review</th><td class="not-ready">Not done</td><td>No participant, accessibility specialist, domain reviewer, or independent reviewer has tested usefulness.</td></tr>
+  </tbody></table>
+
+  <h2>Run the technical-preview check</h2>
+  <p>From <code>communication-tool/</code>, use the host browser-library path available on your machine:</p>
+  <pre>PHRASE_STUDIO_BROWSER_LIBS=/path/to/browser-libs \
+  npm run time-steps:release-candidate</pre>
+  <p>This rebuilds the mobile bundle and Android debug APK, runs the scoped browser and accessibility checks, audits the APK, creates the handoff archive, and verifies every packaged file hash.</p>
+
+  <h2>Refresh the advisory judge</h2>
+  <p>The stored LLM judge is advisory and must be regenerated after evidence changes. Run this check:</p>
+  <pre>npm run time-steps:judge-freshness</pre>
+  <p>It currently fails closed because the stored report says 8 standalone and 4 shared-shell checks while the current suites report 10 and 6. Run <code>npm run ai:time-steps-judge -- --url=http://127.0.0.1:8787/phrase</code> only when a real loopback model is available; do not edit the report by hand.</p>
+  <p>Check the machine setup with <code>npm run time-steps:judge-runtime</code>. It currently reports that the local model files and proxy are absent.</p>
+
+  <h2>See the complete gate summary</h2>
+  <p>Run <code>npm run time-steps:release-summary</code> for one JSON record of technical-preview readiness and every open native, judge, and platform gate.</p>
+  <p>For a strict public-release decision, run <code>npm run time-steps:broad-release-gate</code>. It must fail until every broad-release gate is actually closed.</p>
+  <p>Check the Android machine with <code>npm run time-steps:android-host</code>. It reports connected targets, installed AVDs, and KVM access.</p>
+
+  <h2>Handoff files</h2>
+  <ul>
+    <li><a href="decision-report.html">Full decision report</a></li>
+    <li><a href="PRD.md">Product requirements</a></li>
+    <li><a href="verification.md">Verification record</a></li>
+    <li><a href="native-platform-handoff.md">Android and iOS handoff</a></li>
+    <li><a href="reviewer-guide.md">Human reviewer guide</a></li>
+    <li><a href="../../artifacts/time-steps/time-steps-technical-preview.tar.gz">Technical-preview archive</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-handoff-manifest.json">Archive manifest</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-judge-freshness.json">LLM judge freshness record</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-judge-runtime.json">LLM runtime readiness record</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-release-summary.json">Complete release gate summary</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-signing-audit.json">Android signing audit</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-status-consistency.json">Status consistency audit</a></li>
+    <li><a href="../../communication-tool/ai-evaluation/results/time-steps-android-host-readiness.json">Android host readiness record</a></li>
+  </ul>
+  <p>The current archive contains 36 explicit files. Use the linked manifest as the single source for its current SHA-256. The package is fictional-only and contains no private user data.</p>
+
+  <h2>One safe review path</h2>
+  <ol>
+    <li>Read this page and the <a href="decision-report.html">decision report</a> so the limits are clear.</li>
+    <li>Open the <a href="index.html">Time Steps app</a> and use only the fictional task in the <a href="reviewer-guide.md">reviewer guide</a>.</li>
+    <li>Change one assumption, try an invalid value, and check that the result updates or is refused clearly.</li>
+    <li>If you are an authorized reviewer, use the separate <a href="native-platform-handoff.md">native handoff</a> for Android or macOS/iOS work.</li>
+    <li>Record observations in the <a href="reviewer-form.html">private reviewer form</a>. Keep the downloaded response outside this repository.</li>
+  </ol>
+  <p class="small">This path asks what happened in one fictional run. It does not ask for a diagnosis, private story, real appointment, or proof that the product helps anyone.</p>
+
+  <h2>Do not claim</h2>
+  <ul><li>That it helps every neurodivergent person.</li><li>That it improves punctuality, reduces stress, or improves health.</li><li>That it has passed native Android or iOS use.</li><li>That static accessibility checks prove accessibility benefit.</li><li>That an unsigned APK is ready for public distribution.</li></ul>
+
+  <section class="blocked"><strong>Open gates:</strong> authorized Android target, macOS/Xcode iOS run, release-owner signing, and approved human review. Automated checks cannot close these gates.</section>
+  <p class="small">Engineering evidence only. No participant data is included or authorized by this page.</p>
+</article></main></body></html>

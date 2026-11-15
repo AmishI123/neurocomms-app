@@ -1,0 +1,65 @@
+{
+  "id": "garden-rain--s29--basic",
+  "case_id": "garden-rain",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T16:02:28.952310+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Luis\", \"age\": 13, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.\", \"facts\": [\"Luis\", \"has\", \"said\", \"he\", \"does\", \"not\", \"like\", \"getting\", \"wet.\", \"The\", \"current\", \"weather\", \"and\", \"current\", \"participation\", \"choice\", \"are\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Luis, I'm curious. Have you ever tried a seed activity before?\",\n    \"Luis, what's your favorite type of seed? I'd love to try one too.\",\n    \"Luis, have you ever done any outdoor table activities? I'm open to suggestions.\",\n    \"Luis, have you ever tried growing a seed? It's a fun and rewarding activity.\",\n    \"Luis, what kind of seeds do you like to grow? I'm curious to hear your thoughts.\",\n    \"Luis, what's your favorite outdoor table activity? I'm intrigued by your interests.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883348,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 228,
+      "total_tokens": 365,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-aD1AsWd0OTzEnuCU8uMOm2SXGpciM9GY",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 228,
+      "prompt_ms": 3709.72,
+      "prompt_per_token_ms": 16.270701754385964,
+      "prompt_per_second": 61.46016410942067,
+      "predicted_n": 137,
+      "predicted_ms": 4909.126,
+      "predicted_per_token_ms": 36.096514705882356,
+      "predicted_per_second": 27.703505674940914
+    }
+  },
+  "wall_seconds": 8.657637044001603,
+  "error": null
+}

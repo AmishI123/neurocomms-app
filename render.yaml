@@ -1,0 +1,31 @@
+# Render static site for the Helper Jobs app.
+# The repository remains private; Render serves only the explicit helper-jobs directory.
+services:
+  - type: web
+    name: helper-jobs
+    runtime: static
+    buildCommand: "rm -rf _render && mkdir -p _render && cp -r helper-jobs/. _render/ && rm -rf _render/tests _render/server _render/native _render/README.md _render/package.json"
+    staticPublishPath: ./_render
+    autoDeploy: true
+    previews:
+      generation: automatic
+
+  # The live link: passes Help and Stop from the outing tablet to the lead's phone.
+  # It only ever holds locked (encrypted) data; the key stays on the tablet and the lead's phone.
+  - type: web
+    name: helper-jobs-live
+    runtime: node
+    plan: free
+    buildCommand: "node --version"
+    startCommand: "node helper-jobs/server/server.mjs"
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: ALLOWED_ORIGINS
+        # The website, the Android app (https://localhost) and the iPad app (capacitor://localhost).
+        value: https://helper-jobs.onrender.com,https://localhost,capacitor://localhost
+      - key: NODE_VERSION
+        value: "20"
+      # Keeps the key that wakes the lead's phone the same across restarts.
+      - key: VAPID_SECRET
+        generateValue: true

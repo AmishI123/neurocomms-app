@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Show each step when working backward from an appointment.">
+  <title>Show me the time steps</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>@media (max-width:560px){.shell{width:calc(100% - 24px)}}.panel{min-width:0}</style>
+</head>
+<body>
+<header class="top"><div class="shell"><a class="brand" href="index.html">Show me the time steps</a><details><summary>About this tool</summary><p>This tool shows arithmetic from the times you enter. It does not predict traffic or tell you whether you are ready.</p></details></div></header>
+<main class="shell">
+  <section class="intro" aria-labelledby="title"><p class="eyebrow">Your assumptions. Visible steps. Your choice.</p><h1 id="title">Work backward from an appointment</h1><p>Enter one appointment and the time you think each step needs. You can change the numbers and check the result.</p><div class="note" role="note"><strong>Private by default.</strong> Nothing is sent anywhere. Save only if you choose.</div></section>
+  <div class="layout">
+    <section class="panel" aria-labelledby="inputs-title">
+      <h2 id="inputs-title">Set the appointment</h2>
+      <p class="help">This first version uses the date and time shown by this device. It does not handle time-zone or daylight-saving changes.</p>
+      <div class="field"><label for="appointment">Appointment date and time</label><input id="appointment" type="datetime-local" required></div>
+      <div class="field"><label for="label">Optional label</label><input id="label" type="text" maxlength="80" placeholder="For example: dentist"></div>
+      <div class="field-grid">
+        <div class="field"><label for="preparation">Preparation minutes</label><input id="preparation" type="number" min="0" max="1440" step="1" inputmode="numeric" required><small>Getting ready before leaving</small></div>
+        <div class="field"><label for="travel">Travel minutes</label><input id="travel" type="number" min="0" max="1440" step="1" inputmode="numeric" required><small>From leaving to arrival</small></div>
+      </div>
+      <div class="field"><label for="spare">Optional spare minutes</label><input id="spare" type="number" min="0" max="1440" step="1" inputmode="numeric" value="0"><small>Extra time you choose to include</small></div>
+      <div class="field"><label for="display">Time display</label><select id="display"><option value="24">24-hour time</option><option value="12">12-hour time</option></select></div>
+      <div class="actions"><button id="example" class="button secondary" type="button">Try an example</button><button id="calculate" class="button primary" type="button">Show my time steps</button></div>
+      <div class="actions"><button id="save" class="button secondary" type="button">Save on this device</button><button id="delete" class="button quiet" type="button">Delete saved calculation</button></div>
+      <p id="save-status" class="status" role="status" aria-live="polite">Not saved</p>
+    </section>
+    <section class="panel result-panel" aria-labelledby="result-title"><div class="result-heading"><div><p class="eyebrow">Visible calculation</p><h2 id="result-title">Your time steps</h2></div><button id="print" class="button secondary" type="button">Print steps</button></div><div id="result" role="status" aria-live="polite" aria-atomic="true"><div class="empty"><p>Enter the appointment and minutes, then choose “Show my time steps.”</p></div></div></section>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

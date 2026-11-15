@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · My helper card</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="print.css" />
+  <script src="native.js"></script>
+</head>
+<body class="print-page">
+  <header class="print-bar no-print"><a href="./">← Back to Helper Jobs</a><button type="button" class="primary" onclick="window.print()">Print</button><p>A card the helper keeps: front and back. Print on card, cut out, fold in the middle.</p></header>
+  <main id="cards" class="helper-cards"></main>
+  <script src="icons.js"></script><script src="data.js"></script><script src="store.js"></script>
+  <script>
+    (function () {
+      const main = document.getElementById('cards');
+      let until = 0; try { until = Number(localStorage.getItem('helper-jobs.coord-until') || 0); } catch (_) {}
+      if (Date.now() > until) { main.innerHTML = '<p class="print-empty">Open this from Coordinator tools on the outing tablet.</p>'; return; }
+      const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      const { icon } = HelperJobsIcons; const { jobs } = HelperJobsData;
+      const state = HelperJobsStore.loadState();
+      const helper = state.helpers.find(h => h.id === new URLSearchParams(location.search).get('helper'));
+      if (!helper) { main.innerHTML = '<p class="print-empty">Helper not found.</p>'; return; }
+      const badges = HelperJobsStore.badgesForHelper(state, helper.id);
+      const photo = helper.photoConsent && helper.photoData ? `<img src="${esc(helper.photoData)}" alt="" />` : esc(helper.photo);
+      main.innerHTML = `<article class="hcard"><div class="hcard-front"><p class="hcard-brand"><span class="mark">h.</span> Helper Jobs</p><span class="hcard-photo">${photo}</span><p class="hcard-name">${esc(helper.name)}</p><p class="hcard-role">Level ${helper.level} helper · Pragnya Sunday outings</p><p class="hcard-stars">${icon('star')}<b>${helper.stars}</b> stars</p></div>
+        <div class="hcard-back"><p class="hcard-k">Jobs I do</p><ul>${helper.unlockedJobs.map(id => jobs.find(j => j.id === id)).filter(Boolean).map(job => `<li>${icon(job.icon)}${esc(job.name)}</li>`).join('')}</ul><p class="hcard-k">My badges</p><ul>${badges.map(b => `<li>${icon('award')}${esc(b.name)}</li>`).join('') || '<li class="soft">Five jobs of one kind earn a badge.</li>'}</ul><p class="hcard-help">${icon('bell-ringing')}Need help? Press Help, or wave to your volunteer.</p></div></article>`;
+      document.title = `${helper.name} · Helper Jobs card`;
+    })();
+  </script>
+</body>
+</html>

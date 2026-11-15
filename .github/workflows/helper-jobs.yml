@@ -1,0 +1,80 @@
+name: Helper Jobs release gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check browser JavaScript
+        run: |
+          node --check helper-jobs/data.js
+          node --check helper-jobs/store.js
+          node --check helper-jobs/app.js
+          node --check helper-jobs/link.js
+          node --check helper-jobs/lead-phone.js
+          for file in i18n art certificate family backup print-cards wording report native; do node --check helper-jobs/$file.js; done
+          node --check helper-jobs/server/server.mjs
+      - name: Check the Android and iPad shells (wiring, permissions, no keys)
+        run: |
+          node helper-jobs/native/scripts/build-www.mjs
+          node helper-jobs/native/scripts/check-shells.mjs
+      - name: Run contract tests
+        run: npm test --prefix helper-jobs
+      - name: Check static release surface
+        run: |
+          test -f helper-jobs/index.html
+          test -f helper-jobs/presentation.html
+          test -f helper-jobs/handout.html
+          test -f helper-jobs/presentation/index.html
+          test -f helper-jobs/theme-atlas.css
+          test -f helper-jobs/sw.js
+          test -f helper-jobs/rehearsal.html
+          ! rg -n "archive/|communication-tool|neuro-divergent" helper-jobs/index.html helper-jobs/app.js helper-jobs/data.js helper-jobs/store.js
+      - name: Rehearse Render static bundle
+        run: |
+          rm -rf _render-ci
+          mkdir -p _render-ci
+          cp -r helper-jobs/. _render-ci/
+          rm -rf _render-ci/tests _render-ci/server _render-ci/native _render-ci/README.md _render-ci/package.json
+          test -f _render-ci/presentation/index.html
+          test -f _render-ci/presentation/handout.html
+          test ! -e _render-ci/tests
+          test ! -e _render-ci/native
+          ! find _render-ci -path '*/archive/*' -print -quit | grep -q .
+      - name: Set up browser runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run browser journey
+        run: |
+          python3 -m pip install playwright==1.48.0
+          python3 -m playwright install --with-deps chromium
+          python3 helper-jobs/tests/browser_smoke.py
+      - name: Run the two-device journey (tablet and lead's phone)
+        run: python3 helper-jobs/tests/live_link_smoke.py
+      - name: Run this round's features (people, photos, languages, practice, head count, copies)
+        run: python3 helper-jobs/tests/features_smoke.py
+      - name: Run the five-device journey (two tablets, phone, family page, laptop backup)
+        run: python3 helper-jobs/tests/devices_smoke.py
+      - name: Run the ready-for-Sunday journey (feedback, helper-only mode, wording check, waking the phone)
+        run: python3 helper-jobs/tests/ready_smoke.py
+      - name: Run the real-day journey (Help that cannot be missed, fixing matches, PIN recovery, Sunday report)
+        run: python3 helper-jobs/tests/day_smoke.py
+      - name: Run the helpers journey (day plan, breaks, practising Help, wishes, step pictures, outdoor mode)
+        run: python3 helper-jobs/tests/helpers_smoke.py
+      - name: Run the coordinator journey (making jobs, progress, yes dates, exports, taking over)
+        run: python3 helper-jobs/tests/coordinator_smoke.py
+      - name: Run the app-shell bridge journey (read aloud, print, save, pin, back button)
+        run: python3 helper-jobs/tests/native_smoke.py
+      - name: Run the before-Sunday journey (wording from a phone, no internet, home-screen card)
+        run: python3 helper-jobs/tests/sunday_ready_smoke.py

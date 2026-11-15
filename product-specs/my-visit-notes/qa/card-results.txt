@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: loads without external resources and has accessible landmarks
+ok 1 - loads without external resources and has accessible landmarks
+  ---
+  duration_ms: 2150.497805
+  ...
+# Subtest: example creates editable sections and preview content
+ok 2 - example creates editable sections and preview content
+  ---
+  duration_ms: 495.071569
+  ...
+# Subtest: hidden statements disappear from preview and exported text
+ok 3 - hidden statements disappear from preview and exported text
+  ---
+  duration_ms: 575.168829
+  ...
+# Subtest: visible card can be exported as text and HTML after an explicit review
+ok 4 - visible card can be exported as text and HTML after an explicit review
+  ---
+  duration_ms: 439.79225
+  ...
+# Subtest: local save survives reload and clear removes the saved card
+ok 5 - local save survives reload and clear removes the saved card
+  ---
+  duration_ms: 907.56083
+  ...
+# Subtest: keyboard focus and narrow layout remain usable
+ok 6 - keyboard focus and narrow layout remain usable
+  ---
+  duration_ms: 224.077304
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6717.06163

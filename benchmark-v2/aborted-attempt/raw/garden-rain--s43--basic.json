@@ -1,0 +1,65 @@
+{
+  "id": "garden-rain--s43--basic",
+  "case_id": "garden-rain",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T15:51:33.706133+00:00",
+  "manifest_sha256": "da22c3f93913261b32bf862d3d3c4fa94e9763b6cc3a9a0532e86c52e4b8bb2c",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Luis\", \"age\": 13, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.\", \"facts\": [\"Luis\", \"has\", \"said\", \"he\", \"does\", \"not\", \"like\", \"getting\", \"wet.\", \"The\", \"current\", \"weather\", \"and\", \"current\", \"participation\", \"choice\", \"are\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Luis, I've been thinking about choosing an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready. The current weather and current participation choice are unknown.\",\n    \"Luis, have you heard about getting wet? The current weather and current participation choice are unknown.\",\n    \"Luis, has he ever said he doesn't like getting wet? The current weather and current participation choice are unknown.\",\n    \"Luis, does he like getting wet? The current weather and current participation choice are unknown.\",\n    \"Luis, have you heard about not getting wet? The current weather and current participation choice are unknown.\",\n    \"Luis, what do you think? The current weather and current participation choice are unknown.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788882693,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 167,
+      "prompt_tokens": 228,
+      "total_tokens": 395,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-XOUqbXNXDvrqZFqxCzdjLHIbysL4oCSd",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 228,
+      "prompt_ms": 3760.616,
+      "prompt_per_token_ms": 16.493929824561402,
+      "prompt_per_second": 60.62836514017916,
+      "predicted_n": 167,
+      "predicted_ms": 6459.235,
+      "predicted_per_token_ms": 38.91105421686747,
+      "predicted_per_second": 25.69963780540575
+    }
+  },
+  "wall_seconds": 10.230081330002577,
+  "error": null
+}

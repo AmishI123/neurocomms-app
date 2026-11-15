@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "errors": [],
+  "records": [
+    {
+      "line": 1,
+      "allowed": true,
+      "reasons": []
+    }
+  ],
+  "schema_version": "1.0",
+  "case_id": "quiet-table-demo"
+}

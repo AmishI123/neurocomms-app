@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared-not-run",
+  "date": "2026-09-17",
+  "product": "communication-access-card",
+  "sessionsCompleted": 0,
+  "task": {
+    "title": "Prepare a short card before an unfamiliar appointment",
+    "fictionalPrompt": "You want another person to know that written information helps, that you need extra time, and that they should ask instead of guessing. You also have one private note that must not be shared.",
+    "requiredOutcome": "A person can choose, edit, hide, preview, and share only the information they want to share.",
+    "privateLine": "My private note is not for the shared card."
+  },
+  "conditions": [
+    {
+      "id": "current-method",
+      "name": "Paper or ordinary notes",
+      "instructions": "Use a blank sheet or the person’s usual notes tool. Make the same short card, mark the private line, review what would be shown, and prepare a copy.",
+      "doNotAssume": "A person may already have a better method. Do not treat paper or notes as an inferior control."
+    },
+    {
+      "id": "communication-card",
+      "name": "Communication-access card",
+      "instructions": "Use the app. Start blank or from the example, edit the person’s words, hide the private line, review the preview, save only if wanted, and export after the sharing review.",
+      "doNotAssume": "The app is not required to replace an existing communication aid."
+    }
+  ],
+  "futureSessionRules": {
+    "order": "Counterbalance condition order when there is more than one session.",
+    "support": "The person may choose a supporter, communication method, breaks, and a way to answer.",
+    "consent": "Explain the task, recording choice, storage, deletion, and withdrawal before starting.",
+    "stop": "Stop immediately when the person asks, shows distress, or no longer wants to continue.",
+    "fictionalFirst": true,
+    "noSpeedRanking": true
+  },
+  "recordPerCondition": [
+    "completed task or stopped",
+    "steps the person chose to change",
+    "errors or unwanted sharing",
+    "corrections made",
+    "help requested or provided",
+    "effort described by the person",
+    "whether the person would choose this method for the situation",
+    "privacy or control concern",
+    "anything the person wanted changed"
+  ],
+  "decisionRules": {
+    "continue": "The task works and people describe a useful benefit worth the added effort.",
+    "revise": "The idea helps but wording, access, steps, or sharing controls cause difficulty.",
+    "changeDirection": "The existing method works as well with less effort, the main barrier is outside the app, or people do not want the product.",
+    "notEnoughEvidence": "Zero sessions, one session, or engineering checks alone cannot establish usefulness or demand."
+  },
+  "results": []
+}

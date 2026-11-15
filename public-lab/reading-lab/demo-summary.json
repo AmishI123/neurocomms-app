@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "event_count": 2,
+  "choice_counts": {"clear": 1, "unsure": 1},
+  "interpretation": "Descriptive counts of explicit interface feedback. They do not assess reading ability or identify a best setting."
+}

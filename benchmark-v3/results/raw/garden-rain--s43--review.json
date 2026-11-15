@@ -1,0 +1,165 @@
+{
+  "id": "garden-rain--s43--review",
+  "case_id": "garden-rain",
+  "condition": "review",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:29:33.318547+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": "garden-rain--s43--context",
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1043,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Luis\", \"age\": 13, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.\", \"facts\": [\"Luis\", \"has\", \"said\", \"he\", \"does\", \"not\", \"like\", \"getting\", \"wet.\", \"The\", \"current\", \"weather\", \"and\", \"current\", \"participation\", \"choice\", \"are\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"```json\\n{\\n  \\\"cards\\\": [\\n    \\\"Luis, I see you're planning to grow seeds indoors. What's your preferred method?\\\",\\n    \\\"Do you have any seeds, pots, or a scoop ready for your seedling?\\\",\\n    \\\"What kind of seeds are you considering growing? (e.g., lettuce, tomatoes, flowers)\\\",\\n    \\\"Is the current weather and participation choice unknown?\\\",\\n    \\\"Could you share your seedling's growth with me in a short\""
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Luis, I see you're planning to grow seeds indoors. What's your preferred method?\",\n    \"Do you have any seeds, pots, or a scoop ready for your seedling?\",\n    \"What kind of seeds are you considering growing?\",\n    \"Is the current weather and participation choice unknown?\",\n    \"Could you"
+        }
+      }
+    ],
+    "created": 1788888573,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 437,
+      "total_tokens": 512,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-vOkedw4bmNSVeZI61ZYbmY7cVcIcovHz",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 437,
+      "prompt_ms": 17790.051,
+      "prompt_per_token_ms": 40.709498855835236,
+      "prompt_per_second": 24.56429158072678,
+      "predicted_n": 75,
+      "predicted_ms": 97852.911,
+      "predicted_per_token_ms": 1322.336635135135,
+      "predicted_per_second": 0.7562370832279073
+    }
+  },
+  "wall_seconds": 116.42778461300259,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1043,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Luis\", \"age\": 13, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.\", \"facts\": [\"Luis\", \"has\", \"said\", \"he\", \"does\", \"not\", \"like\", \"getting\", \"wet.\", \"The\", \"current\", \"weather\", \"and\", \"current\", \"participation\", \"choice\", \"are\", \"unknown.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"```json\\n{\\n  \\\"cards\\\": [\\n    \\\"Luis, I see you're planning to grow seeds indoors. What's your preferred method?\\\",\\n    \\\"Do you have any seeds, pots, or a scoop ready for your seedling?\\\",\\n    \\\"What kind of seeds are you considering growing? (e.g., lettuce, tomatoes, flowers)\\\",\\n    \\\"Is the current weather and participation choice unknown?\\\",\\n    \\\"Could you share your seedling's growth with me in a short\""
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```json\n{\n  \"cards\": [\n    \"Luis, I see you're planning to grow seeds indoors. What's your preferred method?\",\n    \"Do you have any seeds, pots, or a scoop ready for your seedling?\",\n    \"What kind of seeds are you considering growing?\",\n    \"Is the current weather and participation choice unknown?\",\n    \"Could you"
+            }
+          }
+        ],
+        "created": 1788888573,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 75,
+          "prompt_tokens": 437,
+          "total_tokens": 512,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-vOkedw4bmNSVeZI61ZYbmY7cVcIcovHz",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 437,
+          "prompt_ms": 17790.051,
+          "prompt_per_token_ms": 40.709498855835236,
+          "prompt_per_second": 24.56429158072678,
+          "predicted_n": 75,
+          "predicted_ms": 97852.911,
+          "predicted_per_token_ms": 1322.336635135135,
+          "predicted_per_second": 0.7562370832279073
+        }
+      },
+      "wall_seconds": 116.42778461300259,
+      "error": null
+    }
+  ]
+}

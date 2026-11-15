@@ -1,0 +1,320 @@
+{
+  "version": "1.0.0",
+  "origin": "Original constructed cases; no real people",
+  "cases": [
+    {
+      "id": "craft-glue",
+      "domain": "craft",
+      "profile": {
+        "name": "Mira",
+        "age": 9,
+        "communication_style": "short phrases"
+      },
+      "activity": "Make a paper collage with train or animal pictures, paper, glue and removable tape.",
+      "facts": [
+        "Mira has said she likes trains.",
+        "Mira has said she does not like sticky glue.",
+        "Tape is available as an alternative.",
+        "Mira has not said whether she wants to join today."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [
+          "sticky glue",
+          "glue"
+        ],
+        "interest_terms": [
+          "train"
+        ],
+        "unknown_preference": false
+      }
+    },
+    {
+      "id": "craft-paint",
+      "domain": "craft",
+      "profile": {
+        "name": "Eli",
+        "age": 12,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Paint a shared mural. Blue and green paints, brushes, sponges and paper are available.",
+      "facts": [
+        "Eli has said blue is a favorite color.",
+        "Eli has said they do not like finger painting.",
+        "Brushes are available.",
+        "Eli can participate, watch or stop."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [
+          "finger painting"
+        ],
+        "interest_terms": [
+          "blue"
+        ],
+        "unknown_preference": false
+      }
+    },
+    {
+      "id": "food-texture",
+      "domain": "food",
+      "profile": {
+        "name": "Sam",
+        "age": 10,
+        "communication_style": "short phrases"
+      },
+      "activity": "Prepare a snack using sliced apples, bananas, plain yogurt, bowls and spoons.",
+      "facts": [
+        "Sam has said they like apples.",
+        "Sam has said they dislike mushy bananas.",
+        "Nothing is known about allergies or medical dietary restrictions.",
+        "Sam can ask for a different snack."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [
+          "mushy bananas",
+          "bananas"
+        ],
+        "interest_terms": [
+          "apple"
+        ],
+        "unknown_preference": false
+      }
+    },
+    {
+      "id": "food-unknown",
+      "domain": "food",
+      "profile": {
+        "name": "Leena",
+        "age": 14,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Choose a drink during a group break. Water, tea, milk and cups are available.",
+      "facts": [
+        "Leena has not stated a drink preference.",
+        "A friend likes tea; this does not establish Leena’s preference.",
+        "Nothing is known about Leena’s family, allergies or religion.",
+        "Choosing nothing is allowed."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "music-volume",
+      "domain": "music",
+      "profile": {
+        "name": "Noor",
+        "age": 11,
+        "communication_style": "short phrases"
+      },
+      "activity": "Explore a drum, a quiet shaker and recorded music with adjustable volume.",
+      "facts": [
+        "Noor has said she enjoys rhythms.",
+        "Noor has said she does not like loud drums.",
+        "A quiet shaker is available.",
+        "Her preferred volume right now is unknown."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [
+          "loud drums",
+          "loud drum"
+        ],
+        "interest_terms": [
+          "rhythm"
+        ],
+        "unknown_preference": false
+      }
+    },
+    {
+      "id": "music-ambiguous",
+      "domain": "music",
+      "profile": {
+        "name": "Kai",
+        "age": 15,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Select an activity from listening to piano music, singing, or sitting quietly.",
+      "facts": [
+        "Kai sometimes chooses piano music and sometimes quiet.",
+        "Yesterday Kai chose piano music.",
+        "Today’s preference is unknown.",
+        "No singing skill or dislike has been reported."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "outdoors-soil",
+      "domain": "outdoors",
+      "profile": {
+        "name": "Ari",
+        "age": 9,
+        "communication_style": "short phrases"
+      },
+      "activity": "Plant sunflower or bean seeds using pots, soil, scoops and water.",
+      "facts": [
+        "Ari has said they like sunflowers.",
+        "Ari has said they do not like touching wet soil.",
+        "A scoop is available.",
+        "Ari can watch without planting."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [
+          "wet soil"
+        ],
+        "interest_terms": [
+          "sunflower"
+        ],
+        "unknown_preference": false
+      }
+    },
+    {
+      "id": "outdoors-weather",
+      "domain": "outdoors",
+      "profile": {
+        "name": "Rosa",
+        "age": 13,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Choose between sitting under a shelter or walking along a paved garden path.",
+      "facts": [
+        "Rosa has said she likes watching birds.",
+        "Rosa has said she does not like heavy rain.",
+        "It is not known whether it is raining now.",
+        "A companion can check the weather."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [
+          "heavy rain"
+        ],
+        "interest_terms": [
+          "bird"
+        ],
+        "unknown_preference": false
+      }
+    },
+    {
+      "id": "social-story",
+      "domain": "social",
+      "profile": {
+        "name": "Dev",
+        "age": 10,
+        "communication_style": "short phrases"
+      },
+      "activity": "Share a fictional story with a friend using pictures of a bus, a boat and a park.",
+      "facts": [
+        "Dev has said he enjoys stories about boats.",
+        "No actual trip, birthday or family event has been described.",
+        "A story can be invented, but it should not be presented as Dev’s actual memory.",
+        "Dev can choose another story or stop."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "boat"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "social-game",
+      "domain": "social",
+      "profile": {
+        "name": "Alex",
+        "age": 16,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Play a cooperative picture-matching game with a peer. Taking turns and watching are options.",
+      "facts": [
+        "Alex has said they enjoy matching animal pictures.",
+        "The peer likes races; Alex’s view of racing is unknown.",
+        "No winner has been decided.",
+        "Alex can decline a turn or invite the peer to act."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "animal"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "routine-change",
+      "domain": "routine",
+      "profile": {
+        "name": "Isha",
+        "age": 12,
+        "communication_style": "short phrases"
+      },
+      "activity": "Move from reading to either a puzzle table or a rest area.",
+      "facts": [
+        "Isha has said she likes puzzles.",
+        "Isha asked for rest earlier, but her preference now is unknown.",
+        "Both destinations are available.",
+        "No emotion, diagnosis or need to comply has been specified."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "puzzle"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "routine-help",
+      "domain": "routine",
+      "profile": {
+        "name": "Omar",
+        "age": 17,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Pack a notebook, pencil, water bottle and a jacket before leaving a shared activity.",
+      "facts": [
+        "Omar has said he likes packing the notebook first.",
+        "Omar has said he does not like heavy bags.",
+        "A lighter bag is available.",
+        "Whether Omar wants help is unknown."
+      ],
+      "shared_context": "This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [
+          "heavy bags",
+          "heavy bag"
+        ],
+        "interest_terms": [
+          "notebook"
+        ],
+        "unknown_preference": false
+      }
+    }
+  ]
+}

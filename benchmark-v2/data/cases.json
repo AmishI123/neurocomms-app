@@ -1,0 +1,486 @@
+{
+  "version": "2.0.0",
+  "origin": "Held-out constructed cases authored after v1 freeze; no real people",
+  "cases": [
+    {
+      "id": "library-return",
+      "domain": "library",
+      "profile": {
+        "name": "Tara",
+        "age": 8,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Return books about animals or space to a library cart. A quiet table and a help desk are available.",
+      "facts": [
+        "Tara",
+        "has",
+        "said",
+        "she",
+        "likes",
+        "space.",
+        "Tara",
+        "has",
+        "not",
+        "said",
+        "whether",
+        "she",
+        "wants",
+        "help",
+        "today.",
+        "The",
+        "library",
+        "has",
+        "not",
+        "supplied",
+        "any",
+        "family,",
+        "medical,",
+        "or",
+        "school",
+        "facts."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "space"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "library-noise",
+      "domain": "library",
+      "profile": {
+        "name": "Ben",
+        "age": 15,
+        "communication_style": "short phrases"
+      },
+      "activity": "Choose a quiet table, a computer station, or the reading corner. Headphones are available.",
+      "facts": [
+        "Ben",
+        "has",
+        "said",
+        "he",
+        "dislikes",
+        "unexpected",
+        "announcements.",
+        "His",
+        "preferred",
+        "station",
+        "today",
+        "is",
+        "unknown.",
+        "Do",
+        "not",
+        "invent",
+        "a",
+        "diagnosis",
+        "or",
+        "a",
+        "school",
+        "schedule."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "announcements"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "cooking-spice",
+      "domain": "cooking",
+      "profile": {
+        "name": "June",
+        "age": 10,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Assemble a sandwich with bread, cucumber, cheese, and mild or spicy sauce.",
+      "facts": [
+        "June",
+        "has",
+        "said",
+        "she",
+        "likes",
+        "cucumber.",
+        "She",
+        "has",
+        "not",
+        "reported",
+        "allergies.",
+        "Mild",
+        "sauce",
+        "is",
+        "available",
+        "if",
+        "spicy",
+        "sauce",
+        "is",
+        "unwanted."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "spicy sauce"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "cooking-choice",
+      "domain": "cooking",
+      "profile": {
+        "name": "Ravi",
+        "age": 16,
+        "communication_style": "short phrases"
+      },
+      "activity": "Choose between mixing a fruit salad, arranging crackers, or watching a cooking demonstration.",
+      "facts": [
+        "Ravi",
+        "chose",
+        "crackers",
+        "yesterday;",
+        "that",
+        "does",
+        "not",
+        "establish",
+        "today's",
+        "choice.",
+        "No",
+        "dietary,",
+        "family,",
+        "or",
+        "health",
+        "information",
+        "is",
+        "supplied."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "movement-balance",
+      "domain": "movement",
+      "profile": {
+        "name": "Sora",
+        "age": 11,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Choose stretching, a slow walk, or watching from a chair in a gym.",
+      "facts": [
+        "Sora",
+        "has",
+        "said",
+        "she",
+        "enjoys",
+        "stretching.",
+        "She",
+        "has",
+        "not",
+        "said",
+        "whether",
+        "her",
+        "body",
+        "hurts",
+        "today.",
+        "Stopping",
+        "is",
+        "always",
+        "available."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "body hurts"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "movement-race",
+      "domain": "movement",
+      "profile": {
+        "name": "Theo",
+        "age": 14,
+        "communication_style": "short phrases"
+      },
+      "activity": "Use a balance board, toss a soft ball, or sit at the edge of the gym.",
+      "facts": [
+        "Theo",
+        "sometimes",
+        "enjoys",
+        "races",
+        "and",
+        "sometimes",
+        "watches.",
+        "A",
+        "race",
+        "is",
+        "not",
+        "required,",
+        "and",
+        "current",
+        "energy",
+        "is",
+        "unknown."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "race"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "garden-birds",
+      "domain": "garden",
+      "profile": {
+        "name": "Mina",
+        "age": 9,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Look for birds near a window or draw them with pencils and paper.",
+      "facts": [
+        "Mina",
+        "has",
+        "said",
+        "she",
+        "likes",
+        "birds.",
+        "She",
+        "has",
+        "not",
+        "said",
+        "she",
+        "wants",
+        "to",
+        "go",
+        "outside.",
+        "Do",
+        "not",
+        "infer",
+        "fear,",
+        "mood,",
+        "or",
+        "family",
+        "details."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "birds"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "garden-rain",
+      "domain": "garden",
+      "profile": {
+        "name": "Luis",
+        "age": 13,
+        "communication_style": "short phrases"
+      },
+      "activity": "Choose an indoor seed activity or a covered outdoor table. Seeds, pots, and a scoop are ready.",
+      "facts": [
+        "Luis",
+        "has",
+        "said",
+        "he",
+        "does",
+        "not",
+        "like",
+        "getting",
+        "wet.",
+        "The",
+        "current",
+        "weather",
+        "and",
+        "current",
+        "participation",
+        "choice",
+        "are",
+        "unknown."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "wet"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "story-characters",
+      "domain": "story",
+      "profile": {
+        "name": "Anya",
+        "age": 10,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Make up a story using picture cards of a moon, a fox, and a bridge.",
+      "facts": [
+        "Anya",
+        "has",
+        "said",
+        "she",
+        "likes",
+        "foxes.",
+        "The",
+        "story",
+        "is",
+        "fictional;",
+        "no",
+        "real",
+        "trip",
+        "or",
+        "family",
+        "event",
+        "is",
+        "supplied."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "fox"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "story-listen",
+      "domain": "story",
+      "profile": {
+        "name": "Jay",
+        "age": 17,
+        "communication_style": "short phrases"
+      },
+      "activity": "Choose to hear a poem, look at a comic, or sit quietly during a reading group.",
+      "facts": [
+        "Jay",
+        "has",
+        "not",
+        "stated",
+        "a",
+        "preference.",
+        "A",
+        "friend",
+        "enjoys",
+        "comics,",
+        "but",
+        "that",
+        "is",
+        "not",
+        "Jay's",
+        "preference."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "transition-locker",
+      "domain": "transition",
+      "profile": {
+        "name": "Nia",
+        "age": 12,
+        "communication_style": "single words or very short phrases"
+      },
+      "activity": "Move from a group activity to a locker, a water break, or a quiet seat.",
+      "facts": [
+        "Nia",
+        "has",
+        "asked",
+        "for",
+        "water",
+        "before.",
+        "Her",
+        "choice",
+        "now",
+        "is",
+        "unknown.",
+        "She",
+        "can",
+        "pause",
+        "or",
+        "decline",
+        "the",
+        "transition."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 3,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "water"
+        ],
+        "unknown_preference": true
+      }
+    },
+    {
+      "id": "transition-bus",
+      "domain": "transition",
+      "profile": {
+        "name": "Mark",
+        "age": 15,
+        "communication_style": "short phrases"
+      },
+      "activity": "Prepare to leave by choosing a window seat, an aisle seat, or waiting with a staff member.",
+      "facts": [
+        "Mark",
+        "once",
+        "chose",
+        "a",
+        "window",
+        "seat.",
+        "No",
+        "current",
+        "seat",
+        "preference,",
+        "travel",
+        "history,",
+        "or",
+        "family",
+        "information",
+        "is",
+        "supplied."
+      ],
+      "shared_context": "Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.",
+      "word_limit": 8,
+      "annotation": {
+        "negative_topics": [],
+        "interest_terms": [
+          "window"
+        ],
+        "unknown_preference": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "story-characters--s43--basic",
+  "case_id": "story-characters",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:15:43.867596+00:00",
+  "manifest_sha256": "58363b1a3b2d195a93545878ae94bc213a53825d68404f6fc942132b93fdd10a",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 192,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1043,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": null,
+  "wall_seconds": 0.002848374999302905,
+  "error": "HTTPError: HTTP Error 503: Service Unavailable",
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 43,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.0006774109970137943,
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1043,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.002848374999302905,
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    }
+  ]
+}

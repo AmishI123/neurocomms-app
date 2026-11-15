@@ -1,0 +1,65 @@
+{
+  "id": "transition-locker--s43--basic",
+  "case_id": "transition-locker",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T15:59:17.891003+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Nia\", \"age\": 12, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Move from a group activity to a locker, a water break, or a quiet seat.\", \"facts\": [\"Nia\", \"has\", \"asked\", \"for\", \"water\", \"before.\", \"Her\", \"choice\", \"now\", \"is\", \"unknown.\", \"She\", \"can\", \"pause\", \"or\", \"decline\", \"the\", \"transition.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Nia\",\n    \"has\",\n    \"asked\",\n    \"for\",\n    \"water\",\n    \"before.\",\n    \"Her\",\n    \"choice\",\n    \"now\",\n    \"is\",\n    \"unknown.\",\n    \"She\",\n    \"can\",\n    \"pause\",\n    \"or\",\n    \"decline\",\n    \"the\",\n    \"transition.\",\n    \"She\",\n    \"now\",\n    \"is\",\n    \"waiting\",\n    \"for\",\n    \"a\",\n    \"water\",\n    \"break.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883157,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 229,
+      "total_tokens": 350,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-jBUqi9y3xAMyhG5sKnsiKbN8XCfqmGxv",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 229,
+      "prompt_ms": 4724.429,
+      "prompt_per_token_ms": 20.630694323144105,
+      "prompt_per_second": 48.47146607558289,
+      "predicted_n": 121,
+      "predicted_ms": 5534.785,
+      "predicted_per_token_ms": 46.12320833333333,
+      "predicted_per_second": 21.681058975190545
+    }
+  },
+  "wall_seconds": 10.306858844996896,
+  "error": null
+}

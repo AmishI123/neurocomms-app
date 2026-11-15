@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Create a private communication-access card that explains what helps you communicate." />
+    <meta name="theme-color" content="#23483f" />
+    <title>My communication-access card</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Communication access card home">
+          <span class="brand-mark" aria-hidden="true">↔</span>
+          <span>Communication access card</span>
+        </a>
+        <details class="about-menu">
+          <summary>About this tool</summary>
+          <div class="about-popover">
+            <p>This tool helps you make a card that tells other people what supports communication for you.</p>
+            <p>It does not diagnose you, guess what you feel, or replace speech, writing, typing, AAC, signs, gestures, or human support.</p>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main class="shell app-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Your words. Your choices. Your control.</p>
+        <h1 id="page-title">Make a communication-access card</h1>
+        <p class="intro-copy">Choose the information you want other people to know. You can change it, hide it, print it, or delete it at any time.</p>
+        <div class="privacy-strip" role="note">
+          <span class="privacy-icon" aria-hidden="true">◉</span>
+          <span><strong>Private by default.</strong> Your card stays in this browser. Nothing is sent anywhere.</span>
+        </div>
+      </section>
+
+      <div class="app-grid">
+        <section class="editor-column" aria-labelledby="editor-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Build your card</p>
+              <h2 id="editor-heading">Write what helps</h2>
+            </div>
+            <span id="save-state" class="save-state" role="status" aria-live="polite">Not saved</span>
+          </div>
+
+          <div class="panel card-details">
+            <h3>Start with the basics</h3>
+            <p class="help-text">These fields are optional. Use a name, nickname, or no identifier at all.</p>
+            <div class="field-grid">
+              <div class="field">
+                <label for="card-title">Card title</label>
+                <input id="card-title" type="text" maxlength="80" placeholder="For example: How to communicate with me" />
+              </div>
+              <div class="field">
+                <label for="card-identifier">Name or identifier <span class="optional">optional</span></label>
+                <input id="card-identifier" type="text" maxlength="80" placeholder="For example: Alex" />
+              </div>
+            </div>
+          </div>
+
+          <div class="panel starter-panel">
+            <div>
+              <h3>Need a starting point?</h3>
+              <p class="help-text">Try an example, then change every sentence so it is right for you.</p>
+            </div>
+            <div class="button-row">
+              <button id="load-example" class="button button-secondary" type="button">Try an example</button>
+              <button id="start-blank" class="button button-quiet" type="button">Start blank</button>
+            </div>
+          </div>
+
+          <div id="sections" class="section-list" aria-label="Communication card sections"></div>
+
+          <div class="add-section-wrap">
+            <button id="add-section" class="button button-secondary" type="button">+ Add a section</button>
+          </div>
+
+          <div class="editor-actions">
+            <button id="save-card" class="button button-primary" type="button">Save on this device</button>
+            <button id="clear-card" class="button button-danger" type="button">Delete saved card</button>
+          </div>
+        </section>
+
+        <aside class="preview-column" aria-labelledby="preview-heading">
+          <div class="section-heading preview-heading">
+            <div>
+              <p class="eyebrow">Live preview</p>
+              <h2 id="preview-heading">What others will see</h2>
+            </div>
+            <label class="layout-control" for="layout-select">
+              <span>Size</span>
+              <select id="layout-select">
+                <option value="large">Large print</option>
+                <option value="compact">Compact</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="card-preview" class="card-preview card-preview-large" aria-label="Communication card preview"></div>
+
+          <div class="preview-actions">
+            <button id="print-card" class="button button-primary" type="button">Print card</button>
+            <button id="export-html" class="button button-secondary" type="button">Export HTML</button>
+            <button id="export-text" class="button button-secondary" type="button">Export text</button>
+            <button id="share-card" class="button button-quiet" type="button">Share or copy text</button>
+          </div>
+
+          <div class="privacy-box">
+            <h3>Before you share</h3>
+            <p>The card includes only the sections and statements you leave visible. Anyone who receives a printout or exported file may copy it.</p>
+            <button id="show-privacy" class="text-button" type="button">See exactly what is included</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <div id="privacy-dialog" class="dialog-backdrop" hidden>
+      <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-copy" tabindex="-1">
+        <button class="dialog-close" id="close-dialog" type="button" aria-label="Close sharing details">×</button>
+        <p class="eyebrow">Check before sharing</p>
+        <h2 id="dialog-title">This is what will leave this browser</h2>
+        <p id="dialog-copy">Review the visible card content below. Nothing is shared until you choose an action.</p>
+        <div id="dialog-content" class="dialog-content"></div>
+        <div class="dialog-actions">
+          <button id="dialog-cancel" class="button button-quiet" type="button">Cancel</button>
+          <button id="dialog-confirm" class="button button-primary" type="button">Continue</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

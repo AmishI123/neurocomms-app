@@ -1,0 +1,165 @@
+{
+  "id": "transition-locker--s43--basic",
+  "case_id": "transition-locker",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:30:16.551032+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Nia\", \"age\": 12, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Move from a group activity to a locker, a water break, or a quiet seat.\", \"facts\": [\"Nia\", \"has\", \"asked\", \"for\", \"water\", \"before.\", \"Her\", \"choice\", \"now\", \"is\", \"unknown.\", \"She\", \"can\", \"pause\", \"or\", \"decline\", \"the\", \"transition.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Nia has asked for water before.\",\n    \"Her choice now is unknown.\",\n    \"She can pause or decline the transition.\",\n    \"Nia has asked for water before.\",\n    \"Her choice now is unknown.\",\n    \"She can pause or decline the transition.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788888616,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_tokens": 229,
+      "total_tokens": 299,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-WRjkP2KFTIuho37Hep7UYi76QLvbji8v",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 229,
+      "prompt_ms": 7589.471,
+      "prompt_per_token_ms": 33.14179475982532,
+      "prompt_per_second": 30.173380990585514,
+      "predicted_n": 70,
+      "predicted_ms": 75528.284,
+      "predicted_per_token_ms": 1094.6128115942029,
+      "predicted_per_second": 0.9135650427328655
+    }
+  },
+  "wall_seconds": 84.07893659099864,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 43,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Nia\", \"age\": 12, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Move from a group activity to a locker, a water break, or a quiet seat.\", \"facts\": [\"Nia\", \"has\", \"asked\", \"for\", \"water\", \"before.\", \"Her\", \"choice\", \"now\", \"is\", \"unknown.\", \"She\", \"can\", \"pause\", \"or\", \"decline\", \"the\", \"transition.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"cards\": [\n    \"Nia has asked for water before.\",\n    \"Her choice now is unknown.\",\n    \"She can pause or decline the transition.\",\n    \"Nia has asked for water before.\",\n    \"Her choice now is unknown.\",\n    \"She can pause or decline the transition.\"\n  ]\n}"
+            }
+          }
+        ],
+        "created": 1788888616,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 70,
+          "prompt_tokens": 229,
+          "total_tokens": 299,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-WRjkP2KFTIuho37Hep7UYi76QLvbji8v",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 229,
+          "prompt_ms": 7589.471,
+          "prompt_per_token_ms": 33.14179475982532,
+          "prompt_per_second": 30.173380990585514,
+          "predicted_n": 70,
+          "predicted_ms": 75528.284,
+          "predicted_per_token_ms": 1094.6128115942029,
+          "predicted_per_second": 0.9135650427328655
+        }
+      },
+      "wall_seconds": 84.07893659099864,
+      "error": null
+    }
+  ]
+}

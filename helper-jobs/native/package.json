@@ -1,0 +1,20 @@
+{
+  "name": "helper-jobs-native",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Android and iPad app shells for Helper Jobs. The app's pages are the same files as the website.",
+  "scripts": {
+    "build": "node scripts/build-www.mjs",
+    "sync": "npm run build && cap sync",
+    "check": "node scripts/check-shells.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.1",
+    "@capacitor/core": "6.2.1",
+    "@capacitor/ios": "6.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.1",
+    "playwright": "1.58.2"
+  }
+}

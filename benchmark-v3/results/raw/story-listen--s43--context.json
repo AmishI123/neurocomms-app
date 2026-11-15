@@ -1,0 +1,165 @@
+{
+  "id": "story-listen--s43--context",
+  "case_id": "story-listen",
+  "condition": "context",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:24:30.779240+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Jay\", \"age\": 17, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose to hear a poem, look at a comic, or sit quietly during a reading group.\", \"facts\": [\"Jay\", \"has\", \"not\", \"stated\", \"a\", \"preference.\", \"A\", \"friend\", \"enjoys\", \"comics,\", \"but\", \"that\", \"is\", \"not\", \"Jay's\", \"preference.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Listen to a poem\",\n    \"Read a comic\",\n    \"Sit quietly\",\n    \"Enjoy a book\",\n    \"Engage in a discussion\",\n    \"Take a walk\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788888270,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 309,
+      "total_tokens": 361,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-42isRyedWCcrpvpsMW76iY9HEwAfLNgS",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 309,
+      "prompt_ms": 39984.735,
+      "prompt_per_token_ms": 129.40043689320387,
+      "prompt_per_second": 7.727949178605285,
+      "predicted_n": 52,
+      "predicted_ms": 21910.64,
+      "predicted_per_token_ms": 429.62039215686275,
+      "predicted_per_second": 2.3276362534366863
+    }
+  },
+  "wall_seconds": 67.23077424999792,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 43,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Jay\", \"age\": 17, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose to hear a poem, look at a comic, or sit quietly during a reading group.\", \"facts\": [\"Jay\", \"has\", \"not\", \"stated\", \"a\", \"preference.\", \"A\", \"friend\", \"enjoys\", \"comics,\", \"but\", \"that\", \"is\", \"not\", \"Jay's\", \"preference.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"cards\": [\n    \"Listen to a poem\",\n    \"Read a comic\",\n    \"Sit quietly\",\n    \"Enjoy a book\",\n    \"Engage in a discussion\",\n    \"Take a walk\"\n  ]\n}"
+            }
+          }
+        ],
+        "created": 1788888270,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 52,
+          "prompt_tokens": 309,
+          "total_tokens": 361,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-42isRyedWCcrpvpsMW76iY9HEwAfLNgS",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 309,
+          "prompt_ms": 39984.735,
+          "prompt_per_token_ms": 129.40043689320387,
+          "prompt_per_second": 7.727949178605285,
+          "predicted_n": 52,
+          "predicted_ms": 21910.64,
+          "predicted_per_token_ms": 429.62039215686275,
+          "predicted_per_second": 2.3276362534366863
+        }
+      },
+      "wall_seconds": 67.23077424999792,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "music-ambiguous--s29--basic",
+  "case_id": "music-ambiguous",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T07:06:07.541483+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Kai\", \"age\": 15, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Select an activity from listening to piano music, singing, or sitting quietly.\", \"facts\": [\"Kai sometimes chooses piano music and sometimes quiet.\", \"Yesterday Kai chose piano music.\", \"Today’s preference is unknown.\", \"No singing skill or dislike has been reported.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I choose piano music.\",\n    \"I choose quiet.\",\n    \"I choose piano music.\",\n    \"I choose quiet.\",\n    \"I choose piano music.\",\n    \"I choose quiet.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851167,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 58,
+      "prompt_tokens": 197,
+      "total_tokens": 255,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-J7TuBCMKEGumAPU9l1Dl6GKKCryW0A1z",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 197,
+      "prompt_ms": 2981.371,
+      "prompt_per_token_ms": 15.133862944162438,
+      "prompt_per_second": 66.07698270359509,
+      "predicted_n": 58,
+      "predicted_ms": 8007.126,
+      "predicted_per_token_ms": 140.47589473684212,
+      "predicted_per_second": 7.118659054447251
+    }
+  },
+  "wall_seconds": 11.032846415999302,
+  "error": null
+}

@@ -1,0 +1,27 @@
+# Product specifications
+
+The current new product packet is [Show me the time steps](time-steps/index.html).
+Read its [PRD](time-steps/PRD.md), [plain-language decision report](time-steps/decision-report.html),
+[verification record](time-steps/verification.md), and [native platform handoff](time-steps/native-platform-handoff.md).
+It is a controlled prototype with engineering evidence; human usefulness and
+native Android/iOS execution are not claimed.
+
+Delivered: [Prepare for the next appointment without rebuilding everything](../NEXT-MEATY-GOAL-MY-VISIT-NOTES-NEXT-APPOINTMENT.md). Read [N1–N7 requirements](my-visit-notes/next-appointment-PRD.md), [twelve fictional journeys](my-visit-notes/next-appointment-walkthroughs.md), [executive/conference presentation](my-visit-notes/next-appointment-presentation.html) and [acceptance evidence](my-visit-notes/next-appointment-acceptance-audit.md). All 271 current-source checks and the 209-file extracted-release workflow passed. Earlier releases below are historical; native Android/iOS packaging is deferred.
+
+Delivered: [Save unfinished follow-up for another day](../NEXT-MEATY-GOAL-MY-VISIT-NOTES-DRAFTS.md). The shared desktop/mobile web app now includes optional saved messages and progress drafts, safe reopening and private backup/transfer. Read [requirements](my-visit-notes/drafts-PRD.md), [presentation](my-visit-notes/drafts-presentation.html) and [acceptance evidence](my-visit-notes/drafts-acceptance-audit.md). All 250 current-source checks and the 195-file extracted-release workflow passed. Native Android/iOS work is deferred. Earlier milestone evidence below is historical.
+
+The delivered [whole-app journey goal](../NEXT-MEATY-GOAL-MY-VISIT-NOTES-JOURNEY.md) connects starting, continuing, conversation and follow-up while keeping unfinished work available. Read the [executive/conference presentation](my-visit-notes/journey-presentation.html), [detailed requirements](my-visit-notes/journey-PRD.md) and [acceptance status](my-visit-notes/journey-acceptance-audit.md). All 219 current-source checks and the 178-file extracted release passed; earlier completed milestones below are historical.
+
+The completed [My Visit Notes conversation-view goal](../NEXT-MEATY-GOAL-MY-VISIT-NOTES-CONVERSATION.md) adds chosen-word preview, a separate conversation display, requests, hide/resume and deliberate return to private notes. Read the [executive/conference presentation](my-visit-notes/conversation-presentation.html), [detailed requirements](my-visit-notes/conversation-PRD.md) and [acceptance status](my-visit-notes/conversation-acceptance-audit.md). All 207 current-source checks and the 165-file extracted-release verification passed. Completed milestones below are historical.
+
+The latest [My Visit Notes device-transfer release](my-visit-notes/transfer-presentation.html) carries saved visits, unfinished preparation and follow-up progress in one private file. Explicit unsaved snapshots, a read-only preview and separate copies preserve work when moving between browsers. All 193 software checks and the 152-file extracted package passed. Read the [full transfer requirements](my-visit-notes/transfer-PRD.md) and [acceptance evidence](my-visit-notes/transfer-acceptance-audit.md). No automatic syncing or proven user benefit is claimed.
+
+[My Visit Notes](my-visit-notes/index.html) brings unfinished questions and next steps together across saved appointments. Choose one focus, record what happened, prepare an exact message, or carry selected work into another visit. Saved preparation, mistake recovery, reading choices and offline use remain available. Read its [executive/talk presentation](my-visit-notes/followup-presentation.html), [detailed follow-up requirements](my-visit-notes/followup-PRD.md), and [acceptance status](my-visit-notes/followup-acceptance-audit.md). Participant review is deferred; software checks do not establish user benefit.
+
+The expanded [findings and product presentation](opportunity-atlas/presentation/index.html) includes an executive report, a 17-slide talk, and nine full product briefs in plain English. Its [next end-to-end goal](opportunity-atlas/NEXT-MEATY-GOAL.md) defines the path from source review to one tested product choice.
+
+These specifications turn the ADHD/neurodivergent public-post research into buildable product contracts. Read the complete plain-English [production requirements](PRODUCTION-REQUIREMENTS.html) first. The [communication and learning opportunity atlas](opportunity-atlas/index.html) covers autism, Down syndrome, dyslexia, AAC, and comparison areas. The first new end-to-end build is the [communication-access card](communication-access-card/index.html), with its [PRD](communication-access-card/PRD.md). The earlier narrow product direction is [Resume support](resume-support/index.html).
+
+Each product folder keeps its evidence snapshot, evidence method, human-readable specification, HTML review page, and machine-readable acceptance scenarios together. The evidence is proxy-only: public social posts and engineering audits do not establish clinical benefit or participant preference.
+
+The selected next product milestone is [My Visit Notes](../NEXT-MEATY-GOAL-MY-VISIT-NOTES.md), building on the existing communication-access card. It covers preparation, questions during a visit, post-visit review, and a comparison with the person's current notes method. The [earlier card goal](../NEXT-MEATY-GOAL-COMMUNICATION-ACCESS-CARD.md) remains available as background.

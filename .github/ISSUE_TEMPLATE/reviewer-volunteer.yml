@@ -1,0 +1,31 @@
+name: Volunteer as a challenge reviewer
+description: Help review six fictional PhraseLab records independently
+title: "Reviewer volunteer: "
+labels: [reviewer, reproducibility]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reviewers use a code rather than a real name in annotation files. Do not include personal communication logs, diagnoses, or participant data.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: I can review six fictional records independently using the five-dimension rubric.
+          required: true
+        - label: I will provide rationales and keep my scores private until the other reviewer finishes.
+          required: true
+  - type: input
+    id: reviewer-code
+    attributes:
+      label: Proposed reviewer code
+      description: Use a pseudonymous code such as reviewer-green-1.
+      placeholder: reviewer-green-1
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Relevant experience (optional)
+      description: Keep this general; do not include personal or participant details.

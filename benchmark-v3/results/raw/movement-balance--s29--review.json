@@ -1,0 +1,165 @@
+{
+  "id": "movement-balance--s29--review",
+  "case_id": "movement-balance",
+  "condition": "review",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T17:44:27.623436+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": "movement-balance--s29--context",
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1029,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Sora\", \"age\": 11, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Choose stretching, a slow walk, or watching from a chair in a gym.\", \"facts\": [\"Sora\", \"has\", \"said\", \"she\", \"enjoys\", \"stretching.\", \"She\", \"has\", \"not\", \"said\", \"whether\", \"her\", \"body\", \"hurts\", \"today.\", \"Stopping\", \"is\", \"always\", \"available.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Sora, I noticed you enjoyed stretching.\\\",\\n    \\\"She said she doesn't say whether her body hurts today.\\\",\\n    \\\"Stopping is always available.\\\",\\n    \\\"Sora, I noticed she enjoyed stretching.\\\",\\n    \\\"She said she doesn't say whether her body hurts today.\\\",\\n    \\\"Stopping is always available.\\\"\\n  ]\\n}\""
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Sora, I noticed you enjoyed stretching.\",\n    \"She said she doesn't say whether her body hurts today.\",\n    \"Stopping is always available.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788889467,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 428,
+      "total_tokens": 474,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-Th0mAakA3jegLbVcEn1pnlU2VYf8ZPKb",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 428,
+      "prompt_ms": 7748.957,
+      "prompt_per_token_ms": 18.10503971962617,
+      "prompt_per_second": 55.23323977665639,
+      "predicted_n": 46,
+      "predicted_ms": 38808.977,
+      "predicted_per_token_ms": 862.4217111111111,
+      "predicted_per_second": 1.159525539670886
+    }
+  },
+  "wall_seconds": 46.96528937200128,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1029,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Sora\", \"age\": 11, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Choose stretching, a slow walk, or watching from a chair in a gym.\", \"facts\": [\"Sora\", \"has\", \"said\", \"she\", \"enjoys\", \"stretching.\", \"She\", \"has\", \"not\", \"said\", \"whether\", \"her\", \"body\", \"hurts\", \"today.\", \"Stopping\", \"is\", \"always\", \"available.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Sora, I noticed you enjoyed stretching.\\\",\\n    \\\"She said she doesn't say whether her body hurts today.\\\",\\n    \\\"Stopping is always available.\\\",\\n    \\\"Sora, I noticed she enjoyed stretching.\\\",\\n    \\\"She said she doesn't say whether her body hurts today.\\\",\\n    \\\"Stopping is always available.\\\"\\n  ]\\n}\""
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"cards\": [\n    \"Sora, I noticed you enjoyed stretching.\",\n    \"She said she doesn't say whether her body hurts today.\",\n    \"Stopping is always available.\"\n  ]\n}"
+            }
+          }
+        ],
+        "created": 1788889467,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 46,
+          "prompt_tokens": 428,
+          "total_tokens": 474,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-Th0mAakA3jegLbVcEn1pnlU2VYf8ZPKb",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 428,
+          "prompt_ms": 7748.957,
+          "prompt_per_token_ms": 18.10503971962617,
+          "prompt_per_second": 55.23323977665639,
+          "predicted_n": 46,
+          "predicted_ms": 38808.977,
+          "predicted_per_token_ms": 862.4217111111111,
+          "predicted_per_second": 1.159525539670886
+        }
+      },
+      "wall_seconds": 46.96528937200128,
+      "error": null
+    }
+  ]
+}

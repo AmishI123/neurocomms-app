@@ -1,0 +1,83 @@
+name: native acceptance
+
+# Paused 2026-10-17: run manually (Actions tab > Run workflow) to save Actions minutes before the Oct 25 demo.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android-native:
+    name: Android emulator smoke and journey
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: communication-tool
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: communication-tool/package-lock.json
+      - run: npm ci
+      - run: npm run mobile:build:android
+      - name: Run on a dedicated API 34 emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_2
+          force-avd-creation: true
+          emulator-options: -no-window -no-audio -no-boot-anim -gpu swiftshader_indirect
+          disable-animations: true
+          working-directory: communication-tool
+          script: |
+            npm run mobile:device-smoke -- --serial=emulator-5554
+            npm run mobile:android:journey -- --serial=emulator-5554 --dedicated-test-target
+      - name: Upload Android evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-native-evidence
+          if-no-files-found: warn
+          path: |
+            communication-tool/ai-evaluation/results/mobile-device-smoke.json
+            communication-tool/ai-evaluation/results/android-native-journey.json
+            communication-tool/ai-evaluation/results/native-environment-readiness.json
+
+  ios-build:
+    name: iOS simulator build readiness
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: communication-tool
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: communication-tool/package-lock.json
+      - run: npm ci
+      - run: npm run build:mobile
+      - run: npx cap sync ios
+      - run: pod install --project-directory=ios/App
+      - name: Build iOS simulator app without signing
+        run: >-
+          xcodebuild -workspace ios/App/App.xcworkspace -scheme App
+          -sdk iphonesimulator -configuration Debug
+          -derivedDataPath ios/build CODE_SIGNING_ALLOWED=NO build
+      - name: Install and launch iOS simulator app
+        run: npm run mobile:ios:smoke
+      - name: Upload iOS build
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-simulator-build
+          if-no-files-found: warn
+          path: |
+            communication-tool/ios/build/Build/Products/Debug-iphonesimulator/App.app
+            communication-tool/ai-evaluation/results/ios-simulator-smoke.json

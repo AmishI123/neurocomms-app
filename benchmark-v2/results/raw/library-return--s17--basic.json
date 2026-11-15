@@ -1,0 +1,65 @@
+{
+  "id": "library-return--s17--basic",
+  "case_id": "library-return",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T16:02:20.292777+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"```json\\n{\\n  \\\"cards\\\": [\\n    \\\"Tara, I noticed you've been reading about animals. Do you have any recommendations?\\\",\\n    \\\"Tara, I heard you're looking for help with space. Would you like to ask me for assistance today?\\\",\\n    \\\"Tara, I'm curious about what you like to do. Do you have any hobbies or interests?\\\",\\n    \\\"Tara, I have a suggestion for you. How about we discuss some books about animals and space?\\\",\\n    \\\"Tara, I've seen you've been reading about space. Would you like to share your thoughts on space?\\\",\\n    \\\"Tara, I've noticed you've been reading about animals. Do you have any books that you enjoy?\\\"\\n  ]\\n}\\n```\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Tara, I noticed you've been reading about animals. Do you have any recommendations?\",\n    \"Tara, I heard you're looking for help with space. Would you like to ask me for assistance today?\",\n    \"Tara, I'm curious about what you like to do. Do you have any hobbies or interests?\",\n    \"Tara, I have a suggestion for you. How about we discuss some books about animals and space?\",\n    \"Tara, I've seen you've been reading about space. Would you like to share your thoughts on space?\",\n    \"Tara, I've noticed you've been reading about animals. Do you have any books that you enjoy?\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883340,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 155,
+      "prompt_tokens": 443,
+      "total_tokens": 598,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-tbZBeWdVQb8sc8fg7KKWdwTbso0Iy6aa",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 443,
+      "prompt_ms": 7510.18,
+      "prompt_per_token_ms": 16.953002257336344,
+      "prompt_per_second": 58.986602185300484,
+      "predicted_n": 155,
+      "predicted_ms": 6166.33,
+      "predicted_per_token_ms": 40.0411038961039,
+      "predicted_per_second": 24.974336436746004
+    }
+  },
+  "wall_seconds": 13.689628157000698,
+  "error": null
+}

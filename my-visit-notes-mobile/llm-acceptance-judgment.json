@@ -1,0 +1,53 @@
+{
+  "product": "My Visit Notes",
+  "reviewType": "llm-evidence-review",
+  "reviewedAt": "2026-09-16",
+  "fictionalDataOnly": true,
+  "nativeReleaseApproved": false,
+  "overallJudgment": "conditional-web-pass-native-not-proven",
+  "evidenceSources": [
+    "product-specs/my-visit-notes/qa/browser-results.json",
+    "product-specs/my-visit-notes/qa/phone-results.json",
+    "product-specs/my-visit-notes/qa/transfer-results.json",
+    "product-specs/my-visit-notes/qa/next-appointment-results.json",
+    "product-specs/my-visit-notes/qa/followup-results.json",
+    "product-specs/my-visit-notes/qa/recovery-results.json",
+    "product-specs/my-visit-notes/qa/conversation-results.json",
+    "product-specs/my-visit-notes/qa/journey-results.json",
+    "product-specs/my-visit-notes/qa/conversation-hidden.png",
+    "product-specs/my-visit-notes/qa/journey-review.png",
+    "product-specs/my-visit-notes/qa/transfer-preview.png",
+    "my-visit-notes-mobile/NATIVE-ACCEPTANCE-RUNBOOK.md"
+  ],
+  "steps": [
+    {"id": 1, "name": "prepare-and-save", "evidence": "supported", "native": "not-proven"},
+    {"id": 2, "name": "show-and-hide", "evidence": "supported-in-simulation", "native": "not-proven"},
+    {"id": 3, "name": "back-safely", "evidence": "supported-in-simulation", "native": "not-proven"},
+    {"id": 4, "name": "question-outcomes", "evidence": "supported-including-partly-answered", "native": "not-proven"},
+    {"id": 5, "name": "follow-up-draft", "evidence": "supported-in-web", "native": "not-proven"},
+    {"id": 6, "name": "next-appointment", "evidence": "supported-in-web", "native": "not-proven"},
+    {"id": 7, "name": "export-and-restore", "evidence": "supported-for-browser-files", "native": "not-proven"},
+    {"id": 8, "name": "copy-and-print", "evidence": "copy-and-simulated-print-supported", "native": "not-proven"},
+    {"id": 9, "name": "offline-and-failed-save", "evidence": "supported-in-web-and-simulation", "native": "not-proven"},
+    {"id": 10, "name": "update-without-data-loss", "evidence": "supported-in-browser", "native": "not-proven"}
+  ],
+  "visualJudgment": {
+    "narrowLayout": "supported-by-screenshots",
+    "privacyMessage": "clear-in-screenshot",
+    "transferReview": "clear-in-screenshot",
+    "afterVisitPage": "usable-but-dense",
+    "nativeAccessibility": "not-proven"
+  },
+  "notProvenNativeChecks": [
+    "Android WebView journey",
+    "iOS build and simulator journey",
+    "system Back",
+    "app-switcher privacy snapshot",
+    "native file picker and share sheet",
+    "native clipboard and print output",
+    "native keyboard and cutouts",
+    "offline native restart",
+    "install update over existing native data"
+  ],
+  "judgeLimit": "An LLM may evaluate supplied evidence but cannot create evidence for a platform that did not run."
+}

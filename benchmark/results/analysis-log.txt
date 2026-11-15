@@ -1,0 +1,137 @@
+{
+  "summaries": {
+    "basic": {
+      "outputs": 36,
+      "valid": 31,
+      "invalid": 5,
+      "risk_outputs": 2,
+      "risk_rate_valid": 0.06451612903225806,
+      "invalid_or_risk": 7,
+      "invalid_or_risk_rate": 0.19444444444444445,
+      "duplicate_cards": 13,
+      "over_limit_cards": 93,
+      "function_indicators": {
+        "refusal": 17,
+        "question": 1,
+        "comment": 17,
+        "social": 0
+      },
+      "wall_seconds_total": 500.23773842200717,
+      "wall_seconds_median": 11.520013227500385,
+      "prompt_tokens": 9139,
+      "completion_tokens": 2875,
+      "workflow_tokens": 12014,
+      "workflow_seconds_total": 500.23773842200717
+    },
+    "context": {
+      "outputs": 36,
+      "valid": 33,
+      "invalid": 3,
+      "risk_outputs": 2,
+      "risk_rate_valid": 0.06060606060606061,
+      "invalid_or_risk": 5,
+      "invalid_or_risk_rate": 0.1388888888888889,
+      "duplicate_cards": 6,
+      "over_limit_cards": 85,
+      "function_indicators": {
+        "refusal": 19,
+        "question": 3,
+        "comment": 18,
+        "social": 0
+      },
+      "wall_seconds_total": 495.3817015549939,
+      "wall_seconds_median": 11.201472672000818,
+      "prompt_tokens": 10413,
+      "completion_tokens": 2790,
+      "workflow_tokens": 13203,
+      "workflow_seconds_total": 495.3817015549939
+    },
+    "review": {
+      "outputs": 36,
+      "valid": 31,
+      "invalid": 5,
+      "risk_outputs": 2,
+      "risk_rate_valid": 0.06451612903225806,
+      "invalid_or_risk": 7,
+      "invalid_or_risk_rate": 0.19444444444444445,
+      "duplicate_cards": 6,
+      "over_limit_cards": 75,
+      "function_indicators": {
+        "refusal": 17,
+        "question": 3,
+        "comment": 17,
+        "social": 0
+      },
+      "wall_seconds_total": 512.7523664200016,
+      "wall_seconds_median": 12.856979702500212,
+      "prompt_tokens": 14135,
+      "completion_tokens": 2509,
+      "workflow_tokens": 29847,
+      "workflow_seconds_total": 1008.1340679749956
+    }
+  },
+  "comparisons": {
+    "review_minus_context": {
+      "risk_any": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "cases": 12,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "review minus context"
+      },
+      "invalid_or_risk": {
+        "difference": 0.05555555555555555,
+        "ci95": [
+          0.0,
+          0.1388888888888889
+        ],
+        "cases": 12,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "review minus context"
+      }
+    },
+    "context_minus_basic": {
+      "risk_any": {
+        "difference": 0.0,
+        "ci95": [
+          -0.08333333333333333,
+          0.08333333333333333
+        ],
+        "cases": 12,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "context minus basic"
+      },
+      "invalid_or_risk": {
+        "difference": -0.05555555555555555,
+        "ci95": [
+          -0.16666666666666666,
+          0.05555555555555555
+        ],
+        "cases": 12,
+        "unit": "case; three trials averaged within condition",
+        "contrast": "context minus basic"
+      }
+    }
+  },
+  "reference_diagnostics": {
+    "n": 24,
+    "true_positive": 9,
+    "true_negative": 10,
+    "false_negative": 4,
+    "false_positive": 1,
+    "precision": 0.9,
+    "recall": 0.6923076923076923,
+    "scope": "Constructed reference examples only; labels authored by benchmark designer, not independent expert validation."
+  },
+  "cost": {
+    "api_fees_usd": 0,
+    "electricity_hardware_cost": "not measured",
+    "actual_model_calls": 108,
+    "actual_prompt_tokens": 33687,
+    "actual_completion_tokens": 8174,
+    "actual_request_wall_seconds": 1508.3718063970027
+  }
+}

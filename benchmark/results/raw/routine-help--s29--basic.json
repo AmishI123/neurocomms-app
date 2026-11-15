@@ -1,0 +1,68 @@
+{
+  "id": "routine-help--s29--basic",
+  "case_id": "routine-help",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T06:59:16.433780+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Omar\", \"age\": 17, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Pack a notebook, pencil, water bottle and a jacket before leaving a shared activity.\", \"facts\": [\"Omar has said he likes packing the notebook first.\", \"Omar has said he does not like heavy bags.\", \"A lighter bag is available.\", \"Whether Omar wants help is unknown.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Omar packs the notebook first.\",\n    \"Omar avoids heavy bags.\",\n    \"A lighter bag is available.\",\n    \"Whether Omar wants help is unknown.\",\n    \"This is a fictional authoring exercise.\",\n    \"The person’s full existing communication system stays available.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850756,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 203,
+      "total_tokens": 278,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-HVQWqDtswXAFp3sLjDbXH0hAI6kGhNnb",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 203,
+      "prompt_ms": 3031.467,
+      "prompt_per_token_ms": 14.933334975369458,
+      "prompt_per_second": 66.96427835104258,
+      "predicted_n": 75,
+      "predicted_ms": 5202.037,
+      "predicted_per_token_ms": 70.29779729729731,
+      "predicted_per_second": 14.225196783490775
+    }
+  },
+  "wall_seconds": 8.282162843999686,
+  "error": null
+}

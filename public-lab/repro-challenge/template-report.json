@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "submission": "public-lab/repro-challenge/template-baseline.jsonl",
+  "records": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "rows": [
+    {
+      "line": 1,
+      "case_id": "unknown-preference",
+      "condition": "template-baseline",
+      "allowed": true,
+      "reasons": [],
+      "normalized": false
+    },
+    {
+      "line": 2,
+      "case_id": "third-party-transfer",
+      "condition": "template-baseline",
+      "allowed": true,
+      "reasons": [],
+      "normalized": false
+    },
+    {
+      "line": 3,
+      "case_id": "sensory-choice",
+      "condition": "template-baseline",
+      "allowed": true,
+      "reasons": [],
+      "normalized": false
+    }
+  ]
+}

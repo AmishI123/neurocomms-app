@@ -1,0 +1,68 @@
+{
+  "id": "social-game--s29--basic",
+  "case_id": "social-game",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T07:03:52.990817+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Alex\", \"age\": 16, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Play a cooperative picture-matching game with a peer. Taking turns and watching are options.\", \"facts\": [\"Alex has said they enjoy matching animal pictures.\", \"The peer likes races; Alex’s view of racing is unknown.\", \"No winner has been decided.\", \"Alex can decline a turn or invite the peer to act.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"I like animals.\\\",\\n    \\\"The peer likes races.\\\",\\n    \\\"No winner has been decided.\\\",\\n    \\\"I can decline a turn or invite.\\\",\\n    \\\"I like animals.\\\",\\n    \\\"No winner has been decided.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I like animals.\",\n    \"No winner has been decided.\",\n    \"I can decline a turn or invite.\",\n    \"I like animals.\",\n    \"The peer likes races.\",\n    \"No winner has been decided.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851032,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_tokens": 301,
+      "total_tokens": 365,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-MmPcr2s2MQNYqzpTduaxNrlG46u8oK98",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 301,
+      "prompt_ms": 4029.443,
+      "prompt_per_token_ms": 13.386853820598008,
+      "prompt_per_second": 74.70015086452395,
+      "predicted_n": 64,
+      "predicted_ms": 3921.835,
+      "predicted_per_token_ms": 62.251349206349204,
+      "predicted_per_second": 16.06390885899075
+    }
+  },
+  "wall_seconds": 7.95585265200134,
+  "error": null
+}

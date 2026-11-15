@@ -1,0 +1,69 @@
+{
+  "completed_utc": "2026-09-08T17:45:52.871594+00:00",
+  "reviewer": "Benchmark author; condition visible; qualitative audit, not independent clinical review",
+  "scope": "12 prespecified outputs: four held-out cases at seed 17 across three workflows",
+  "summary": "The validator materially improved parseability, but over-limit and repeated-card failures remain. The audit is descriptive and does not establish communication benefit.",
+  "posthoc_examples": [],
+  "entries": [
+    {
+      "id": "library-return--s17--basic",
+      "source_sha256": "4ce99a48a015a5ad7b7000322a02789af8672c13e364da5717632dd23064bb0a",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "library-return--s17--context",
+      "source_sha256": "a4983f17ac2fcf21ccfb51596368a21a8a543dda320151941ae059323218af9e",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "library-return--s17--review",
+      "source_sha256": "7061a796d0d94339bd3a0eae9101586083c813c93887a08287b5e7c32dcd7867",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "cooking-spice--s17--basic",
+      "source_sha256": "d9242aaa6c42e9a4c2326ef0f987649abb33dd16a9fb6fc7f974fd1de319cd3e",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "cooking-spice--s17--context",
+      "source_sha256": "b7593937d0b0115c8c584d5eaa59f0d77776e4e461584e18ef84781a2b81f308",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "cooking-spice--s17--review",
+      "source_sha256": "514bf93c94cdc037bec0817d054ed5a18814dd185eeecdca846f5ab24695ffac",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "story-characters--s17--basic",
+      "source_sha256": "f1cd95294240c1fe39811a5f4f3fc02df5286ba8dfa3151a977b3740cb002250",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "story-characters--s17--context",
+      "source_sha256": "0a0369ce9e0cf3e72cde1b85f49ec6580343f6efb4ef8c03a5171d9a5fbf6dc6",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "story-characters--s17--review",
+      "source_sha256": "427197da99aa44c8765355f984e9582f4827508ebd17443c126d1e719edcf16a",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "transition-locker--s17--basic",
+      "source_sha256": "cf3a6f3b903d8fb9fd64978797022926b63f8ab78a076a8451e6a69743c8f57b",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "transition-locker--s17--context",
+      "source_sha256": "211adbaf9d450a4e4a1df73af015798de93a9f4291dfbb731715f36638f53fda",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    },
+    {
+      "id": "transition-locker--s17--review",
+      "source_sha256": "e966621a234e277f6d3051fdaa50870a451c72fce7389c2687249518b6cf992b",
+      "finding": "Schema-constrained request with bounded repair and local fence normalization. Inspect the raw attempt record alongside the parsed result; this audit records format and repetition behavior, not clinical usefulness."
+    }
+  ]
+}

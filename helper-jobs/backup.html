@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F3ECE1" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · Laptop backup</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="experience.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="styles.css" />
+  <script src="native.js"></script>
+</head>
+<body class="lead-phone">
+  <header><a class="brand" href="./"><span class="mark" aria-hidden="true">h.</span> Helper Jobs</a><span class="header-status"><span class="badge" id="backup-status" role="status">Connecting…</span></span></header>
+  <main id="app" tabindex="-1">
+    <section id="backup-missing" hidden><div class="hj-heading"><p class="eyebrow">Laptop backup</p><h1>Open this from the tablet.</h1><p class="hj-sub">On the outing tablet: Coordinator tools → Copies and backup → Set up the laptop backup.</p></div></section>
+    <section id="backup-board" hidden aria-labelledby="backup-title">
+      <div class="hj-top"><div class="hj-heading"><p class="eyebrow">Coordinator · Laptop backup</p><h1 id="backup-title">Waiting for the tablet’s first copy…</h1><p class="hj-sub" id="backup-when">Leave this page open during the outing. It updates by itself.</p></div><div class="hj-art" data-art="backup"></div></div>
+      <div class="board-summary" id="backup-summary"></div>
+      <form class="setup-form" id="backup-save">
+        <h2 class="hj-h2 with-icon" style="margin:0"><span class="h-icon" data-icon="download"></span>Save a locked copy to this laptop</h2>
+        <p class="hj-sub">Choose words to lock the file. You need the same words to restore it on a tablet.</p>
+        <label>Words to lock it <small>(at least 8 letters)</small><input name="passphrase" type="password" minlength="8" autocomplete="new-password" required /></label>
+        <button class="primary" type="submit">Download locked copy</button>
+      </form>
+      <div class="pair-panel backup-how"><h2 class="hj-h2 with-icon" style="margin-top:0"><span class="h-icon" data-icon="lifebuoy"></span>If the tablet breaks</h2><ol class="icon-steps"><li><span class="h-icon" data-icon="download"></span>Download a locked copy here.</li><li><span class="h-icon" data-icon="device-tablet"></span>On another tablet, open Helper Jobs and choose a coordinator PIN.</li><li><span class="h-icon" data-icon="upload"></span>Coordinator tools → Restore from a copy. Choose the file and type the words.</li></ol></div>
+      <p class="hj-privacy">The copy is locked on the tablet before it is sent. The server keeps only the newest locked copy, for up to 14 days without use. This page keeps nothing on this laptop until you download.</p>
+      <button type="button" class="button-stop" id="backup-forget">Stop showing the backup on this laptop</button>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="icons.js"></script><script src="art.js"></script><script src="link.js"></script><script src="backup.js"></script>
+</body>
+</html>

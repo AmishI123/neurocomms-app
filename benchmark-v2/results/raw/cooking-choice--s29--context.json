@@ -1,0 +1,65 @@
+{
+  "id": "cooking-choice--s29--context",
+  "case_id": "cooking-choice",
+  "condition": "context",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T15:55:51.574518+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Ravi\", \"age\": 16, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose between mixing a fruit salad, arranging crackers, or watching a cooking demonstration.\", \"facts\": [\"Ravi\", \"chose\", \"crackers\", \"yesterday;\", \"that\", \"does\", \"not\", \"establish\", \"today's\", \"choice.\", \"No\", \"dietary,\", \"family,\", \"or\", \"health\", \"information\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Today's choice is to mix a fruit salad, no dietary, family, or health information is provided.\",\n    \"Today's choice is to mix a fruit salad, no dietary, family, or health information is provided.\",\n    \"Today's choice is to mix a fruit salad, no dietary, family, or health information is provided.\",\n    \"Today's choice is to mix a fruit salad, no dietary, family, or health information is provided.\",\n    \"Today's choice is to mix a fruit salad, no dietary, family, or health information is provided.\",\n    \"Today's choice is to mix a fruit salad, no dietary, family, or health information is provided.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788882951,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 148,
+      "prompt_tokens": 313,
+      "total_tokens": 461,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-j2AO0QU3sg9sOcxoM6ybiQUYPhM31JZH",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 313,
+      "prompt_ms": 5246.788,
+      "prompt_per_token_ms": 16.762900958466453,
+      "prompt_per_second": 59.65554544990193,
+      "predicted_n": 148,
+      "predicted_ms": 5838.217,
+      "predicted_per_token_ms": 39.715761904761905,
+      "predicted_per_second": 25.178920208001863
+    }
+  },
+  "wall_seconds": 11.09569192699928,
+  "error": null
+}

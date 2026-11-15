@@ -1,0 +1,61 @@
+{
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 101,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a fictional person choosing a book, return only a JSON object with key cards and six short optional phrases."
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"books\": [\n    \"The Book Thief\",\n    \"How to Manage Your Brain\",\n    \"The Secret Life of Bees\",\n    \"1984\",\n    \"The Giver\",\n    \"The Hunger Games\"\n  ],\n  \"phrases\": [\n    \"Read the beginning to see how the story starts.\",\n    \"What do you think the main character does in Chapter 1?\",\n    \"Why is the protagonist feeling so lonely in the novel?\",\n    \"Does the story have a twist at the end?\",\n    \"How does the main character react to the new situation?\",\n    \"What is the main theme of this story?\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850158,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 153,
+      "prompt_tokens": 34,
+      "total_tokens": 187,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-5UWoDQHrO50FcyV6p0YRBxnYtJTeY1ne",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 34,
+      "prompt_ms": 1273.63,
+      "prompt_per_token_ms": 37.45970588235294,
+      "prompt_per_second": 26.69535108312461,
+      "predicted_n": 153,
+      "predicted_ms": 12816.247,
+      "predicted_per_token_ms": 84.31741447368421,
+      "predicted_per_second": 11.859946207341354
+    }
+  },
+  "wall_seconds": 14.172095724999963,
+  "error": null
+}

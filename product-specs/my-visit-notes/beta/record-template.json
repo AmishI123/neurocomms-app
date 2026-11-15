@@ -1,0 +1,27 @@
+{
+  "caseId": "BETA-WEB-001",
+  "runDate": "YYYY-MM-DD",
+  "surface": "web",
+  "buildHash": "replace-with-exact-build-hash",
+  "device": "browser-or-dedicated-device",
+  "osVersion": "record-if-known",
+  "tasks": {
+    "1": "Not run",
+    "2": "Not run",
+    "3": "Not run",
+    "4": "Not run",
+    "5": "Not run",
+    "6": "Not run",
+    "7": "Not run",
+    "8": "Not run",
+    "9": "Not run",
+    "10": "Not run",
+    "11": "Not run"
+  },
+  "dataResult": "not-recorded",
+  "privacyResult": "not-recorded",
+  "evidencePaths": [],
+  "severity": "S3",
+  "failureCode": null,
+  "nextAction": "record-result"
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · Certificates</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="print.css" />
+  <style>@media print{@page{size:landscape;margin:.3in}}</style>
+  <script src="native.js"></script>
+</head>
+<body class="print-page">
+  <header class="print-bar no-print"><a href="./">← Back to Helper Jobs</a><button type="button" class="primary" onclick="window.print()">Print</button><p>One certificate per page. Print on card, landscape.</p></header>
+  <main id="certs"></main>
+  <script src="data.js"></script><script src="store.js"></script><script src="certificate.js"></script>
+  <script>
+    (function () {
+      // Reads this tablet's own records. Nothing is sent anywhere.
+      let until = 0; try { until = Number(localStorage.getItem('helper-jobs.coord-until') || 0); } catch (_) {}
+      if (Date.now() > until) { document.getElementById('certs').innerHTML = '<p class="print-empty">Open this from Coordinator tools on the outing tablet.</p>'; return; }
+      const state = HelperJobsStore.loadState();
+      const id = new URLSearchParams(location.search).get('helper');
+      const helper = state.helpers.find(item => item.id === id);
+      const main = document.getElementById('certs');
+      if (!helper) { main.innerHTML = '<p class="print-empty">Open this from Coordinator tools on the outing tablet.</p>'; return; }
+      const list = HelperJobsStore.certificatesFor(state, id);
+      main.innerHTML = list.map(cert => HelperJobsCertificate.html({ name: helper.name, title: cert.title, line: cert.line, place: state.outing.place, date: state.outing.date })).join('') || '<p class="print-empty">No certificates yet. Finish a job to earn the first one.</p>';
+      document.title = `${helper.name} · Helper Jobs certificates`;
+    })();
+  </script>
+</body>
+</html>

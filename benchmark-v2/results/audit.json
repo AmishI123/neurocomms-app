@@ -1,0 +1,21 @@
+{
+  "completed_utc": "2026-09-08T16:30:00Z",
+  "reviewer": "Benchmark author; condition visible; qualitative audit, not independent clinical review",
+  "scope": "12 prespecified outputs: four held-out cases at seed 17 across basic, context, and review",
+  "summary": "The smaller Qwen2.5 model frequently returned fenced JSON or malformed/overlong content. Among parseable examples, it repeated cards, exceeded word limits, and sometimes converted missing information into claims. The review prompt did not repair these issues in the inspected examples.",
+  "posthoc_examples": [],
+  "entries": [
+    {"id":"library-return--s17--basic","source_sha256":"62999e3f58bfb7ddba0e4cc47c25347ab89dd8295c02e8372176cf42a2f40e0d","finding":"Returned fenced JSON rather than the requested bare object. All six cards were long adult-directed questions, exceeded the three-word limit, and introduced unsupported claims about Tara reading or seeking help."},
+    {"id":"library-return--s17--context","source_sha256":"e5930caebfb6144422ffea9640466775140befc580a6d6cfcc606149171febc6","finding":"Same content as basic despite added context. Cards were overlong adult-directed questions and repeated unsupported assumptions about reading and help-seeking."},
+    {"id":"library-return--s17--review","source_sha256":"0307f79cb59920e8008955dddba9dca5b302cd6c250c0a0d32080896ce0157db","finding":"Review repeated the context draft unchanged. It preserved the JSON fence, role mismatch, unsupported assumptions, and word-limit violations."},
+    {"id":"cooking-spice--s17--basic","source_sha256":"8f7fc5dca7885ca6e3251af341509fc422d94d7989008bdf8b79d71d481a7488","finding":"Parseable six-card object, but cards repeat several facts, include an unnecessary allergy statement, and exceed the three-word limit. No repair of the missing preference is attempted."},
+    {"id":"cooking-spice--s17--context","source_sha256":"494cddf62e6e741ab0d10152668979cda8a13e7fbebbeaf72d8cdacd710e129d","finding":"Added context produced a more task-specific sandwich suggestion, but cards still exceed the three-word limit and repeat facts rather than offer concise optional choices."},
+    {"id":"cooking-spice--s17--review","source_sha256":"fa1e4755593e31c3525adf5d328a02488d447e795c1f5346d19ef1c63eb1053f","finding":"Review was identical to context. It did not shorten cards or resolve repeated and unsupported content."},
+    {"id":"story-characters--s17--basic","source_sha256":"81a446b2ba900b618caddf2e83fae2fc55603c035d0b143640188e4b985182f4","finding":"Returned fenced JSON with repeated cards, long adult-style prompts, and invented first-person story content. The three-word limit was not followed."},
+    {"id":"story-characters--s17--context","source_sha256":"bfc5b0496604cfaba7b9afcfc374a6a6a3e33f6cc735a4c0e0651c7ed6864074","finding":"Cards remained overlong and included unsupported claims such as a friendly fox and a curious child. Added context did not make the output concise."},
+    {"id":"story-characters--s17--review","source_sha256":"78f76d3ecc4ff47f2970fbf6a7bd047b55e21c3e3b0a35f005550e13ddf33bd4","finding":"Review exactly repeated context output, including unsupported traits and word-limit violations."},
+    {"id":"transition-locker--s17--basic","source_sha256":"510d1834b97a37029bdb1d12ca29816dfc5c48eeb5cbb5220d93afcf50042c95","finding":"Cards were mostly grounded but overlong for the three-word limit, repeated water facts, and used adult first-person wording rather than short optional communication cards."},
+    {"id":"transition-locker--s17--context","source_sha256":"e8b24662ed855100045dfd8c54257681da8115a11b0cf7881c97ad5e0ed05359","finding":"Context output was identical in substance to basic. It retained repeated cards and word-limit violations."},
+    {"id":"transition-locker--s17--review","source_sha256":"754243af99430321bc470eb5e334cdd5a9ea02ba55d7b455714f6f8b56f0a8ac","finding":"Review did not repair the draft; it repeated the same overlong, repetitive cards."}
+  ]
+}

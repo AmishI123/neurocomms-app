@@ -1,0 +1,3 @@
+Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key "cards". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.
+
+Check for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.

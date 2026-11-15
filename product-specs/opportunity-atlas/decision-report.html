@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product choice: communication-access card</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .decision { padding: 18px 20px; border-left: 6px solid #286153; background: #e5f1ec; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; }
+    th, td { padding: 12px; border-bottom: 1px solid #d8e2dd; text-align: left; vertical-align: top; }
+    th { color: #173d35; background: #f4f7f4; }
+    .step { counter-increment: step; }
+    .steps { counter-reset: step; }
+    .step h3::before { content: counter(step) ". "; color: #286153; }
+    .limit { padding: 14px 16px; background: #fffaf0; border: 1px solid #eadcae; }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <p class="kicker">Product choice · engineering evidence · no participant claim</p>
+    <h1>Build the communication-access card first</h1>
+    <p class="lead">The project has three sensible first products. The card is the only one with a working implementation and a complete checked flow today.</p>
+    <nav><a href="presentation/index.html">Atlas presentation</a> · <a href="presentation/products.html">Product comparison</a> · <a href="NEXT-MEATY-GOAL.md">End-to-end goal</a></nav>
+  </header>
+  <main class="wrap">
+    <section class="decision">
+      <h2>Decision</h2>
+      <p><strong>Build and review the communication-access card before starting the reading desk or time-step helper.</strong> This is an engineering sequence decision, not a ranking of people’s needs or proof that people will use the card.</p>
+      <p>The first task is: make a short card for one real-life situation, edit the words, hide anything private, preview the exact shared content, save it on the device, and export only after review.</p>
+    </section>
+
+    <section>
+      <h2>Why this product comes first</h2>
+      <ul>
+        <li>A working prototype and a clear product requirements document already exist.</li>
+        <li>The task is small enough to test from opening to export without building a whole communication system.</li>
+        <li>The person writes and approves the content. The app does not require a diagnosis or guess what the person means.</li>
+        <li>The same basic flow may be useful in several settings, while still allowing personal wording and different communication methods.</li>
+        <li>Its risks are visible and bounded: privacy of printed copies, wording fit, and the fact that another person may still refuse to listen.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Three candidates</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Product</th><th>What exists now</th><th>Effort</th><th>What we can check</th><th>Important risk</th><th>Decision</th></tr></thead>
+        <tbody>
+          <tr><td>Communication-access card</td><td>Working prototype, PRD, six browser tests</td><td>Small extension</td><td>Edit, visibility, preview, save, delete, export, keyboard, narrow screen, network boundary</td><td>The card cannot make a listener respond</td><td><strong>First</strong></td></tr>
+          <tr><td>Reading and writing desk</td><td>Product brief only</td><td>Medium; larger for scanned documents</td><td>Not yet available</td><td>Extraction or speech can change the original or expose private text</td><td>Later</td></tr>
+          <tr><td>Show me the time steps</td><td>Product brief only</td><td>Small to medium</td><td>Not yet available</td><td>Hidden assumptions can make a date or money result look exact</td><td>Later</td></tr>
+        </tbody>
+      </table></div>
+      <p class="small">“Effort” is a planning estimate. It is not a market estimate and does not say which need matters more.</p>
+    </section>
+
+    <section>
+      <h2>Exact first task</h2>
+      <div class="steps">
+        <article class="step"><h3>Choose a situation</h3><p>Use a healthcare visit, school meeting, work conversation, public service, or another situation chosen by the person. The card does not ask for a diagnosis.</p></article>
+        <article class="step"><h3>Start blank or from an example</h3><p>The example is only a starting point. Every sentence can be changed, hidden, reordered, or removed.</p></article>
+        <article class="step"><h3>Write the person’s words</h3><p>Include the communication method, time needed, turn-taking preference, and what to do when the message is unclear.</p></article>
+        <article class="step"><h3>Check the public view</h3><p>The preview shows only visible, non-empty content. Private editor notes do not appear automatically.</p></article>
+        <article class="step"><h3>Save deliberately</h3><p>Save only on the device when the person chooses. Reload and confirm that the card is still there. Delete it with a clear confirmation.</p></article>
+        <article class="step"><h3>Review before sharing</h3><p>Show the exact text that will leave the browser. Then print, export, or use the device share option. If sharing is unavailable, keep a local text download.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>What was checked now</h2>
+      <p>The current release audit passed <strong>22 of 22</strong> browser and decision-flow checks. This includes the feature, acceptance, accessibility, keyboard, accessibility-tree, host-boundary, selected-task, and review-protocol checks at the documented browser-library setting.</p>
+      <ul>
+        <li>Accessible page structure and labelled controls.</li>
+        <li>Editable example content and live preview.</li>
+        <li>Hidden statements excluded from preview and export review.</li>
+        <li>Explicit review before text and HTML export.</li>
+        <li>Save, reload, and delete in local browser storage.</li>
+        <li>Keyboard focus and 320px layout without horizontal overflow.</li>
+      </ul>
+      <p><code>npm --prefix communication-tool run communication-card:release-audit</code></p>
+      <p>The audit also verifies a fresh package extraction and records the advisory LLM review. Read the <a href="../../communication-tool/ai-evaluation/results/communication-card-release-audit.json">current release audit</a> and the <a href="../../communication-tool/ai-evaluation/results/communication-card-judge.html">LLM report</a>.</p>
+      <p>Additional recorded checks cover no external page resources, offline shell control, the share fallback, and the four viewport widths. See the <a href="communication-access-card/verification.md">prototype verification record</a>.</p>
+      <p>The selected card is also integrated into the main Phrase Studio web/mobile shell with a review-before-copy/share boundary. See the <a href="../../communication-tool/docs/communication-card-integration.md">integration record</a>.</p>
+    </section>
+
+    <section>
+      <h2>What this result does not show</h2>
+      <div class="limit"><p>There were no participants in this slice. The result does not show that people prefer the card, that a listener will respect it, or that it improves healthcare, school, work, or relationships. It does not show clinical benefit, demand, or suitability for every communication method.</p></div>
+      <p>The next test should compare the card with the person’s current paper or notes method on the same fictional task first. The prepared <a href="review-protocol.html">review protocol</a> defines that comparison. Any later review must be voluntary, accessible, and led by the person’s chosen way of communicating.</p>
+    </section>
+
+    <section>
+      <h2>Change-direction rules</h2>
+      <ul>
+        <li><strong>Continue</strong> if the first task works and people say the card gives useful control for a situation.</li>
+        <li><strong>Revise</strong> if the flow works but wording, steps, sharing, or access methods add avoidable effort.</li>
+        <li><strong>Change direction</strong> if the existing method is easier with the same result, or if people do not want to show a card in the situation.</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="wrap"><p>Decision record: <a href="decision-record.json">decision-record.json</a>. Product proposal only; no medical or market claim.</p></footer>
+</body>
+</html>

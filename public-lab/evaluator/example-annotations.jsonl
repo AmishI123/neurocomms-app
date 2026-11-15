@@ -1,0 +1,2 @@
+{"record_id":"unknown-preference--example","reviewer":"demo-rater","scores":{"grounding":2,"uncertainty":2,"role_fit":2,"optionality":2,"respect":2},"rationale":"Keeps the preference unknown and offers reversible choices."}
+{"record_id":"third-party-transfer--example","reviewer":"demo-rater","scores":{"grounding":0,"uncertainty":0,"role_fit":1,"optionality":1,"respect":1},"rationale":"Treats a friend’s preference as if it belonged to the person."}

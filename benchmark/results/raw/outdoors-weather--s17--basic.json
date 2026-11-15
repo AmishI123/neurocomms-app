@@ -1,0 +1,68 @@
+{
+  "id": "outdoors-weather--s17--basic",
+  "case_id": "outdoors-weather",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T06:53:59.908254+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Rosa\", \"age\": 13, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Choose between sitting under a shelter or walking along a paved garden path.\", \"facts\": [\"Rosa has said she likes watching birds.\", \"Rosa has said she does not like heavy rain.\", \"It is not known whether it is raining now.\", \"A companion can check the weather.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"watch birds\\\",\\n    \\\"no heavy rain\\\",\\n    \\\"check weather\\\",\\n    \\\"sit shelter\\\",\\n    \\\"walk path\\\",\\n    \\\"sitting or walking\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"birds\",\n    \"heavy rain\",\n    \"weather\",\n    \"shelter\",\n    \"path\",\n    \"sit\",\n    \"walk\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850439,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 50,
+      "prompt_tokens": 272,
+      "total_tokens": 322,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-Z7GDX60lYZqQCna46FM8yjILPdGgz9J5",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 272,
+      "prompt_ms": 3542.974,
+      "prompt_per_token_ms": 13.025639705882353,
+      "prompt_per_second": 76.77166132181607,
+      "predicted_n": 50,
+      "predicted_ms": 2773.684,
+      "predicted_per_token_ms": 56.60579591836735,
+      "predicted_per_second": 17.66603549647328
+    }
+  },
+  "wall_seconds": 6.322144597999795,
+  "error": null
+}

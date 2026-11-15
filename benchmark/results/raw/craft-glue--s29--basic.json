@@ -1,0 +1,68 @@
+{
+  "id": "craft-glue--s29--basic",
+  "case_id": "craft-glue",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T06:56:55.922709+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mira\", \"age\": 9, \"communication_style\": \"short phrases\"}, \"activity\": \"Make a paper collage with train or animal pictures, paper, glue and removable tape.\", \"facts\": [\"Mira has said she likes trains.\", \"Mira has said she does not like sticky glue.\", \"Tape is available as an alternative.\", \"Mira has not said whether she wants to join today.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Mira prefers short phrases, so avoid long sentences.\",\n    \"She dislikes sticky glue, so use removable tape instead.\",\n    \"She does not want to join the activity yet.\",\n    \"Mira is 9 years old, so keep ideas simple.\",\n    \"This is a creative writing exercise.\",\n    \"Your name is Mira, I am 9.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850615,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 202,
+      "total_tokens": 295,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-neBseEVDthUTdq3uEpSmdyi6iZspLU92",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 202,
+      "prompt_ms": 3456.682,
+      "prompt_per_token_ms": 17.11228712871287,
+      "prompt_per_second": 58.437542128549865,
+      "predicted_n": 93,
+      "predicted_ms": 23803.82,
+      "predicted_per_token_ms": 258.7371739130435,
+      "predicted_per_second": 3.8649258816442065
+    }
+  },
+  "wall_seconds": 27.30223424200085,
+  "error": null
+}

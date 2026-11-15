@@ -1,0 +1,65 @@
+{
+  "id": "library-noise--s17--context",
+  "case_id": "library-noise",
+  "condition": "context",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T16:06:05.598508+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Ben\", \"age\": 15, \"communication_style\": \"short phrases\"}, \"activity\": \"Choose a quiet table, a computer station, or the reading corner. Headphones are available.\", \"facts\": [\"Ben\", \"has\", \"said\", \"he\", \"dislikes\", \"unexpected\", \"announcements.\", \"His\", \"preferred\", \"station\", \"today\", \"is\", \"unknown.\", \"Do\", \"not\", \"invent\", \"a\", \"diagnosis\", \"or\", \"a\", \"school\", \"schedule.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Ben prefers to headphones today.\",\n    \"Ben dislikes unexpected announcements.\",\n    \"Ben's preferred station today is unknown.\",\n    \"Do not invent a diagnosis or school schedule.\",\n    \"Held-out fictional case, full communication access remains available.\",\n    \"Ben prefers to choose a quiet table, a computer station, or the reading corner.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883565,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 324,
+      "total_tokens": 408,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-zBp6Cxm0q62SnVpCB9gfKZ4Ldj0Z2iS0",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 324,
+      "prompt_ms": 5273.721,
+      "prompt_per_token_ms": 16.276916666666665,
+      "prompt_per_second": 61.43669716316052,
+      "predicted_n": 84,
+      "predicted_ms": 3133.341,
+      "predicted_per_token_ms": 37.75109638554217,
+      "predicted_per_second": 26.489296887890593
+    }
+  },
+  "wall_seconds": 8.416942238000047,
+  "error": null
+}

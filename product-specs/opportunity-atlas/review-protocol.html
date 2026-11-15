@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review protocol: communication-access card</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .notice { padding: 16px 18px; border-left: 6px solid #a84d00; background: #fffaf0; }
+    .protocol { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .protocol article { padding: 18px; border: 1px solid #d8e2dd; border-radius: 10px; background: #fff; }
+    .protocol h3 { margin-top: 0; }
+    .table-wrap { max-width: 100%; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px; border-bottom: 1px solid #d8e2dd; text-align: left; vertical-align: top; }
+    th { background: #f4f7f4; color: #173d35; }
+    @media (max-width: 700px) { .protocol { grid-template-columns: 1fr; } table { display: block; overflow-x: auto; min-width: 640px; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <p class="kicker">Review preparation · fictional task · no sessions completed</p>
+    <h1>How to compare the card with a person’s current method</h1>
+    <p class="lead">This is a clear plan for a future voluntary review. It is not a study result, a recruitment claim, or proof that the app is useful.</p>
+    <nav><a href="decision-report.html">Product decision</a> · <a href="review-protocol.json">Protocol data</a> · <a href="NEXT-MEATY-GOAL.md">End-to-end goal</a></nav>
+  </header>
+  <main class="wrap">
+    <section class="notice">
+      <h2>Current status</h2>
+      <p><strong>Prepared, not run.</strong> Sessions completed: <strong>0</strong>. The existing 11/11 engineering checks remain software evidence only.</p>
+    </section>
+
+    <section>
+      <h2>What the review asks</h2>
+      <p>Can a person make a short communication card for an unfamiliar appointment, keep one line private, and prepare only the chosen information for sharing? The comparison is between the card app and the person’s ordinary paper or notes method.</p>
+      <p>The task uses fictional content first. It does not ask for a diagnosis, medical history, real appointment, or personal communication record.</p>
+    </section>
+
+    <section>
+      <h2>Same task, two conditions</h2>
+      <div class="protocol">
+        <article>
+          <h3>Current method: paper or ordinary notes</h3>
+          <p>Use a blank sheet or the person’s usual notes tool. Make the same short card, mark the private line, review what would be shown, and prepare a copy.</p>
+          <p><strong>Important:</strong> this is not an inferior control. The person may already have a better method.</p>
+        </article>
+        <article>
+          <h3>Communication-access card</h3>
+          <p>Start blank or from the example, edit the person’s words, hide the private line, review the preview, save only if wanted, and export after the sharing review.</p>
+          <p><strong>Important:</strong> the app does not replace an existing communication aid.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Fictional task card</h2>
+      <ol>
+        <li>Written information helps me.</li>
+        <li>Please give me extra time to answer.</li>
+        <li>Please ask me instead of guessing what I mean.</li>
+        <li><strong>Private:</strong> My private note is not for the shared card.</li>
+      </ol>
+      <p>Success means the person can choose, edit, hide, preview, and share only the information they want to share. It does not mean finishing quickly.</p>
+    </section>
+
+    <section>
+      <h2>What to explain before any future session</h2>
+      <ul>
+        <li>This is voluntary. The person can say no, pause, change the task, or stop without giving a reason.</li>
+        <li>Explain what will be written down, whether anything will be recorded, where it will be stored, who can see it, and when it will be deleted.</li>
+        <li>The person chooses their communication method, support person, breaks, and way to answer.</li>
+        <li>Use fictional content first. Do not ask for real health details or a real communication record.</li>
+        <li>Do not recruit or contact anyone from this document. Recruitment needs a separate approved instruction.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What to record for each method</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Record</th><th>How to write it</th></tr></thead>
+        <tbody>
+          <tr><td>Completion</td><td>Finished, changed the task, paused, or stopped. State who made the change.</td></tr>
+          <tr><td>Errors and corrections</td><td>What was shown, hidden, lost, or corrected. Do not call a person’s communication a failure.</td></tr>
+          <tr><td>Help</td><td>Who helped, what they did, and whether the person wanted that help.</td></tr>
+          <tr><td>Effort</td><td>Use the person’s own description. Do not replace it with time alone.</td></tr>
+          <tr><td>Choice</td><td>Would the person choose this method for this situation, and why or why not?</td></tr>
+          <tr><td>Control and privacy</td><td>Could the person refuse, change, hide, review, delete, or stop sharing?</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>Decision rules</h2>
+      <ul>
+        <li><strong>Continue:</strong> the task works and people describe a useful benefit worth the added effort.</li>
+        <li><strong>Revise:</strong> the idea helps but wording, access, steps, or sharing controls cause difficulty.</li>
+        <li><strong>Change direction:</strong> the existing method works as well with less effort, the main barrier is outside the app, or people do not want the product.</li>
+      </ul>
+      <p><strong>For now:</strong> no decision about usefulness can be made because no sessions have happened.</p>
+    </section>
+
+    <section>
+      <h2>Engineering-only visual review</h2>
+      <p>The app has been checked at 320px and 1280px by assistant visual self-review. The privacy message, editable card, preview, and sharing review are visible; mobile uses one column without horizontal overflow. This is not an independent model review, participant review, screen-reader certification, or native Android/iOS test.</p>
+    </section>
+  </main>
+  <footer class="wrap"><p><a href="decision-report.html">Return to product decision</a>. Protocol data: <a href="review-protocol.json">review-protocol.json</a>.</p></footer>
+</body>
+</html>

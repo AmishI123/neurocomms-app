@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dyslexia: product opportunity requirements</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="kicker">Area 3 · Dyslexia</div>
+        <h1>Products that reduce the cost of reading and writing tasks</h1>
+        <p class="lead">
+          The initial evidence points to slow or tiring reading, missed words,
+          comprehension problems in dense material, writing and spelling effort,
+          hard-to-use documents, and uncertainty about workplace support.
+        </p>
+        <nav>
+          <a href="index.html">Atlas home</a
+          ><a href="comparison.html">Compare areas</a
+          ><a href="methods-and-evidence.html">Evidence and limits</a>
+        </nav>
+      </header>
+      <section>
+        <h2>Who this evidence represents</h2>
+        <p>
+          The evidence includes adult learners, workplace guidance, research
+          participants, and public community discussions. The first pass has
+          more evidence about reading support than about specific workplace
+          software, cultural differences, or people who do not use the dyslexia
+          label.
+        </p>
+        <h2>What the evidence suggests</h2>
+        <p>
+          A 2024 review found that assistive-technology research for adults with
+          dyslexia is scarce, especially in work and higher education. Research
+          on read-aloud tools suggests possible comprehension benefits with
+          substantial variation. Community accounts describe fatigue, line
+          tracking, skipped words, dense documents, and the practical cost of
+          writing and checking.
+        </p>
+        <div class="note">
+          <strong>Design consequence:</strong> support should be chosen for the
+          actual task. The product must not assume that a special font, colour,
+          voice, or reading mode works for every dyslexic person.
+        </div>
+        <p class="source">
+          Sources:
+          <a
+            href="https://research.jku.at/en/publications/words-unleashed-a-systematic-literature-review-study-on-the-use-o/"
+            >adult assistive-technology review</a
+          >,
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5494021/"
+            >read-aloud meta-analysis</a
+          >,
+          <a href="https://pubmed.ncbi.nlm.nih.gov/40012340/"
+            >adult reading enjoyment study</a
+          >,
+          <a
+            href="https://www.reddit.com/r/Dyslexia/comments/1u16maf/dyslexia_and_reading/"
+            >public reading discussion</a
+          >, and
+          <a
+            href="https://digitalcommons.lesley.edu/education_dissertations/201/"
+            >professional workplace narratives</a
+          >.
+        </p>
+      </section>
+      <section>
+        <h2>Possible products to explore</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Document access workspace</h3>
+            <p>
+              Helps a person read dense, scanned, or badly formatted documents
+              while keeping the original visible.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Reading and writing support</h3>
+            <p>
+              Combines read-aloud, line focus, speech-to-text, draft read-back,
+              and editable checking for a specific task.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Private adjustment request builder</h3>
+            <p>
+              Creates a request for extra time, information in advance, digital
+              text, or another support without requiring medical details.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section>
+        <h2>Pain points and product requirements</h2>
+        <article class="pain">
+          <h3>1. Reading can take too much time and energy</h3>
+          <p>
+            A person may read accurately but slowly, lose their place, reread,
+            skip small words, or need breaks before the meaning is clear.
+          </p>
+          <div class="example">
+            <strong>Example:</strong> An employee understands the subject but
+            needs an hour to read a short policy. By the end, they are too tired
+            to write the response it requires.
+          </div>
+          <div class="solution">
+            <strong>Possible product:</strong> a reading workspace with
+            user-controlled read-aloud, line focus, spacing, speed, and a place
+            to write a short understanding check.
+          </div>
+          <p><strong>Must do:</strong></p>
+          <ul>
+            <li>let the person change one support at a time;</li>
+            <li>keep the original text available for checking;</li>
+            <li>
+              avoid changing wording without showing exactly what changed.
+            </li>
+          </ul>
+          <div class="check">
+            <strong>Acceptance check:</strong> the user can read, pause, replay,
+            change speed, and return to the same line without losing the source
+            document.
+          </div>
+        </article>
+        <article class="pain">
+          <h3>2. Important documents are badly formatted or scanned</h3>
+          <p>
+            PDFs, photographs, forms, columns, tables, and small text can make
+            ordinary reading tools fail.
+          </p>
+          <div class="example">
+            <strong>Example:</strong> A person can use read-aloud in an email
+            but receives a scanned PDF for a workplace task. The text cannot be
+            selected, the columns are read in the wrong order, and the person
+            cannot tell which number belongs to which field.
+          </div>
+          <div class="solution">
+            <strong>Possible product:</strong> a document-access layer that
+            detects selectable text, lets the user check extracted text, and
+            keeps the page image beside the reading view.
+          </div>
+          <p><strong>Must do:</strong></p>
+          <ul>
+            <li>show when text was extracted or may be wrong;</li>
+            <li>
+              preserve tables, headings, and page references where possible;
+            </li>
+            <li>
+              never silently rewrite a document that could change its meaning.
+            </li>
+          </ul>
+          <div class="check">
+            <strong>Acceptance check:</strong> the user can compare the
+            extracted sentence with the original page before relying on it.
+          </div>
+        </article>
+        <article class="pain">
+          <h3>3. Writing shows a different set of barriers</h3>
+          <p>
+            Putting ideas into words, spelling, organising a message, checking
+            missing words, and typing can each require attention.
+          </p>
+          <div class="example">
+            <strong>Example:</strong> Someone knows the answer to an email but
+            leaves out small words, mixes sentence order, and cannot notice the
+            errors until they read it several times.
+          </div>
+          <div class="solution">
+            <strong>Possible product:</strong> a writing workspace with
+            speech-to-text, a visible draft structure, read-back, and
+            user-controlled checking rather than automatic rewriting.
+          </div>
+          <p><strong>Must do:</strong></p>
+          <ul>
+            <li>separate the person’s wording from optional suggestions;</li>
+            <li>
+              highlight possible errors without changing the draft
+              automatically;
+            </li>
+            <li>
+              let the person hear the draft and compare it with what they meant.
+            </li>
+          </ul>
+          <div class="check">
+            <strong>Acceptance check:</strong> the original draft remains
+            recoverable after any suggested correction.
+          </div>
+        </article>
+        <article class="pain">
+          <h3>4. Support at school or work can require disclosure</h3>
+          <p>
+            A person may need extra time, information in advance, a quiet place,
+            or assistive technology but worry about being judged or having to
+            explain private information.
+          </p>
+          <div class="example">
+            <strong>Example:</strong> A student needs text-to-speech for an exam
+            but is told that asking for it means proving they cannot read.
+          </div>
+          <div class="solution">
+            <strong>Possible product:</strong> a private adjustment-request
+            builder organised around the task and the change needed.
+          </div>
+          <p><strong>Must do:</strong></p>
+          <ul>
+            <li>start with “what would make this task accessible?”;</li>
+            <li>make diagnosis and personal history optional;</li>
+            <li>show a complete editable request before copying or sending.</li>
+          </ul>
+          <div class="check">
+            <strong>Acceptance check:</strong> a request for digital text and
+            extra time can be produced without entering a diagnosis.
+          </div>
+        </article>
+        <article class="pain">
+          <h3>5. Existing tools may be hard to compare and learn</h3>
+          <p>
+            A person may be offered several reading or writing tools without
+            knowing which one matches the task, costs money, works with their
+            files, or needs training.
+          </p>
+          <div class="example">
+            <strong>Example:</strong> Someone has access to a text-to-speech app
+            but cannot use it on scanned documents and does not know whether
+            another tool would help before paying for it.
+          </div>
+          <div class="solution">
+            <strong>Possible product:</strong> a task-based tool comparison
+            guide that tests a small sample document and reports what each tool
+            can and cannot do.
+          </div>
+          <p><strong>Must do:</strong></p>
+          <ul>
+            <li>
+              compare real tasks such as scanned PDF, email, form, and
+              handwritten notes;
+            </li>
+            <li>show cost, device, privacy, and training requirements;</li>
+            <li>avoid ranking a tool without user-relevant evidence.</li>
+          </ul>
+          <div class="check">
+            <strong>Acceptance check:</strong> every comparison claim has a
+            source or a repeatable local test.
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>Non-goals and open questions</h2>
+        <ul>
+          <li>
+            Do not promise to cure dyslexia or make reading equally easy for
+            everyone.
+          </li>
+          <li>
+            Do not assume all reading difficulty is dyslexia or that every
+            dyslexic person needs read-aloud.
+          </li>
+          <li>
+            Do not hide errors created by text extraction, summarising, spelling
+            correction, or AI rewriting.
+          </li>
+          <li>
+            Study adult work and higher education tasks directly; the current
+            evidence is much stronger for general support than for a specific
+            adult product.
+          </li>
+        </ul>
+        <p class="source">
+          The public posts are useful problem signals but are not a prevalence
+          estimate or a test of any tool.
+        </p>
+      </section>
+      <footer><a href="index.html">← Back to atlas</a></footer>
+    </main>
+  </body>
+</html>

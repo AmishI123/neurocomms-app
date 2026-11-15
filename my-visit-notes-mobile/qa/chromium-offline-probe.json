@@ -1,0 +1,111 @@
+{
+  "date": "2026-09-16T07:35:13.738Z",
+  "cases": [
+    {
+      "mode": "playwright-offline",
+      "requests": [
+        "/",
+        "/sw.js"
+      ],
+      "warm": {
+        "passed": true,
+        "fromServiceWorker": true
+      },
+      "cold": {
+        "passed": true,
+        "fromServiceWorker": true
+      },
+      "profile": "/tmp/webkit-offline-probe-dPKGw9",
+      "before": {
+        "url": "http://127.0.0.1:40233/",
+        "caches": [
+          "probe"
+        ],
+        "registrations": 1,
+        "keys": [
+          "http://127.0.0.1:40233/"
+        ],
+        "cachedPage": "<!doctype html><title>Offline fixture</title><p id=\"cached\">Only the service worker supplies this page.</p>"
+      },
+      "cacheDiagnostics": {
+        "workerBefore": {
+          "url": "http://127.0.0.1:40233/sw.js",
+          "keys": [
+            "http://127.0.0.1:40233/"
+          ],
+          "root": "<!doctype html><title>Offline fixture</title><p id=\"cached\">Only the service worker supplies this page.</p>"
+        },
+        "windowKeys": [
+          "http://127.0.0.1:40233/",
+          "http://127.0.0.1:40233/window-canary"
+        ],
+        "windowCanary": "window-canary",
+        "workerAfter": {
+          "url": "http://127.0.0.1:40233/sw.js",
+          "keys": [
+            "http://127.0.0.1:40233/",
+            "http://127.0.0.1:40233/window-canary"
+          ],
+          "root": "<!doctype html><title>Offline fixture</title><p id=\"cached\">Only the service worker supplies this page.</p>"
+        }
+      },
+      "originStopped": false
+    },
+    {
+      "mode": "server-stopped",
+      "requests": [
+        "/",
+        "/sw.js"
+      ],
+      "warm": {
+        "passed": true,
+        "fromServiceWorker": true
+      },
+      "cold": {
+        "passed": true,
+        "fromServiceWorker": true
+      },
+      "profile": "/tmp/webkit-offline-probe-SRta0G",
+      "before": {
+        "url": "http://127.0.0.1:38037/",
+        "caches": [
+          "probe"
+        ],
+        "registrations": 1,
+        "keys": [
+          "http://127.0.0.1:38037/"
+        ],
+        "cachedPage": "<!doctype html><title>Offline fixture</title><p id=\"cached\">Only the service worker supplies this page.</p>"
+      },
+      "cacheDiagnostics": {
+        "workerBefore": {
+          "url": "http://127.0.0.1:38037/sw.js",
+          "keys": [
+            "http://127.0.0.1:38037/"
+          ],
+          "root": "<!doctype html><title>Offline fixture</title><p id=\"cached\">Only the service worker supplies this page.</p>"
+        },
+        "windowKeys": [
+          "http://127.0.0.1:38037/",
+          "http://127.0.0.1:38037/window-canary"
+        ],
+        "windowCanary": "window-canary",
+        "workerAfter": {
+          "url": "http://127.0.0.1:38037/sw.js",
+          "keys": [
+            "http://127.0.0.1:38037/",
+            "http://127.0.0.1:38037/window-canary"
+          ],
+          "root": "<!doctype html><title>Offline fixture</title><p id=\"cached\">Only the service worker supplies this page.</p>"
+        }
+      },
+      "originStopped": true
+    }
+  ],
+  "limits": [
+    "Minimal synthetic fixture, not app or native iOS acceptance",
+    "A stopped local origin is not a physical airplane-mode test"
+  ],
+  "engine": "chromium",
+  "browser": "145.0.7632.6"
+}

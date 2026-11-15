@@ -1,0 +1,1 @@
+Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key "cards" containing exactly six nonempty strings. Do not include commentary.

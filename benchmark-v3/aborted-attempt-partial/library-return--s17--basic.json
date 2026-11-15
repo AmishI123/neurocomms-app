@@ -1,0 +1,138 @@
+{
+  "id": "library-return--s17--basic",
+  "case_id": "library-return",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T17:15:43.477921+00:00",
+  "manifest_sha256": "58363b1a3b2d195a93545878ae94bc213a53825d68404f6fc942132b93fdd10a",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 192,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 1017,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": null,
+  "wall_seconds": 0.0018052430023089983,
+  "error": "HTTPError: HTTP Error 503: Service Unavailable",
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 17,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.006405847001587972,
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1017,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.0018052430023089983,
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    }
+  ]
+}

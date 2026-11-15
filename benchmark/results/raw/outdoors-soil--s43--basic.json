@@ -1,0 +1,68 @@
+{
+  "id": "outdoors-soil--s43--basic",
+  "case_id": "outdoors-soil",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T06:55:01.361817+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Ari\", \"age\": 9, \"communication_style\": \"short phrases\"}, \"activity\": \"Plant sunflower or bean seeds using pots, soil, scoops and water.\", \"facts\": [\"Ari has said they like sunflowers.\", \"Ari has said they do not like touching wet soil.\", \"A scoop is available.\", \"Ari can watch without planting.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Ari likes to watch seeds grow without touching wet soil.\",\n    \"Ari has said they do not like touching wet soil.\",\n    \"Ari has said they do not like touching wet soil.\",\n    \"Ari likes to watch seeds grow without touching wet soil.\",\n    \"Ari has said they do not like touching wet soil.\",\n    \"Ari has said they do not like touching wet soil.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850501,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 195,
+      "total_tokens": 298,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-AWRPPUYBDpsQoszDeOwh6VGticRtLm0U",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 195,
+      "prompt_ms": 2387.995,
+      "prompt_per_token_ms": 12.246128205128205,
+      "prompt_per_second": 81.65846243396658,
+      "predicted_n": 103,
+      "predicted_ms": 11401.167,
+      "predicted_per_token_ms": 111.77614705882353,
+      "predicted_per_second": 8.946452586827295
+    }
+  },
+  "wall_seconds": 13.830500206000579,
+  "error": null
+}

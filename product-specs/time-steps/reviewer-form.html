@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Private source-free reviewer response form for the Time Steps prototype.">
+  <title>Time Steps · private reviewer response</title>
+  <style>
+    :root{--ink:#172a2a;--muted:#526562;--wash:#edf5f1;--line:#b8cbc4;--accent:#075f62;--warn:#9a5100;--danger:#a33b2b}
+    *{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+    main{max-width:900px;margin:auto;padding:1rem}.page{background:#fff;padding:clamp(1.2rem,4vw,3rem);margin:1rem 0 4rem;box-shadow:0 2px 12px #0001}
+    h1,h2{font-family:Georgia,serif;line-height:1.15;color:#16484a}h1{font-size:clamp(2rem,5vw,3.2rem);margin:.2rem 0 1rem}h2{margin-top:2.2rem}
+    .lead{font-size:1.15rem;color:var(--muted)}.notice{padding:1rem 1.2rem;background:#fff8e8;border-left:5px solid var(--warn)}.danger{padding:1rem 1.2rem;background:#fff0ec;border-left:5px solid var(--danger)}
+    .field{margin:1.1rem 0}.field label{display:block;font-weight:700;margin-bottom:.35rem}.field small{display:block;color:var(--muted);margin-top:.25rem}
+    input,select,textarea{width:100%;font:inherit;padding:.65rem .7rem;border:1px solid var(--line);border-radius:.35rem;background:#fff;color:var(--ink)}textarea{min-height:6rem;resize:vertical}
+    fieldset{border:1px solid var(--line);padding:1rem;margin:1.2rem 0}legend{font-weight:700;padding:0 .35rem}.choice{display:flex;gap:.6rem;align-items:flex-start;margin:.7rem 0}.choice input{width:1.25rem;height:1.25rem;margin-top:.25rem}
+    .check{display:flex;gap:.6rem;align-items:flex-start;margin:1.2rem 0}.check input{width:1.25rem;height:1.25rem;margin-top:.25rem}.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+    button{border:1px solid var(--accent);border-radius:.4rem;padding:.7rem 1rem;font:inherit;font-weight:700;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#fff;color:var(--accent)}
+    .status{min-height:1.7rem;margin-top:1rem;font-weight:700}.small{font-size:.9rem;color:var(--muted)}a{color:var(--accent)}:focus-visible{outline:3px solid #b36800;outline-offset:3px}
+  </style>
+</head>
+<body>
+<main><article class="page">
+  <p class="small"><a href="index.html">Time Steps</a> · private reviewer response</p>
+  <h1>Reviewer response</h1>
+  <p class="lead">Use this form after reading <a href="reviewer-guide.md">the reviewer guide</a> and trying the fictional task. It records observations about the prototype, not personal or clinical information.</p>
+  <div class="notice"><strong>Keep this response private.</strong> The download stays on your device. Do not include names, diagnoses, real appointment details, private stories, or contact information. Send it only through an approved private channel.</div>
+  <div class="danger"><strong>This is not a participant form.</strong> It does not ask whether someone wants the product and it does not create evidence of benefit, demand, or clinical value.</div>
+
+  <form id="review-form" novalidate>
+    <h2>About this review</h2>
+    <div class="field"><label for="reviewer-role">Review area</label><select id="reviewer-role" required><option value="">Choose one</option><option>accessibility</option><option>product</option><option>privacy</option><option>research methods</option><option>other</option></select></div>
+    <div class="field"><label for="review-date">Review date</label><input id="review-date" type="date" required></div>
+    <div class="field"><label for="disposition">What should happen next?</label><select id="disposition" required><option value="">Choose one</option><option value="revise">Revise before another review</option><option value="seek-more-review">Seek more review</option><option value="continue-engineering">Continue engineering checks</option><option value="stop">Stop this direction</option></select></div>
+    <label class="check"><input id="private-confirm" type="checkbox" required><span>I used only the fictional task and will not put private or identifying material in this response.</span></label>
+
+    <h2>What you observed</h2>
+    <fieldset><legend>Could you understand the inputs and results?</legend><label class="choice"><input type="radio" name="understand" value="yes" required>Yes</label><label class="choice"><input type="radio" name="understand" value="partly">Partly</label><label class="choice"><input type="radio" name="understand" value="no">No</label><label class="choice"><input type="radio" name="understand" value="not-tested">Not tested</label></fieldset>
+    <fieldset><legend>Could you change an assumption and see what changed?</legend><label class="choice"><input type="radio" name="control" value="yes" required>Yes</label><label class="choice"><input type="radio" name="control" value="partly">Partly</label><label class="choice"><input type="radio" name="control" value="no">No</label><label class="choice"><input type="radio" name="control" value="not-tested">Not tested</label></fieldset>
+    <fieldset><legend>Were keyboard, focus, narrow-window, or print checks usable?</legend><label class="choice"><input type="radio" name="accessibility" value="yes" required>Yes</label><label class="choice"><input type="radio" name="accessibility" value="partly">Partly</label><label class="choice"><input type="radio" name="accessibility" value="no">No</label><label class="choice"><input type="radio" name="accessibility" value="not-tested">Not tested</label></fieldset>
+    <fieldset><legend>Did the privacy and product limits remain clear?</legend><label class="choice"><input type="radio" name="boundaries" value="yes" required>Yes</label><label class="choice"><input type="radio" name="boundaries" value="partly">Partly</label><label class="choice"><input type="radio" name="boundaries" value="no">No</label><label class="choice"><input type="radio" name="boundaries" value="not-tested">Not tested</label></fieldset>
+
+    <h2>Challenge the product</h2>
+    <div class="field"><label for="strongest-concern">Strongest concern</label><textarea id="strongest-concern" required maxlength="2000"></textarea><small>Describe what happened. Do not add a private story.</small></div>
+    <div class="field"><label for="confusing-part">What was confusing, slow, or easy to misread?</label><textarea id="confusing-part" required maxlength="2000"></textarea></div>
+    <div class="field"><label for="missing-support">What support or access need may be missing?</label><textarea id="missing-support" required maxlength="2000"></textarea></div>
+    <div class="field"><label for="privacy-concern">What privacy or boundary concern needs action?</label><textarea id="privacy-concern" required maxlength="2000"></textarea></div>
+    <div class="field"><label for="change-trigger">What finding should cause a revision or stop?</label><textarea id="change-trigger" required maxlength="2000"></textarea></div>
+    <div class="field"><label for="additional-note">Anything else to examine?</label><textarea id="additional-note" maxlength="2000"></textarea></div>
+    <div class="actions"><button class="primary" type="submit">Download private response</button><button class="secondary" id="clear-form" type="button">Clear form</button></div>
+    <p id="form-status" class="status" role="status" aria-live="polite"></p>
+  </form>
+</article></main>
+<script>
+(() => {
+  'use strict';
+  const form = document.querySelector('#review-form');
+  const status = document.querySelector('#form-status');
+  const textIds = ['reviewer-role','review-date','disposition','strongest-concern','confusing-part','missing-support','privacy-concern','change-trigger','additional-note'];
+  const value = id => document.querySelector(`#${id}`).value.trim();
+  const selected = name => document.querySelector(`input[name="${name}"]:checked`)?.value || '';
+  function response() { return {template:false, product:'time-steps', independent:true, fictionalOnly:true, rawSourceIncluded:false, reviewerRoleBand:value('reviewer-role'), reviewDate:value('review-date'), disposition:value('disposition'), observations:{understanding:selected('understand'), control:selected('control'), accessibility:selected('accessibility'), boundaries:selected('boundaries')}, strongestConcern:value('strongest-concern'), confusingPart:value('confusing-part'), missingSupport:value('missing-support'), privacyConcern:value('privacy-concern'), changeTrigger:value('change-trigger'), additionalNote:value('additional-note')}; }
+  function download(data) { const blob = new Blob([`${JSON.stringify(data, null, 2)}\n`], {type:'application/json'}); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = 'time-steps-review-response.json'; link.click(); URL.revokeObjectURL(url); }
+  form.addEventListener('submit', event => { event.preventDefault(); if (!form.checkValidity()) { form.reportValidity(); status.textContent = 'Complete the required review fields before downloading.'; return; } download(response()); status.textContent = 'Private response downloaded. Keep it outside this repository.'; });
+  document.querySelector('#clear-form').addEventListener('click', () => { form.reset(); status.textContent = 'Form cleared. Nothing was saved by this page.'; });
+  [...document.querySelectorAll('input,select,textarea')].forEach(control => control.addEventListener('input', () => { if (status.textContent) status.textContent = ''; }));
+  void textIds;
+})();
+</script>
+</body>
+</html>

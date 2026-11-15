@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-16T06:39:25.306Z",
+  "passed": 14,
+  "failed": 1,
+  "results": [
+    {
+      "id": "TR-01",
+      "name": "Two isolated browsers transfer preparation and focus, continue offline, and preserve both versions on return",
+      "passed": true
+    },
+    {
+      "id": "TR-02",
+      "name": "Unsaved work needs explicit choices and restores separately without replacing the receiving draft",
+      "passed": true
+    },
+    {
+      "id": "TR-03",
+      "name": "Failed note writes leave no partial import; settings failure can retry without duplicating notes",
+      "passed": true
+    },
+    {
+      "id": "TR-04",
+      "name": "Malformed files and cancelled previews leave saved content and open work unchanged",
+      "passed": true
+    },
+    {
+      "id": "TR-05",
+      "name": "A concurrent tab invalidates the preview rather than overwriting newer notes",
+      "passed": true
+    },
+    {
+      "id": "TR-06",
+      "name": "Cancelled and closed-tab imports cannot apply after a held storage lock is released",
+      "passed": true
+    },
+    {
+      "id": "TR-07",
+      "name": "Double confirmation and repeated import after permanent deletion do not repeat or resurrect visits",
+      "passed": true
+    },
+    {
+      "id": "TR-08",
+      "name": "Complete persistent-browser restart retains transferred notes and permits offline export with no outgoing content",
+      "passed": true
+    },
+    {
+      "id": "TR-09",
+      "name": "Settings changed after preview are not overwritten; private comparison and keyboard controls fit narrow and enlarged views",
+      "passed": true
+    },
+    {
+      "id": "TR-10",
+      "name": "Explicit exclusions preserve unsaved work and incoming focus and display never replace local choices by default",
+      "passed": true
+    },
+    {
+      "id": "TR-11",
+      "name": "Forgetting transfer identifiers requires confirmation and preserves all current notes",
+      "passed": true
+    },
+    {
+      "id": "TR-12",
+      "name": "Previous collection-five data stays unchanged until explicit import and remains exportable",
+      "passed": true
+    },
+    {
+      "id": "TR-13",
+      "name": "Unsupported and oversized transfer files are rejected before saving",
+      "passed": false,
+      "error": "locator.setInputFiles: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#transfer-import')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"file\" id=\"transfer-import\" accept=\".json,application/json\" aria-label=\"Choose a private transfer file\"/>\u001b[22m\n\n    at async file:///home/mehta/neuro-divergent/product-specs/my-visit-notes/tests/transfer-browser.mjs:78:358\n    at async run (/home/mehta/neuro-divergent/product-specs/my-visit-notes/tests/transfer-browser.mjs:17:285)\n    at async file:///home/mehta/neuro-divergent/product-specs/my-visit-notes/tests/transfer-browser.mjs:77:2"
+    },
+    {
+      "id": "TR-14",
+      "name": "Retained temporary results open their exact version rather than a same-ID older saved visit",
+      "passed": true
+    },
+    {
+      "id": "TR-15",
+      "name": "An older pending preparation cannot repeat passages after its completion was transferred",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "app.mjs": "e6ccce6a6daed0f21d148a0c737d14cdf00adbc02192487a42b4d8d1ad5187ef",
+    "model.mjs": "8aaa7630551a3017ab687478ac38122674f4e3b68775b5a4e0632be8862cadfc",
+    "index.html": "79cd6c28c21d0562dfb44a88e69c36ca74c2fb1587453afaba1060b5841bcc8e",
+    "styles.css": "56e5e773ca414701e65df81bf1b2f6ab6f37cbcfd80983b950a994d1be1dc255",
+    "sw.js": "b88b94c8f1c3abc5b420685220ad25857a3fb9697dd63bd584f3cdd5ac249131",
+    "display.mjs": "9fd973401ae92a48e6889ec67c760d830ede147467d07c20973958dd2ce97932",
+    "intake.mjs": "707b33f85bc3e7a993a86e0bd93ea04fa3dd0de89e662b3af054d512cf14bb45",
+    "intake-model.mjs": "e5e8c1938dd172e9a9b174d0d42350af11e59b330dd2982c8119bfe649def844",
+    "preparation-model.mjs": "ddebc5b550660c60a09a1ccebb962e2ce3ffe1994ad82adab10e05774047b08d",
+    "recovery-model.mjs": "074d8684b58b1ef39a820d4521758177d361fd489adb7a9cd034506733faa1ce",
+    "followup-model.mjs": "0c1c2a6af00ca8525fe2fcb5c6b1f959b2e1eee33d4214b9fe25561693482bef",
+    "followup-record.mjs": "968f49c8881c4958eba84fdd2661bb32ae5f6008b9342947b8c601f8dfb3e7a1",
+    "followup-ui.mjs": "bb753d817a6fada83ba34c9a3e0fadd2723df1a7facf79c082e035c2bf4a2887",
+    "transfer-record.mjs": "1a272b626042cd1846ce6533756f1cd04613628463e2ccc39b719588dd2d637e",
+    "transfer-model.mjs": "3a35eeedadff56cb4bd29560ef41d2b8176b40ba3c69fb68eec8e3735571cd8d",
+    "transfer-ui.mjs": "5aba8d0d01cafade807ec18bdbec83aa4f916fd3699c948998028a0117509b13",
+    "tests/transfer-browser.mjs": "891c7c3574baa9f57b26ce233ad197831e6771cf901aded924cc19df2bdf3c93"
+  }
+}

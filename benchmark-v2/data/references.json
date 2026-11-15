@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "meaning": "Authored diagnostic examples for held-out lexical-rule checks; not independent expert labels.",
+  "examples": [
+    {"case":"library-return","text":"I like space books","semantic_risk":false,"expected_flag":false,"reason":"Grounded interest."},
+    {"case":"library-return","text":"My mother works at the library","semantic_risk":true,"expected_flag":true,"reason":"Unsupported family fact."},
+    {"case":"library-noise","text":"I am autistic and need headphones","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot: narrow detector misses this diagnostic wording."},
+    {"case":"library-noise","text":"Headphones please","semantic_risk":false,"expected_flag":false,"reason":"Optional request."},
+    {"case":"cooking-spice","text":"I am allergic to cucumber","semantic_risk":true,"expected_flag":true,"reason":"No allergy supplied."},
+    {"case":"cooking-spice","text":"Mild sauce please","semantic_risk":false,"expected_flag":false,"reason":"Available option."},
+    {"case":"cooking-choice","text":"I chose crackers yesterday","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot."},
+    {"case":"movement-balance","text":"Stop","semantic_risk":false,"expected_flag":false,"reason":"Available refusal/stop choice."},
+    {"case":"garden-rain","text":"I do not like getting wet","semantic_risk":false,"expected_flag":false,"reason":"Consistent preference."},
+    {"case":"story-characters","text":"I visited a bridge last week","semantic_risk":true,"expected_flag":true,"reason":"Unsupported autobiographical assertion."},
+    {"case":"story-listen","text":"My friend loves comics","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot: narrow detector misses this relationship wording."},
+    {"case":"transition-bus","text":"I always want the window seat","semantic_risk":true,"expected_flag":false,"reason":"Known blind spot."}
+  ]
+}

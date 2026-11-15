@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "passed": true,
+  "checks": [
+    {
+      "name": "firewall tests",
+      "passed": true,
+      "output": "test_accepts_clean_object (test_core.FirewallTests.test_accepts_clean_object) ... ok\ntest_normalizes_fence_but_reports_length (test_core.FirewallTests.test_normalizes_fence_but_reports_length) ... ok\ntest_rejects_inference_topic (test_core.FirewallTests.test_rejects_inference_topic) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "challenge tests",
+      "passed": true,
+      "output": "test_bad_submission_explains_failure (test_score.ScoreTests.test_bad_submission_explains_failure) ... ok\ntest_example_submission (test_score.ScoreTests.test_example_submission) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "case tests",
+      "passed": true,
+      "output": "test_fixtures_are_explicitly_fictional (test_generate.GenerateTests.test_fixtures_are_explicitly_fictional) ... ok\ntest_seed_is_reproducible (test_generate.GenerateTests.test_seed_is_reproducible) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "evaluator tests",
+      "passed": true,
+      "output": "test_example_pairing (test_agreement.AgreementTests.test_example_pairing) ... ok\ntest_kappa_perfect (test_agreement.AgreementTests.test_kappa_perfect) ... ok\ntest_example_valid (test_annotations.AnnotationTests.test_example_valid) ... ok\ntest_missing_dimension_rejected (test_annotations.AnnotationTests.test_missing_dimension_rejected) ... ok\ntest_packet_contains_rubric_and_records (test_packet.PacketTests.test_packet_contains_rubric_and_records) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "atlas tests",
+      "passed": true,
+      "output": "test_browser_has_separate_review_metadata_surface (test_build.AtlasTests.test_browser_has_separate_review_metadata_surface) ... ok\ntest_index_is_descriptive_and_complete (test_build.AtlasTests.test_index_is_descriptive_and_complete) ... ok\ntest_records_have_traceable_fields (test_build.AtlasTests.test_records_have_traceable_fields) ... ok\ntest_community_rows_are_traceable (test_import_report.ImportTests.test_community_rows_are_traceable) ... ok\ntest_keeps_review_metadata_separate (test_import_review.ReviewImportTests.test_keeps_review_metadata_separate) ... ok\ntest_rejects_review_without_packet_fingerprint (test_import_review.ReviewImportTests.test_rejects_review_without_packet_fingerprint) ... ok\ntest_rejects_unverified_pair (test_import_review.ReviewImportTests.test_rejects_unverified_pair) ... ok\ntest_report_has_caveat_and_inventory (test_report.ReportTests.test_report_has_caveat_and_inventory) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "red-team tests",
+      "passed": true,
+      "output": "{\"passed\": true, \"records\": 1}\n{\"records\": 325, \"community_reports\": 1}\n{\"bytes\": 1200, \"output\": \"/tmp/<temporary>/ATLAS-REPORT.md\"}\n{\"output\": \"/tmp/<temporary> \"report\": \"/tmp/<temporary>/demo-report.json\", \"atlas\": \"/tmp/<temporary>/atlas-with-community.json\", \"passed\": true}\ntest_pipeline_leaves_report_and_atlas (test_demo.DemoTests.test_pipeline_leaves_report_and_atlas) ... ok\ntest_bad_submission_fails (test_run_case.RunCaseTests.test_bad_submission_fails) ... ok\ntest_valid_submission_passes (test_run_case.RunCaseTests.test_valid_submission_passes) ... ok\ntest_duplicate_and_identifying_data_fail (test_validate.RedTeamTests.test_duplicate_and_identifying_data_fail) ... ok\ntest_examples_pass (test_validate.RedTeamTests.test_examples_pass) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "atlas build",
+      "passed": true,
+      "output": "{\"runs\": 3, \"records\": 324}\n"
+    },
+    {
+      "name": "red-team examples",
+      "passed": true,
+      "output": "{\"valid\": true, \"cases\": 2}\n"
+    },
+    {
+      "name": "environment lab tests",
+      "passed": true,
+      "output": "test_case_studio_has_named_form_fields (test_accessibility.AccessibilitySmokeTests.test_case_studio_has_named_form_fields) ... ok\ntest_environment_page_has_named_controls_and_status (test_accessibility.AccessibilitySmokeTests.test_environment_page_has_named_controls_and_status) ... ok\ntest_unsure_is_preserved_as_a_choice (test_analysis.AnalysisTests.test_unsure_is_preserved_as_a_choice) ... ok\ntest_missing_choice_is_zero_and_caveated (test_compare.CompareTests.test_missing_choice_is_zero_and_caveated) ... ok\ntest_fixtures_are_fictional_presets_with_bounded_values (test_fixtures.FixtureTests.test_fixtures_are_fictional_presets_with_bounded_values) ... ok\ntest_csv_maps_to_valid_session_shape (test_import_sensor.SensorImportTests.test_csv_maps_to_valid_session_shape) ... ok\ntest_demo_shape_passes (test_validate_session.SessionValidationTests.test_demo_shape_passes) ... ok\ntest_unknown_choice_and_range_fail (test_validate_session.SessionValidationTests.test_unknown_choice_and_range_fail) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "reading lab tests",
+      "passed": true,
+      "output": "test_invalid_setting_fails (test_analysis.ReadingAnalysisTests.test_invalid_setting_fails) ... ok\ntest_unsure_is_retained (test_analysis.ReadingAnalysisTests.test_unsure_is_retained) ... ok\ntest_unsure_difference_is_explicit (test_compare.ReadingCompareTests.test_unsure_difference_is_explicit) ... ok\ntest_fixture_is_fictional_and_bounded (test_fixtures.ReadingFixtureTests.test_fixture_is_fictional_and_bounded) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "package tests",
+      "passed": true,
+      "output": "test_archive_bytes_are_deterministic (test_package_release.PackageReleaseTests.test_archive_bytes_are_deterministic) ... ok\ntest_archive_contains_public_review_artifacts (test_package_release.PackageReleaseTests.test_archive_contains_public_review_artifacts) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "package build",
+      "passed": true,
+      "output": "{'output': '/tmp/phraselab-platform-release-check.zip', 'files': 145, 'sha256': '90e6ebaf7864f6bda52f95d088cde783ce1768cdad86e58e6be734567ea6f65e'}\n"
+    },
+    {
+      "name": "repro challenge tests",
+      "passed": true,
+      "output": "ssistedReviewTests.test_rejects_partial_or_wrong_shape) ... ok\ntest_report_can_include_verified_review (test_report.ChallengeReportTests.test_report_can_include_verified_review) ... ok\ntest_report_does_not_trust_verification_from_another_packet (test_report.ChallengeReportTests.test_report_does_not_trust_verification_from_another_packet) ... ok\ntest_report_keeps_review_step_open (test_report.ChallengeReportTests.test_report_keeps_review_step_open) ... ok\ntest_packet_pairs_both_conditions_and_stays_blank (test_review_packet.ReviewPacketTests.test_packet_pairs_both_conditions_and_stays_blank) ... ok\ntest_packet_fingerprint_is_required_when_packet_supplied (test_verify_review.VerifyReviewTests.test_packet_fingerprint_is_required_when_packet_supplied) ... ok\ntest_rejects_duplicate_record_in_file (test_verify_review.VerifyReviewTests.test_rejects_duplicate_record_in_file) ... ok\ntest_rejects_mixed_reviewer_file (test_verify_review.VerifyReviewTests.test_rejects_mixed_reviewer_file) ... ok\ntest_requires_complete_pair (test_verify_review.VerifyReviewTests.test_requires_complete_pair) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in <duration>s\n\nOK\n"
+    },
+    {
+      "name": "template baseline generation",
+      "passed": true,
+      "output": "{\"records\": 3, \"output\": \"/tmp/template-baseline.jsonl\"}\n"
+    },
+    {
+      "name": "template baseline score",
+      "passed": true,
+      "output": "{\"records\": 3, \"accepted\": 3, \"rejected\": 0}\n"
+    },
+    {
+      "name": "review packet build",
+      "passed": true,
+      "output": "{\"records\": 6, \"output\": \"/tmp/phraselab-review-packet.json\"}\n"
+    },
+    {
+      "name": "challenge report build",
+      "passed": true,
+      "output": "{\"bytes\": 1211, \"output\": \"/tmp/phraselab-challenge-report.md\", \"review_verified\": false}\n"
+    },
+    {
+      "name": "condition comparison",
+      "passed": true,
+      "output": "{\"schema_version\": \"1.0\", \"comparison_type\": \"descriptive\", \"caveat\": \"Formatting acceptance is an engineering measurement on fictional cases, not usefulness or clinical benefit.\", \"conditions\": [{\"condition\": \"reference-control\", \"records\": 3, \"accepted\": 3, \"rejected\": 0, \"reason_counts\": {}}, {\"condition\": \"template-baseline\", \"records\": 3, \"accepted\": 3, \"rejected\": 0, \"reason_counts\": {}}]}\n"
+    },
+    {
+      "name": "reference control score",
+      "passed": true,
+      "output": "{\"records\": 3, \"accepted\": 3, \"rejected\": 0}\n"
+    },
+    {
+      "name": "Phrase Studio JavaScript syntax",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "Phrase Studio firewall syntax",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "static local links",
+      "passed": true,
+      "output": "all local HTML links resolve\n"
+    },
+    {
+      "name": "public artifacts",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "Pages publishing wiring",
+      "passed": true
+    }
+  ],
+  "scope": "offline tests, JavaScript syntax, static link integrity, and artifact presence"
+}

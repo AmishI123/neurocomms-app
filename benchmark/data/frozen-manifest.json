@@ -1,0 +1,39 @@
+{
+  "frozen_utc": "2026-09-08T06:49:53.459964+00:00",
+  "sha256": {
+    "data/cases.json": "c8e99b7cca6b07eab6d807ef30940473b3e1ebd5cc19bd1d9bf2bc67f09923ad",
+    "data/references.json": "0007e02dfc1aafec64ed87959f58dc4068fc5c2bc07110c1191b7e56499bcc54",
+    "data/model-lock.json": "91a5e2573b4488e7eba958429938272acfc56482c733dbe551c26ad949a9dc50",
+    "prompts/basic.txt": "e548b8c8a382ecf5866601cc310c99592c3c5e352eeea0874080f1acad3e14bd",
+    "prompts/context.txt": "a3f03c417cce78424224c4738aa75ee009fd8603660fc92af6553cd27eb40298",
+    "prompts/review.txt": "10eaa997f6a0140eb60b030dd82f4e74f32b7e96d9dd06475eafbc1ec0ef33c9",
+    "score.py": "6f0f7b9b958795a5fdd2c174955364782beb6b9720872c486b5b28f21e46cb9c",
+    "run.py": "645895d3408c2c03e53aace83aea9511328fcd07b69cf50d89491da1a7e304b5",
+    "docs/protocol.md": "e7224e16ed0825d6d5adbb3e79f5d23fd44a574b6084165fe2ccc764ad17e360"
+  },
+  "settings": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "schedule_seed": 20260907,
+  "host": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "cpu_count": 4
+  },
+  "scope": "12 constructed cases; 3 seeds; 3 workflows; actual local model"
+}

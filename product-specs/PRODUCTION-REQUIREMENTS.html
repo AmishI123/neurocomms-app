@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Everyday problems described in ADHD and neurodivergent community posts, possible products to help, and clear requirements for each idea.">
+<title>Everyday problems and possible products | Product requirements</title>
+<style>
+:root{--paper:#fbfaf7;--ink:#24313a;--muted:#52616b;--line:#d9e0df;--accent:#225e58;--soft:#edf5f1;--example:#f0f3fa;--white:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:22px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:#205b78;text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid #a45513;outline-offset:5px}
+.skip{position:absolute;left:16px;top:-80px;background:white;padding:10px;z-index:3}.skip:focus{top:12px}
+.layout{max-width:1280px;margin:auto;display:grid;grid-template-columns:230px minmax(0,1fr);gap:48px;padding:36px 28px 80px}
+aside{position:sticky;top:28px;align-self:start;max-height:calc(100vh - 56px);overflow:auto;font-size:14px}
+.brand{font-weight:750;color:var(--accent);font-size:17px;margin-bottom:20px}nav a{display:block;padding:7px 0;text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent);text-decoration:underline}
+nav .sub{font-size:13px;padding-left:12px;border-left:1px solid var(--line)}
+main{min-width:0;max-width:880px}header{padding:14px 0 30px;border-bottom:2px solid var(--accent)}
+.section-label{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+h1{font-size:clamp(34px,4.8vw,56px);line-height:1.12;letter-spacing:-.035em;font-weight:750;max-width:780px;margin:0 0 22px}
+h2{font-size:clamp(26px,3.1vw,35px);line-height:1.24;letter-spacing:-.02em;margin:0 0 18px}h3{font-size:18px;line-height:1.4;margin:24px 0 7px}
+p{margin:0 0 15px}.intro{font-size:20px;line-height:1.6;color:#3c505d}.muted,.evidence{color:var(--muted);font-size:14px}
+section{margin-top:36px;scroll-margin-top:22px}.problem{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:32px;margin-top:28px}
+.problem h2{max-width:720px}.example,.proposal,.check,.note{padding:20px 22px;margin:22px 0;border-radius:8px}
+.example{background:var(--example);border-left:4px solid #5571a0}.proposal{background:var(--soft);border-left:4px solid var(--accent)}.check{background:#f7f7f3;border:1px solid var(--line)}.note{background:#fff4df;border-left:4px solid #956b1e}
+.example h3,.proposal h3,.check h3,.note h3{margin-top:0}.example p:last-child,.proposal p:last-child,.check p:last-child,.note p:last-child{margin-bottom:0}
+ul,ol{padding-left:23px;margin:10px 0 20px}li{padding-left:4px;margin:7px 0}
+.overview{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0;list-style:none;counter-reset:item}.overview li{margin:0;padding:0}.overview a{display:block;background:white;border:1px solid var(--line);border-radius:9px;padding:16px;height:100%;text-decoration:none}.overview a:hover{border-color:var(--accent)}.overview b{display:block;font-size:16px}.overview span{font-size:14px;color:var(--muted)}
+.back{font-size:13px}.evidence{border-top:1px solid var(--line);padding-top:16px;margin-top:22px}
+.product-list{display:grid;gap:12px}.product{background:white;border:1px solid var(--line);border-radius:10px;padding:22px}.product h3{margin:0 0 10px}.product p:last-child{margin-bottom:0}
+.rules{padding-left:24px}.rules li{padding:10px 0 12px 5px;border-bottom:1px solid var(--line)}.rules strong{display:block}
+footer{font-size:13px;color:var(--muted);margin-top:42px;border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr;gap:12px;padding:20px 18px 50px}aside{position:static;max-height:none}.brand{margin:0 0 8px}nav{display:flex;gap:5px 16px;flex-wrap:wrap}nav .sub{display:none}nav a{font-size:13px}header{padding-top:16px}.problem{padding:24px}}
+@media(max-width:540px){body{font-size:16px}.overview{grid-template-columns:1fr}.problem{padding:21px 18px}.example,.proposal,.check,.note{padding:16px}.intro{font-size:18px}.layout{padding-left:12px;padding-right:12px}}
+@media print{body{background:white;font-size:11pt}.layout{display:block;padding:0}aside,.skip,.back{display:none}main{max-width:none}h1{font-size:30pt}h2{font-size:21pt}h3{break-after:avoid}.problem{box-shadow:none;padding:20px;border-radius:0}p,li{orphans:3;widows:3}.example,.proposal,.check{break-inside:avoid}a{color:inherit}footer{margin-top:20px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the document</a>
+<div class="layout">
+<aside>
+<div class="brand">Product requirements</div>
+<nav aria-label="Document sections">
+<a href="#summary">Start here</a><a href="#problems">The ten problems</a>
+<a class="sub" href="#starting">1. Starting a task</a>
+<a class="sub" href="#interruption">2. Returning after interruption</a>
+<a class="sub" href="#energy">3. Changes in energy</a>
+<a class="sub" href="#surroundings">4. Difficult surroundings</a>
+<a class="sub" href="#instructions">5. Unclear instructions</a>
+<a class="sub" href="#support-request">6. Asking for support</a>
+<a class="sub" href="#criticism">7. Responding after a mistake</a>
+<a class="sub" href="#maintenance">8. Keeping up with tools</a>
+<a class="sub" href="#care">9. Finding professional help</a>
+<a class="sub" href="#relationships">10. Messages and commitments</a>
+<a href="#solutions">Possible products</a><a href="#requirements">Shared requirements</a><a href="#tests">How to test the ideas</a><a href="#limits">Where this came from</a>
+</nav>
+</aside>
+<main id="main">
+<header>
+<div class="section-label">Research findings → possible solutions → product requirements</div>
+<h1>Everyday problems people described, and products that could help</h1>
+<p class="intro">People in ADHD and other neurodivergent communities described difficulties with work, energy, communication, daily responsibilities, and finding support. This document explains those difficulties and turns them into specific ideas for products.</p>
+<p><strong>Who this is for:</strong> someone deciding what to build, designing how it should work, or reviewing whether an idea addresses a real problem. No earlier knowledge of the project is needed.</p>
+<p class="muted">“Neurodivergent” is used here as a broad term that includes people with ADHD and autistic people. The experiences described vary between people. The proposed tools would not require a diagnosis.</p>
+</header>
+
+<section id="summary">
+<div class="section-label">Start here</div>
+<h2>Help has to address the part that is difficult</h2>
+<p>Consider someone who has not answered a work email. They might be unsure what the sender wants. They might have lost the information needed to reply. They might be exhausted or worried about the response.</p>
+<p>Each situation calls for different help: a clarification question, a saved note, a smaller task, or help writing a difficult reply. The starting point for a product is to identify which difficulty the person wants help with.</p>
+<div class="note"><h3>How to read this document</h3><p>Each section explains one problem, gives an example, proposes a solution, and lists what that solution must do. The everyday examples are invented to explain the idea. The problems come from the saved research; the proposed features still need to be tested with people.</p></div>
+</section>
+
+<section id="problems">
+<div class="section-label">Choose a problem to read</div>
+<h2>Ten places where everyday life becomes harder</h2>
+<p>These problems can happen together. They are separated here so the reason for each product idea is easy to follow.</p>
+<ol class="overview">
+<li><a href="#starting"><b>1. Knowing what needs doing, but being unable to begin</b><span>The person wants to do the task. Getting from that intention to the first action is where they get stuck.</span></a></li>
+<li><a href="#interruption"><b>2. Losing the thread after an interruption</b><span>Returning to a task can require remembering a whole chain of decisions.</span></a></li>
+<li><a href="#energy"><b>3. Having less energy than the plan assumes</b><span>The amount someone can manage changes from day to day, and sometimes within the same day.</span></a></li>
+<li><a href="#surroundings"><b>4. Noise, light, and interruptions making the task harder</b><span>The surroundings can make a manageable task difficult to do.</span></a></li>
+<li><a href="#instructions"><b>5. Receiving work without enough information to do it</b><span>A request may omit the deadline, priority, expected result, or who is responsible.</span></a></li>
+<li><a href="#support-request"><b>6. Needing help but worrying about the reaction</b><span>A person may know what would help and still feel unsafe asking for it.</span></a></li>
+<li><a href="#criticism"><b>7. Avoiding a task after a mistake or criticism</b><span>Worry about the response can make taking the next step harder.</span></a></li>
+<li><a href="#maintenance"><b>8. Abandoning tools that take too much effort to maintain</b><span>Keeping a support tool organised can become another job.</span></a></li>
+<li><a href="#care"><b>9. Getting stuck while trying to find professional support</b><span>Knowing that help exists does not tell someone how to reach it, afford it, or get through the process.</span></a></li>
+<li><a href="#relationships"><b>10. Messages, promises, and shared chores becoming sources of conflict</b><span>An unanswered message or missed commitment can be interpreted as not caring.</span></a></li>
+</ol>
+</section>
+
+
+<section class="problem" id="starting" aria-labelledby="starting-title">
+  <div class="section-label">Problem 01</div>
+  <h2 id="starting-title">Knowing what needs doing, but being unable to begin</h2>
+  <p class="intro">The person wants to do the task. Getting from that intention to the first action is where they get stuck.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone needs to submit an expense claim. They keep opening the reminder and closing it. Before submitting anything, they need to find the receipt, locate the form, and work out which details it needs.</p></div>
+  <h3>Why this becomes difficult</h3><p>A task name such as “submit expenses” hides several smaller jobs. The person may be struggling to choose among them, find missing information, or face a task that has become upsetting. Even a clear first step will not remove every reason for being stuck.</p>
+  <h3>What it costs the person</h3><p>The deadline gets closer while the person spends effort thinking about the task. More reminders can repeat the demand without answering what to do next.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A helper that finds a manageable first action</h3><p>The person types “submit expenses.” The tool asks whether they already have the receipt. If they do not, it offers “find one receipt.” If they do, it offers “open the expense form.” The person can change the suggestion.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Accept an ordinary task description without requiring dates or categories.</li><li>Offer a few specific starting actions, using information the person provides.</li><li>Let the person say “too much,” “wrong step,” or “leave this for later.”</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>Given a task with a missing document, the tool offers a way to find the document. The person can choose or write a different action.</p></div>
+  <h3>What we still need to learn</h3><p>Does choosing a smaller action actually help someone begin, or does choosing become another obstacle?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe difficulty starting, hidden steps, and requests for concrete help. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="interruption" aria-labelledby="interruption-title">
+  <div class="section-label">Problem 02</div>
+  <h2 id="interruption-title">Losing the thread after an interruption</h2>
+  <p class="intro">Returning to a task can require remembering a whole chain of decisions.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone is comparing two bills when a call interrupts them. Afterward, both bills are still open, but they cannot remember which charge they were checking or what they had already ruled out.</p></div>
+  <h3>Why this becomes difficult</h3><p>A task list preserves the name of the job. It often leaves out the temporary details: what has been checked, what is still uncertain, and the next intended action. Those details must be rebuilt after an interruption.</p>
+  <h3>What it costs the person</h3><p>The person repeats work, searches through tabs, or puts the task off because recovering their place feels difficult.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A short “where I stopped” note</h3><p>Before leaving, the person saves: “January bill checked. February has a charge I do not recognise. Next: compare that charge with the receipt.” When they return, this note appears beside the task.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Allow a short note and an optional file or page link.</li><li>Show the latest stopping point clearly when the person returns.</li><li>Make editing and removing the note easy; saving it must be the person’s choice.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>After closing and reopening the tool, the saved stopping point and next action are still available.</p></div>
+  <h3>What we still need to learn</h3><p>Can people leave a useful note quickly enough when interrupted? What happens when the interruption gives them no warning?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe lost task context, interruptions, and requests to remember where to resume. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="energy" aria-labelledby="energy-title">
+  <div class="section-label">Problem 03</div>
+  <h2 id="energy-title">Having less energy than the plan assumes</h2>
+  <p class="intro">The amount someone can manage changes from day to day, and sometimes within the same day.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone planned to cook dinner after work. A demanding day leaves them without the energy to shop, prepare ingredients, cook, and clean. The plan still says “cook dinner.”</p></div>
+  <h3>Why this becomes difficult</h3><p>The plan was made under one set of conditions. The person now has a different amount of energy and attention. Posts also describe the effort of hiding difficulties around others, sometimes called masking, and having little energy left afterward.</p>
+  <h3>What it costs the person</h3><p>A plan can become unusable just when support is needed. The person may feel guilty about something they could have done on another day.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A way to choose how much of a task to take on today</h3><p>For “deal with laundry,” the tool offers “wash one load,” “put clothes in the basket,” or “leave it for later.” The person chooses what feels possible.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Let the person choose a smaller version, preparation only, or a pause.</li><li>Do not require a mood score or an explanation for doing less.</li><li>Keep the original task available if the person wants to return to it.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>Choosing “leave it for later” ends the flow without a failure label or another demand. The saved task remains available.</p></div>
+  <h3>What we still need to learn</h3><p>Do the smaller versions feel useful and respectful? Which tasks should simply be left alone when the person needs rest?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe changing energy, burnout, the effort of masking, and the need for lower-demand choices. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="surroundings" aria-labelledby="surroundings-title">
+  <div class="section-label">Problem 04</div>
+  <h2 id="surroundings-title">Noise, light, and interruptions making the task harder</h2>
+  <p class="intro">The surroundings can make a manageable task difficult to do.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone can read a document in a quiet room but repeatedly loses their place beside a loud conversation. Adding another reminder to read it does not change the room.</p></div>
+  <h3>Why this becomes difficult</h3><p>The person has to handle both the task and the unwanted input around them. The saved research describes noise, bright lights, and other surroundings using up attention or making it hard to remain in the space.</p>
+  <h3>What it costs the person</h3><p>The person may leave, work more slowly, or use energy enduring the setting before starting the task.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A tool for describing and remembering workable conditions</h3><p>The person chooses “conversation noise is making reading difficult.” The tool offers a private note about a quieter location or an editable request: “Could I use the quiet room while I review this document?”</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Let the person describe the problem and choose what change might help.</li><li>Remember a condition only when the person asks to save it.</li><li>Allow “I cannot change the setting” and an option to pause.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>The person can produce a request for a quieter space without entering a diagnosis or turning on a microphone.</p></div>
+  <h3>What we still need to learn</h3><p>Can the person actually change their surroundings? If not, how much can this tool help?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings connect sensory conditions with difficulty working and describe quieter or more flexible settings as possible support. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="instructions" aria-labelledby="instructions-title">
+  <div class="section-label">Problem 05</div>
+  <h2 id="instructions-title">Receiving work without enough information to do it</h2>
+  <p class="intro">A request may omit the deadline, priority, expected result, or who is responsible.</p>
+  <div class="example"><h3>An everyday example</h3><p>A manager writes “prepare the update soon.” The person cannot tell whether this means a short email today or a slide presentation next week. A meeting later adds more suggestions without recording a decision.</p></div>
+  <h3>Why this becomes difficult</h3><p>The person must guess missing details before acting. Remembering a conversation is also different from having a written agreement about what happens next.</p>
+  <h3>What it costs the person</h3><p>They may do the wrong work, spend time rechecking, miss an unstated expectation, or delay because asking again feels uncomfortable.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A helper that turns unclear requests into clear questions</h3><p>The person pastes the request. The tool shows “Deadline: not stated” and “Format: not stated,” then drafts: “When do you need this, and would you like an email or slides?” For meeting notes, it separates confirmed decisions from open questions.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Show what is stated and what is missing.</li><li>Keep suggested actions separate from confirmed decisions.</li><li>Let the person edit a clarification message and choose whether to send it.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>For “prepare the update soon,” the tool leaves the date unknown and asks for clarification. It does not make up a deadline.</p></div>
+  <h3>What we still need to learn</h3><p>Will people and their coworkers use the written clarification? How often are the missing details actually available?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe ambiguous expectations, meeting details being lost, competing priorities, and requests for written instructions. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="support-request" aria-labelledby="support-request-title">
+  <div class="section-label">Problem 06</div>
+  <h2 id="support-request-title">Needing help but worrying about the reaction</h2>
+  <p class="intro">A person may know what would help and still feel unsafe asking for it.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone works better when instructions are written down. They want to ask their manager but worry that explaining the difficulty will make them look less capable.</p></div>
+  <h3>Why this becomes difficult</h3><p>Requesting a change can reveal something private and put the person in a position where someone else can judge or refuse them. The difficulty includes the relationship and the power the other person holds.</p>
+  <h3>What it costs the person</h3><p>The person may keep struggling silently, over-explain personal details, or avoid asking until the situation has worsened.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A private tool for writing a support request</h3><p>The person chooses “written instructions” and “manager.” The tool drafts: “Could you send the main steps in writing so I can check them as I work?” The person can add personal information if they want to.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Start with the change the person wants, such as fewer interruptions or clearer priorities.</li><li>Make personal and medical details optional.</li><li>Show the full draft before copying or sharing, with no automatic sending.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>A complete request can be written without a diagnosis, employer name, or medical history. Sharing requires an explicit action.</p></div>
+  <h3>What we still need to learn</h3><p>Does the wording feel safe and natural to the person? Software cannot guarantee how the recipient will respond.</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe fear of judgment, disclosure concerns, and difficulty turning a need into a request. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="criticism" aria-labelledby="criticism-title">
+  <div class="section-label">Problem 07</div>
+  <h2 id="criticism-title">Avoiding a task after a mistake or criticism</h2>
+  <p class="intro">Worry about the response can make taking the next step harder.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone notices that they sent a file with an error. They keep postponing a correction because they expect an angry reply. The delay makes the situation more awkward.</p></div>
+  <h3>Why this becomes difficult</h3><p>Repairing the mistake now also means facing an anticipated reaction. The posts describe shame, fear of criticism, and avoidance that can add to the original problem.</p>
+  <h3>What it costs the person</h3><p>A small correction can become a longer delay. Repeated warnings can add pressure without helping the person decide what to say or do.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A helper for taking one repair step</h3><p>The person selects “I sent the wrong file.” The tool offers “find the correct file,” “write a correction,” or “leave this for now.” A draft might say: “I sent the wrong version earlier. Here is the corrected file.”</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Keep language factual and avoid judging the person.</li><li>Offer a draft that can be edited or discarded.</li><li>Do not invent explanations, apologies, promises, or another person’s intentions.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>The person can draft a correction without being pushed to send it. The text contains only details they supplied or approved.</p></div>
+  <h3>What we still need to learn</h3><p>Does the help make responding easier, or does another screen asking for action add pressure?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe anticipated criticism, over-explaining, shame, and avoiding feedback. A repair-message tool is a proposed response to those problems. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="maintenance" aria-labelledby="maintenance-title">
+  <div class="section-label">Problem 08</div>
+  <h2 id="maintenance-title">Abandoning tools that take too much effort to maintain</h2>
+  <p class="intro">Keeping a support tool organised can become another job.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone sets up a task app with folders, labels, dates, and reminders. After a difficult week, they return to a long overdue list and feel they must clean it up before using it again.</p></div>
+  <h3>Why this becomes difficult</h3><p>The tool needs regular attention to remain useful. When the person has less energy, that upkeep becomes harder at the same time that they need more help.</p>
+  <h3>What it costs the person</h3><p>They stop using the tool, lose useful information, and later spend effort setting up a new system.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A tool that remains usable after being ignored</h3><p>After two weeks away, the person opens the tool and can immediately add the one thing they need help with today. Older saved items are available separately, without a cleanup requirement.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Make categories, dates, and regular reviews optional.</li><li>Allow useful help for one item without setting up a complete system.</li><li>Let people remove or leave old items without a penalty; explain any automatic deletion.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>A returning user can add a new item without clearing old tasks, restoring a streak, or filling in missed days.</p></div>
+  <h3>What we still need to learn</h3><p>Does the tool save more effort than it takes to keep using? Do people return to it after a break?</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings explicitly describe abandoned routines, repeated resets, and tools whose upkeep exceeds available energy. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="care" aria-labelledby="care-title">
+  <div class="section-label">Problem 09</div>
+  <h2 id="care-title">Getting stuck while trying to find professional support</h2>
+  <p class="intro">Knowing that help exists does not tell someone how to reach it, afford it, or get through the process.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone wants an assessment. One service needs a referral, another has unclear fees, and a third has a long wait. Each enquiry creates another set of documents and follow-up tasks.</p></div>
+  <h3>Why this becomes difficult</h3><p>Information and decisions are spread across services. The person must discover the route, gather documents, ask about costs, and keep track of replies. The research also describes shortages and access barriers.</p>
+  <h3>What it costs the person</h3><p>People may spend time and money contacting unsuitable services or stop partway through the process.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A guide for the practical steps of getting support</h3><p>The person chooses the kind of help they are looking for and supplies a region if local information is needed. The tool lists the next questions to ask, such as referral requirements, fees, and waiting time, and keeps a private record of enquiries.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Explain the purpose of each service in ordinary words.</li><li>Attach a source and a last-checked date to service details; show unknown fees or availability as unknown.</li><li>Help prepare questions and track replies without making a diagnosis or recommending treatment.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>An unconfirmed waiting time is clearly marked as unknown. Every listed provider has a source the person can open.</p></div>
+  <h3>What we still need to learn</h3><p>Who will keep the service information current? A guide cannot create appointments, funding, or medication supply.</p>
+  <p class="evidence"><strong>Research basis:</strong> The findings describe assessment waits, costs, uneven access, and shortages. A service guide is a separate product idea that needs further research. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section class="problem" id="relationships" aria-labelledby="relationships-title">
+  <div class="section-label">Problem 10</div>
+  <h2 id="relationships-title">Messages, promises, and shared chores becoming sources of conflict</h2>
+  <p class="intro">An unanswered message or missed commitment can be interpreted as not caring.</p>
+  <div class="example"><h3>An everyday example</h3><p>Someone reads a friend’s message while busy and intends to reply later. Days pass. Now writing back also feels like explaining the delay, which makes replying harder.</p></div>
+  <h3>Why this becomes difficult</h3><p>Reading, remembering, deciding what to say, and sending are separate steps. Other people may see only the missing reply. Shared chores can have a similar problem when each person has different expectations about who will do what.</p>
+  <h3>What it costs the person</h3><p>Misunderstandings grow, commitments are missed, and a simple conversation can become emotionally difficult.</p>
+  <div class="proposal"><div class="section-label">Possible product</div><h3>A helper for brief replies and clear agreements</h3><p>The person drafts “I saw your message and need a little time to respond.” For a shared chore, they can write an agreement that states who is doing what and when. They review anything before sharing it.</p></div>
+  <h3>What the product must do</h3>
+  <ul><li>Let the person choose and edit the words; do not speak for them automatically.</li><li>Do not invent a promise to reply by a certain time.</li><li>Keep notes private unless deliberately shared, and avoid tracking another person’s activity.</li></ul>
+  <div class="check"><h3>How to check the feature works</h3><p>A reply draft can be used without a promised deadline. No message or household note is shared without review.</p></div>
+  <h3>What we still need to learn</h3><p>Would people find this supportive or intrusive? Shared tools also need the other person’s agreement.</p>
+  <p class="evidence"><strong>Research basis:</strong> Relationship strain appears in the saved findings as a Reddit theme. The specific reply and household features are ideas to investigate, with less detail in the written synthesis than the work and task themes. <a href="resume-support/FINDINGS.md">Read the saved findings</a>.</p>
+  <a class="back" href="#problems">Back to the problem list ↑</a>
+</section>
+
+<section id="solutions">
+<div class="section-label">What could be built</div>
+<h2>Six possible products to explore</h2>
+<p>The problems above suggest several products. Some related features could belong together. These are proposals based on the analysis; the research has not established which one people would use or pay for.</p>
+<div class="product-list">
+<article class="product"><h3>A. Help starting and returning to a task</h3><p><strong>For:</strong> someone who wants to act but cannot find a starting point or remember where they stopped.</p><p><strong>First version:</strong> a task description, an editable next step, a stopping note, and an optional reminder.</p><p><strong>Covers:</strong> <a href="#starting">starting</a> and <a href="#interruption">interruptions</a>, with smaller options for <a href="#energy">changes in energy</a>.</p></article>
+<article class="product"><h3>B. Help understanding a work request</h3><p><strong>For:</strong> someone who receives vague instructions or leaves a meeting unsure what was decided.</p><p><strong>First version:</strong> paste a request or notes, see what is known and missing, and edit a question to send back.</p><p><strong>Covers:</strong> <a href="#instructions">unclear instructions and meeting decisions</a>.</p></article>
+<article class="product"><h3>C. Help adjusting a task or its surroundings</h3><p><strong>For:</strong> someone whose energy or environment makes the current plan difficult.</p><p><strong>First version:</strong> choose a smaller task, describe a change in surroundings that might help, or pause.</p><p><strong>Covers:</strong> <a href="#energy">changes in energy</a> and <a href="#surroundings">difficult surroundings</a>.</p></article>
+<article class="product"><h3>D. Help asking for support</h3><p><strong>For:</strong> someone who knows what would help but is unsure how much to explain or how to ask.</p><p><strong>First version:</strong> choose the change needed and who the request is for, then edit a private draft.</p><p><strong>Covers:</strong> <a href="#support-request">asking for help</a> and requests about <a href="#surroundings">working conditions</a>.</p></article>
+<article class="product"><h3>E. Help responding when a conversation feels difficult</h3><p><strong>For:</strong> someone delaying a reply or a correction because they cannot find the words or expect a bad reaction.</p><p><strong>First version:</strong> describe what happened, choose a short response, edit it, and decide whether to send it.</p><p><strong>Covers:</strong> <a href="#criticism">responding after a mistake</a> and <a href="#relationships">messages and commitments</a>.</p></article>
+<article class="product"><h3>F. Help with the steps of finding professional support</h3><p><strong>For:</strong> someone trying to understand services, ask about eligibility and costs, or follow up on enquiries.</p><p><strong>First version:</strong> a guide for one defined region and type of support, with sourced service details and private enquiry notes.</p><p><strong>Covers:</strong> <a href="#care">access to professional support</a>. This requires someone to maintain the service information.</p></article>
+</div>
+<p class="note"><strong>About the earlier “resume support” decision:</strong> the previous specification chose product A as the first small prototype. “Resume” means return to a task here. That decision was based on a manageable build scope and repeated reports about starting and interruptions. The other product directions remain open; the research does not establish that product A is the best overall business.</p>
+</section>
+
+<section id="requirements">
+<div class="section-label">Rules for all six ideas</div>
+<h2>What every product must get right</h2>
+<p>These requirements follow from the repeated concerns about effort, privacy, judgment, and control.</p>
+<ol class="rules">
+<li><strong>Let people get help without a long setup.</strong>A person should be able to use one feature without entering a diagnosis, organising their life into categories, or creating a complete plan.</li>
+<li><strong>Keep suggestions editable.</strong>The person can write their own answer, reject a suggestion, or stop. The tool must never treat a suggestion as the person’s confirmed intention.</li>
+<li><strong>Make returning easy.</strong>Opening the product after a break must not require clearing a backlog or explaining missed days.</li>
+<li><strong>Make reminders a choice.</strong>They start switched off. Before enabling one, show when it will appear and how to cancel it. The earlier task prototype allows one reminder with an end time.</li>
+<li><strong>Keep personal information under the person’s control.</strong>Show what is saved and where. Give clear ways to export and delete it. If information would leave the device, explain that before it happens.</li>
+<li><strong>Require review before sharing.</strong>Show the complete message or record. The person decides whether to copy or send it and to whom.</li>
+<li><strong>Say when information is missing.</strong>Do not invent deadlines, decisions, medical details, reasons for a delay, or promises to another person.</li>
+<li><strong>Use neutral language.</strong>“Saved,” “try later,” and “delete” describe actions. Avoid scores for effort, guilt about missed days, or comparisons with other people.</li>
+<li><strong>Make every control usable.</strong>Use clear labels, readable text, enough contrast, keyboard controls, visible keyboard focus, and layouts that work on a phone. Support software that reads the screen aloud.</li>
+<li><strong>Explain the limits of the help.</strong>A draft cannot guarantee a good response from a manager. A service guide cannot guarantee an appointment. A task suggestion may still be unhelpful.</li>
+</ol>
+</section>
+
+<section id="tests">
+<div class="section-label">Before calling an idea successful</div>
+<h2>Check both the feature and the benefit</h2>
+<h3>1. Check that the product behaves as promised</h3>
+<p>Use the concrete check in each problem section. Also confirm that saving, reopening, editing, deleting, reminder cancellation, and sharing controls work. Try the page on a phone and with a keyboard.</p>
+<p>For the earlier task prototype, the written target is a usable next step within three decisions and 60 seconds. That is a target to investigate; the research has not shown that people can meet it.</p>
+<h3>2. Ask people to try the idea with their agreement</h3>
+<p>For a chosen product, ask people who recognise the problem to try it using a situation they are comfortable sharing. Ask whether the wording makes sense, whether the help fits, and whether using the tool takes more effort than it saves.</p>
+<ul>
+<li><strong>Task help:</strong> did the person find a useful next action or recover where they stopped?</li>
+<li><strong>Work clarification:</strong> did the question identify information they actually needed?</li>
+<li><strong>Energy and surroundings:</strong> did the available choices fit what they could manage or change?</li>
+<li><strong>Support requests and replies:</strong> did the draft say what they intended, in words they would use?</li>
+<li><strong>Finding support:</strong> did the person understand a practical next step, and was the service information accurate?</li>
+</ul>
+<h3>3. Learn whether the help stays useful</h3>
+<p>A successful first attempt does not show that someone will keep using a product. Look for whether they choose to return, whether upkeep becomes a burden, and which features they ignore. Use that evidence to decide what deserves further work.</p>
+</section>
+
+<section id="limits">
+<div class="section-label">Research background</div>
+<h2>Where these ideas came from</h2>
+<p>The saved analysis describes <strong>1,295 Reddit records and 260 LinkedIn records</strong> collected through searches. It reports <strong>1,296 records after repeated entries were removed</strong>. A record means a saved item of text from the collection; it does not mean a separate person.</p>
+<p>Reddit supplied more personal accounts. LinkedIn supplied more workplace discussion, advice, advocacy, and promotional material. Posts were found through selected searches, so the collection cannot tell us how common a problem is across all people with ADHD or all autistic people.</p>
+<p>The analysis grouped posts using word and phrase matches. One post could fit several groups. The explanations in this document are interpretations of those recurring accounts, rather than proven explanations for every person’s experience.</p>
+<h3>What is supported, and what remains a proposal</h3>
+<p>The saved findings support investigating difficulties with starting, interruption, workplace communication, changing energy, sensory conditions, criticism, care access, and maintaining tools. Relationship strain is mentioned more briefly. The examples, screen behaviour, and requirements on this page are proposed ways to respond to those findings.</p>
+<p>The collection does not establish medical benefit, demand for a specific app, willingness to pay, or which product should become a business.</p>
+<ul>
+<li><a href="resume-support/FINDINGS.html">Read the original findings as a webpage</a></li>
+<li><a href="resume-support/FINDINGS.md">Read the saved written analysis</a></li>
+<li><a href="resume-support/evidence-snapshot.json">Open the saved evidence data</a></li>
+<li><a href="resume-support/PRODUCT-SPEC.md">Read the earlier task restart specification</a></li>
+</ul>
+</section>
+<footer>Product requirements for the neuro-divergent project · Plain-English revision · 14 September 2026</footer>
+</main>
+</div>
+</body>
+</html>

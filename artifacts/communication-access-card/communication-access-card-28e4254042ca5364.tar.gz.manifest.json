@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "communication-access-card-standalone-release",
+  "runtimeId": "28e4254042ca53643e8b195fc13d3d831301c520668a169825a47295f79570b4",
+  "archive": {
+    "file": "communication-access-card-28e4254042ca5364.tar.gz",
+    "bytes": 18267,
+    "sha256": "7083abba0ab7e7abcb4b0a6ae2970abca4fe95a41c5dc467c2efa01d1919b9f9"
+  },
+  "reproducibleIndependentBuilds": 2,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 6707,
+      "sha256": "06e2c7a34d0c4d5f4dd951be1f4bbc2773a240ba44b3ecbf35232ed0524acb16"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 11724,
+      "sha256": "060c2f276474290cafb32eeb02bf85650db5002e936eb2243e5786db434e06ba"
+    },
+    {
+      "file": "app.js",
+      "bytes": 17875,
+      "sha256": "722c7b23dd14546a7fc743ee075f9d54f6f0915b03f075e9535999b85c6ad213"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 716,
+      "sha256": "c3f884ad8fd6e24f194142bd1183c64f3ecfc58c377442ba15737d2851c1ff96"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2217,
+      "sha256": "b8702b8b1b2903560710cc214c87a00245fe82392e52484bff002be6c53fa0ec"
+    },
+    {
+      "file": "PRD.md",
+      "bytes": 8394,
+      "sha256": "1afc50baacfd5ebf236ec313bb5d067a2420be6afd94da61e58b409ad20095ab"
+    },
+    {
+      "file": "verification.md",
+      "bytes": 3401,
+      "sha256": "382a721aa693441bca40161e0233c2bfcea2dbc9ce185223609ed67f86726cee"
+    },
+    {
+      "file": "tests/communication-access-card.test.cjs",
+      "bytes": 4626,
+      "sha256": "dd8ff88b77e00582fb12cacae0ef760637b85088183bc9169f20b122e4db014a"
+    },
+    {
+      "file": "tests/acceptance.test.cjs",
+      "bytes": 5376,
+      "sha256": "20fba3c2bf8b8fd9e101ed1cd03ce0bc1983072c22474e3b8b3c42fcfaf96868"
+    },
+    {
+      "file": "tests/accessibility.test.cjs",
+      "bytes": 2473,
+      "sha256": "09a4a09ae50e1f815d0468a3f2ece9f83c3fa0d04e31b04acaed59fa42ce3b4e"
+    },
+    {
+      "file": "tests/keyboard-flow.test.cjs",
+      "bytes": 2542,
+      "sha256": "d007a562bdd6b728f401738e327f9f3c14a68a463dde0c84061381ea47b35c25"
+    }
+  ],
+  "boundary": {
+    "includesUserData": false,
+    "includesSecrets": false,
+    "nativeExecutionClaimed": false,
+    "participantEvidenceIncluded": false,
+    "interpretation": "A reproducible web package with engineering checks; not evidence of usefulness, clinical benefit, store approval, or public deployment."
+  }
+}

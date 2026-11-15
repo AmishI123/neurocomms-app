@@ -1,0 +1,68 @@
+{
+  "id": "craft-glue--s17--context",
+  "case_id": "craft-glue",
+  "condition": "context",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:01:37.801806+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mira\", \"age\": 9, \"communication_style\": \"short phrases\"}, \"activity\": \"Make a paper collage with train or animal pictures, paper, glue and removable tape.\", \"facts\": [\"Mira has said she likes trains.\", \"Mira has said she does not like sticky glue.\", \"Tape is available as an alternative.\", \"Mira has not said whether she wants to join today.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Mira prefers trains, so she might want to make a train collage.\",\n    \"Mira dislikes sticky glue, so she will avoid glue in her paper.\",\n    \"Tape is a good alternative, so she might choose tape instead of glue.\",\n    \"Mira hasn't decided whether she wants to join today, so she needs to ask.\",\n    \"She is a short phraser, so keep her sentences brief.\",\n    \"She doesn't have specific allergies mentioned, so stick to paper and glue.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850897,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 289,
+      "total_tokens": 413,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-MADfgMAETh7bVAfBO3eP4voPTMhjQNBZ",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 289,
+      "prompt_ms": 3799.699,
+      "prompt_per_token_ms": 13.14774740484429,
+      "prompt_per_second": 76.05865622513782,
+      "predicted_n": 124,
+      "predicted_ms": 7506.301,
+      "predicted_per_token_ms": 61.026837398373985,
+      "predicted_per_second": 16.386233379130413
+    }
+  },
+  "wall_seconds": 11.343378744000802,
+  "error": null
+}

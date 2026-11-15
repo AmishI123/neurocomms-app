@@ -1,0 +1,65 @@
+{
+  "id": "movement-balance--s29--basic",
+  "case_id": "movement-balance",
+  "condition": "basic",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T16:09:47.379545+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 29,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Sora\", \"age\": 11, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Choose stretching, a slow walk, or watching from a chair in a gym.\", \"facts\": [\"Sora\", \"has\", \"said\", \"she\", \"enjoys\", \"stretching.\", \"She\", \"has\", \"not\", \"said\", \"whether\", \"her\", \"body\", \"hurts\", \"today.\", \"Stopping\", \"is\", \"always\", \"available.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Sora said she enjoys stretching.\",\n    \"She has not said whether her body hurts today.\",\n    \"Stopping is always available.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883787,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 233,
+      "total_tokens": 275,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-TPmDxd8ngs7lgY1qtN5KTY8gCnavjcdc",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 233,
+      "prompt_ms": 4272.875,
+      "prompt_per_token_ms": 18.338519313304722,
+      "prompt_per_second": 54.53002954685077,
+      "predicted_n": 42,
+      "predicted_ms": 1995.73,
+      "predicted_per_token_ms": 48.67634146341464,
+      "predicted_per_second": 20.54386114354146
+    }
+  },
+  "wall_seconds": 6.294482594003057,
+  "error": null
+}

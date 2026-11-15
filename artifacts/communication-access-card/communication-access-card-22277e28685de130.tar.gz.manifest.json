@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "communication-access-card-standalone-release",
+  "runtimeId": "22277e28685de130a92aee4dfd11ea2565e735316c7844cb678d1b4e3fdc2800",
+  "archive": {
+    "file": "communication-access-card-22277e28685de130.tar.gz",
+    "bytes": 17201,
+    "sha256": "91f05c22db1a6c105c58a1b21f64010156bba62e9d49404627b06b104b7a607a"
+  },
+  "reproducibleIndependentBuilds": 2,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 6676,
+      "sha256": "5c279712e7abac0b47fce291ea4817bcb10beb1c701ee0bb4ef3a90676f92598"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 11724,
+      "sha256": "060c2f276474290cafb32eeb02bf85650db5002e936eb2243e5786db434e06ba"
+    },
+    {
+      "file": "app.js",
+      "bytes": 17875,
+      "sha256": "722c7b23dd14546a7fc743ee075f9d54f6f0915b03f075e9535999b85c6ad213"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 716,
+      "sha256": "c3f884ad8fd6e24f194142bd1183c64f3ecfc58c377442ba15737d2851c1ff96"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2126,
+      "sha256": "6f1fef6ff6f24b83cf8394ab475f20e13a7a18a4950ec2b1179e4479184533f5"
+    },
+    {
+      "file": "PRD.md",
+      "bytes": 8394,
+      "sha256": "1afc50baacfd5ebf236ec313bb5d067a2420be6afd94da61e58b409ad20095ab"
+    },
+    {
+      "file": "verification.md",
+      "bytes": 2852,
+      "sha256": "bfd4ab3a64ff62c5552caed8bce928bb09c8923486bdc8fe9b2a97a0e7db8bbd"
+    },
+    {
+      "file": "tests/communication-access-card.test.cjs",
+      "bytes": 4608,
+      "sha256": "62971394b7494dd8923691489ccfa5bdaf6beb8bdd2f574ef92daf2b69161507"
+    },
+    {
+      "file": "tests/acceptance.test.cjs",
+      "bytes": 5358,
+      "sha256": "39991c29f024a07fdffcd39cd2b2cd0fb17447b945150efda5bd2766bc118ef4"
+    }
+  ],
+  "boundary": {
+    "includesUserData": false,
+    "includesSecrets": false,
+    "nativeExecutionClaimed": false,
+    "participantEvidenceIncluded": false,
+    "interpretation": "A reproducible web package with engineering checks; not evidence of usefulness, clinical benefit, store approval, or public deployment."
+  }
+}

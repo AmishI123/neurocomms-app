@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "records": 108,
+  "conditions": 3,
+  "cases": 12,
+  "trials_per_condition_case": 3,
+  "audit_entries": 12,
+  "frozen_inputs_match": true,
+  "raw_scores_match": true,
+  "parent_drafts_match": true,
+  "dashboard_matches_analysis": true,
+  "token_totals_match": true
+}

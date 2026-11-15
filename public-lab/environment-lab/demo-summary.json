@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "event_count": 2,
+  "choice_counts": {
+    "comfortable": 1,
+    "unsure": 1
+  },
+  "preset_choice_counts": {
+    "quiet-dim": {
+      "comfortable": 1
+    },
+    "busy-bright": {
+      "unsure": 1
+    }
+  },
+  "interpretation": "Descriptive counts of explicit simulator buttons. They do not infer sensory sensitivity, preference, or real-world action."
+}

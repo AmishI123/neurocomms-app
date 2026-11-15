@@ -1,0 +1,165 @@
+{
+  "id": "story-characters--s43--basic",
+  "case_id": "story-characters",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T17:45:29.134253+00:00",
+  "manifest_sha256": "0954dc24265590d1420702df3c6d1c6c2e1351982a639a94b11ddd977da68262",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 96,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"```json\\n{\\n  \\\"cards\\\": [\\n    \\\"Anya, I'm thinking of a story.\\\",\\n    \\\"I'm imagining a fox and a moon bridge.\\\",\\n    \\\"What would you like to be the main character?\\\",\\n    \\\"I'm not sure if you want a fox or a moon.\\\",\\n    \\\"I'm thinking of a story involving a fox and a moon bridge.\\\",\\n    \\\"I'm planning to make up a story using picture cards of a moon, a fox,\""
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Anya, I'm thinking of a story.\",\n    \"I'm imagining a fox and a moon bridge.\",\n    \"What would you like to be the main character?\",\n    \"I'm not sure if you want a fox or a moon.\",\n    \"I'm thinking of a story involving a fox and a moon bridge.\",\n    \"I'm planning to make up a story using picture cards of a moon, a fox.\"\n"
+        }
+      }
+    ],
+    "created": 1788889529,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 358,
+      "total_tokens": 454,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-3RJWS36JLAE67yer4HSk3pO0rZVl5T8Q",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 358,
+      "prompt_ms": 8078.616,
+      "prompt_per_token_ms": 22.565966480446928,
+      "prompt_per_second": 44.31452120016597,
+      "predicted_n": 96,
+      "predicted_ms": 24149.183,
+      "predicted_per_token_ms": 254.20192631578948,
+      "predicted_per_second": 3.9338804960813785
+    }
+  },
+  "wall_seconds": 32.6599810129992,
+  "error": null,
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 96,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 43,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"```json\\n{\\n  \\\"cards\\\": [\\n    \\\"Anya, I'm thinking of a story.\\\",\\n    \\\"I'm imagining a fox and a moon bridge.\\\",\\n    \\\"What would you like to be the main character?\\\",\\n    \\\"I'm not sure if you want a fox or a moon.\\\",\\n    \\\"I'm thinking of a story involving a fox and a moon bridge.\\\",\\n    \\\"I'm planning to make up a story using picture cards of a moon, a fox,\""
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```json\n{\n  \"cards\": [\n    \"Anya, I'm thinking of a story.\",\n    \"I'm imagining a fox and a moon bridge.\",\n    \"What would you like to be the main character?\",\n    \"I'm not sure if you want a fox or a moon.\",\n    \"I'm thinking of a story involving a fox and a moon bridge.\",\n    \"I'm planning to make up a story using picture cards of a moon, a fox.\"\n"
+            }
+          }
+        ],
+        "created": 1788889529,
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "system_fingerprint": "b10853-9dcf84e5a",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 96,
+          "prompt_tokens": 358,
+          "total_tokens": 454,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-3RJWS36JLAE67yer4HSk3pO0rZVl5T8Q",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 358,
+          "prompt_ms": 8078.616,
+          "prompt_per_token_ms": 22.565966480446928,
+          "prompt_per_second": 44.31452120016597,
+          "predicted_n": 96,
+          "predicted_ms": 24149.183,
+          "predicted_per_token_ms": 254.20192631578948,
+          "predicted_per_second": 3.9338804960813785
+        }
+      },
+      "wall_seconds": 32.6599810129992,
+      "error": null
+    }
+  ]
+}

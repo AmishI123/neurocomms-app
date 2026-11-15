@@ -1,0 +1,5 @@
+[
+  {"id":"quiet-dim","label":"Quiet + dim","sound_db":35,"light_pct":25},
+  {"id":"steady-medium","label":"Steady + medium","sound_db":55,"light_pct":55},
+  {"id":"busy-bright","label":"Busy + bright","sound_db":72,"light_pct":85}
+]

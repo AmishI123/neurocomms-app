@@ -1,0 +1,68 @@
+{
+  "id": "outdoors-weather--s43--basic",
+  "case_id": "outdoors-weather",
+  "condition": "basic",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T06:52:01.500838+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Rosa\", \"age\": 13, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Choose between sitting under a shelter or walking along a paved garden path.\", \"facts\": [\"Rosa has said she likes watching birds.\", \"Rosa has said she does not like heavy rain.\", \"It is not known whether it is raining now.\", \"A companion can check the weather.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I like watching birds.\",\n    \"No heavy rain.\",\n    \"It is not known whether it is raining now.\",\n    \"A companion can check the weather.\",\n    \"Sit under a shelter or walk along a path.\",\n    \"No words allowed.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850321,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 202,
+      "total_tokens": 273,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-RO1PN1P4a468fxL4SWmgIMl7O2o9aZm0",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 202,
+      "prompt_ms": 3332.896,
+      "prompt_per_token_ms": 16.499485148514854,
+      "prompt_per_second": 60.60795176327134,
+      "predicted_n": 71,
+      "predicted_ms": 5995.651,
+      "predicted_per_token_ms": 85.65215714285713,
+      "predicted_per_second": 11.67512918947417
+    }
+  },
+  "wall_seconds": 9.396598160001304,
+  "error": null
+}

@@ -1,0 +1,16 @@
+{
+  "product": "resume-support",
+  "version": "0.1",
+  "evidence_mode": "proxy-only",
+  "scenarios": [
+    {"id":"S1","name":"interruption","given":"unfinished writing task after a meeting","must":"capture task and choose one restart step in <=3 decisions"},
+    {"id":"S2","name":"initiation-freeze","given":"task is known but first action is unclear","must":"offer editable smallest-step choices without diagnosis questions"},
+    {"id":"S3","name":"low-energy","given":"limited capacity","must":"allow smaller step and no prompt"},
+    {"id":"S4","name":"sensory-load","given":"overloaded or near shutdown","must":"allow skip or snooze without explanation"},
+    {"id":"S5","name":"workplace-privacy","given":"work task","must":"never require diagnosis, employer, or disclosure metadata"},
+    {"id":"S6","name":"delete-undo","given":"saved item","must":"export, delete, and undo before retention expiry"},
+    {"id":"S7","name":"expiry","given":"unfinished item at stated retention boundary","must":"remove it and explain why"},
+    {"id":"S8","name":"no-network","given":"network disabled","must":"retain all core behavior with no network call"}
+  ],
+  "claim_boundary": "These are engineering acceptance checks, not usability evidence."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "food-texture--s17--review",
+  "case_id": "food-texture",
+  "condition": "review",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T06:50:55.489574+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": "food-texture--s17--context",
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 1017,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Sam\", \"age\": 10, \"communication_style\": \"short phrases\"}, \"activity\": \"Prepare a snack using sliced apples, bananas, plain yogurt, bowls and spoons.\", \"facts\": [\"Sam has said they like apples.\", \"Sam has said they dislike mushy bananas.\", \"Nothing is known about allergies or medical dietary restrictions.\", \"Sam can ask for a different snack.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"I need a snack with apples and bananas.\\\",\\n    \\\"I don't like mushy bananas.\\\",\\n    \\\"I can ask for a different snack.\\\",\\n    \\\"I am 10 years old and prefer short phrases.\\\",\\n    \\\"I need a snack to eat.\\\",\\n    \\\"I don't have allergies or medical restrictions.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"I am 10 years old and prefer short phrases.\",\n    \"I don't like mushy bananas.\",\n    \"I don't have allergies or medical restrictions.\",\n    \"I can ask for a different snack.\",\n    \"I am 10 years old and prefer short phrases.\",\n    \"I need a snack to eat.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850255,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 396,
+      "total_tokens": 483,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-51zEZqyH8z45tu8oQkR5HlISKp9frQsQ",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 396,
+      "prompt_ms": 9264.99,
+      "prompt_per_token_ms": 23.396439393939392,
+      "prompt_per_second": 42.741546402100816,
+      "predicted_n": 87,
+      "predicted_ms": 9889.121,
+      "predicted_per_token_ms": 114.98977906976744,
+      "predicted_per_second": 8.696425091775094
+    }
+  },
+  "wall_seconds": 19.32296424500055,
+  "error": null
+}

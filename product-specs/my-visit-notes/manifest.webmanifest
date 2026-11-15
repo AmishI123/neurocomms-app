@@ -1,0 +1,16 @@
+{
+  "name": "My Visit Notes",
+  "short_name": "Visit Notes",
+  "description": "Prepare appointment questions, keep your place, and record your own next steps. Notes stay on this device.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f5ef",
+  "theme_color": "#215b53",
+  "lang": "en",
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

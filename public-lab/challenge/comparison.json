@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "comparison_type": "descriptive",
+  "caveat": "Runs use different fictional case sets and therefore do not isolate model effects. Rates are not a leaderboard of clinical usefulness.",
+  "runs": [
+    {
+      "run": "v1",
+      "model": {
+        "repository": "ggml-org/Qwen3.5-0.8B-GGUF",
+        "upstream": "Qwen/Qwen3.5-0.8B",
+        "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+        "filename": "Qwen3.5-0.8B-Q8_0.gguf",
+        "sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+        "bytes": 833592096,
+        "url": "https://huggingface.co/ggml-org/Qwen3.5-0.8B-GGUF/resolve/8fea620810c4afa23dd6443f999a48574c1611a3/Qwen3.5-0.8B-Q8_0.gguf"
+      },
+      "cases": 12,
+      "workflows": {
+        "basic": {
+          "valid": 31,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.1944
+        },
+        "context": {
+          "valid": 33,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.1389
+        },
+        "review": {
+          "valid": 31,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.1944
+        }
+      }
+    },
+    {
+      "run": "v2",
+      "model": {
+        "repository": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+        "upstream": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "main",
+        "filename": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+        "sha256": "041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55",
+        "bytes": 522186592,
+        "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q5_k_m.gguf"
+      },
+      "cases": 12,
+      "workflows": {
+        "basic": {
+          "valid": 5,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.8611
+        },
+        "context": {
+          "valid": 9,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.75
+        },
+        "review": {
+          "valid": 0,
+          "outputs": 36,
+          "invalid_or_risk_rate": 1
+        }
+      }
+    },
+    {
+      "run": "v3",
+      "model": {
+        "repository": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+        "upstream": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "main",
+        "filename": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+        "sha256": "041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55",
+        "bytes": 522186592,
+        "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q5_k_m.gguf"
+      },
+      "cases": 12,
+      "workflows": {
+        "basic": {
+          "valid": 16,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.5556
+        },
+        "context": {
+          "valid": 16,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.5556
+        },
+        "review": {
+          "valid": 7,
+          "outputs": 36,
+          "invalid_or_risk_rate": 0.8056
+        }
+      }
+    }
+  ]
+}

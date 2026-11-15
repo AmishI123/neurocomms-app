@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Visit Notes — beta readiness</title>
+  <style>
+    :root{font:16px/1.55 system-ui,sans-serif;color:#173f3a;background:#f4f3ec}
+    body{max-width:1100px;margin:auto;padding:28px 18px}header,section{background:#fff;border:1px solid #ccd9d1;border-radius:16px;padding:24px;margin:0 0 20px}h1,h2{line-height:1.15}h1{font-size:clamp(32px,5vw,56px);margin:.2em 0}h2{font-size:25px;margin-top:0}.quiet{color:#536761}.status{display:inline-block;padding:5px 11px;border-radius:20px;background:#f7e3a8;color:#574313;font-weight:700;font-size:12px}.decision{border-left:6px solid #b47b00;background:#fff8df;padding:15px 18px;border-radius:8px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:#eef4df;border-radius:10px;padding:16px}.card strong{display:block;font-size:22px}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #d7e0da;padding:11px 8px}th{background:#edf3df}.pass{color:#176346;font-weight:700}.pending{color:#8a5b00;font-weight:700}li{margin:7px 0}@media(max-width:720px){body{padding:14px}.cards{grid-template-columns:1fr}table{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header>
+    <span class="status">BETA READINESS · ENGINEERING REVIEW</span>
+    <h1>My Visit Notes</h1>
+    <p class="quiet">A plain-language handoff for building, checking and safely reviewing the web, Android and iPhone versions.</p>
+    <div class="decision"><strong>Current decision: Engineering beta, web verified; native runtime pending.</strong><br>The product must not be called native-ready until Android and iOS runtime checks are completed.</div>
+  </header>
+
+  <section>
+    <h2>What this product does</h2>
+    <p>My Visit Notes helps a person prepare appointment questions, choose what to show during a visit, keep personal notes separate, record what happened in their own words, save follow-up drafts and prepare the next appointment.</p>
+    <p>It does not diagnose, interpret symptoms, send information by itself or mark questions complete without the person's choice.</p>
+  </section>
+
+  <section>
+    <h2>Evidence snapshot</h2>
+    <div class="cards"><div class="card"><strong>288</strong>web source checks pass</div><div class="card"><strong>35</strong>Android package files match</div><div class="card"><strong>10</strong>acceptance steps reviewed by LLM</div></div>
+    <p class="quiet">The LLM reviewed test reports, saved outputs, simulated native calls and screenshots. It did not approve native runtime behavior that was never observed.</p>
+  </section>
+
+  <section>
+    <h2>Beta gates</h2>
+    <table><thead><tr><th>Gate</th><th>Pass condition</th><th>State</th></tr></thead><tbody>
+      <tr><td>Source and model</td><td>Current logic checks pass</td><td class="pass">Pass</td></tr>
+      <tr><td>Browser journey</td><td>Current reports pass with no page errors</td><td class="pass">Pass</td></tr>
+      <tr><td>Package integrity</td><td>Archive manifest and files match</td><td class="pass">Pass</td></tr>
+      <tr><td>Android build</td><td>Tests, lint, build and APK audit pass</td><td class="pass">Pass</td></tr>
+      <tr><td>LLM evidence safety</td><td>Ten steps exist; native approval remains false</td><td class="pass">Pass</td></tr>
+      <tr><td>Android runtime</td><td>Ten native steps recorded</td><td class="pending">Pending target</td></tr>
+      <tr><td>iOS build and runtime</td><td>Mac build plus ten native steps recorded</td><td class="pending">Pending Mac</td></tr>
+      <tr><td>Recovery and rollback</td><td>Restore, retry, deletion and update paths exercised</td><td class="pending">Web only</td></tr>
+    </tbody></table>
+  </section>
+
+  <section>
+    <h2>Data safety in simple terms</h2>
+    <ul><li>Visits, drafts, private notes and recovery history stay on the device.</li><li>There is no automatic server copy or account.</li><li>Only content deliberately exported, copied, shared or printed leaves the device.</li><li>Private notes must not appear in selected conversation or review output.</li><li>Use fictional data in all engineering checks.</li></ul>
+  </section>
+
+  <section>
+    <h2>How to test it</h2>
+    <p><strong>Web:</strong> extract the recorded archive, serve it locally and follow the browser reports.</p>
+    <p><strong>Android:</strong> build from <code>my-visit-notes-mobile/</code>, use a dedicated phone or emulator, install the debug package and run the native runbook. Never clear someone else's data to make a test pass.</p>
+    <p><strong>iPhone:</strong> on a Mac with Xcode and CocoaPods, run the iOS build script, use a clean simulator installation and repeat the same ten steps.</p>
+    <p>Record the build hash, device or simulator, operating-system version, every step result and any screenshot or log that explains a failure.</p>
+  </section>
+
+  <section>
+    <h2>Recovery and rollback</h2>
+    <ul><li>Before a risky change, make a private backup and check its destination.</li><li>If saving fails, keep the words visible, fix storage and retry once; verify no duplicate records.</li><li>If a transfer looks wrong, cancel before saving and keep the original file.</li><li>For deletion, confirm the exact scope, delete exported copies separately and reopen to verify.</li><li>For an update problem, keep the old backup and restore into a separate installation before overwriting anything.</li></ul>
+  </section>
+
+  <section>
+    <h2>Next action</h2>
+    <p>Run <em>Check My Visit Notes native builds</em> with <em>platform: both</em> when the GitHub runner is usable, or use a working Android target and Mac. Attach the results to <code>NATIVE-ACCEPTANCE-RUNBOOK.md</code>.</p>
+    <p class="quiet">The LLM can review the resulting evidence and explain failures. It cannot replace real Android or iOS runtime evidence.</p>
+  </section>
+</body>
+</html>

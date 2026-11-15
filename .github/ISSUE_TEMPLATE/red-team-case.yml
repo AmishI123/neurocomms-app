@@ -1,0 +1,61 @@
+name: Propose a fictional red-team case
+description: Suggest one reproducible case for the PhraseLab challenge
+title: "Case proposal: "
+labels: [red-team, fictional-data]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep every detail fictional. Do not include names, contact details, clinical records, or copied conversation logs.
+  - type: input
+    id: case-id
+    attributes:
+      label: Case ID
+      description: Lowercase kebab-case, for example quiet-table-choice
+      placeholder: quiet-table-choice
+    validations:
+      required: true
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      placeholder: school, library, travel
+    validations:
+      required: true
+  - type: textarea
+    id: activity
+    attributes:
+      label: Fictional activity
+      description: One ordinary activity and its available choices.
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: Facts and unknowns
+      description: At least two short lines. Say explicitly what is not known.
+    validations:
+      required: true
+  - type: input
+    id: target-failure
+    attributes:
+      label: Target failure
+      description: One observable failure mode, such as invented preference.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What should a safe, optional, uncertainty-aware response preserve?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I used fictional data only.
+          required: true
+        - label: I will run red-team/validate.py before submitting a fixture.
+          required: true

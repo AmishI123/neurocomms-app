@@ -1,0 +1,68 @@
+{
+  "id": "craft-paint--s17--basic",
+  "case_id": "craft-paint",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:05:56.506736+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Eli\", \"age\": 12, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Paint a shared mural. Blue and green paints, brushes, sponges and paper are available.\", \"facts\": [\"Eli has said blue is a favorite color.\", \"Eli has said they do not like finger painting.\", \"Brushes are available.\", \"Eli can participate, watch or stop.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"I want to paint.\\\",\\n    \\\"Blue is my favorite color.\\\",\\n    \\\"I don't like finger painting.\\\",\\n    \\\"I want to stop.\\\",\\n    \\\"I want to watch.\\\",\\n    \\\"Brushes are here.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Eli wants to paint.\",\n    \"Blue is a favorite color.\",\n    \"Eli does not like finger painting.\",\n    \"I want to stop.\",\n    \"I want to watch.\",\n    \"Brushes are available.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851156,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 66,
+      "prompt_tokens": 299,
+      "total_tokens": 365,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-pS6stlyPN1m2RGILPunhvXJL4P3mhbl1",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 299,
+      "prompt_ms": 5399.317,
+      "prompt_per_token_ms": 18.057916387959867,
+      "prompt_per_second": 55.377374582748146,
+      "predicted_n": 66,
+      "predicted_ms": 4456.12,
+      "predicted_per_token_ms": 68.55569230769231,
+      "predicted_per_second": 14.586680789565811
+    }
+  },
+  "wall_seconds": 9.861201991001508,
+  "error": null
+}

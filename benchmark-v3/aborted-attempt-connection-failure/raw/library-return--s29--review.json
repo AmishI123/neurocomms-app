@@ -1,0 +1,138 @@
+{
+  "id": "library-return--s29--review",
+  "case_id": "library-return",
+  "condition": "review",
+  "trial_seed": 29,
+  "created_utc": "2026-09-08T17:05:29.830435+00:00",
+  "manifest_sha256": "58363b1a3b2d195a93545878ae94bc213a53825d68404f6fc942132b93fdd10a",
+  "parent_id": "library-return--s29--context",
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 192,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 2029,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+      }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "cards"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": null,
+  "wall_seconds": 0.00021693599774152972,
+  "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+  "attempts": [
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 1029,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.0003211840012227185,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "request": {
+        "model": "qwen2.5-0.5b-q5_k_m",
+        "temperature": 0.4,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "max_tokens": 192,
+        "stream": false,
+        "cache_prompt": false,
+        "seed": 2029,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Tara\", \"age\": 8, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Return books about animals or space to a library cart. A quiet table and a help desk are available.\", \"facts\": [\"Tara\", \"has\", \"said\", \"she\", \"likes\", \"space.\", \"Tara\", \"has\", \"not\", \"said\", \"whether\", \"she\", \"wants\", \"help\", \"today.\", \"The\", \"library\", \"has\", \"not\", \"supplied\", \"any\", \"family,\", \"medical,\", \"or\", \"school\", \"facts.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nREPAIR: Return only the required JSON object with exactly six nonempty strings."
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 6,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "cards"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "response": null,
+      "wall_seconds": 0.00021693599774152972,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    }
+  ]
+}

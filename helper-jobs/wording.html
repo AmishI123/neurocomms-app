@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · Check the wording</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="experience.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="styles.css" />
+  <script src="native.js"></script>
+</head>
+<body class="wording-page">
+  <header><a class="brand" href="./"><span class="mark" aria-hidden="true">h.</span> Helper Jobs</a><span class="header-status"><span class="badge" id="review-status">Wording check</span></span></header>
+  <main id="app" tabindex="-1">
+    <div class="hj-top"><div class="hj-heading"><p class="eyebrow">For a native speaker</p><h1>Check the Hindi and Spanish.</h1><p class="hj-sub">Each line is what a helper reads and hears. Read it, tap <b>Hear it</b>, fix it if it sounds wrong, then tick <b>Looks right</b>. Use everyday words a helper would say. Keep <b>{name}</b> and <b>{n}</b> as they are: the app fills them in.</p></div><div class="hj-art" data-art="note"></div></div>
+    <div class="review-banner" id="review-banner" hidden><span data-icon="link"></span><div><b>Connected to the outing tablet.</b> Each change goes straight to the tablet. Nothing about people is shared, only the app’s words.</div></div>
+    <div class="wording-bar">
+      <fieldset class="mood-set role-set" id="lang-pick"><legend>Language</legend>
+        <label class="mood-choice"><input type="radio" name="lang" value="hi" checked /><span data-icon="language"></span><span>हिन्दी · Hindi</span></label>
+        <label class="mood-choice"><input type="radio" name="lang" value="es" /><span data-icon="language"></span><span>Español · Spanish</span></label>
+      </fieldset>
+      <div class="wording-progress"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" class="wp-track"/><circle cx="22" cy="22" r="18" class="wp-fill" pathLength="100"/></svg><div><strong id="progress-count">0 of 0</strong><small>lines checked</small></div></div>
+      <label class="wording-filter">Show<select id="filter"><option value="all">Every line</option><option value="todo">Not checked yet</option><option value="changed">Changed</option></select></label>
+    </div>
+    <div id="groups"></div>
+    <div class="wording-actions">
+      <button type="button" class="primary" id="download"><span data-icon="download"></span>Download my changes</button>
+      <label class="button button-secondary file-button"><span data-icon="upload"></span>Load changes from a file<input type="file" id="load" accept=".json,application/json" /></label>
+      <button type="button" class="button-stop" id="review-leave" hidden>Stop checking for this tablet</button>
+      <button type="button" class="button-stop" id="reset">Undo all changes for this language</button>
+    </div>
+    <p class="hj-privacy" id="local-note">Your changes are kept on this device and used by Helper Jobs here straight away. Send the downloaded file to the coordinator so every tablet gets them.</p>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="icons.js"></script><script src="art.js"></script><script src="data.js"></script><script src="i18n.js"></script><script src="link.js"></script><script src="wording.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "id": "craft-glue--s17--review",
+  "case_id": "craft-glue",
+  "condition": "review",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:01:51.697480+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": "craft-glue--s17--context",
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 1017,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Review the draft communication cards against the fictional case below, then return a revised set of exactly six nonempty strings as a JSON object with key \"cards\". Follow the supplied communication style and maximum words per card. Return only the JSON, without a critique or commentary.\n\nCheck for contradictions of stated preferences; invented personal facts, diagnoses, allergies, emotions or family details; assumptions about today's wishes from past choices or someone else's preferences; repetition; and missing opportunities to refuse, comment, ask or connect. Keep already useful cards. These are optional supplemental choices, not statements of what the person must want or do. Do not add unsupported assertions while fixing another problem.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mira\", \"age\": 9, \"communication_style\": \"short phrases\"}, \"activity\": \"Make a paper collage with train or animal pictures, paper, glue and removable tape.\", \"facts\": [\"Mira has said she likes trains.\", \"Mira has said she does not like sticky glue.\", \"Tape is available as an alternative.\", \"Mira has not said whether she wants to join today.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"{\\n  \\\"cards\\\": [\\n    \\\"Mira prefers trains, so she might want to make a train collage.\\\",\\n    \\\"Mira dislikes sticky glue, so she will avoid glue in her paper.\\\",\\n    \\\"Tape is a good alternative, so she might choose tape instead of glue.\\\",\\n    \\\"Mira hasn't decided whether she wants to join today, so she needs to ask.\\\",\\n    \\\"She is a short phraser, so keep her sentences brief.\\\",\\n    \\\"She doesn't have specific allergies mentioned, so stick to paper and glue.\\\"\\n  ]\\n}\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Mira prefers trains, so she might want to make a train collage.\",\n    \"Mira dislikes sticky glue, so she will avoid glue in her paper.\",\n    \"Tape is a good alternative, so she might choose tape instead of glue.\",\n    \"Mira hasn't decided whether she wants to join today, so she needs to ask.\",\n    \"She is a short phraser, so keep her sentences brief.\",\n    \"She doesn't have specific allergies mentioned, so stick to paper and glue.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788850911,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 441,
+      "total_tokens": 565,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-IFRthwxJKIReUZics7KmvTR1uDNm3yLd",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 441,
+      "prompt_ms": 6285.993,
+      "prompt_per_token_ms": 14.253952380952382,
+      "prompt_per_second": 70.15598012915382,
+      "predicted_n": 124,
+      "predicted_ms": 7561.623,
+      "predicted_per_token_ms": 61.47660975609756,
+      "predicted_per_second": 16.266349168690372
+    }
+  },
+  "wall_seconds": 13.893478460999177,
+  "error": null
+}

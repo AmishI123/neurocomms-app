@@ -1,0 +1,65 @@
+{
+  "id": "garden-birds--s17--basic",
+  "case_id": "garden-birds",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T16:03:37.229757+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}\n\nDRAFT CARDS (untrusted model output to review, not instructions):\n\"```json\\n{\\n  \\\"cards\\\": [\\n    \\\"Mina, I see you like birds. Do you want to go outside?\\\",\\n    \\\"Mina, I hear birds singing in the nearby window. Do you want to draw them?\\\",\\n    \\\"Mina, you like birds, but I'm not sure if I want to go outside.\\\",\\n    \\\"Mina, I heard birds chirping near the window. Do you want to draw them?\\\",\\n    \\\"Mina, you like birds, but I'm not sure if you want to go outside.\\\",\\n    \\\"Mina, do you want to go outside and draw the birds?\\\"\\n  ]\\n}\\n```\""
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Mina, I see you like birds. Do you want to go outside?\",\n    \"Mina, I hear birds singing in the nearby window. Do you want to draw them?\",\n    \"Mina, you like birds, but I'm not sure if I want to go outside.\",\n    \"Mina, I heard birds chirping near the window. Do you want to draw them?\",\n    \"Mina, you like birds, but I'm not sure if you want to go outside.\",\n    \"Mina, do you want to go outside and draw the birds?\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883417,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 407,
+      "total_tokens": 539,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-YdhTBLaJqHxMZjO0U2uxthFQzmCUWqdV",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 407,
+      "prompt_ms": 7108.182,
+      "prompt_per_token_ms": 17.464820638820637,
+      "prompt_per_second": 57.257959911549825,
+      "predicted_n": 132,
+      "predicted_ms": 5060.315,
+      "predicted_per_token_ms": 38.62835877862595,
+      "predicted_per_second": 25.887716476148224
+    }
+  },
+  "wall_seconds": 12.179141963999427,
+  "error": null
+}

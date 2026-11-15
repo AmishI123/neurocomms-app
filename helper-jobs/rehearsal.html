@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helper Jobs · Practice Sunday</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="print.css" />
+  <script src="native.js"></script>
+</head>
+<body class="print-page">
+  <header class="print-bar no-print"><a href="./">← Back to Helper Jobs</a><button type="button" class="primary" onclick="window.print()">Print</button><p>A 20-minute practice run of a whole outing, at home or at Pragnya, before the first real Sunday.</p></header>
+  <main class="paper-sheet">
+    <section class="sheet-page setup-page">
+      <div class="setup-top"><div><p class="paper-kicker">Helper Jobs · practice Sunday</p><h1>Try the whole day in 20 minutes</h1><p class="paper-lede">Four adults, one tablet, one phone. Use the made-up people already in the app: no real kids, no real names. Stop the timer whenever something goes wrong and write it down.</p></div><div class="setup-art" data-art="tablets"></div></div>
+      <h2 class="setup-h"><span data-icon="users"></span>Who plays whom</h2>
+      <div class="rh-roles">
+        <div><span data-icon="clipboard-list"></span><b>Lead</b><small>Runs the board on the tablet, keeps the phone in a pocket.</small></div>
+        <div><span data-icon="user"></span><b>Helper (Asha)</b><small>Uses the tablet like a helper would. Reads slowly, asks for help once.</small></div>
+        <div><span data-icon="heart-handshake"></span><b>Volunteer (Jordan)</b><small>Stands next to the helper. Plays “the kid” too.</small></div>
+        <div><span data-icon="award"></span><b>Coordinator</b><small>Watches, keeps time, fills in the sheet on page 2.</small></div>
+      </div>
+      <h2 class="setup-h"><span data-icon="clock"></span>The script</h2>
+      <ol class="rh-script">
+        <li><time>0–3 min</time><div><b>Set up.</b> Coordinator: Start again with the made-up example. Lead: choose a PIN, tick who is here, start the live board. Pair the lead’s phone and send a test buzz.</div></li>
+        <li><time>3–7 min</time><div><b>A real job.</b> Lead: match Asha with Snack Helper, Eli, and Jordan nearby. Asha: tap her picture, do the steps, tap <b>Read aloud</b> once, finish and pick a face.</div></li>
+        <li><time>7–10 min</time><div><b>Help.</b> Asha starts Clean-Up Crew and taps <b>Help</b>. Lead’s phone is locked in a pocket: does it buzz? Lead taps <b>I’m here</b> on the phone and writes a short note.</div></li>
+        <li><time>10–13 min</time><div><b>The day.</b> Lead taps <b>Next part</b> on the day plan. Asha tries a practice run of Play Partner. Asha taps <b>I want to stop</b>, then comes back.</div></li>
+        <li><time>13–16 min</time><div><b>The tablet stops.</b> Turn the tablet off for 2 minutes. Lead hands out a paper job card and writes the match on the paper sheet. Turn it back on: is everything still there?</div></li>
+        <li><time>16–20 min</time><div><b>Wrap up.</b> Lead: mark every kid back or home with family, then finish. Everyone: two minutes of feedback in the app. Coordinator: open the Sunday report.</div></li>
+      </ol>
+    </section>
+    <section class="sheet-page">
+      <p class="paper-kicker">Practice Sunday · what we noticed</p>
+      <h1>Ready for the first Sunday?</h1>
+      <ul class="tick-list">
+        <li><span data-icon="bell-ringing"></span><span class="tl-text">The lead’s locked phone buzzed within a few seconds of Help.</span></li>
+        <li><span data-icon="volume"></span><span class="tl-text">Read aloud was loud enough to hear in a noisy room, in every helper’s language.</span></li>
+        <li><span data-icon="user-check"></span><span class="tl-text">Asha found her picture and her job without anyone pointing.</span></li>
+        <li><span data-icon="sun"></span><span class="tl-text">The screen stayed on, and could be read outside.</span></li>
+        <li><span data-icon="printer"></span><span class="tl-text">The paper job cards and match sheet were printed and in the bag.</span></li>
+        <li><span data-icon="device-laptop"></span><span class="tl-text">After the tablet was turned off and on, nothing was lost.</span></li>
+        <li><span data-icon="users"></span><span class="tl-text">Wrap-up would not finish until every kid was marked.</span></li>
+      </ul>
+      <h2>What went wrong, and what we will change</h2>
+      <table class="paper-table obs"><thead><tr><th style="width:14%">Minute</th><th>What happened</th><th style="width:30%">Change before Sunday</th></tr></thead><tbody>
+        <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+      </tbody></table>
+      <p class="paper-small">Made-up people only. When you are done, tap Coordinator tools → Start again, so the real Sunday begins clean.</p>
+    </section>
+  </main>
+  <script src="icons.js"></script><script src="art.js"></script>
+  <script>document.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = HelperJobsIcons.icon(el.dataset.icon); }); document.querySelectorAll('[data-art]').forEach(el => { el.innerHTML = HelperJobsArt.draw(el.dataset.art); });</script>
+</body>
+</html>

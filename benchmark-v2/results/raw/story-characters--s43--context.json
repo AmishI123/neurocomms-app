@@ -1,0 +1,65 @@
+{
+  "id": "story-characters--s43--context",
+  "case_id": "story-characters",
+  "condition": "context",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T16:10:29.671024+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Anya said she likes foxes.\",\n    \"The story is fictional.\",\n    \"No real trip or family event is supplied.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883829,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 316,
+      "total_tokens": 358,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-QXvrYjarrdYfzseriiol4VeRN0q3zHtz",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 316,
+      "prompt_ms": 5339.348,
+      "prompt_per_token_ms": 16.89667088607595,
+      "prompt_per_second": 59.18325608295245,
+      "predicted_n": 42,
+      "predicted_ms": 1611.244,
+      "predicted_per_token_ms": 39.29863414634146,
+      "predicted_per_second": 25.446176991194385
+    }
+  },
+  "wall_seconds": 7.0051864169981855,
+  "error": null
+}

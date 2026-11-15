@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Helper Jobs · Progress across Sundays</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="theme-atlas.css" /><link rel="stylesheet" href="print.css" />
+  <script src="native.js"></script>
+</head>
+<body class="print-page">
+  <header class="print-bar no-print"><a href="./">← Back to Helper Jobs</a><button type="button" class="primary" onclick="window.print()">Print</button><p>For the coordinator. “Might be ready” is a hint from the records: you decide, with the helper.</p></header>
+  <main class="paper-sheet" id="progress"></main>
+  <script src="icons.js"></script><script src="data.js"></script><script src="store.js"></script>
+  <script>
+    (function () {
+      const main = document.getElementById('progress');
+      let until = 0; try { until = Number(localStorage.getItem('helper-jobs.coord-until') || 0); } catch (_) {}
+      if (Date.now() > until) { main.innerHTML = '<p class="print-empty">Open this from Coordinator tools on the outing tablet.</p>'; return; }
+      const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      const { icon } = HelperJobsIcons; const store = HelperJobsStore; const state = store.loadState();
+      const jobs = store.jobList(state);
+      const short = d => new Date(d + 'T12:00').toLocaleDateString('en', { month: 'short', day: 'numeric' });
+      const cards = state.helpers.map(helper => {
+        const p = store.progressFor(state, helper.id);
+        const max = Math.max(1, ...p.perSunday.map(x => x.jobs));
+        const chart = p.perSunday.length ? `<div class="pg-chart" role="img" aria-label="Jobs per Sunday: ${p.perSunday.map(x => `${short(x.date)} ${x.jobs}`).join(', ')}">${p.perSunday.map(x => `<div class="pg-col" title="${short(x.date)}: ${x.jobs} jobs"><span class="pg-n">${x.jobs}</span><span class="pg-bar" style="height:${Math.max(6, x.jobs / max * 70)}px"></span><small>${short(x.date)}</small></div>`).join('')}</div>` : '<p class="r-none">No finished jobs yet.</p>';
+        const done = state.assignments.filter(a => a.helperId === helper.id && a.status === 'complete');
+        const byJob = jobs.map(job => ({ job, n: done.filter(a => a.jobId === job.id).length })).filter(x => x.n);
+        const ready = p.ready.map(r => `<li class="${r.mightBeReady ? 'ready' : ''}">${icon(r.mightBeReady ? 'circle-check' : 'hourglass')}<span>${r.mightBeReady ? `<b>Might be ready for ${esc(r.name)}.</b> Talk with ${esc(helper.name)} and the lead.` : `${esc(r.name)}: needs ${esc(r.missing.join(', '))}`}</span></li>`).join('') || `<li>${icon('star')}<span>No next-level jobs to suggest.</span></li>`;
+        const wishes = p.wishes.map(w => jobs.find(j => j.id === w.jobId)?.name).filter(Boolean);
+        return `<article class="pg-card"><div class="pg-head"><span class="pg-photo">${helper.photoConsent && helper.photoData ? `<img src="${esc(helper.photoData)}" alt="" />` : esc(helper.photo)}</span><div><h2>${esc(helper.name)}</h2><p>Level ${p.level} · ${p.stars} ${p.stars === 1 ? 'star' : 'stars'} · ${p.total} jobs over ${p.sundays} ${p.sundays === 1 ? 'Sunday' : 'Sundays'}</p></div></div>
+          <div class="pg-body"><div><p class="paper-kicker">Jobs per Sunday</p>${chart}</div>
+          <div><p class="paper-kicker">Jobs done</p><ul class="pg-jobs">${byJob.map(x => `<li>${icon(x.job.icon)}${esc(x.job.name)} <b>${x.n}</b></li>`).join('') || '<li class="r-none">None yet</li>'}</ul>
+          <p class="pg-facts">${icon('bell-ringing')}Asked for help ${p.help} ${p.help === 1 ? 'time' : 'times'} · ${icon('star')}${(n => `${n} practice ${n === 1 ? 'run' : 'runs'}`)(Object.values(p.practice).reduce((a, b) => a + b, 0))}${wishes.length ? ` · ${icon('heart')}Would like to try ${esc(wishes.join(', '))}` : ''}</p></div></div>
+          <ul class="pg-ready">${ready}</ul></article>`;
+      }).join('');
+      main.innerHTML = `<section class="sheet-page"><p class="paper-kicker">Helper Jobs · progress across Sundays</p><h1>How each helper is growing</h1><p class="paper-lede">From this tablet’s records. No kid names. Moving up is always the coordinator’s decision, with the helper.</p>${cards || '<p class="r-none">No helpers yet.</p>'}</section>`;
+    })();
+  </script>
+</body>
+</html>

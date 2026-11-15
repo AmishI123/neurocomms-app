@@ -1,0 +1,25 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs/promises');const path=require('node:path');
+const {chromium}=require('playwright');
+const root=path.resolve(__dirname,'..');
+test('Final dashboard: actual counts, filters, raw text, download, responsive layout and report PDF',{timeout:120000},async t=>{
+ const data=JSON.parse(await fs.readFile(path.join(root,'results/analysis.json'),'utf8'));assert.equal(data.rows.length,108);
+ const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||undefined,args:['--no-sandbox']});t.after(()=>browser.close());
+ const page=await browser.newPage({viewport:{width:1365,height:1000},acceptDownloads:true});const errors=[],requests=[];page.on('pageerror',e=>errors.push(String(e)));page.on('request',r=>{if(r.url().startsWith('http'))requests.push(r.url());});
+ await page.goto('file://'+path.join(root,'dashboard.html'));
+ assert.match(await page.locator('#metrics').textContent(),/108/);assert.equal(await page.locator('#results article').count(),12);assert.equal(await page.locator('#case-filter option').count(),13);
+ await page.screenshot({path:path.join(root,'qa/dashboard-desktop.png'),fullPage:false});
+ await page.selectOption('#case-filter','craft-glue');await page.selectOption('#condition-filter','review');assert.equal(await page.locator('#results article').count(),3);
+ await page.fill('#search','--s17--');assert.equal(await page.locator('#results article').count(),1);
+ await page.locator('#results summary').click();const row=data.rows.find(r=>r.id==='craft-glue--s17--review');assert.equal(await page.locator('#results pre').textContent(),row.content);
+ await page.locator('#results').screenshot({path:path.join(root,'qa/dashboard-record.png')});
+ await page.fill('#search','an impossible unmatched query');assert.equal(await page.locator('#results article').count(),0);assert.equal(await page.locator('#more').isVisible(),false);
+ await page.fill('#search','');await page.selectOption('#case-filter','all');await page.selectOption('#condition-filter','all');await page.click('#more');assert.equal(await page.locator('#results article').count(),24);
+ const pending=page.waitForEvent('download');await page.click('#download');const download=await pending;const saved=JSON.parse(await fs.readFile(await download.path(),'utf8'));assert.equal(saved.rows.length,108);assert.equal(saved.audit.entries.length,12);
+ await page.setViewportSize({width:390,height:844});await page.selectOption('#case-filter','food-unknown');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:path.join(root,'qa/dashboard-mobile.png'),fullPage:true});
+ await page.selectOption('#case-filter','all');
+ await page.evaluate(()=>{DATA.rows[0].score.cards[0].text='<img src=x onerror=window.UNSAFE=true>';render();});
+ assert.equal(await page.locator('#results img').count(),0);assert.equal(await page.evaluate(()=>window.UNSAFE),undefined);
+ assert.deepEqual(errors,[]);assert.deepEqual(requests,[]);
+ const report=await browser.newPage();await report.goto('file://'+path.join(root,'REPORT.html'));assert.equal(await report.locator('figure img').count(),2);assert.ok(await report.locator('figure img').evaluateAll(imgs=>imgs.every(i=>i.complete&&i.naturalWidth>0)));
+ await report.pdf({path:path.join(root,'REPORT.pdf'),format:'A4',printBackground:true,preferCSSPageSize:true});
+});

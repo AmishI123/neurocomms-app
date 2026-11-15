@@ -1,0 +1,65 @@
+{
+  "id": "garden-birds--s43--context",
+  "case_id": "garden-birds",
+  "condition": "context",
+  "trial_seed": 43,
+  "created_utc": "2026-09-08T15:56:47.095995+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 43,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Mina\", \"age\": 9, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Look for birds near a window or draw them with pencils and paper.\", \"facts\": [\"Mina\", \"has\", \"said\", \"she\", \"likes\", \"birds.\", \"She\", \"has\", \"not\", \"said\", \"she\", \"wants\", \"to\", \"go\", \"outside.\", \"Do\", \"not\", \"infer\", \"fear,\", \"mood,\", \"or\", \"family\", \"details.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Mina has said she likes birds.\",\n    \"She has not said she wants to go outside.\",\n    \"Do not infer fear, mood, or family details.\",\n    \"Mina has said she has said she wants to go outside.\",\n    \"Mina has not said she wants to go outside.\",\n    \"Do not infer fear, mood, or family details.\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883007,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 326,
+      "total_tokens": 416,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-0GMig6OZYAyNh4P0dET7PrKLBoWsdT1l",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 326,
+      "prompt_ms": 5741.093,
+      "prompt_per_token_ms": 17.610714723926378,
+      "prompt_per_second": 56.78361245846392,
+      "predicted_n": 90,
+      "predicted_ms": 3885.81,
+      "predicted_per_token_ms": 43.66078651685393,
+      "predicted_per_second": 22.903847589048357
+    }
+  },
+  "wall_seconds": 9.637804091998987,
+  "error": null
+}

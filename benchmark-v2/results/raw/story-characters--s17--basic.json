@@ -1,0 +1,65 @@
+{
+  "id": "story-characters--s17--basic",
+  "case_id": "story-characters",
+  "condition": "basic",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T16:01:14.555709+00:00",
+  "manifest_sha256": "14b880d7f804aa5dce882db4d74500ffeb9804b94a897ab5875fb0847555235b",
+  "parent_id": null,
+  "request": {
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Anya\", \"age\": 10, \"communication_style\": \"single words or very short phrases\"}, \"activity\": \"Make up a story using picture cards of a moon, a fox, and a bridge.\", \"facts\": [\"Anya\", \"has\", \"said\", \"she\", \"likes\", \"foxes.\", \"The\", \"story\", \"is\", \"fictional;\", \"no\", \"real\", \"trip\", \"or\", \"family\", \"event\", \"is\", \"supplied.\"], \"shared_context\": \"Held-out fictional case. Full communication access remains available. Cards are optional supplements, not claims about current intent.\", \"word_limit\": 3}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"cards\": [\n    \"Anya, I've been thinking about a story.\",\n    \"I'm thinking about making up a moon, a fox, and a bridge.\",\n    \"The moon, a fox, and the bridge might be perfect for your tale.\",\n    \"Anya, do you have a story in mind?\",\n    \"Anya, do you have any moon, foxes, or bridge in mind?\",\n    \"Anya, do you have any moon, foxes, or bridge in mind?\"\n  ]\n}\n```"
+        }
+      }
+    ],
+    "created": 1788883274,
+    "model": "qwen2.5-0.5b-q5_k_m",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 230,
+      "total_tokens": 344,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-KOgXzMfW9J50nvnk4BXQymWSKBOEIwse",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 230,
+      "prompt_ms": 3611.875,
+      "prompt_per_token_ms": 15.703804347826088,
+      "prompt_per_second": 63.67883716906039,
+      "predicted_n": 114,
+      "predicted_ms": 4193.608,
+      "predicted_per_token_ms": 37.11157522123894,
+      "predicted_per_second": 26.945770801658142
+    }
+  },
+  "wall_seconds": 7.824433468998905,
+  "error": null
+}

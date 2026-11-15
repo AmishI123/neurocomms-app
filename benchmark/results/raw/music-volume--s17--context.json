@@ -1,0 +1,68 @@
+{
+  "id": "music-volume--s17--context",
+  "case_id": "music-volume",
+  "condition": "context",
+  "trial_seed": 17,
+  "created_utc": "2026-09-08T07:14:48.404994+00:00",
+  "manifest_sha256": "5ad0218f01b896ea496125a243a1cfafbb1a4877edd2ca21ba19f6efe64ef1df",
+  "parent_id": null,
+  "request": {
+    "model": "qwen3.5-0.8b-q8_0",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "max_tokens": 256,
+    "stream": false,
+    "cache_prompt": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "seed": 17,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Prepare six useful optional communication cards for the fictional person and activity below. Follow the supplied communication style and maximum words per card. Return only a JSON object with the key \"cards\" containing exactly six nonempty strings. Do not include commentary.\n\nUse the supplied facts carefully. Do not contradict stated preferences or invent autobiographical facts, diagnoses, allergies, emotions, or family details. A past choice or another person's preference does not establish this person's current wish. Leave room for requests, comments, questions, refusal or stopping, and social connection when appropriate. Avoid repetition. Do not turn preferences into demands to participate. General-purpose words can be useful without repeating an interest.\n\n\nFICTIONAL CASE:\n{\"profile\": {\"name\": \"Noor\", \"age\": 11, \"communication_style\": \"short phrases\"}, \"activity\": \"Explore a drum, a quiet shaker and recorded music with adjustable volume.\", \"facts\": [\"Noor has said she enjoys rhythms.\", \"Noor has said she does not like loud drums.\", \"A quiet shaker is available.\", \"Her preferred volume right now is unknown.\"], \"shared_context\": \"This is a fictional authoring exercise. The person’s full existing communication system stays available. These are optional supplemental phrase cards, not claims about current intent.\", \"word_limit\": 8}"
+      }
+    ]
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cards\": [\n    \"Noor loves the soft beat of a quiet shaker, so she prefers low volume to let the music breathe.\",\n    \"She enjoys rhythm, but loud drums are too loud, so she wants to explore the drums gently with her favorite shaker.\",\n    \"Her current favorite volume is unknown, so we can ask her what she prefers before we start playing anything.\",\n    \"Noor will not play loud drums, so we must choose a quiet shaker first to start this session.\",\n    \"She has said she enjoys rhythms, so we can ask about the type of music she prefers to play with her shaker.\",\n    \"Noor is currently avoiding loud instruments, so we must respect her preference for a quiet shaker before exploring the drums.\"\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1788851688,
+    "model": "qwen3.5-0.8b-q8_0",
+    "system_fingerprint": "b10853-9dcf84e5a",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 171,
+      "prompt_tokens": 283,
+      "total_tokens": 454,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-Kka29lMC3iiKrZfm43h29gMmi3ocLHnl",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 283,
+      "prompt_ms": 3958.493,
+      "prompt_per_token_ms": 13.98760777385159,
+      "prompt_per_second": 71.4918530865155,
+      "predicted_n": 171,
+      "predicted_ms": 11605.515,
+      "predicted_per_token_ms": 68.26773529411764,
+      "predicted_per_second": 14.648208201014778
+    }
+  },
+  "wall_seconds": 15.572780622998835,
+  "error": null
+}

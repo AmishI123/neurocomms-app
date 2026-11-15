@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-16T18:36:31.477Z",
+  "node": "v18.19.1",
+  "exitCode": 0,
+  "passed": 6,
+  "failed": 0,
+  "sourceHashes": {
+    "tests/card-regression.mjs": "cb387e6dc72c33c62b65bdaeb603f1853514ddeeece9d4ff7dc2be78ccc10170",
+    "../communication-access-card/index.html": "5c279712e7abac0b47fce291ea4817bcb10beb1c701ee0bb4ef3a90676f92598",
+    "../communication-access-card/app.js": "722c7b23dd14546a7fc743ee075f9d54f6f0915b03f075e9535999b85c6ad213",
+    "../communication-access-card/styles.css": "626d84fdfccd864131f995d147b9bcfac35aab859cadad7794c2e7a9887fddfc",
+    "../communication-access-card/sw.js": "c3f884ad8fd6e24f194142bd1183c64f3ecfc58c377442ba15737d2851c1ff96",
+    "../communication-access-card/tests/communication-access-card.test.cjs": "def331c15c4f27f8036751c6a4d3505cf2f5f6279d575dba821bd25a8178ed47"
+  }
+}

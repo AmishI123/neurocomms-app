@@ -1,0 +1,82 @@
+name: Check My Visit Notes native builds
+
+# Manual until the native acceptance journey is verified. This is separate from
+# Phrase Studio and requires no signing credentials or store access.
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Which native check to run
+        required: true
+        default: both
+        type: choice
+        options: [both, android, ios]
+
+permissions:
+  contents: read
+
+jobs:
+  android-journey:
+    if: inputs.platform == 'both' || inputs.platform == 'android'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: my-visit-notes-mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            my-visit-notes-mobile/package-lock.json
+            communication-tool/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: android-actions/setup-android@v3
+      - run: npm ci --ignore-scripts
+      - run: npm ci --ignore-scripts --prefix ../communication-tool
+      - run: node scripts/llm-acceptance-gate.mjs
+      - run: npm run build && npx --no-install cap copy ios && npx --no-install cap sync android
+      - run: ./android/gradlew -p android test lint assembleDebug --no-daemon
+      - run: node scripts/audit-bundle.mjs android/app/build/outputs/apk/debug/app-debug.apk
+      - run: sdkmanager 'platform-tools' 'emulator' 'system-images;android-34;google_apis;x86_64'
+      - name: Save, copy, navigate Back and restart inside Android
+        run: bash scripts/android-ci-journey.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: my-visit-notes-android-check
+          retention-days: 1
+          path: |
+            my-visit-notes-mobile/android/app/build/outputs/apk/debug/app-debug.apk
+            ${{ runner.temp }}/visit-android-journey.log
+            ${{ runner.temp }}/visit-emulator.log
+  ios-build:
+    if: inputs.platform == 'both' || inputs.platform == 'ios'
+    runs-on: macos-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: my-visit-notes-mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: my-visit-notes-mobile/package-lock.json
+      - run: npm ci
+      - run: node scripts/llm-acceptance-gate.mjs
+      - run: node scripts/build-ios.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-visit-notes-ios-simulator-build
+          retention-days: 1
+          path: |
+            my-visit-notes-mobile/ios/App/build/Build/Products/Debug-iphonesimulator/App.app
+            my-visit-notes-mobile/ios/App/build/visit-build-evidence.json
+          if-no-files-found: error

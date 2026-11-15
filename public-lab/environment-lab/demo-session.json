@@ -1,0 +1,1 @@
+{"schema_version":"1.0","fictional":true,"events":[{"timestamp":"2026-09-08T12:00:00Z","preset":"quiet-dim","sound_db_simulated":35,"light_pct_simulated":25,"choice":"comfortable"},{"timestamp":"2026-09-08T12:01:00Z","preset":"busy-bright","sound_db_simulated":72,"light_pct_simulated":85,"choice":"unsure"}]}
